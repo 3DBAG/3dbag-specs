@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "3DBAG Dataset Attribute Schema",
+  "description": "Schema for defining attributes in the 3DBAG dataset",
+  "patternProperties": {
+    "^[a-zA-Z0-9_]+$": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["int", "float", "bool", "string"],
+          "description": "Data type of the attribute"
+        },
+        "generating_software": {
+          "type": "string",
+          "description": "Software used to generate this attribute"
+        },
+        "null_valid": {
+          "type": "boolean",
+          "description": "Whether null values are valid for this attribute"
+        },
+        "level": {
+          "type": "string",
+          "pattern": "^(feature|surface)(\\s*\\|\\s*(feature|surface))*$",
+          "description": "Level where this attribute applies - feature (whole building) or surface (single surface)"
+        },
+        "precision": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Precision for numeric values"
+        },
+        "documentation": {
+          "type": "object",
+          "properties": {
+            "en": {
+              "$ref": "#/definitions/documentationEntry"
+            },
+            "nl": {
+              "$ref": "#/definitions/documentationEntry"
+            }
+          },
+          "additionalProperties": {
+            "$ref": "#/definitions/documentationEntry"
+          },
+          "description": "Multi-language documentation for the attribute"
+        }
+      },
+      "required": ["type", "level"],
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "documentationEntry": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string",
+          "description": "Description of the attribute"
+        },
+        "type": {
+          "type": "string",
+          "description": "Type classification of the attribute"
+        },
+        "unit": {
+          "type": "string",
+          "description": "Unit of measurement for the attribute"
+        }
+      },
+      "required": ["description", "type", "unit"],
+      "additionalProperties": false
+    }
+  }
+}
