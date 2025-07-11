@@ -1,9 +1,9 @@
 {
   "b3_pand_deel_id": {
     "type": "int",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature | surface",
+    "source": "roofer",
+    "nullable": false,
+    "appliesTo": "Building",
     "precision": null,
     "documentation": {
       "en": {
@@ -20,9 +20,9 @@
   },
   "b3_dd_id": {
     "type": "int",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "surface",
+    "source": "roofer",
+    "nullable": false,
+    "appliesTo": "RoofSurface",
     "precision": null,
     "documentation": {
       "en": {
@@ -39,9 +39,9 @@
   },
   "identificatie": {
     "type": "string",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": "BAG,roofer",
+    "nullable": false,
+    "appliesTo": "Building",
     "precision": null,
     "documentation": {
       "en": {
@@ -59,10 +59,10 @@
     }
   },
   "oorspronkelijkbouwjaar": {
-    "type": "string",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "type": "date",
+    "source": "BAG",
+    "nullable": true,
+    "appliesTo": "Building",
     "precision": null,
     "documentation": {
       "en": {
@@ -79,9 +79,9 @@
   },
   "status": {
     "type": "string",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": "BAG",
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -100,9 +100,9 @@
   },
   "geconstateerd": {
     "type": "string",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -121,9 +121,9 @@
   },
   "documentdatum": {
     "type": "string",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -142,9 +142,9 @@
   },
   "documentnummer": {
     "type": "string",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -163,9 +163,9 @@
   },
   "voorkomenidentificatie": {
     "type": "int",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -184,9 +184,9 @@
   },
   "begingeldigheid": {
     "type": "string",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -205,9 +205,9 @@
   },
   "eindgeldigheid": {
     "type": "string",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -226,9 +226,9 @@
   },
   "tijdstipregistratie": {
     "type": "string",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -247,9 +247,9 @@
   },
   "eindregistratie": {
     "type": "string",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -268,9 +268,9 @@
   },
   "tijdstipinactief": {
     "type": "string",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -289,9 +289,9 @@
   },
   "tijdstipregistratielv": {
     "type": "string",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -310,9 +310,9 @@
   },
   "tijdstipeindregistratielv": {
     "type": "string",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -331,9 +331,9 @@
   },
   "tijdstipinactieflv": {
     "type": "string",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -352,9 +352,9 @@
   },
   "tijdstipnietbaglv": {
     "type": "string",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -373,9 +373,9 @@
   },
   "b3_h_maaiveld": {
     "type": "float",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -392,9 +392,9 @@
   },
   "b3_dak_type": {
     "type": "string",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -425,9 +425,9 @@
   },
   "b3_pw_datum": {
     "type": "string",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -444,9 +444,9 @@
   },
   "b3_pw_bron": {
     "type": "string",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -463,9 +463,9 @@
   },
   "b3_kas_warenhuis": {
     "type": "string",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -482,9 +482,9 @@
   },
   "b3_reconstructie_onvolledig": {
     "type": "null",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -501,9 +501,9 @@
   },
   "b3_h_dak_min": {
     "type": "float",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "surface",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "surface",
     "precision": null,
     "documentation": {
       "en": {
@@ -520,9 +520,9 @@
   },
   "b3_h_dak_50p": {
     "type": "float",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "surface",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "surface",
     "precision": null,
     "documentation": {
       "en": {
@@ -539,9 +539,9 @@
   },
   "b3_h_dak_70p": {
     "type": "float",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "surface",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "surface",
     "precision": null,
     "documentation": {
       "en": {
@@ -558,9 +558,9 @@
   },
   "b3_h_dak_max": {
     "type": "float",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "surface",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "surface",
     "precision": null,
     "documentation": {
       "en": {
@@ -577,9 +577,9 @@
   },
   "b3_val3dity_lod12": {
     "type": "null",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -596,9 +596,9 @@
   },
   "b3_val3dity_lod13": {
     "type": "null",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -615,9 +615,9 @@
   },
   "b3_val3dity_lod22": {
     "type": "null",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -634,9 +634,9 @@
   },
   "b3_rmse_lod12": {
     "type": "float",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -653,9 +653,9 @@
   },
   "b3_rmse_lod13": {
     "type": "float",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -672,9 +672,9 @@
   },
   "b3_rmse_lod22": {
     "type": "float",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -691,9 +691,9 @@
   },
   "b3_mutatie_ahn3_ahn4": {
     "type": "string",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -710,9 +710,9 @@
   },
   "b3_nodata_fractie_ahn3": {
     "type": "float",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -729,9 +729,9 @@
   },
   "b3_nodata_fractie_ahn4": {
     "type": "float",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -748,9 +748,9 @@
   },
   "b3_nodata_radius_ahn3": {
     "type": "float",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -767,9 +767,9 @@
   },
   "b3_nodata_radius_ahn4": {
     "type": "float",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -786,9 +786,9 @@
   },
   "b3_pw_selectie_reden": {
     "type": "string",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -819,9 +819,9 @@
   },
   "b3_puntdichtheid_ahn3": {
     "type": "int",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -838,9 +838,9 @@
   },
   "b3_puntdichtheid_ahn4": {
     "type": "int",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -857,9 +857,9 @@
   },
   "b3_volume_lod12": {
     "type": "float",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -876,9 +876,9 @@
   },
   "b3_volume_lod13": {
     "type": "float",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -895,9 +895,9 @@
   },
   "b3_volume_lod22": {
     "type": "float",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -914,9 +914,9 @@
   },
   "b3_bag_bag_overlap": {
     "type": "float",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -933,9 +933,9 @@
   },
   "b3_opp_grond": {
     "type": "float",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -952,9 +952,9 @@
   },
   "b3_opp_dak_plat": {
     "type": "float",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -971,9 +971,9 @@
   },
   "b3_opp_dak_schuin": {
     "type": "float",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -990,9 +990,9 @@
   },
   "b3_opp_scheidingsmuur": {
     "type": "float",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -1009,9 +1009,9 @@
   },
   "b3_opp_buitenmuur": {
     "type": "float",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -1028,9 +1028,9 @@
   },
   "labels": {
     "type": "null",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "surface",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "surface",
     "precision": null,
     "documentation": {
       "en": {
@@ -1047,9 +1047,9 @@
   },
   "b3_bouwlagen": {
     "type": "int",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -1066,9 +1066,9 @@
   },
   "b3_kwaliteitsindicator": {
     "type": "string",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "feature",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "feature",
     "precision": null,
     "documentation": {
       "en": {
@@ -1085,9 +1085,9 @@
   },
   "b3_azimut": {
     "type": "float",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "surface",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "surface",
     "precision": null,
     "documentation": {
       "en": {
@@ -1104,9 +1104,9 @@
   },
   "b3_hellingshoek": {
     "type": "float",
-    "generating_software": null,
-    "null_valid": null,
-    "level": "surface",
+    "source": null,
+    "nullable": null,
+    "appliesTo": "surface",
     "precision": null,
     "documentation": {
       "en": {
