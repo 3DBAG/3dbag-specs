@@ -9,25 +9,23 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["int", "float", "bool", "string"],
-          "description": "Data type of the attribute"
+          "enum": ["int", "float", "bool", "string", "date", "datetime"],
+          "description": "Data type of the attribute."
         },
-        "generating_software": {
+        "source": {
           "type": "string",
-          "description": "Software used to generate this attribute"
+          "description": "The source of this attribute. It can be another data set like the BAG or a software that generates this attribute."
         },
-        "null_valid": {
+        "nullable": {
           "type": "boolean",
-          "description": "Whether null values are valid for this attribute"
+          "description": "Whether null values are valid for this attribute or they indicate an error in the process."
         },
-        "level": {
-          "type": "string",
-          "pattern": "^(feature|surface)(\\s*\\|\\s*(feature|surface))*$",
-          "description": "Level where this attribute applies - feature (whole building) or surface (single surface)"
+        "appliesTo": {
+          "enum": ["Building", "RoofSurface", "WallSurface", "GroundSurface", "ClosureSurface", "OuterCeilingSurface", "OuterFloorSurface", "InteriorWallSurface", "CeilingSurface", "FloorSurface"],
+          "description": "Level where this attribute applies"
         },
         "precision": {
-          "type": "integer",
-          "minimum": 0,
+          "type": ["integer", "null"],
           "description": "Precision for numeric values"
         },
         "documentation": {
@@ -46,7 +44,7 @@
           "description": "Multi-language documentation for the attribute"
         }
       },
-      "required": ["type", "level"],
+      "required": ["type", "source", "nullable", "appliesTo", "precision", "documentation"],
       "additionalProperties": false
     }
   },
