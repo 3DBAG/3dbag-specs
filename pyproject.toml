@@ -1,0 +1,44 @@
+[project]
+name = "3dbag-specs"
+version = "2025.07.14"
+description = "3DBAG specifications."
+readme = "README.md"
+authors = [{name = "Balázs Dukai", email = "balazs.dukai@3dgi.nl"}]
+license = {text = "MIT"}
+requires-python = ">=3.11"
+
+[project.urls]
+Repository = "https://github.com/3DBAG/3dbag-specs"
+
+[project.optional-dependencies]
+dev = [
+    "pytest~=8.3.4",
+    "bumpver~=2024.1130",
+    "jsonschema~=4.24.0"
+]
+
+[tool.uv]
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-format = false
+
+[tool.bumpver]
+current_version = "2025.07.14"
+version_pattern = "YYYY.MM.DD"
+commit_message = "bump version {old_version} -> {new_version}"
+tag_message = "{new_version}"
+tag_scope = "default"
+commit = true
+tag = true
+push = true
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = [
+    'current_version = "{version}"',
+    'version = "{version}"',
+]
