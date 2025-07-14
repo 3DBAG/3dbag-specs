@@ -1,7 +1,7 @@
-# 3DBAG Attributes Schema
+# 3DBAG Specifications
 
-Attribute schema of the 3DBAG.
+Attribute specification of the 3DBAG.
 
-`attributes.json`: The schema of each 3DBAG attribute.
+`attributes.json`: The specification of each 3DBAG attribute.
 
 `attributes.schema.json`: The schema of `attributes.json`.
