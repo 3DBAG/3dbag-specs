@@ -7,13 +7,13 @@
     "precision": null,
     "unit": "-",
     "documentation": {
-      "en": {
-        "description": "Buildingpart ID. A building can have multiple parts when it was cut into parts because of underground parts.",
-        "type": "nominal number"
+      "description": {
+        "nl": "Panddeel ID. Een pand kan meerdere delen hebben wanneer het is opgedeeld vanwege ondergrondse delen.",
+        "en": "Buildingpart ID. A building can have multiple parts when it was cut into parts because of underground parts."
       },
-      "nl": {
-        "description": "Panddeel ID. Een pand kan meerdere delen hebben wanneer het is opgedeeld vanwege ondergrondse delen.",
-        "type": "nominaal getal"
+      "type": {
+        "nl": "nominaal getal",
+        "en": "nominal number"
       }
     }
   },
@@ -25,13 +25,13 @@
     "precision": null,
     "unit": "-",
     "documentation": {
-      "en": {
-        "description": "Dak Deel ID. Roofpart ID.",
-        "type": "nominal number"
+      "description": {
+        "nl": "Dakdeel ID.",
+        "en": "Dak Deel ID. Roofpart ID."
       },
-      "nl": {
-        "description": "Dakdeel ID.",
-        "type": "nominaal getal"
+      "type": {
+        "nl": "nominaal getal",
+        "en": "nominal number"
       }
     }
   },
@@ -43,13 +43,13 @@
     "precision": null,
     "unit": "-",
     "documentation": {
-      "en": {
-        "description": "ID of a building.",
-        "type": "text"
+      "description": {
+        "nl": "De unieke BAG aanduiding van een pand.",
+        "en": "ID of a building."
       },
-      "nl": {
-        "description": "De unieke BAG aanduiding van een pand.",
-        "type": "tekst"
+      "type": {
+        "nl": "tekst",
+        "en": "text"
       }
     }
   },
@@ -61,13 +61,13 @@
     "precision": null,
     "unit": "`YYYY`",
     "documentation": {
-      "en": {
-        "description": "Building construction year.",
-        "type": "date"
+      "description": {
+        "nl": "De aanduiding van het jaar waarin een pand oorspronkelijk als bouwkundig gereed is of zal worden opgeleverd.",
+        "en": "Building construction year."
       },
-      "nl": {
-        "description": "De aanduiding van het jaar waarin een pand oorspronkelijk als bouwkundig gereed is of zal worden opgeleverd.",
-        "type": "datum"
+      "type": {
+        "nl": "datum",
+        "en": "date"
       }
     }
   },
@@ -79,13 +79,13 @@
     "precision": null,
     "unit": "-",
     "documentation": {
-      "en": {
-        "description": "The current fase in the buildings life-cycle.",
-        "type": "categorical"
+      "description": {
+        "nl": "De fase van de levenscyclus van een pand, waarin het betreffende pand zich bevindt.",
+        "en": "The current fase in the buildings life-cycle."
       },
-      "nl": {
-        "description": "De fase van de levenscyclus van een pand, waarin het betreffende pand zich bevindt.",
-        "type": "categorisch"
+      "type": {
+        "nl": "categorisch",
+        "en": "categorical"
       }
     }
   },
@@ -97,13 +97,13 @@
     "precision": null,
     "unit": "true/false",
     "documentation": {
-      "en": {
-        "description": "Indicates that the buildings has included in the BAG registration.",
-        "type": "categorical"
+      "description": {
+        "nl": "Een aanduiding waarmee kan worden aangegeven dat een pand in de registratie is opgenomen als gevolg van een feitelijke constatering, zonder dat er op het moment van opname sprake was van een regulier brondocument voor deze opname.",
+        "en": "Indicates that the buildings has included in the BAG registration."
       },
-      "nl": {
-        "description": "Een aanduiding waarmee kan worden aangegeven dat een pand in de registratie is opgenomen als gevolg van een feitelijke constatering, zonder dat er op het moment van opname sprake was van een regulier brondocument voor deze opname.",
-        "type": "categorisch"
+      "type": {
+        "nl": "categorisch",
+        "en": "categorical"
       }
     }
   },
@@ -115,13 +115,13 @@
     "precision": null,
     "unit": "`YYYY-MM-DD`",
     "documentation": {
-      "en": {
-        "description": "Building registration date.",
-        "type": "date"
+      "description": {
+        "nl": "De datum waarop het brondocument is vastgesteld, op basis waarvan een opname, mutatie of een verwijdering van gegevens ten aanzien van een pand heeft plaatsgevonden.",
+        "en": "Building registration date."
       },
-      "nl": {
-        "description": "De datum waarop het brondocument is vastgesteld, op basis waarvan een opname, mutatie of een verwijdering van gegevens ten aanzien van een pand heeft plaatsgevonden.",
-        "type": "datum"
+      "type": {
+        "nl": "datum",
+        "en": "date"
       }
     }
   },
@@ -133,13 +133,13 @@
     "precision": null,
     "unit": "`YYYY-MM-DD`",
     "documentation": {
-      "en": {
-        "description": "Document number.",
-        "type": "text"
+      "description": {
+        "nl": "De unieke aanduiding van het brondocument op basis waarvan een opname, mutatie of een verwijdering van gegevens ten aanzien van een pand heeft plaatsgevonden, binnen een gemeente.",
+        "en": "Document number."
       },
-      "nl": {
-        "description": "De unieke aanduiding van het brondocument op basis waarvan een opname, mutatie of een verwijdering van gegevens ten aanzien van een pand heeft plaatsgevonden, binnen een gemeente.",
-        "type": "tekst"
+      "type": {
+        "nl": "tekst",
+        "en": "text"
       }
     }
   },
@@ -151,13 +151,13 @@
     "precision": null,
     "unit": "-",
     "documentation": {
-      "en": {
-        "description": "Relates to the building registration history and version.",
-        "type": "ordinal number"
+      "description": {
+        "nl": "Houdt verband met de geschiedenis van de pandregistratie en de versie.",
+        "en": "Relates to the building registration history and version."
       },
-      "nl": {
-        "description": "Houdt verband met de geschiedenis van de pandregistratie en de versie.",
-        "type": "ordinaal getal"
+      "type": {
+        "nl": "ordinaal getal",
+        "en": "ordinal number"
       }
     }
   },
@@ -169,13 +169,13 @@
     "precision": null,
     "unit": "`YYYY-MM-DD`",
     "documentation": {
-      "en": {
-        "description": "Relates to the building registration history and version.",
-        "type": "date"
+      "description": {
+        "nl": "De datum waarop een versie van een BAG-object geldig is in de werkelijkheid conform de ingangsdatum in het brondocument. Dit tijdstip wordt vastgelegd in de beginGeldigheid. Als er geen expliciete ingangsdatum van geldigheid is opgenomen, wordt de datum van het brondocument overgenomen.",
+        "en": "Relates to the building registration history and version."
       },
-      "nl": {
-        "description": "De datum waarop een versie van een BAG-object geldig is in de werkelijkheid conform de ingangsdatum in het brondocument. Dit tijdstip wordt vastgelegd in de beginGeldigheid. Als er geen expliciete ingangsdatum van geldigheid is opgenomen, wordt de datum van het brondocument overgenomen.",
-        "type": "datum"
+      "type": {
+        "nl": "datum",
+        "en": "date"
       }
     }
   },
@@ -187,13 +187,13 @@
     "precision": null,
     "unit": "`YYYY-MM-DD`",
     "documentation": {
-      "en": {
-        "description": "Relates to the building registration history and version.",
-        "type": "date"
+      "description": {
+        "nl": "De datum waarop de periode van geldigheid van een versie van een BAG-object eindigt. Bijvoorbeeld als gevolg van de vaststelling van een nieuw brondocument. Wanneer er geen tijdstip is ingevuld, dan is de versie nog geldig. Dit tijdstip wordt vastgelegd in de eindGeldigheid.",
+        "en": "Relates to the building registration history and version."
       },
-      "nl": {
-        "description": "De datum waarop de periode van geldigheid van een versie van een BAG-object eindigt. Bijvoorbeeld als gevolg van de vaststelling van een nieuw brondocument. Wanneer er geen tijdstip is ingevuld, dan is de versie nog geldig. Dit tijdstip wordt vastgelegd in de eindGeldigheid.",
-        "type": "datum"
+      "type": {
+        "nl": "datum",
+        "en": "date"
       }
     }
   },
@@ -205,13 +205,13 @@
     "precision": null,
     "unit": "`YYYY-MM-DDThh:mm:ss.sss`",
     "documentation": {
-      "en": {
-        "description": "Relates to the building registration history and version.",
-        "type": "date-time"
+      "description": {
+        "nl": "Houdt verband met de geschiedenis van de pandregistratie en de versie.",
+        "en": "Relates to the building registration history and version."
       },
-      "nl": {
-        "description": "Houdt verband met de geschiedenis van de pandregistratie en de versie.",
-        "type": "datum-tijd"
+      "type": {
+        "nl": "datum-tijd",
+        "en": "date-time"
       }
     }
   },
@@ -223,13 +223,13 @@
     "precision": null,
     "unit": "`YYYY-MM-DDThh:mm:ss.sss`",
     "documentation": {
-      "en": {
-        "description": "Relates to the building registration history and version.",
-        "type": "date-time"
+      "description": {
+        "nl": "Houdt verband met de geschiedenis van de pandregistratie en de versie.",
+        "en": "Relates to the building registration history and version."
       },
-      "nl": {
-        "description": "Houdt verband met de geschiedenis van de pandregistratie en de versie.",
-        "type": "datum-tijd"
+      "type": {
+        "nl": "datum-tijd",
+        "en": "date-time"
       }
     }
   },
@@ -241,13 +241,13 @@
     "precision": null,
     "unit": "`YYYY-MM-DDThh:mm:ss.sss`",
     "documentation": {
-      "en": {
-        "description": "Relates to the building registration history and version.",
-        "type": "date-time"
+      "description": {
+        "nl": "Houdt verband met de geschiedenis van de pandregistratie en de versie.",
+        "en": "Relates to the building registration history and version."
       },
-      "nl": {
-        "description": "Houdt verband met de geschiedenis van de pandregistratie en de versie.",
-        "type": "datum-tijd"
+      "type": {
+        "nl": "datum-tijd",
+        "en": "date-time"
       }
     }
   },
@@ -259,13 +259,13 @@
     "precision": null,
     "unit": "`YYYY-MM-DDThh:mm:ss.sss`",
     "documentation": {
-      "en": {
-        "description": "Relates to the building registration history and version.",
-        "type": "date-time"
+      "description": {
+        "nl": "Dit is het tijdstip waarop een versie van een BAG-object is opgenomen in de registratie van de landelijke voorziening. De gegevens komen daarmee beschikbaar voor afnemers.",
+        "en": "Relates to the building registration history and version."
       },
-      "nl": {
-        "description": "Dit is het tijdstip waarop een versie van een BAG-object is opgenomen in de registratie van de landelijke voorziening. De gegevens komen daarmee beschikbaar voor afnemers.",
-        "type": "datum-tijd"
+      "type": {
+        "nl": "datum-tijd",
+        "en": "date-time"
       }
     }
   },
@@ -277,13 +277,13 @@
     "precision": null,
     "unit": "`YYYY-MM-DDThh:mm:ss.sss`",
     "documentation": {
-      "en": {
-        "description": "Relates to the building registration history and version.",
-        "type": "date-time"
+      "description": {
+        "nl": "Houdt verband met de geschiedenis van de pandregistratie en de versie.",
+        "en": "Relates to the building registration history and version."
       },
-      "nl": {
-        "description": "Houdt verband met de geschiedenis van de pandregistratie en de versie.",
-        "type": "datum-tijd"
+      "type": {
+        "nl": "datum-tijd",
+        "en": "date-time"
       }
     }
   },
@@ -295,13 +295,13 @@
     "precision": null,
     "unit": "`YYYY-MM-DDThh:mm:ss.sss`",
     "documentation": {
-      "en": {
-        "description": "Relates to the building registration history and version.",
-        "type": "date-time"
+      "description": {
+        "nl": "Houdt verband met de geschiedenis van de pandregistratie en de versie.",
+        "en": "Relates to the building registration history and version."
       },
-      "nl": {
-        "description": "Houdt verband met de geschiedenis van de pandregistratie en de versie.",
-        "type": "datum-tijd"
+      "type": {
+        "nl": "datum-tijd",
+        "en": "date-time"
       }
     }
   },
@@ -313,13 +313,13 @@
     "precision": null,
     "unit": "`YYYY-MM-DDThh:mm:ss.sss`",
     "documentation": {
-      "en": {
-        "description": "Relates to the building registration history and version.",
-        "type": "date-time"
+      "description": {
+        "nl": "Houdt verband met de geschiedenis van de pandregistratie en de versie.",
+        "en": "Relates to the building registration history and version."
       },
-      "nl": {
-        "description": "Houdt verband met de geschiedenis van de pandregistratie en de versie.",
-        "type": "datum-tijd"
+      "type": {
+        "nl": "datum-tijd",
+        "en": "date-time"
       }
     }
   },
@@ -331,13 +331,13 @@
     "precision": null,
     "unit": "metre",
     "documentation": {
-      "en": {
-        "description": "Elevation above sea level (Amsterdam Ordnance Datum) at the ground level of the building. Calculated as the 5th percentile of the ground points found within a 4 meter radius of the building.",
-        "type": "real number"
+      "description": {
+        "nl": "Elevatie boven zeeniveau (NAP) op het maaiveldniveau van het pand. Berekend als het 5e percentiel van de maaiveldpunten gevonden binnen een radius van 4 meter van het pand.",
+        "en": "Elevation above sea level (Amsterdam Ordnance Datum) at the ground level of the building. Calculated as the 5th percentile of the ground points found within a 4 meter radius of the building."
       },
-      "nl": {
-        "description": "Elevatie boven zeeniveau (NAP) op het maaiveldniveau van het pand. Berekend als het 5e percentiel van de maaiveldpunten gevonden binnen een radius van 4 meter van het pand.",
-        "type": "reëel getal"
+      "type": {
+        "nl": "reëel getal",
+        "en": "real number"
       }
     }
   },
@@ -350,34 +350,34 @@
     "unit": "-",
     "values": {
       "slanted": {
-        "en": "Roof with at least one slanted surface.",
-        "nl": "Dat met ten minste één schuin oppervlak."
+        "nl": "Dat met ten minste één schuin oppervlak.",
+        "en": "Roof with at least one slanted surface."
       },
       "multiple horizontal": {
-        "en": "Roof with multiple, only horizontal surfaces.",
-        "nl": "Dak met meerdere, uitsluitend horizontale oppervlakken."
+        "nl": "Dak met meerdere, uitsluitend horizontale oppervlakken.",
+        "en": "Roof with multiple, only horizontal surfaces."
       },
       "single horizontal": {
-        "en": "Roof with a single horizontal surface.",
-        "nl": "Dak met een enkel horizontaal oppervlak."
+        "nl": "Dak met een enkel horizontaal oppervlak.",
+        "en": "Roof with a single horizontal surface."
       },
       "no points": {
-        "en": "No point was found for the building.",
-        "nl": "Er was geen punt gevonden voor het gebouw."
+        "nl": "Er was geen punt gevonden voor het gebouw.",
+        "en": "No point was found for the building."
       },
       "could not detect": {
-        "en": "Could not detect a roof surface, even though points were found.",
-        "nl": "Kon geen dakoppervlak detecteren, ondanks dat er punten gevonden waren."
+        "nl": "Kon geen dakoppervlak detecteren, ondanks dat er punten gevonden waren.",
+        "en": "Could not detect a roof surface, even though points were found."
       }
     },
     "documentation": {
-      "en": {
-        "description": "Roof type of the building.",
-        "type": "categorical"
+      "description": {
+        "nl": "Daktype van het pand.",
+        "en": "Roof type of the building."
       },
-      "nl": {
-        "description": "Daktype van het pand.",
-        "type": "categorisch"
+      "type": {
+        "nl": "categorisch",
+        "en": "categorical"
       }
     }
   },
@@ -389,13 +389,13 @@
     "precision": null,
     "unit": "`YYYY`",
     "documentation": {
-      "en": {
-        "description": "Acquisition year of the point cloud. This is determined by looking at the GPS timestamps on the AHN points for the building. In case good GPS timestamps are not available the file creation date of the point cloud file is used.",
-        "type": "date"
+      "description": {
+        "nl": "Inwinjaar van de bron puntenwolk. Dit is bepaald door naar de GPS tijd van de AHN punten voor dit pand. Indien een goede GPS tijd niet beschikbaar is, wordt de file creation date van het puntenwolk bestand gebruikt.",
+        "en": "Acquisition year of the point cloud. This is determined by looking at the GPS timestamps on the AHN points for the building. In case good GPS timestamps are not available the file creation date of the point cloud file is used."
       },
-      "nl": {
-        "description": "Inwinjaar van de bron puntenwolk. Dit is bepaald door naar de GPS tijd van de AHN punten voor dit pand. Indien een goede GPS tijd niet beschikbaar is, wordt de file creation date van het puntenwolk bestand gebruikt.",
-        "type": "datum"
+      "type": {
+        "nl": "datum",
+        "en": "date"
       }
     }
   },
@@ -407,13 +407,13 @@
     "precision": null,
     "unit": "-",
     "documentation": {
-      "en": {
-        "description": "Source of the point cloud, eg. AHN3 or AHN4.",
-        "type": "text"
+      "description": {
+        "nl": "Bron van de puntenwolk, bijv. AHN3 of AHN4.",
+        "en": "Source of the point cloud, eg. AHN3 or AHN4."
       },
-      "nl": {
-        "description": "Bron van de puntenwolk, bijv. AHN3 of AHN4.",
-        "type": "tekst"
+      "type": {
+        "nl": "tekst",
+        "en": "text"
       }
     }
   },
@@ -425,13 +425,13 @@
     "precision": null,
     "unit": "true/false",
     "documentation": {
-      "en": {
-        "description": "The building is greenhouse or warehouse (according to TOP10NL) or has an area of over 70000 square meters.",
-        "type": "categorical"
+      "description": {
+        "nl": "Het gebouw is een kas of een warenhuis volgens de TOP10NL of heeft een oppervlakte van meer dan 70000 vierkante meter.",
+        "en": "The building is greenhouse or warehouse (according to TOP10NL) or has an area of over 70000 square meters."
       },
-      "nl": {
-        "description": "Het gebouw is een kas of een warenhuis volgens de TOP10NL of heeft een oppervlakte van meer dan 70000 vierkante meter.",
-        "type": "categorisch"
+      "type": {
+        "nl": "categorisch",
+        "en": "categorical"
       }
     }
   },
@@ -443,13 +443,13 @@
     "precision": null,
     "unit": "null",
     "documentation": {
-      "en": {
-        "description": "Indicates whether full LoD1.2/LoD1.3/LoD2.2 reconstruction was skipped for this feature.",
-        "type": "null"
+      "description": {
+        "nl": "Geeft aan of de volledige LoD1.2/LoD1.3/LoD2.2 reconstructie is overgeslagen voor het pand.",
+        "en": "Indicates whether full LoD1.2/LoD1.3/LoD2.2 reconstruction was skipped for this feature."
       },
-      "nl": {
-        "description": "Geeft aan of de volledige LoD1.2/LoD1.3/LoD2.2 reconstructie is overgeslagen voor het pand.",
-        "type": "null"
+      "type": {
+        "nl": "null",
+        "en": "null"
       }
     }
   },
@@ -461,13 +461,13 @@
     "precision": null,
     "unit": "metre",
     "documentation": {
-      "en": {
-        "description": "Minimum elevation on roof surface based on reconstructed 3D model in LoD2.2. Given as elevation above sea level (NAP).",
-        "type": "real number"
+      "description": {
+        "nl": "Minimumhoogte op dakdeel gebaseerd op het gereconstrueerde 3D-model in LoD2.2. Gegeven als hoogte boven zeeniveau (NAP).",
+        "en": "Minimum elevation on roof surface based on reconstructed 3D model in LoD2.2. Given as elevation above sea level (NAP)."
       },
-      "nl": {
-        "description": "Minimumhoogte op dakdeel gebaseerd op het gereconstrueerde 3D-model in LoD2.2. Gegeven als hoogte boven zeeniveau (NAP).",
-        "type": "reëel getal"
+      "type": {
+        "nl": "reëel getal",
+        "en": "real number"
       }
     }
   },
@@ -479,13 +479,13 @@
     "precision": null,
     "unit": "metre",
     "documentation": {
-      "en": {
-        "description": "Median elevation on roof surface based on reconstructed 3D model in LoD2.2. Given as elevation above sea level (NAP).",
-        "type": "real number"
+      "description": {
+        "nl": "Medianhoogte op dakdeel gebaseerd op het gereconstrueerde 3D-model in LoD2.2. Gegeven als hoogte boven zeeniveau (NAP).",
+        "en": "Median elevation on roof surface based on reconstructed 3D model in LoD2.2. Given as elevation above sea level (NAP)."
       },
-      "nl": {
-        "description": "Medianhoogte op dakdeel gebaseerd op het gereconstrueerde 3D-model in LoD2.2. Gegeven als hoogte boven zeeniveau (NAP).",
-        "type": "reëel getal"
+      "type": {
+        "nl": "reëel getal",
+        "en": "real number"
       }
     }
   },
@@ -497,13 +497,13 @@
     "precision": null,
     "unit": "metre",
     "documentation": {
-      "en": {
-        "description": "The 70th percentile elevation on roof surface based on reconstructed 3D model in LoD2.2. Given as elevation above sea level (NAP).",
-        "type": "real number"
+      "description": {
+        "nl": "De 70e percentielhoogte op dakdeel gebaseerd op het gereconstrueerde 3D-model in LoD2.2. Gegeven als hoogte boven zeeniveau (NAP).",
+        "en": "The 70th percentile elevation on roof surface based on reconstructed 3D model in LoD2.2. Given as elevation above sea level (NAP)."
       },
-      "nl": {
-        "description": "De 70e percentielhoogte op dakdeel gebaseerd op het gereconstrueerde 3D-model in LoD2.2. Gegeven als hoogte boven zeeniveau (NAP).",
-        "type": "reëel getal"
+      "type": {
+        "nl": "reëel getal",
+        "en": "real number"
       }
     }
   },
@@ -515,13 +515,13 @@
     "precision": null,
     "unit": "metre",
     "documentation": {
-      "en": {
-        "description": "Maximum elevation on roof surface based on reconstructed 3D model in LoD2.2. Given as elevation above sea level (NAP). Unit: metre.",
-        "type": "real number"
+      "description": {
+        "nl": "Maximumhoogte op dakdeel gebaseerd op het gereconstrueerde 3D-model in LoD2.2. Gegeven als hoogte boven zeeniveau (NAP). Eenheid: meter.",
+        "en": "Maximum elevation on roof surface based on reconstructed 3D model in LoD2.2. Given as elevation above sea level (NAP). Unit: metre."
       },
-      "nl": {
-        "description": "Maximumhoogte op dakdeel gebaseerd op het gereconstrueerde 3D-model in LoD2.2. Gegeven als hoogte boven zeeniveau (NAP). Eenheid: meter.",
-        "type": "reëel getal"
+      "type": {
+        "nl": "reëel getal",
+        "en": "real number"
       }
     }
   },
@@ -533,13 +533,13 @@
     "precision": null,
     "unit": "-",
     "documentation": {
-      "en": {
-        "description": "[Val3dity error codes](https://val3dity.readthedocs.io/en/latest/errors) for the LoD1.2 3D model. Empty list means valid geometry.",
-        "type": "list"
+      "description": {
+        "nl": "[Val3dity foutcodes](https://val3dity.readthedocs.io/en/latest/errors) voor het LoD1.2 3D model. Lege lijst betekent valide geometry.",
+        "en": "[Val3dity error codes](https://val3dity.readthedocs.io/en/latest/errors) for the LoD1.2 3D model. Empty list means valid geometry."
       },
-      "nl": {
-        "description": "[Val3dity foutcodes](https://val3dity.readthedocs.io/en/latest/errors) voor het LoD1.2 3D model. Lege lijst betekent valide geometry.",
-        "type": "lijst"
+      "type": {
+        "nl": "lijst",
+        "en": "list"
       }
     }
   },
@@ -551,13 +551,13 @@
     "precision": null,
     "unit": "-",
     "documentation": {
-      "en": {
-        "description": "[Val3dity error codes](https://val3dity.readthedocs.io/en/latest/errors) for the LoD1.3 3D model. Empty list means valid geometry.",
-        "type": "list"
+      "description": {
+        "nl": "[Val3dity foutcodes](https://val3dity.readthedocs.io/en/latest/errors) voor het LoD1.3 3D model. Lege lijst betekent valide geometry.",
+        "en": "[Val3dity error codes](https://val3dity.readthedocs.io/en/latest/errors) for the LoD1.3 3D model. Empty list means valid geometry."
       },
-      "nl": {
-        "description": "[Val3dity foutcodes](https://val3dity.readthedocs.io/en/latest/errors) voor het LoD1.3 3D model. Lege lijst betekent valide geometry.",
-        "type": "lijst"
+      "type": {
+        "nl": "lijst",
+        "en": "list"
       }
     }
   },
@@ -569,13 +569,13 @@
     "precision": null,
     "unit": "-",
     "documentation": {
-      "en": {
-        "description": "[Val3dity error codes](https://val3dity.readthedocs.io/en/latest/errors) for the LoD2.2 3D model. Empty list means valid geometry.",
-        "type": "list"
+      "description": {
+        "nl": "[Val3dity foutcodes](https://val3dity.readthedocs.io/en/latest/errors) voor het LoD2.2 3D model. Lege lijst betekent valide geometry.",
+        "en": "[Val3dity error codes](https://val3dity.readthedocs.io/en/latest/errors) for the LoD2.2 3D model. Empty list means valid geometry."
       },
-      "nl": {
-        "description": "[Val3dity foutcodes](https://val3dity.readthedocs.io/en/latest/errors) voor het LoD2.2 3D model. Lege lijst betekent valide geometry.",
-        "type": "lijst"
+      "type": {
+        "nl": "lijst",
+        "en": "list"
       }
     }
   },
@@ -587,13 +587,13 @@
     "precision": null,
     "unit": "metre",
     "documentation": {
-      "en": {
-        "description": "Root Mean Square Error of the 3D distances between the point cloud and the LoD1.2 model. Unit: metre.",
-        "type": "real number"
+      "description": {
+        "nl": "Root Mean Square Error van de 3D afstanden tussen de puntenwolk en het LoD1.2 model. Eenheid: meter.",
+        "en": "Root Mean Square Error of the 3D distances between the point cloud and the LoD1.2 model. Unit: metre."
       },
-      "nl": {
-        "description": "Root Mean Square Error van de 3D afstanden tussen de puntenwolk en het LoD1.2 model. Eenheid: meter.",
-        "type": "reëel getal"
+      "type": {
+        "nl": "reëel getal",
+        "en": "real number"
       }
     }
   },
@@ -605,13 +605,13 @@
     "precision": null,
     "unit": "metre",
     "documentation": {
-      "en": {
-        "description": "Root Mean Square Error of the 3D distances between the point cloud and the LoD1.3 model. Unit: metre.",
-        "type": "real number"
+      "description": {
+        "nl": "Root Mean Square Error van de 3D afstanden tussen de puntenwolk en het LoD1.3 model. Eenheid: meter.",
+        "en": "Root Mean Square Error of the 3D distances between the point cloud and the LoD1.3 model. Unit: metre."
       },
-      "nl": {
-        "description": "Root Mean Square Error van de 3D afstanden tussen de puntenwolk en het LoD1.3 model. Eenheid: meter.",
-        "type": "reëel getal"
+      "type": {
+        "nl": "reëel getal",
+        "en": "real number"
       }
     }
   },
@@ -623,13 +623,13 @@
     "precision": null,
     "unit": "metre",
     "documentation": {
-      "en": {
-        "description": "Root Mean Square Error of the 3D distances between the point cloud and the LoD2.2 model. Unit: metre.",
-        "type": "real number"
+      "description": {
+        "nl": "Root Mean Square Error van de 3D afstanden tussen de puntenwolk en het LoD2.2 model. Eenheid: meter.",
+        "en": "Root Mean Square Error of the 3D distances between the point cloud and the LoD2.2 model. Unit: metre."
       },
-      "nl": {
-        "description": "Root Mean Square Error van de 3D afstanden tussen de puntenwolk en het LoD2.2 model. Eenheid: meter.",
-        "type": "reëel getal"
+      "type": {
+        "nl": "reëel getal",
+        "en": "real number"
       }
     }
   },
@@ -641,13 +641,13 @@
     "precision": null,
     "unit": "true/false",
     "documentation": {
-      "en": {
-        "description": "`true` if there was a significant change detected in the building between the AHN3 and AHN4 pointclouds.",
-        "type": "categorical"
+      "description": {
+        "nl": "`true` als er een significante verandering is gedetecteerd in het pand tussen de AHN3 en AHN4 puntenwolken.",
+        "en": "`true` if there was a significant change detected in the building between the AHN3 and AHN4 pointclouds."
       },
-      "nl": {
-        "description": "`true` als er een significante verandering is gedetecteerd in het pand tussen de AHN3 en AHN4 puntenwolken.",
-        "type": "categorisch"
+      "type": {
+        "nl": "categorisch",
+        "en": "categorical"
       }
     }
   },
@@ -659,13 +659,13 @@
     "precision": null,
     "unit": "-",
     "documentation": {
-      "en": {
-        "description": "Fraction of the footprint area that has no point data in the AHN3 point cloud. Only points classified as building or ground are considered.",
-        "type": "real number"
+      "description": {
+        "nl": "Fractie van het BAG polygon met onvoldoende AHN3 punten dekking. Alleen punten geclassificeerd als gebouw of grond worden gebruikt.",
+        "en": "Fraction of the footprint area that has no point data in the AHN3 point cloud. Only points classified as building or ground are considered."
       },
-      "nl": {
-        "description": "Fractie van het BAG polygon met onvoldoende AHN3 punten dekking. Alleen punten geclassificeerd als gebouw of grond worden gebruikt.",
-        "type": "reëel getal"
+      "type": {
+        "nl": "reëel getal",
+        "en": "real number"
       }
     }
   },
@@ -677,13 +677,13 @@
     "precision": null,
     "unit": "-",
     "documentation": {
-      "en": {
-        "description": "Fraction of the footprint area that has no point data in the AHN4 point cloud. Only points classified as building or ground are considered.",
-        "type": "real number"
+      "description": {
+        "nl": "Fractie van het BAG polygon met onvoldoende AHN4 punten dekking. Alleen punten geclassificeerd als gebouw of grond worden gebruikt.",
+        "en": "Fraction of the footprint area that has no point data in the AHN4 point cloud. Only points classified as building or ground are considered."
       },
-      "nl": {
-        "description": "Fractie van het BAG polygon met onvoldoende AHN4 punten dekking. Alleen punten geclassificeerd als gebouw of grond worden gebruikt.",
-        "type": "reëel getal"
+      "type": {
+        "nl": "reëel getal",
+        "en": "real number"
       }
     }
   },
@@ -695,13 +695,13 @@
     "precision": null,
     "unit": "metre",
     "documentation": {
-      "en": {
-        "description": "Radius of the largest circle inside the BAG polygon without any AHN3 points. Only points classified as building or ground are considered.",
-        "type": "real number"
+      "description": {
+        "nl": "Straal van de grootste cirkel die binnen het BAG polygoon valt en geen AHN3 punten bevat. Alleen punten geclassificeerd als gebouw of grond worden gebruikt.",
+        "en": "Radius of the largest circle inside the BAG polygon without any AHN3 points. Only points classified as building or ground are considered."
       },
-      "nl": {
-        "description": "Straal van de grootste cirkel die binnen het BAG polygoon valt en geen AHN3 punten bevat. Alleen punten geclassificeerd als gebouw of grond worden gebruikt.",
-        "type": "reëel getal"
+      "type": {
+        "nl": "reëel getal",
+        "en": "real number"
       }
     }
   },
@@ -713,13 +713,13 @@
     "precision": null,
     "unit": "metre",
     "documentation": {
-      "en": {
-        "description": "Radius of the largest circle inside the BAG polygon without any AHN4 points. Only points classified as building or ground are considered.",
-        "type": "real number"
+      "description": {
+        "nl": "Straal van de grootste cirkel die binnen het BAG polygoon valt en geen AHN4 punten bevat. Alleen punten geclassificeerd als gebouw of grond worden gebruikt.",
+        "en": "Radius of the largest circle inside the BAG polygon without any AHN4 points. Only points classified as building or ground are considered."
       },
-      "nl": {
-        "description": "Straal van de grootste cirkel die binnen het BAG polygoon valt en geen AHN4 punten bevat. Alleen punten geclassificeerd als gebouw of grond worden gebruikt.",
-        "type": "reëel getal"
+      "type": {
+        "nl": "reëel getal",
+        "en": "real number"
       }
     }
   },
@@ -732,34 +732,34 @@
     "unit": "-",
     "values": {
       "PREFERRED_AND_LATEST": {
-        "en": "The selected point cloud has a good point coverage and there are no newer point clouds available that also have good point coverage.",
-        "nl": "De geselecteerde puntenwolk heeft een goede puntdekking en er is geen recentere puntenwolk met voldoende puntdekking beschikbaar."
+        "nl": "De geselecteerde puntenwolk heeft een goede puntdekking en er is geen recentere puntenwolk met voldoende puntdekking beschikbaar.",
+        "en": "The selected point cloud has a good point coverage and there are no newer point clouds available that also have good point coverage."
       },
       "PREFERRED_NOT_LATEST": {
-        "en": "The selected point cloud has a good point coverage and there is a newer point cloud available that also has good coverage. Newer pointcloud was not selected because no mutation was detected.",
-        "nl": "De geselecteerde puntenwolk heeft een goede point puntdekking en er is een recentere puntenwolk met voldoende puntdekking beschikbaar. De nieuwere puntewolk is echter niet geselecteerd omdat er geen mutatie is gedecteerd."
+        "nl": "De geselecteerde puntenwolk heeft een goede point puntdekking en er is een recentere puntenwolk met voldoende puntdekking beschikbaar. De nieuwere puntewolk is echter niet geselecteerd omdat er geen mutatie is gedecteerd.",
+        "en": "The selected point cloud has a good point coverage and there is a newer point cloud available that also has good coverage. Newer pointcloud was not selected because no mutation was detected."
       },
       "LATEST_WITH_MUTATION": {
-        "en": "The selected point cloud has a good point coverage and a mutation was detected compared to the older pointclouds.",
-        "nl": "De geselecteerde puntenwolk heeft een goede puntdekking en er is een mutatie ten opzichte van een oudere puntenwolk gedetecteerd."
+        "nl": "De geselecteerde puntenwolk heeft een goede puntdekking en er is een mutatie ten opzichte van een oudere puntenwolk gedetecteerd.",
+        "en": "The selected point cloud has a good point coverage and a mutation was detected compared to the older pointclouds."
       },
       "_HIGHEST_YET_INSUFFICIENT_COVERAGE": {
-        "en": "The selected point cloud has possible poor point coverage. Nonetheless, it is the point cloud with the highest point coverage among all available point clouds.",
-        "nl": "De geselecteerde puntenwolk heeft hoogste puntdekking van alle kandidaat puntenwolken, maar de puntdekking is alsnog mogelijk niet voldoende. Dit gebouw vertoont mogelijk reconstructie fouten."
+        "nl": "De geselecteerde puntenwolk heeft hoogste puntdekking van alle kandidaat puntenwolken, maar de puntdekking is alsnog mogelijk niet voldoende. Dit gebouw vertoont mogelijk reconstructie fouten.",
+        "en": "The selected point cloud has possible poor point coverage. Nonetheless, it is the point cloud with the highest point coverage among all available point clouds."
       },
       "_LATEST_BUT_OUTDATED": {
-        "en": "The selected pointcloud is the latest one available, but it may be outdated for this building. This happens when the year of construction is equal or later than the point cloud acquisition date.",
-        "nl": "De geselecteerde puntenwolk is de meerst recente, maar is mogelijk alsnog te oud voor dit pand. Dit kan gebeurt als het oorspronkelijk bouwjaar gelijk aan of jonger is dan het inwin jaar van de puntenwolk."
+        "nl": "De geselecteerde puntenwolk is de meerst recente, maar is mogelijk alsnog te oud voor dit pand. Dit kan gebeurt als het oorspronkelijk bouwjaar gelijk aan of jonger is dan het inwin jaar van de puntenwolk.",
+        "en": "The selected pointcloud is the latest one available, but it may be outdated for this building. This happens when the year of construction is equal or later than the point cloud acquisition date."
       }
     },
     "documentation": {
-      "en": {
-        "description": "Provides information about the pointcloud selection indicated in the `pw_bron` attribute.",
-        "type": "categorical"
+      "description": {
+        "nl": "Geeft achtergrond informatie met betrekking tot de puntenwolk selectie (zie `pw_bron` attribuut).",
+        "en": "Provides information about the pointcloud selection indicated in the `pw_bron` attribute."
       },
-      "nl": {
-        "description": "Geeft achtergrond informatie met betrekking tot de puntenwolk selectie (zie `pw_bron` attribuut).",
-        "type": "categorisch"
+      "type": {
+        "nl": "categorisch",
+        "en": "categorical"
       }
     }
   },
@@ -771,13 +771,13 @@
     "precision": null,
     "unit": "points per square metre",
     "documentation": {
-      "en": {
-        "description": "Density of the AHN3 point cloud on BAG polygon. Only points classified as building or ground are considered.",
-        "type": "nominal number"
+      "description": {
+        "nl": "Puntdichtheid van de AHN3-puntenwolk voor het pand. Alleen punten geclassificeerd als gebouw of grond worden in beschouwing genomen.",
+        "en": "Density of the AHN3 point cloud on BAG polygon. Only points classified as building or ground are considered."
       },
-      "nl": {
-        "description": "Puntdichtheid van de AHN3-puntenwolk voor het pand. Alleen punten geclassificeerd als gebouw of grond worden in beschouwing genomen.",
-        "type": "nominaal getal"
+      "type": {
+        "nl": "nominaal getal",
+        "en": "nominal number"
       }
     }
   },
@@ -789,13 +789,13 @@
     "precision": null,
     "unit": "points per square metre",
     "documentation": {
-      "en": {
-        "description": "Density of the AHN4 point cloud on BAG polygon. Only points classified as building or ground are considered. Unit: points per square metre.",
-        "type": "nominal number"
+      "description": {
+        "nl": "Puntdichtheid van de AHN4-puntenwolk voor het pand. Alleen punten geclassificeerd als gebouw of grond worden in beschouwing genomen. Eenheid: punten per vierkante meter.",
+        "en": "Density of the AHN4 point cloud on BAG polygon. Only points classified as building or ground are considered. Unit: points per square metre."
       },
-      "nl": {
-        "description": "Puntdichtheid van de AHN4-puntenwolk voor het pand. Alleen punten geclassificeerd als gebouw of grond worden in beschouwing genomen. Eenheid: punten per vierkante meter.",
-        "type": "nominaal getal"
+      "type": {
+        "nl": "nominaal getal",
+        "en": "nominal number"
       }
     }
   },
@@ -807,13 +807,13 @@
     "precision": null,
     "unit": "cubic metre",
     "documentation": {
-      "en": {
-        "description": "Volume of the LoD1.2 model. Unit: cubic metre.",
-        "type": "real number"
+      "description": {
+        "nl": "Volume van het LoD1.2-model. Eenheid: kubieke meter.",
+        "en": "Volume of the LoD1.2 model. Unit: cubic metre."
       },
-      "nl": {
-        "description": "Volume van het LoD1.2-model. Eenheid: kubieke meter.",
-        "type": "reëel getal"
+      "type": {
+        "nl": "reëel getal",
+        "en": "real number"
       }
     }
   },
@@ -825,13 +825,13 @@
     "precision": null,
     "unit": "cubic metre",
     "documentation": {
-      "en": {
-        "description": "Volume of the LoD1.3 model. Unit: cubic metre.",
-        "type": "real number"
+      "description": {
+        "nl": "Volume van het LoD1.3-model. Eenheid: kubieke meter.",
+        "en": "Volume of the LoD1.3 model. Unit: cubic metre."
       },
-      "nl": {
-        "description": "Volume van het LoD1.3-model. Eenheid: kubieke meter.",
-        "type": "reëel getal"
+      "type": {
+        "nl": "reëel getal",
+        "en": "real number"
       }
     }
   },
@@ -843,13 +843,13 @@
     "precision": null,
     "unit": "cubic metre",
     "documentation": {
-      "en": {
-        "description": "Volume of the LoD2.2 model. Unit: cubic metre.",
-        "type": "real number"
+      "description": {
+        "nl": "Volume van het LoD2.2-model. Eenheid: kubieke meter.",
+        "en": "Volume of the LoD2.2 model. Unit: cubic metre."
       },
-      "nl": {
-        "description": "Volume van het LoD2.2-model. Eenheid: kubieke meter.",
-        "type": "reëel getal"
+      "type": {
+        "nl": "reëel getal",
+        "en": "real number"
       }
     }
   },
@@ -861,13 +861,13 @@
     "precision": null,
     "unit": "square metre",
     "documentation": {
-      "en": {
-        "description": "The total overlap area of BAG polygon with other BAG polygons. Unit: square metre.",
-        "type": "real number"
+      "description": {
+        "nl": "Het oppervlakte van overlap van dit BAG polygon met andere BAG polygonen. Eenheid: vierkante meter.",
+        "en": "The total overlap area of BAG polygon with other BAG polygons. Unit: square metre."
       },
-      "nl": {
-        "description": "Het oppervlakte van overlap van dit BAG polygon met andere BAG polygonen. Eenheid: vierkante meter.",
-        "type": "reëel getal"
+      "type": {
+        "nl": "reëel getal",
+        "en": "real number"
       }
     }
   },
@@ -879,13 +879,13 @@
     "precision": null,
     "unit": "square metre",
     "documentation": {
-      "en": {
-        "description": "Total ground floor area. Unit: square metre.",
-        "type": "real number"
+      "description": {
+        "nl": "Totale oppervlakte begane grond. Eenheid: vierkante meter.",
+        "en": "Total ground floor area. Unit: square metre."
       },
-      "nl": {
-        "description": "Totale oppervlakte begane grond. Eenheid: vierkante meter.",
-        "type": "reëel getal"
+      "type": {
+        "nl": "reëel getal",
+        "en": "real number"
       }
     }
   },
@@ -897,13 +897,13 @@
     "precision": null,
     "unit": "square metre",
     "documentation": {
-      "en": {
-        "description": "Total area of the flat parts of the roof. Unit: square metre.",
-        "type": "real number"
+      "description": {
+        "nl": "Totale oppervlakte van de platte delen van het dak. Eenheid: vierkante meter.",
+        "en": "Total area of the flat parts of the roof. Unit: square metre."
       },
-      "nl": {
-        "description": "Totale oppervlakte van de platte delen van het dak. Eenheid: vierkante meter.",
-        "type": "reëel getal"
+      "type": {
+        "nl": "reëel getal",
+        "en": "real number"
       }
     }
   },
@@ -915,13 +915,13 @@
     "precision": null,
     "unit": "square metre",
     "documentation": {
-      "en": {
-        "description": "Total area of the sloped parts of the roof. Unit: square metre.",
-        "type": "real number"
+      "description": {
+        "nl": "Totale oppervlakte van de schuine delen van het dak. Eenheid: vierkante meter.",
+        "en": "Total area of the sloped parts of the roof. Unit: square metre."
       },
-      "nl": {
-        "description": "Totale oppervlakte van de schuine delen van het dak. Eenheid: vierkante meter.",
-        "type": "reëel getal"
+      "type": {
+        "nl": "reëel getal",
+        "en": "real number"
       }
     }
   },
@@ -933,13 +933,13 @@
     "precision": null,
     "unit": "square metre",
     "documentation": {
-      "en": {
-        "description": "Total area of the party walls. Unit: square metre.",
-        "type": "real number"
+      "description": {
+        "nl": "Totale oppervlakte van de pandscheidende muren. Eenheid: vierkante meter.",
+        "en": "Total area of the party walls. Unit: square metre."
       },
-      "nl": {
-        "description": "Totale oppervlakte van de pandscheidende muren. Eenheid: vierkante meter.",
-        "type": "reëel getal"
+      "type": {
+        "nl": "reëel getal",
+        "en": "real number"
       }
     }
   },
@@ -951,13 +951,13 @@
     "precision": null,
     "unit": "square metre",
     "documentation": {
-      "en": {
-        "description": "Total area of the exterior walls. Unit: square metre.",
-        "type": "real number"
+      "description": {
+        "nl": "Totale oppervlakte van de buitenmuren. Eenheid: vierkante meter.",
+        "en": "Total area of the exterior walls. Unit: square metre."
       },
-      "nl": {
-        "description": "Totale oppervlakte van de buitenmuren. Eenheid: vierkante meter.",
-        "type": "reëel getal"
+      "type": {
+        "nl": "reëel getal",
+        "en": "real number"
       }
     }
   },
@@ -969,13 +969,13 @@
     "precision": null,
     "unit": "-",
     "documentation": {
-      "en": {
-        "description": "Building surface semantics. Only available in the GPKG 3D layers. This is an array of integers, where an integer refers to a surface type (0: `GroundSurface`, 1: `RoofSurface`, 2: `OuterWallSurface`, 3: `InnerWallSurface`). If a surface does not have a semantic value, NULL is used instead. Thus the length of the array equals the number of 3D polygons in the geometry, and the order of values in the array corresponds to the order of polygons.",
-        "type": "list"
+      "description": {
+        "nl": "Pand-oppervlaksemantiek. Alleen beschikbaar in de GPKG 3D lagen. Dit is een array van integers, waarbij een integer verwijst naar een oppervlaktype (0: `GroundSurface`, 1: `RoofSurface`, 2: `OuterWallSurface`, 3: `InnerWallSurface`). Als een oppervlak geen semantische waarde heeft, wordt NULL gebruikt. De lengte van de array staat dus gelijk aan het aantal 3D polygonen van de geometrie, en de volgorde van waarden in de array correspondeert met de volgorde van de polygonen.",
+        "en": "Building surface semantics. Only available in the GPKG 3D layers. This is an array of integers, where an integer refers to a surface type (0: `GroundSurface`, 1: `RoofSurface`, 2: `OuterWallSurface`, 3: `InnerWallSurface`). If a surface does not have a semantic value, NULL is used instead. Thus the length of the array equals the number of 3D polygons in the geometry, and the order of values in the array corresponds to the order of polygons."
       },
-      "nl": {
-        "description": "Pand-oppervlaksemantiek. Alleen beschikbaar in de GPKG 3D lagen. Dit is een array van integers, waarbij een integer verwijst naar een oppervlaktype (0: `GroundSurface`, 1: `RoofSurface`, 2: `OuterWallSurface`, 3: `InnerWallSurface`). Als een oppervlak geen semantische waarde heeft, wordt NULL gebruikt. De lengte van de array staat dus gelijk aan het aantal 3D polygonen van de geometrie, en de volgorde van waarden in de array correspondeert met de volgorde van de polygonen.",
-        "type": "lijst"
+      "type": {
+        "nl": "lijst",
+        "en": "list"
       }
     }
   },
@@ -987,13 +987,13 @@
     "precision": null,
     "unit": "-",
     "documentation": {
-      "en": {
-        "description": "An estimation of the number of floors in the building. Estimates are only are available for buildings with up to 5 estimated floors.",
-        "type": "nominal number"
+      "description": {
+        "nl": "Een schatting van het aantal bouwlagen in het gebouw. Schattingen zijn alleen beschikbaar voor gebouwen met maximaal 5 geschatte bouwlagen.",
+        "en": "An estimation of the number of floors in the building. Estimates are only are available for buildings with up to 5 estimated floors."
       },
-      "nl": {
-        "description": "Een schatting van het aantal bouwlagen in het gebouw. Schattingen zijn alleen beschikbaar voor gebouwen met maximaal 5 geschatte bouwlagen.",
-        "type": "nominaal getal"
+      "type": {
+        "nl": "nominaal getal",
+        "en": "nominal number"
       }
     }
   },
@@ -1005,13 +1005,13 @@
     "precision": null,
     "unit": "true/false",
     "documentation": {
-      "en": {
-        "description": "Indication of the reliability of the building reconstruction. Value `false` indicates that the reconstruction is possibly incorrect. `b3_kwaliteitsindicator = (b3_bag_bag_overlap == 0) AND (b3_val3dity_lod22 == []) AND ( (b3_pw_selectie_reden != _HIGHEST_YET_INSUFFICIENT_COVERAGE) AND (b3_pw_selectie_reden != _LATEST_BUT_OUTDATED) )`",
-        "type": "categorical"
+      "description": {
+        "nl": "Indicatie van de betrouwbaarheid van de gebouwreconstructie. Waarde `false` geeft aan dat de gebouwreconstructie mogelijk niet correct is. `b3_kwaliteitsindicator = (b3_bag_bag_overlap == 0) AND (b3_val3dity_lod22 == []) AND ( (b3_pw_selectie_reden != _HIGHEST_YET_INSUFFICIENT_COVERAGE) AND (b3_pw_selectie_reden != _LATEST_BUT_OUTDATED) )`",
+        "en": "Indication of the reliability of the building reconstruction. Value `false` indicates that the reconstruction is possibly incorrect. `b3_kwaliteitsindicator = (b3_bag_bag_overlap == 0) AND (b3_val3dity_lod22 == []) AND ( (b3_pw_selectie_reden != _HIGHEST_YET_INSUFFICIENT_COVERAGE) AND (b3_pw_selectie_reden != _LATEST_BUT_OUTDATED) )`"
       },
-      "nl": {
-        "description": "Indicatie van de betrouwbaarheid van de gebouwreconstructie. Waarde `false` geeft aan dat de gebouwreconstructie mogelijk niet correct is. `b3_kwaliteitsindicator = (b3_bag_bag_overlap == 0) AND (b3_val3dity_lod22 == []) AND ( (b3_pw_selectie_reden != _HIGHEST_YET_INSUFFICIENT_COVERAGE) AND (b3_pw_selectie_reden != _LATEST_BUT_OUTDATED) )`",
-        "type": "categorisch"
+      "type": {
+        "nl": "categorisch",
+        "en": "categorical"
       }
     }
   },
@@ -1023,13 +1023,13 @@
     "precision": null,
     "unit": "degrees",
     "documentation": {
-      "en": {
-        "description": "Azimuth of roofpart. Available for the LoD 2.2 roofparts in GPKG 2D layers.",
-        "type": "real number"
+      "description": {
+        "nl": "Azimut van dakdeel. Beschikbaar voor de LoD 2.2 dakdelen in de GPKG 2D lagen.",
+        "en": "Azimuth of roofpart. Available for the LoD 2.2 roofparts in GPKG 2D layers."
       },
-      "nl": {
-        "description": "Azimut van dakdeel. Beschikbaar voor de LoD 2.2 dakdelen in de GPKG 2D lagen.",
-        "type": "reëel getal"
+      "type": {
+        "nl": "reëel getal",
+        "en": "real number"
       }
     }
   },
@@ -1041,13 +1041,13 @@
     "precision": null,
     "unit": "degrees",
     "documentation": {
-      "en": {
-        "description": "Slope of roofpart. Available for the LoD 2.2 roofparts in GPKG 2D layers.",
-        "type": "real number"
+      "description": {
+        "nl": "Hellingshoek van dakdeel. Beschikbaar voor de LoD 2.2 dakdelen in de GPKG 2D lagen",
+        "en": "Slope of roofpart. Available for the LoD 2.2 roofparts in GPKG 2D layers."
       },
-      "nl": {
-        "description": "Hellingshoek van dakdeel. Beschikbaar voor de LoD 2.2 dakdelen in de GPKG 2D lagen",
-        "type": "reëel getal"
+      "type": {
+        "nl": "reëel getal",
+        "en": "real number"
       }
     }
   }
