@@ -62,7 +62,10 @@
     "nullable": true,
     "appliesTo": "Building",
     "precision": null,
-    "unit": "YYYY",
+    "unit": {
+      "en": "YYYY",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -100,7 +103,10 @@
     "nullable": null,
     "appliesTo": "feature",
     "precision": null,
-    "unit": "true/false",
+    "unit": {
+      "en": "true/false",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -119,7 +125,10 @@
     "nullable": null,
     "appliesTo": "feature",
     "precision": null,
-    "unit": "YYYY-MM-DD",
+    "unit": {
+      "en": "YYYY-MM-DD",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -138,7 +147,10 @@
     "nullable": null,
     "appliesTo": "feature",
     "precision": null,
-    "unit": "YYYY-MM-DD",
+    "unit": {
+      "en": "YYYY-MM-DD",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -176,7 +188,10 @@
     "nullable": null,
     "appliesTo": "feature",
     "precision": null,
-    "unit": "YYYY-MM-DD",
+    "unit": {
+      "en": "YYYY-MM-DD",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -195,7 +210,10 @@
     "nullable": null,
     "appliesTo": "feature",
     "precision": null,
-    "unit": "YYYY-MM-DD",
+    "unit": {
+      "en": "YYYY-MM-DD",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -214,7 +232,10 @@
     "nullable": null,
     "appliesTo": "feature",
     "precision": null,
-    "unit": "YYYY-MM-DDThh:mm:ss.sss",
+    "unit": {
+      "en": "YYYY-MM-DDThh:mm:ss.sss",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -233,7 +254,10 @@
     "nullable": null,
     "appliesTo": "feature",
     "precision": null,
-    "unit": "YYYY-MM-DDThh:mm:ss.sss",
+    "unit": {
+      "en": "YYYY-MM-DDThh:mm:ss.sss",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -252,7 +276,10 @@
     "nullable": null,
     "appliesTo": "feature",
     "precision": null,
-    "unit": "YYYY-MM-DDThh:mm:ss.sss",
+    "unit": {
+      "en": "YYYY-MM-DDThh:mm:ss.sss",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -271,7 +298,10 @@
     "nullable": null,
     "appliesTo": "feature",
     "precision": null,
-    "unit": "YYYY-MM-DDThh:mm:ss.sss",
+    "unit": {
+      "en": "YYYY-MM-DDThh:mm:ss.sss",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -290,7 +320,10 @@
     "nullable": null,
     "appliesTo": "feature",
     "precision": null,
-    "unit": "YYYY-MM-DDThh:mm:ss.sss",
+    "unit": {
+      "en": "YYYY-MM-DDThh:mm:ss.sss",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -309,7 +342,10 @@
     "nullable": null,
     "appliesTo": "feature",
     "precision": null,
-    "unit": "YYYY-MM-DDThh:mm:ss.sss",
+    "unit": {
+      "en": "YYYY-MM-DDThh:mm:ss.sss",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -328,7 +364,10 @@
     "nullable": null,
     "appliesTo": "feature",
     "precision": null,
-    "unit": "YYYY-MM-DDThh:mm:ss.sss",
+    "unit": {
+      "en": "YYYY-MM-DDThh:mm:ss.sss",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -347,7 +386,10 @@
     "nullable": null,
     "appliesTo": "feature",
     "precision": null,
-    "unit": "metre",
+    "unit": {
+      "en": "metre",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -406,7 +448,10 @@
     "nullable": null,
     "appliesTo": "feature",
     "precision": null,
-    "unit": "YYYY",
+    "unit": {
+      "en": "YYYY",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -444,7 +489,10 @@
     "nullable": null,
     "appliesTo": "feature",
     "precision": null,
-    "unit": "true/false",
+    "unit": {
+      "en": "true/false",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -482,7 +530,10 @@
     "nullable": null,
     "appliesTo": "surface",
     "precision": null,
-    "unit": "metre",
+    "unit": {
+      "en": "metre",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -501,7 +552,10 @@
     "nullable": null,
     "appliesTo": "surface",
     "precision": null,
-    "unit": "metre",
+    "unit": {
+      "en": "metre",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -520,7 +574,10 @@
     "nullable": null,
     "appliesTo": "surface",
     "precision": null,
-    "unit": "metre",
+    "unit": {
+      "en": "metre",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -539,7 +596,10 @@
     "nullable": null,
     "appliesTo": "surface",
     "precision": null,
-    "unit": "metre",
+    "unit": {
+      "en": "metre",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -615,7 +675,10 @@
     "nullable": null,
     "appliesTo": "feature",
     "precision": null,
-    "unit": "metre",
+    "unit": {
+      "en": "metre",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -634,7 +697,10 @@
     "nullable": null,
     "appliesTo": "feature",
     "precision": null,
-    "unit": "metre",
+    "unit": {
+      "en": "metre",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -653,7 +719,10 @@
     "nullable": null,
     "appliesTo": "feature",
     "precision": null,
-    "unit": "metre",
+    "unit": {
+      "en": "metre",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -672,7 +741,10 @@
     "nullable": null,
     "appliesTo": "feature",
     "precision": null,
-    "unit": "true/false",
+    "unit": {
+      "en": "true/false",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -729,7 +801,10 @@
     "nullable": null,
     "appliesTo": "feature",
     "precision": null,
-    "unit": "metre",
+    "unit": {
+      "en": "metre",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -748,7 +823,10 @@
     "nullable": null,
     "appliesTo": "feature",
     "precision": null,
-    "unit": "metre",
+    "unit": {
+      "en": "metre",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -807,7 +885,10 @@
     "nullable": null,
     "appliesTo": "feature",
     "precision": null,
-    "unit": "points per square metre",
+    "unit": {
+      "en": "points per square metre",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -826,7 +907,10 @@
     "nullable": null,
     "appliesTo": "feature",
     "precision": null,
-    "unit": "points per square metre",
+    "unit": {
+      "en": "points per square metre",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -845,7 +929,10 @@
     "nullable": null,
     "appliesTo": "feature",
     "precision": null,
-    "unit": "cubic metre",
+    "unit": {
+      "en": "cubic metre",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -864,7 +951,10 @@
     "nullable": null,
     "appliesTo": "feature",
     "precision": null,
-    "unit": "cubic metre",
+    "unit": {
+      "en": "cubic metre",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -883,7 +973,10 @@
     "nullable": null,
     "appliesTo": "feature",
     "precision": null,
-    "unit": "cubic metre",
+    "unit": {
+      "en": "cubic metre",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -902,7 +995,10 @@
     "nullable": null,
     "appliesTo": "feature",
     "precision": null,
-    "unit": "square metre",
+    "unit": {
+      "en": "square metre",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -921,7 +1017,10 @@
     "nullable": null,
     "appliesTo": "feature",
     "precision": null,
-    "unit": "square metre",
+    "unit": {
+      "en": "square metre",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -940,7 +1039,10 @@
     "nullable": null,
     "appliesTo": "feature",
     "precision": null,
-    "unit": "square metre",
+    "unit": {
+      "en": "square metre",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -959,7 +1061,10 @@
     "nullable": null,
     "appliesTo": "feature",
     "precision": null,
-    "unit": "square metre",
+    "unit": {
+      "en": "square metre",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -978,7 +1083,10 @@
     "nullable": null,
     "appliesTo": "feature",
     "precision": null,
-    "unit": "square metre",
+    "unit": {
+      "en": "square metre",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -997,7 +1105,10 @@
     "nullable": null,
     "appliesTo": "feature",
     "precision": null,
-    "unit": "square metre",
+    "unit": {
+      "en": "square metre",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -1054,7 +1165,10 @@
     "nullable": null,
     "appliesTo": "feature",
     "precision": null,
-    "unit": "true/false",
+    "unit": {
+      "en": "true/false",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -1073,7 +1187,10 @@
     "nullable": null,
     "appliesTo": "surface",
     "precision": null,
-    "unit": "degrees",
+    "unit": {
+      "en": "degrees",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
@@ -1092,7 +1209,10 @@
     "nullable": null,
     "appliesTo": "surface",
     "precision": null,
-    "unit": "degrees",
+    "unit": {
+      "en": "degrees",
+      "nl": null
+    },
     "values": null,
     "documentation": {
       "description": {
