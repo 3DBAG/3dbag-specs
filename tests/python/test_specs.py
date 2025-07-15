@@ -1,9 +1,5 @@
 from bag3d.specs.resources import get_resource_file_path
-from bag3d.specs.core import (
-    Attribute,
-    AttributeType,
-    load_attributes_spec
-)
+from bag3d.specs.core import Attribute, AttributeType, load_attributes_spec
 
 
 def test_get_resource_file_path():
