@@ -1,11 +1,10 @@
 name: Lint & Format
 
 on:
+  push:
+    branches: [ "master" ]
   pull_request:
-    branches: ["develop", "master"]
-    paths-ignore:
-      - "docs/**"
-      - "**.md"
+    branches: [ "master" ]
 
 jobs:
   build:

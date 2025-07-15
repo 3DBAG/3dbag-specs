@@ -4,13 +4,10 @@ requires-python = ">=3.11"
 
 [[package]]
 name = "3dbag-specs"
-version = "2025.7.14"
+version = "2025.7.15"
 source = { editable = "." }
 dependencies = [
-    { name = "bumpver" },
     { name = "jsonschema" },
-    { name = "pytest" },
-    { name = "tox-uv" },
 ]
 
 [package.optional-dependencies]
@@ -18,33 +15,22 @@ dev = [
     { name = "bumpver" },
     { name = "jsonschema" },
     { name = "pytest" },
+    { name = "ruff" },
     { name = "tox" },
-]
-lint = [
-    { name = "ruff" },
-]
-
-[package.dev-dependencies]
-dev = [
-    { name = "ruff" },
+    { name = "tox-uv" },
 ]
 
 [package.metadata]
 requires-dist = [
-    { name = "bumpver", specifier = ">=2024.1130" },
     { name = "bumpver", marker = "extra == 'dev'", specifier = "~=2024.1130" },
     { name = "jsonschema", specifier = ">=4.24.0" },
     { name = "jsonschema", marker = "extra == 'dev'", specifier = "~=4.24.0" },
-    { name = "pytest", specifier = ">=8.3.5" },
     { name = "pytest", marker = "extra == 'dev'", specifier = "~=8.3.4" },
-    { name = "ruff", marker = "extra == 'lint'", specifier = "~=0.8.2" },
+    { name = "ruff", marker = "extra == 'dev'", specifier = "~=0.8.6" },
     { name = "tox", marker = "extra == 'dev'", specifier = "~=4.27.0" },
-    { name = "tox-uv", specifier = ">=1.26.1" },
+    { name = "tox-uv", marker = "extra == 'dev'", specifier = ">=1.26.1" },
 ]
-provides-extras = ["dev", "lint"]
-
-[package.metadata.requires-dev]
-dev = [{ name = "ruff", specifier = ">=0.8.6" }]
+provides-extras = ["dev"]
 
 [[package]]
 name = "attrs"
