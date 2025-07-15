@@ -167,6 +167,6 @@ class Attribute:
     nullable: bool
     applies_to: AttributeAppliesTo
     precision: Optional[int]
-    unit: Optional[str]
+    unit: Optional[dict[DocumentationLanguage, str]]
     values: Optional[list[AttributeValue]]
     documentation: dict[DocumentationLanguage, DocumentationEntry]

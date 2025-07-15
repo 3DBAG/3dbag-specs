@@ -17,7 +17,8 @@
         "precision",
         "unit",
         "values",
-        "documentation"
+        "description",
+        "scale"
       ],
       "properties": {
         "type": {
@@ -50,7 +51,8 @@
             {
               "$ref": "#/definitions/translation"
             }
-          ]
+          ],
+          "description": "Unit of measurement."
         },
         "values": {
           "oneOf": [
@@ -63,19 +65,15 @@
                 "$ref": "#/definitions/translation"
               }
             }
-          ]
+          ],
+          "description": "Possible values for categorical attributes."
         },
-        "documentation": {
-          "type": "object",
-          "required": ["description", "type"],
-          "properties": {
-            "description": {
-              "$ref": "#/definitions/translation"
-            },
-            "type": {
-              "$ref": "#/definitions/translation"
-            }
-          }
+        "description": {
+          "$ref": "#/definitions/translation"
+        },
+        "scale": {
+          "$ref": "#/definitions/translation",
+          "description": "Scale of measurement."
         }
       }
     },
