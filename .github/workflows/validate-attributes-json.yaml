@@ -30,8 +30,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+          pip install .
 
       - name: Validate JSON
         run: |
-          python validate-attributes-json.py --schema attributes.schema.json --json attributes.json
+          validate-attributes-json --schema attributes.schema.json --json attributes.json
