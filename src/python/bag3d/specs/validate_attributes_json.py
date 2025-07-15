@@ -7,11 +7,11 @@ import argparse
 def validate_json_file(schema_path, json_path):
     try:
         # Load schema
-        with open(schema_path, 'r') as f:
+        with open(schema_path, "r") as f:
             schema = json.load(f)
 
         # Load JSON file
-        with open(json_path, 'r') as f:
+        with open(json_path, "r") as f:
             data = json.load(f)
 
         # Validate
@@ -37,11 +37,14 @@ def validate_json_file(schema_path, json_path):
 
 def main():
     parser = argparse.ArgumentParser(
-        description='Validate JSON files against a JSON schema')
-    parser.add_argument('--schema', '-s', required=True,
-                        help='Path to the JSON schema file')
-    parser.add_argument('--json', '-j', required=True,
-                        help='Path to the JSON file to validate')
+        description="Validate JSON files against a JSON schema"
+    )
+    parser.add_argument(
+        "--schema", "-s", required=True, help="Path to the JSON schema file"
+    )
+    parser.add_argument(
+        "--json", "-j", required=True, help="Path to the JSON file to validate"
+    )
 
     args = parser.parse_args()
 

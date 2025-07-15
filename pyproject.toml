@@ -1,3 +1,7 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "3dbag-specs"
 version = "2025.07.14"
@@ -14,8 +18,21 @@ Repository = "https://github.com/3DBAG/3dbag-specs"
 dev = [
     "pytest~=8.3.4",
     "bumpver~=2024.1130",
-    "jsonschema~=4.24.0"
+    "jsonschema~=4.24.0",
+    "tox~=4.27.0"
 ]
+lint = [
+    "ruff~=0.8.2",
+]
+
+[project.scripts]
+validate-attributes-json = "bag3d.specs.validate_attributes_json:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src/python"]
 
 [tool.uv]
 
@@ -41,4 +58,9 @@ push = true
 "pyproject.toml" = [
     'current_version = "{version}"',
     'version = "{version}"',
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.8.6",
 ]

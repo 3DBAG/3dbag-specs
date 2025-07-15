@@ -1,2 +1,7 @@
+# IDE
 .idea
 .run
+
+# Build
+src/3dbag_specs.egg-info
+src/python/3dbag_specs.egg-info

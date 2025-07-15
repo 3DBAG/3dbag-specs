@@ -15,7 +15,7 @@ class AttributeType(Enum):
     NULL = auto()
 
     @classmethod
-    def from_string(cls, type_str: str) -> 'AttributeType':
+    def from_string(cls, type_str: str) -> "AttributeType":
         """Convert string to AttributeType enum."""
         mapping = {
             "int": cls.INT,
@@ -50,7 +50,7 @@ class AttributeType(Enum):
             "STRING": "string",
             "DATE": "string",
             "DATETIME": "string",
-            "NULL": "null"
+            "NULL": "null",
         }
         return mapping[self.name]
 
@@ -63,7 +63,7 @@ class AttributeType(Enum):
             "STRING": "TEXT",
             "DATE": "DATE",
             "DATETIME": "TIMESTAMP",
-            "NULL": "NULL"
+            "NULL": "NULL",
         }
         return mapping[self.name]
 
@@ -76,7 +76,7 @@ class AttributeType(Enum):
             "STRING": "TEXT",
             "DATE": "DATE",
             "DATETIME": "DATETIME",
-            "NULL": "NULL"
+            "NULL": "NULL",
         }
         return mapping[self.name]
 
@@ -89,7 +89,7 @@ class AttributeType(Enum):
             "STRING": "String",
             "DATE": "String",
             "DATETIME": "String",
-            "NULL": "None"
+            "NULL": "None",
         }
         return mapping[self.name]
 
@@ -109,7 +109,7 @@ class AttributeAppliesTo(StrEnum):
     FloorSurface = auto()
 
     @classmethod
-    def from_string(cls, applies_to_str: str) -> 'AttributeAppliesTo':
+    def from_string(cls, applies_to_str: str) -> "AttributeAppliesTo":
         """Convert string to AttributeAppliesTo enum."""
         # Handle exact matches first
         for item in cls:
@@ -117,8 +117,10 @@ class AttributeAppliesTo(StrEnum):
                 return item
 
         # If no exact match, raise error with suggestions
-        raise ValueError(f"Unknown appliesTo value: {applies_to_str}. "
-                         f"Valid values: {[item.value for item in cls]}")
+        raise ValueError(
+            f"Unknown appliesTo value: {applies_to_str}. "
+            f"Valid values: {[item.value for item in cls]}"
+        )
 
     def __repr__(self) -> str:
         return self.name
@@ -126,12 +128,13 @@ class AttributeAppliesTo(StrEnum):
     def __str__(self) -> str:
         return self.name
 
+
 class DocumentationLanguage(Enum):
     EN = auto()
     NL = auto()
 
     @classmethod
-    def from_string(cls, lang_str: str) -> 'DocumentationLanguage':
+    def from_string(cls, lang_str: str) -> "DocumentationLanguage":
         """Convert string to DocumentationLanguage enum."""
         mapping = {
             "en": cls.EN,
@@ -142,6 +145,7 @@ class DocumentationLanguage(Enum):
 
 class DocumentationEntry:
     """Documentation entry for an attribute in a specific language."""
+
     description: str
     type: str
 
@@ -149,6 +153,7 @@ class DocumentationEntry:
 @dataclass
 class AttributeValue:
     """Represents a possible value for a categorical attribute."""
+
     value: str
     description: dict[DocumentationLanguage, str]
 
@@ -156,6 +161,7 @@ class AttributeValue:
 @dataclass
 class Attribute:
     """3DBAG attribute."""
+
     type: AttributeType
     source: str
     nullable: bool
