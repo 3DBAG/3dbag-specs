@@ -3,14 +3,14 @@ name: Validate attributes.json
 on:
   push:
     paths:
-      - 'attributes.json'
-      - 'attributes.schema.json'
+      - 'resources/attributes.json'
+      - 'resources/attributes.schema.json'
     branches:
       - '**'
   pull_request:
     paths:
-      - 'attributes.json'
-      - 'attributes.schema.json'
+      - 'resources/attributes.json'
+      - 'resources/attributes.schema.json'
     branches:
       - '**'
 
@@ -34,4 +34,4 @@ jobs:
 
       - name: Validate JSON
         run: |
-          validate-attributes-json --schema attributes.schema.json --json attributes.json
+          validate-attributes-json --schema resources/attributes.schema.json --json resources/attributes.json
