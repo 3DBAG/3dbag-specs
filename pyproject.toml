@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "3dbag-specs"
+name = "bag3d-specs"
 version = "2025.07.15"
 description = "3DBAG specifications."
 readme = "README.md"
