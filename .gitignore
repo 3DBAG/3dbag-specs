@@ -2,6 +2,11 @@
 .idea
 .run
 
+# Tools
+.venv
+.ruff_cache
+.tox
+
 # Build
 src/3dbag_specs.egg-info
 src/python/3dbag_specs.egg-info
