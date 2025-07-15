@@ -64,7 +64,7 @@
     "precision": null,
     "unit": {
       "en": "YYYY",
-      "nl": null
+      "nl": "YYYY"
     },
     "values": null,
     "documentation": {
@@ -82,7 +82,7 @@
     "type": "string",
     "source": "BAG",
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": null,
     "values": null,
@@ -101,12 +101,9 @@
     "type": "string",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
-    "unit": {
-      "en": "true/false",
-      "nl": null
-    },
+    "unit": null,
     "values": null,
     "documentation": {
       "description": {
@@ -123,11 +120,11 @@
     "type": "string",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": {
       "en": "YYYY-MM-DD",
-      "nl": null
+      "nl": "YYYY-MM-DD"
     },
     "values": null,
     "documentation": {
@@ -145,11 +142,11 @@
     "type": "string",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": {
       "en": "YYYY-MM-DD",
-      "nl": null
+      "nl": "YYYY-MM-DD"
     },
     "values": null,
     "documentation": {
@@ -167,7 +164,7 @@
     "type": "int",
     "source": "BAG",
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": null,
     "values": null,
@@ -186,11 +183,11 @@
     "type": "string",
     "source": "BAG",
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": {
       "en": "YYYY-MM-DD",
-      "nl": null
+      "nl": "YYYY-MM-DD"
     },
     "values": null,
     "documentation": {
@@ -208,11 +205,11 @@
     "type": "string",
     "source": "BAG",
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": {
       "en": "YYYY-MM-DD",
-      "nl": null
+      "nl": "YYYY-MM-DD"
     },
     "values": null,
     "documentation": {
@@ -230,11 +227,11 @@
     "type": "string",
     "source": "BAG",
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": {
       "en": "YYYY-MM-DDThh:mm:ss.sss",
-      "nl": null
+      "nl": "YYYY-MM-DDThh:mm:ss.sss"
     },
     "values": null,
     "documentation": {
@@ -252,11 +249,11 @@
     "type": "string",
     "source": "BAG",
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": {
       "en": "YYYY-MM-DDThh:mm:ss.sss",
-      "nl": null
+      "nl": "YYYY-MM-DDThh:mm:ss.sss"
     },
     "values": null,
     "documentation": {
@@ -274,11 +271,11 @@
     "type": "string",
     "source": "BAG",
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": {
       "en": "YYYY-MM-DDThh:mm:ss.sss",
-      "nl": null
+      "nl": "YYYY-MM-DDThh:mm:ss.sss"
     },
     "values": null,
     "documentation": {
@@ -296,11 +293,11 @@
     "type": "string",
     "source": "BAG",
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": {
       "en": "YYYY-MM-DDThh:mm:ss.sss",
-      "nl": null
+      "nl": "YYYY-MM-DDThh:mm:ss.sss"
     },
     "values": null,
     "documentation": {
@@ -318,11 +315,11 @@
     "type": "string",
     "source": "BAG",
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": {
       "en": "YYYY-MM-DDThh:mm:ss.sss",
-      "nl": null
+      "nl": "YYYY-MM-DDThh:mm:ss.sss"
     },
     "values": null,
     "documentation": {
@@ -340,11 +337,11 @@
     "type": "string",
     "source": "BAG",
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": {
       "en": "YYYY-MM-DDThh:mm:ss.sss",
-      "nl": null
+      "nl": "YYYY-MM-DDThh:mm:ss.sss"
     },
     "values": null,
     "documentation": {
@@ -362,11 +359,11 @@
     "type": "string",
     "source": "BAG",
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": {
       "en": "YYYY-MM-DDThh:mm:ss.sss",
-      "nl": null
+      "nl": "YYYY-MM-DDThh:mm:ss.sss"
     },
     "values": null,
     "documentation": {
@@ -384,11 +381,11 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": {
       "en": "metre",
-      "nl": null
+      "nl": "meter"
     },
     "values": null,
     "documentation": {
@@ -406,7 +403,7 @@
     "type": "string",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": null,
     "values": {
@@ -446,11 +443,11 @@
     "type": "string",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": {
       "en": "YYYY",
-      "nl": null
+      "nl": "YYYY"
     },
     "values": null,
     "documentation": {
@@ -468,7 +465,7 @@
     "type": "string",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": null,
     "values": null,
@@ -487,12 +484,9 @@
     "type": "string",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
-    "unit": {
-      "en": "true/false",
-      "nl": null
-    },
+    "unit": null,
     "values": null,
     "documentation": {
       "description": {
@@ -509,10 +503,10 @@
     "type": "bool",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": null,
-    "values": "true/false",
+    "values": null,
     "documentation": {
       "description": {
         "nl": "Geeft aan of de volledige LoD1.2/LoD1.3/LoD2.2 reconstructie is overgeslagen voor het pand.",
@@ -528,11 +522,11 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "surface",
+    "appliesTo": "RoofSurface",
     "precision": null,
     "unit": {
       "en": "metre",
-      "nl": null
+      "nl": "meter"
     },
     "values": null,
     "documentation": {
@@ -550,11 +544,11 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "surface",
+    "appliesTo": "RoofSurface",
     "precision": null,
     "unit": {
       "en": "metre",
-      "nl": null
+      "nl": "meter"
     },
     "values": null,
     "documentation": {
@@ -572,11 +566,11 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "surface",
+    "appliesTo": "RoofSurface",
     "precision": null,
     "unit": {
       "en": "metre",
-      "nl": null
+      "nl": "meter"
     },
     "values": null,
     "documentation": {
@@ -594,11 +588,11 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "surface",
+    "appliesTo": "RoofSurface",
     "precision": null,
     "unit": {
       "en": "metre",
-      "nl": null
+      "nl": "meter"
     },
     "values": null,
     "documentation": {
@@ -616,7 +610,7 @@
     "type": "null",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": null,
     "values": null,
@@ -635,7 +629,7 @@
     "type": "null",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": null,
     "values": null,
@@ -654,7 +648,7 @@
     "type": "null",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": null,
     "values": null,
@@ -673,11 +667,11 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": {
       "en": "metre",
-      "nl": null
+      "nl": "meter"
     },
     "values": null,
     "documentation": {
@@ -695,11 +689,11 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": {
       "en": "metre",
-      "nl": null
+      "nl": "meter"
     },
     "values": null,
     "documentation": {
@@ -717,11 +711,11 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": {
       "en": "metre",
-      "nl": null
+      "nl": "meter"
     },
     "values": null,
     "documentation": {
@@ -739,12 +733,9 @@
     "type": "string",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
-    "unit": {
-      "en": "true/false",
-      "nl": null
-    },
+    "unit": null,
     "values": null,
     "documentation": {
       "description": {
@@ -761,7 +752,7 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": null,
     "values": null,
@@ -780,7 +771,7 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": null,
     "values": null,
@@ -799,11 +790,11 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": {
       "en": "metre",
-      "nl": null
+      "nl": "meter"
     },
     "values": null,
     "documentation": {
@@ -821,11 +812,11 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": {
       "en": "metre",
-      "nl": null
+      "nl": "meter"
     },
     "values": null,
     "documentation": {
@@ -843,7 +834,7 @@
     "type": "string",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": null,
     "values": {
@@ -883,11 +874,11 @@
     "type": "int",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": {
       "en": "points per square metre",
-      "nl": null
+      "nl": "punten per vierkante meter"
     },
     "values": null,
     "documentation": {
@@ -905,11 +896,11 @@
     "type": "int",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": {
       "en": "points per square metre",
-      "nl": null
+      "nl": "punten per vierkante meter"
     },
     "values": null,
     "documentation": {
@@ -927,11 +918,11 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": {
       "en": "cubic metre",
-      "nl": null
+      "nl": "kubieke meter"
     },
     "values": null,
     "documentation": {
@@ -949,11 +940,11 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": {
       "en": "cubic metre",
-      "nl": null
+      "nl": "kubieke meter"
     },
     "values": null,
     "documentation": {
@@ -971,11 +962,11 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": {
       "en": "cubic metre",
-      "nl": null
+      "nl": "kubieke meter"
     },
     "values": null,
     "documentation": {
@@ -993,11 +984,11 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": {
       "en": "square metre",
-      "nl": null
+      "nl": "vierkante meter"
     },
     "values": null,
     "documentation": {
@@ -1015,11 +1006,11 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": {
       "en": "square metre",
-      "nl": null
+      "nl": "vierkante meter"
     },
     "values": null,
     "documentation": {
@@ -1037,11 +1028,11 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": {
       "en": "square metre",
-      "nl": null
+      "nl": "vierkante meter"
     },
     "values": null,
     "documentation": {
@@ -1059,11 +1050,11 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": {
       "en": "square metre",
-      "nl": null
+      "nl": "vierkante meter"
     },
     "values": null,
     "documentation": {
@@ -1081,11 +1072,11 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": {
       "en": "square metre",
-      "nl": null
+      "nl": "vierkante meter"
     },
     "values": null,
     "documentation": {
@@ -1103,11 +1094,11 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": {
       "en": "square metre",
-      "nl": null
+      "nl": "vierkante meter"
     },
     "values": null,
     "documentation": {
@@ -1125,7 +1116,7 @@
     "type": "null",
     "source": null,
     "nullable": null,
-    "appliesTo": "surface",
+    "appliesTo": "Building",
     "precision": null,
     "unit": null,
     "values": null,
@@ -1144,7 +1135,7 @@
     "type": "int",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
     "unit": null,
     "values": null,
@@ -1163,12 +1154,9 @@
     "type": "string",
     "source": null,
     "nullable": null,
-    "appliesTo": "feature",
+    "appliesTo": "Building",
     "precision": null,
-    "unit": {
-      "en": "true/false",
-      "nl": null
-    },
+    "unit": null,
     "values": null,
     "documentation": {
       "description": {
@@ -1185,11 +1173,11 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "surface",
+    "appliesTo": "RoofSurface",
     "precision": null,
     "unit": {
       "en": "degrees",
-      "nl": null
+      "nl": "graden"
     },
     "values": null,
     "documentation": {
@@ -1207,11 +1195,11 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "surface",
+    "appliesTo": "RoofSurface",
     "precision": null,
     "unit": {
       "en": "degrees",
-      "nl": null
+      "nl": "graden"
     },
     "values": null,
     "documentation": {

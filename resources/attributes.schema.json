@@ -1,73 +1,95 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "3DBAG Attribute Specification Schema",
+  "description": "A schema for the attributes.json file, which defines the specifications for attributes in the 3DBAG data set.",
   "type": "object",
-  "title": "3DBAG Dataset Attribute Schema",
-  "description": "Schema for defining attributes in the 3DBAG dataset",
-  "patternProperties": {
-    "^[a-zA-Z0-9_]+$": {
+  "additionalProperties": {
+    "$ref": "#/definitions/attribute"
+  },
+  "definitions": {
+    "attribute": {
       "type": "object",
+      "required": [
+        "type",
+        "source",
+        "nullable",
+        "appliesTo",
+        "precision",
+        "unit",
+        "values",
+        "documentation"
+      ],
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["int", "float", "bool", "string", "date", "datetime"],
+          "enum": ["int", "float", "bool", "string", "date", "datetime", "null"],
           "description": "Data type of the attribute."
         },
         "source": {
-          "type": "string",
+          "type": ["string", "null"],
           "description": "The source of this attribute. It can be another data set like the BAG or a software that generates this attribute."
         },
         "nullable": {
-          "type": "boolean",
+          "type": ["boolean", "null"],
           "description": "Whether null values are valid for this attribute or they indicate an error in the process."
         },
         "appliesTo": {
+          "type": "string",
           "enum": ["Building", "RoofSurface", "WallSurface", "GroundSurface", "ClosureSurface", "OuterCeilingSurface", "OuterFloorSurface", "InteriorWallSurface", "CeilingSurface", "FloorSurface"],
-          "description": "Level where this attribute applies"
+          "description": "Level where this attribute applies."
         },
         "precision": {
           "type": ["integer", "null"],
-          "description": "Precision for numeric values"
+          "description": "Precision for numeric values."
+        },
+        "unit": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/translation"
+            }
+          ]
+        },
+        "values": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/definitions/translation"
+              }
+            }
+          ]
         },
         "documentation": {
           "type": "object",
+          "required": ["description", "type"],
           "properties": {
-            "en": {
-              "$ref": "#/definitions/documentationEntry"
+            "description": {
+              "$ref": "#/definitions/translation"
             },
-            "nl": {
-              "$ref": "#/definitions/documentationEntry"
+            "type": {
+              "$ref": "#/definitions/translation"
             }
-          },
-          "additionalProperties": {
-            "$ref": "#/definitions/documentationEntry"
-          },
-          "description": "Multi-language documentation for the attribute"
+          }
         }
-      },
-      "required": ["type", "source", "nullable", "appliesTo", "precision", "documentation"],
-      "additionalProperties": false
-    }
-  },
-  "additionalProperties": false,
-  "definitions": {
-    "documentationEntry": {
+      }
+    },
+    "translation": {
       "type": "object",
+      "required": ["nl", "en"],
       "properties": {
-        "description": {
-          "type": "string",
-          "description": "Description of the attribute"
+        "nl": {
+          "type": "string"
         },
-        "type": {
-          "type": "string",
-          "description": "Type classification of the attribute"
-        },
-        "unit": {
-          "type": "string",
-          "description": "Unit of measurement for the attribute"
+        "en": {
+          "type": "string"
         }
-      },
-      "required": ["description", "type", "unit"],
-      "additionalProperties": false
+      }
     }
   }
 }
