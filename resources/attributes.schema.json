@@ -16,6 +16,8 @@
         "appliesTo",
         "precision",
         "unit",
+        "format",
+        "semanticType",
         "values",
         "description",
         "scale"
@@ -23,24 +25,52 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["int", "float", "bool", "string", "date", "datetime", "null"],
-          "description": "Data type of the attribute."
+          "enum": [
+            "int",
+            "float",
+            "bool",
+            "string",
+            "date",
+            "datetime",
+            "array"
+          ],
+          "description": "How is the attribute stored? As an int, as a float etc."
         },
         "source": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "description": "The source of this attribute. It can be another data set like the BAG or a software that generates this attribute."
         },
         "nullable": {
-          "type": ["boolean", "null"],
+          "type": [
+            "boolean",
+            "null"
+          ],
           "description": "Whether null values are valid for this attribute or they indicate an error in the process."
         },
         "appliesTo": {
           "type": "string",
-          "enum": ["Building", "RoofSurface", "WallSurface", "GroundSurface", "ClosureSurface", "OuterCeilingSurface", "OuterFloorSurface", "InteriorWallSurface", "CeilingSurface", "FloorSurface"],
+          "enum": [
+            "Building",
+            "RoofSurface",
+            "WallSurface",
+            "GroundSurface",
+            "ClosureSurface",
+            "OuterCeilingSurface",
+            "OuterFloorSurface",
+            "InteriorWallSurface",
+            "CeilingSurface",
+            "FloorSurface"
+          ],
           "description": "Level where this attribute applies."
         },
         "precision": {
-          "type": ["integer", "null"],
+          "type": [
+            "integer",
+            "null"
+          ],
           "description": "Precision for numeric values."
         },
         "unit": {
@@ -53,6 +83,17 @@
             }
           ],
           "description": "Unit of measurement."
+        },
+        "format": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "How is the attribute formatted? Eg. YYYY-MM-DD."
+        },
+        "semanticType": {
+          "type": "string",
+          "description": "What is the attribute? A year, a day, a millisecond, an error etc."
         },
         "values": {
           "oneOf": [
@@ -72,20 +113,60 @@
           "$ref": "#/definitions/translation"
         },
         "scale": {
-          "$ref": "#/definitions/translation",
-          "description": "Scale of measurement."
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/translation",
+              "description": "How is the attribute measured? On an interval scale, on a nominal scale etc."
+            }
+          ]
+        },
+        "items": {
+          "$ref": "#/definitions/array-item",
+          "description": "Definition of the items of an array-type attribute."
         }
       }
     },
     "translation": {
       "type": "object",
-      "required": ["nl", "en"],
+      "required": [
+        "nl",
+        "en"
+      ],
       "properties": {
         "nl": {
           "type": "string"
         },
         "en": {
           "type": "string"
+        }
+      }
+    },
+    "array-item": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "int",
+            "float",
+            "bool",
+            "string",
+            "date",
+            "datetime",
+            "null"
+          ]
+        },
+        "semanticType": {
+          "type": "string"
+        },
+        "description": {
+          "$ref": "#/definitions/translation"
+        },
+        "scale": {
+          "$ref": "#/definitions/translation"
         }
       }
     }
