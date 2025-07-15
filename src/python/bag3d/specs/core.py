@@ -1,6 +1,10 @@
 from enum import Enum, StrEnum, auto
-from typing import Optional
+from typing import Optional, Dict, Any
 from dataclasses import dataclass
+import json
+from pathlib import Path
+
+from .resources import get_resource_file_path
 
 
 class AttributeType(Enum):
@@ -12,6 +16,7 @@ class AttributeType(Enum):
     STRING = auto()
     DATE = auto()
     DATETIME = auto()
+    ARRAY = auto()
     NULL = auto()
 
     @classmethod
@@ -24,6 +29,7 @@ class AttributeType(Enum):
             "string": cls.STRING,
             "date": cls.DATE,
             "datetime": cls.DATETIME,
+            "array": cls.ARRAY,
             "null": cls.NULL,
         }
         return mapping[type_str.lower()]
@@ -34,9 +40,10 @@ class AttributeType(Enum):
             "INT": "int",
             "FLOAT": "float",
             "BOOL": "bool",
-            "STRING": "string",
-            "DATE": "string",
+            "STRING": "str",
+            "DATE": "str",
             "DATETIME": "datetime",
+            "ARRAY": "list",
             "NULL": "None",
         }
         return mapping[self.name]
@@ -50,6 +57,7 @@ class AttributeType(Enum):
             "STRING": "string",
             "DATE": "string",
             "DATETIME": "string",
+            "ARRAY": "vector",
             "NULL": "null",
         }
         return mapping[self.name]
@@ -63,6 +71,7 @@ class AttributeType(Enum):
             "STRING": "TEXT",
             "DATE": "DATE",
             "DATETIME": "TIMESTAMP",
+            "ARRAY": "ARRAY",
             "NULL": "NULL",
         }
         return mapping[self.name]
@@ -76,6 +85,7 @@ class AttributeType(Enum):
             "STRING": "TEXT",
             "DATE": "DATE",
             "DATETIME": "DATETIME",
+            "ARRAY": "TEXT",
             "NULL": "NULL",
         }
         return mapping[self.name]
@@ -89,6 +99,7 @@ class AttributeType(Enum):
             "STRING": "String",
             "DATE": "String",
             "DATETIME": "String",
+            "ARRAY": "Vec",
             "NULL": "None",
         }
         return mapping[self.name]
@@ -97,16 +108,16 @@ class AttributeType(Enum):
 class AttributeAppliesTo(StrEnum):
     """The level where the attribute applies."""
 
-    Building = auto()
-    RoofSurface = auto()
-    WallSurface = auto()
-    GroundSurface = auto()
-    ClosureSurface = auto()
-    OuterCeilingSurface = auto()
-    OuterFloorSurface = auto()
-    InteriorWallSurface = auto()
-    CeilingSurface = auto()
-    FloorSurface = auto()
+    Building = "Building"
+    RoofSurface = "RoofSurface"
+    WallSurface = "WallSurface"
+    GroundSurface = "GroundSurface"
+    ClosureSurface = "ClosureSurface"
+    OuterCeilingSurface = "OuterCeilingSurface"
+    OuterFloorSurface = "OuterFloorSurface"
+    InteriorWallSurface = "InteriorWallSurface"
+    CeilingSurface = "CeilingSurface"
+    FloorSurface = "FloorSurface"
 
     @classmethod
     def from_string(cls, applies_to_str: str) -> "AttributeAppliesTo":
@@ -121,12 +132,6 @@ class AttributeAppliesTo(StrEnum):
             f"Unknown appliesTo value: {applies_to_str}. "
             f"Valid values: {[item.value for item in cls]}"
         )
-
-    def __repr__(self) -> str:
-        return self.name
-
-    def __str__(self) -> str:
-        return self.name
 
 
 class DocumentationLanguage(Enum):
@@ -143,30 +148,128 @@ class DocumentationLanguage(Enum):
         return mapping[lang_str.lower()]
 
 
-class DocumentationEntry:
-    """Documentation entry for an attribute in a specific language."""
+@dataclass
+class Translation:
+    """Translation in Dutch and English."""
 
-    description: str
-    type: str
+    nl: str
+    en: str
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, str]) -> "Translation":
+        """Create Translation from dictionary."""
+        return cls(nl=data["nl"], en=data["en"])
 
 
 @dataclass
-class AttributeValue:
-    """Represents a possible value for a categorical attribute."""
+class ArrayItemDefinition:
+    """Definition for items in an array-type attribute."""
 
-    value: str
-    description: dict[DocumentationLanguage, str]
+    type: AttributeType
+    semantic_type: Optional[str] = None
+    description: Optional[Translation] = None
+    scale: Optional[Translation] = None
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> "ArrayItemDefinition":
+        """Create ArrayItemDefinition from dictionary."""
+        return cls(
+            type=AttributeType.from_string(data["type"]),
+            semantic_type=data.get("semanticType"),
+            description=Translation.from_dict(data["description"])
+            if "description" in data
+            else None,
+            scale=Translation.from_dict(data["scale"]) if "scale" in data else None,
+        )
 
 
 @dataclass
 class Attribute:
     """3DBAG attribute."""
 
+    name: str
     type: AttributeType
-    source: str
+    source: Optional[str]
     nullable: bool
     applies_to: AttributeAppliesTo
     precision: Optional[int]
-    unit: Optional[dict[DocumentationLanguage, str]]
-    values: Optional[list[AttributeValue]]
-    documentation: dict[DocumentationLanguage, DocumentationEntry]
+    unit: Optional[Translation]
+    format: Optional[str]
+    semantic_type: str
+    values: Optional[Dict[str, Translation]]
+    description: Translation
+    scale: Optional[Translation]
+    items: Optional[ArrayItemDefinition]
+
+    @classmethod
+    def from_dict(cls, name: str, data: Dict[str, Any]) -> "Attribute":
+        """Create Attribute from dictionary."""
+        # Handle values - can be null or a dict of value: translation pairs
+        values = None
+        if data.get("values") is not None:
+            values = {
+                key: Translation.from_dict(val) for key, val in data["values"].items()
+            }
+
+        # Handle optional Translation fields
+        unit = (
+            Translation.from_dict(data["unit"])
+            if data.get("unit") is not None
+            else None
+        )
+        scale = (
+            Translation.from_dict(data["scale"])
+            if data.get("scale") is not None
+            else None
+        )
+
+        # Handle array items
+        items = None
+        if "items" in data and data["items"] is not None:
+            items = ArrayItemDefinition.from_dict(data["items"])
+
+        return cls(
+            name=name,
+            type=AttributeType.from_string(data["type"]),
+            source=data["source"],
+            nullable=data["nullable"],
+            applies_to=AttributeAppliesTo.from_string(data["appliesTo"]),
+            precision=data["precision"],
+            unit=unit,
+            format=data["format"],
+            semantic_type=data["semanticType"],
+            values=values,
+            description=Translation.from_dict(data["description"]),
+            scale=scale,
+            items=items,
+        )
+
+
+def load_attributes_from_json(json_path: Path) -> Dict[str, Attribute]:
+    """
+    Load attributes from a JSON file and deserialize them into a dictionary.
+
+    Args:
+        json_path: Path to the JSON file containing attribute definitions.
+
+    Returns:
+        A dictionary where keys are attribute names and values are Attribute objects.
+    """
+    with open(json_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    attributes = {}
+    for attr_name, attr_data in data.items():
+        attributes[attr_name] = Attribute.from_dict(attr_name, attr_data)
+
+    return attributes
+
+
+def load_attributes_spec() -> Dict[str, Attribute]:
+    """Load the attribute specifications from the package.
+
+    Returns:
+        A dictionary where keys are attribute names and values are Attribute objects.
+    """
+    path_attributes_json = get_resource_file_path("attributes.json")
+    return load_attributes_from_json(path_attributes_json)
