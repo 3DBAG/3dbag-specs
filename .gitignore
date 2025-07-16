@@ -5,7 +5,9 @@
 # Tools
 .venv
 .ruff_cache
+.pytest_cache
 .tox
+tests/python/__pycache__
 
 # Build
 src/python/bag3d_specs.egg-info

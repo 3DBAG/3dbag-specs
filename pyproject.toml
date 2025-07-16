@@ -39,7 +39,7 @@ validate-attributes-json = "bag3d.specs.validate_attributes_json:main"
 include-package-data = true
 
 [tool.setuptools.data-files]
-"bag3d/resources" = ["resources/**/*"]
+"bag3d/resources" = ["resources/attributes.json", "resources/attributes.schema.json"]
 
 [tool.setuptools.packages.find]
 where = ["src/python"]
