@@ -17,14 +17,14 @@ dependencies = [
 [project.urls]
 Repository = "https://github.com/3DBAG/3dbag-specs"
 
-[project.optional-dependencies]
+[dependency-groups]
 dev = [
-    "pytest~=8.3.4",
-    "bumpver~=2024.1130",
-    "jsonschema~=4.24.0",
+    "pytest~=8.4.1",
+    "bumpver~=2025.1131",
     "tox~=4.27.0",
     "tox-uv>=1.26.1",
-    "ruff~=0.8.6",
+    "ruff~=0.12.3",
+    "bag3d-specs",
 ]
 
 [project.scripts]
@@ -37,6 +37,9 @@ include-package-data = true
 where = ["src/python"]
 
 [tool.uv]
+
+[tool.uv.sources]
+bag3d-specs = { workspace = true }
 
 [tool.ruff]
 line-length = 88

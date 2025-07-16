@@ -16,11 +16,11 @@ def get_resource_file_path(filename: str) -> Path:
         A pathlib.Path object pointing to the resource file.
     """
     try:
-        package_anchor = importlib.resources.files("bag3d")
+        package_anchor = importlib.resources.files("bag3d.specs")
 
-        data_path = package_anchor.parent.joinpath(
-            "bag3d.data/data/resources"
-        ).joinpath(filename)
+        data_path = package_anchor.parent.parent.parent.parent.joinpath(
+            "resources", "attributes.json"
+        )
 
         if not data_path.is_file():
             raise FileNotFoundError(
