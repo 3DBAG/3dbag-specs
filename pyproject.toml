@@ -8,7 +8,12 @@ version = "2025.07.16"
 description = "3DBAG specifications."
 readme = "README.md"
 authors = [{name = "Balázs Dukai", email = "balazs.dukai@3dgi.nl"}]
-license = {text = "MIT"}
+license = "Apache-2.0"
+license-files = ["LICEN[CS]E*", "NOTICE"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: GIS",
+]
 requires-python = ">=3.11"
 dependencies = [
     "jsonschema>=4.24.0",
