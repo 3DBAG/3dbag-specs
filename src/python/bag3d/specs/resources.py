@@ -10,7 +10,9 @@ def get_resource_file_path(filename: str) -> Path:
         return resource_path
 
     # Fallback for development (when running from source)
-    resource_path = Path(files("bag3d").name).parent.parent.joinpath("resources", filename)
+    resource_path = Path(files("bag3d").name).parent.parent.joinpath(
+        "resources", filename
+    )
     if resource_path.exists():
         return resource_path
 
