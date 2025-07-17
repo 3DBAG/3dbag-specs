@@ -106,7 +106,20 @@ class AttributeType(Enum):
 
 
 class AttributeAppliesTo(StrEnum):
-    """The level where the attribute applies."""
+    """The level where the attribute applies.
+
+    Attributes:
+        Building
+        RoofSurface
+        WallSurface
+        GroundSurface
+        ClosureSurface
+        OuterCeilingSurface
+        OuterFloorSurface
+        InteriorWallSurface
+        CeilingSurface
+        FloorSurface
+    """
 
     Building = "Building"
     RoofSurface = "RoofSurface"
@@ -185,7 +198,23 @@ class ArrayItemDefinition:
 
 @dataclass
 class Attribute:
-    """3DBAG attribute."""
+    """3DBAG attribute.
+
+    Attributes:
+        name: str
+        type: AttributeType
+        source: Optional[str]
+        nullable: bool
+        applies_to: AttributeAppliesTo
+        precision: Optional[int]
+        unit: Optional[Translation]
+        format: Optional[str]
+        semantic_type: str
+        values: Optional[Dict[str, Translation]]
+        description: Translation
+        scale: Optional[Translation]
+        items: Optional[ArrayItemDefinition]
+    """
 
     name: str
     type: AttributeType
