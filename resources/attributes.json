@@ -3,7 +3,18 @@
     "type": "int",
     "source": "roofer",
     "nullable": false,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "gpkg": {
+        "locations": [
+          "lod13_3d",
+          "lod12_2d",
+          "lod22_2d",
+          "lod22_3d",
+          "lod13_2d",
+          "lod12_3d"
+        ]
+      }
+    },
     "precision": null,
     "unit": null,
     "valueFormat": null,
@@ -22,7 +33,15 @@
     "type": "int",
     "source": "roofer",
     "nullable": false,
-    "appliesTo": "RoofSurface",
+    "appliesTo": {
+      "gpkg": {
+        "locations": [
+          "lod22_2d",
+          "lod12_2d",
+          "lod13_2d"
+        ]
+      }
+    },
     "precision": null,
     "unit": null,
     "valueFormat": null,
@@ -41,7 +60,24 @@
     "type": "string",
     "source": "BAG,roofer",
     "nullable": false,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "lod13_3d",
+          "lod12_2d",
+          "pand",
+          "lod22_2d",
+          "lod22_3d",
+          "lod13_2d",
+          "lod12_3d"
+        ]
+      }
+    },
     "precision": null,
     "unit": null,
     "valueFormat": null,
@@ -60,7 +96,18 @@
     "type": "int",
     "source": "BAG",
     "nullable": true,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": null,
     "valueFormat": "YYYY",
@@ -79,7 +126,18 @@
     "type": "string",
     "source": "BAG",
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": null,
     "valueFormat": null,
@@ -98,7 +156,18 @@
     "type": "string",
     "source": null,
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": null,
     "valueFormat": null,
@@ -117,7 +186,18 @@
     "type": "date",
     "source": null,
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": null,
     "valueFormat": "YYYY-MM-DD",
@@ -136,7 +216,18 @@
     "type": "string",
     "source": null,
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": null,
     "valueFormat": null,
@@ -155,7 +246,18 @@
     "type": "int",
     "source": "BAG",
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": null,
     "valueFormat": null,
@@ -174,7 +276,18 @@
     "type": "date",
     "source": "BAG",
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": null,
     "valueFormat": "YYYY-MM-DD",
@@ -193,7 +306,18 @@
     "type": "date",
     "source": "BAG",
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": null,
     "valueFormat": "YYYY-MM-DD",
@@ -212,7 +336,18 @@
     "type": "datetime",
     "source": "BAG",
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": null,
     "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
@@ -231,7 +366,18 @@
     "type": "datetime",
     "source": "BAG",
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": null,
     "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
@@ -250,7 +396,18 @@
     "type": "datetime",
     "source": "BAG",
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": null,
     "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
@@ -269,7 +426,18 @@
     "type": "datetime",
     "source": "BAG",
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": null,
     "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
@@ -288,7 +456,18 @@
     "type": "datetime",
     "source": "BAG",
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": null,
     "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
@@ -307,7 +486,18 @@
     "type": "datetime",
     "source": "BAG",
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": null,
     "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
@@ -326,7 +516,18 @@
     "type": "datetime",
     "source": "BAG",
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": null,
     "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
@@ -345,7 +546,18 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": {
       "en": "metre",
@@ -367,14 +579,25 @@
     "type": "string",
     "source": null,
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": null,
     "valueFormat": null,
     "semanticType": "category",
     "values": {
       "slanted": {
-        "nl": "Dat met ten minste één schuin oppervlak.",
+        "nl": "Dat met ten minste \u00e9\u00e9n schuin oppervlak.",
         "en": "Roof with at least one slanted surface."
       },
       "multiple horizontal": {
@@ -407,7 +630,18 @@
     "type": "int",
     "source": null,
     "nullable": false,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": null,
     "valueFormat": "YYYY",
@@ -426,7 +660,18 @@
     "type": "string",
     "source": null,
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": null,
     "valueFormat": null,
@@ -445,7 +690,18 @@
     "type": "bool",
     "source": null,
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": null,
     "valueFormat": null,
@@ -464,7 +720,7 @@
     "type": "bool",
     "source": null,
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {},
     "precision": null,
     "unit": null,
     "valueFormat": null,
@@ -483,7 +739,14 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "RoofSurface",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "RoofSurface",
+          "Building"
+        ]
+      }
+    },
     "precision": null,
     "unit": {
       "en": "metre",
@@ -505,7 +768,14 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "RoofSurface",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "RoofSurface",
+          "Building"
+        ]
+      }
+    },
     "precision": null,
     "unit": {
       "en": "metre",
@@ -527,7 +797,14 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "RoofSurface",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "RoofSurface",
+          "Building"
+        ]
+      }
+    },
     "precision": null,
     "unit": {
       "en": "metre",
@@ -549,7 +826,14 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "RoofSurface",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "RoofSurface",
+          "Building"
+        ]
+      }
+    },
     "precision": null,
     "unit": {
       "en": "metre",
@@ -571,7 +855,18 @@
     "type": "array",
     "source": null,
     "nullable": false,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "semanticType": "list",
     "precision": null,
     "unit": null,
@@ -599,7 +894,18 @@
     "type": "array",
     "source": null,
     "nullable": false,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "semanticType": "list",
     "precision": null,
     "unit": null,
@@ -627,7 +933,18 @@
     "type": "array",
     "source": null,
     "nullable": false,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "semanticType": "list",
     "precision": null,
     "unit": null,
@@ -655,7 +972,18 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": {
       "en": "metre",
@@ -677,7 +1005,18 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": {
       "en": "metre",
@@ -699,7 +1038,18 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": {
       "en": "metre",
@@ -721,7 +1071,18 @@
     "type": "bool",
     "source": null,
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": null,
     "valueFormat": null,
@@ -749,7 +1110,18 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": null,
     "valueFormat": null,
@@ -768,7 +1140,18 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": null,
     "valueFormat": null,
@@ -787,7 +1170,18 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": {
       "en": "metre",
@@ -809,7 +1203,18 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": {
       "en": "metre",
@@ -831,7 +1236,18 @@
     "type": "string",
     "source": null,
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": null,
     "valueFormat": null,
@@ -871,7 +1287,18 @@
     "type": "int",
     "source": null,
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": {
       "en": "points per square metre",
@@ -893,7 +1320,18 @@
     "type": "int",
     "source": null,
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": {
       "en": "points per square metre",
@@ -915,7 +1353,18 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": {
       "en": "cubic metre",
@@ -937,7 +1386,18 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": {
       "en": "cubic metre",
@@ -959,7 +1419,18 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": {
       "en": "cubic metre",
@@ -981,7 +1452,18 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": {
       "en": "square metre",
@@ -1003,7 +1485,18 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": {
       "en": "square metre",
@@ -1025,7 +1518,18 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": {
       "en": "square metre",
@@ -1047,7 +1551,18 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": {
       "en": "square metre",
@@ -1069,7 +1584,18 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": {
       "en": "square metre",
@@ -1091,7 +1617,18 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": {
       "en": "square metre",
@@ -1113,7 +1650,15 @@
     "type": "array",
     "source": null,
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "gpkg": {
+        "locations": [
+          "lod22_3d",
+          "lod13_3d",
+          "lod12_3d"
+        ]
+      }
+    },
     "semanticType": "list",
     "precision": null,
     "unit": null,
@@ -1141,7 +1686,18 @@
     "type": "int",
     "source": null,
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": null,
     "valueFormat": null,
@@ -1160,7 +1716,13 @@
     "type": "string",
     "source": null,
     "nullable": null,
-    "appliesTo": "Building",
+    "appliesTo": {
+      "gpkg": {
+        "locations": [
+          "pand"
+        ]
+      }
+    },
     "precision": null,
     "unit": null,
     "valueFormat": null,
@@ -1188,7 +1750,18 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "RoofSurface",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "RoofSurface"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "lod22_2d"
+        ]
+      }
+    },
     "precision": null,
     "unit": {
       "en": "degrees",
@@ -1210,7 +1783,18 @@
     "type": "float",
     "source": null,
     "nullable": null,
-    "appliesTo": "RoofSurface",
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "RoofSurface"
+        ]
+      },
+      "gpkg": {
+        "locations": [
+          "lod22_2d"
+        ]
+      }
+    },
     "precision": null,
     "unit": {
       "en": "degrees",

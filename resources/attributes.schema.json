@@ -16,7 +16,7 @@
         "appliesTo",
         "precision",
         "unit",
-        "format",
+        "valueFormat",
         "semanticType",
         "values",
         "description",
@@ -59,7 +59,7 @@
               "$ref": "#/definitions/format-gpkg"
             }
           },
-          "minProperties": 1,
+          "minProperties": 0,
           "additionalProperties": false
         },
         "precision": {
@@ -169,39 +169,45 @@
     "format-cityjson": {
       "type": "object",
       "properties": {
-        "location": {
-          "type": "string",
-          "enum": [
-            "Building",
-            "BuildingPart",
-            "RoofSurface",
-            "WallSurface",
-            "GroundSurface",
-            "ClosureSurface",
-            "OuterCeilingSurface",
-            "OuterFloorSurface",
-            "InteriorWallSurface",
-            "CeilingSurface",
-            "FloorSurface"
-          ],
-          "description": "The CitObject or Semantic type where the attribute is located."
+        "locations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "Building",
+              "BuildingPart",
+              "RoofSurface",
+              "WallSurface",
+              "GroundSurface",
+              "ClosureSurface",
+              "OuterCeilingSurface",
+              "OuterFloorSurface",
+              "InteriorWallSurface",
+              "CeilingSurface",
+              "FloorSurface"
+            ]
+          },
+          "description": "The CityObject or Semantic type where the attribute is located."
         }
       }
     },
     "format-gpkg": {
       "type": "object",
       "properties": {
-        "location": {
-          "type": "string",
-          "enum": [
-            "pand",
-            "lod12_2d",
-            "lod12_3d",
-            "lod13_2d",
-            "lod13_3d",
-            "lod22_2d",
-            "lod22_3d"
-          ],
+        "locations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "pand",
+              "lod12_2d",
+              "lod12_3d",
+              "lod13_2d",
+              "lod13_3d",
+              "lod22_2d",
+              "lod22_3d"
+            ]
+          },
           "description": "The GeoPackage layer where the attribute is located."
         }
       }
