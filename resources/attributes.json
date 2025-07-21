@@ -6,7 +6,7 @@
     "appliesTo": "Building",
     "precision": null,
     "unit": null,
-    "format": null,
+    "valueFormat": null,
     "semanticType": "identifier",
     "values": null,
     "description": {
@@ -25,7 +25,7 @@
     "appliesTo": "RoofSurface",
     "precision": null,
     "unit": null,
-    "format": null,
+    "valueFormat": null,
     "semanticType": "identifier",
     "values": null,
     "description": {
@@ -44,7 +44,7 @@
     "appliesTo": "Building",
     "precision": null,
     "unit": null,
-    "format": null,
+    "valueFormat": null,
     "semanticType": "identifier",
     "values": null,
     "description": {
@@ -63,7 +63,7 @@
     "appliesTo": "Building",
     "precision": null,
     "unit": null,
-    "format": "YYYY",
+    "valueFormat": "YYYY",
     "semanticType": "year",
     "values": null,
     "description": {
@@ -82,7 +82,7 @@
     "appliesTo": "Building",
     "precision": null,
     "unit": null,
-    "format": null,
+    "valueFormat": null,
     "semanticType": "category",
     "values": null,
     "description": {
@@ -101,7 +101,7 @@
     "appliesTo": "Building",
     "precision": null,
     "unit": null,
-    "format": null,
+    "valueFormat": null,
     "semanticType": "flag",
     "values": null,
     "description": {
@@ -120,7 +120,7 @@
     "appliesTo": "Building",
     "precision": null,
     "unit": null,
-    "format": "YYYY-MM-DD",
+    "valueFormat": "YYYY-MM-DD",
     "semanticType": "day",
     "values": null,
     "description": {
@@ -139,7 +139,7 @@
     "appliesTo": "Building",
     "precision": null,
     "unit": null,
-    "format": null,
+    "valueFormat": null,
     "semanticType": "identifier",
     "values": null,
     "description": {
@@ -158,7 +158,7 @@
     "appliesTo": "Building",
     "precision": null,
     "unit": null,
-    "format": null,
+    "valueFormat": null,
     "semanticType": "identifier",
     "values": null,
     "description": {
@@ -177,7 +177,7 @@
     "appliesTo": "Building",
     "precision": null,
     "unit": null,
-    "format": "YYYY-MM-DD",
+    "valueFormat": "YYYY-MM-DD",
     "semanticType": "day",
     "values": null,
     "description": {
@@ -196,7 +196,7 @@
     "appliesTo": "Building",
     "precision": null,
     "unit": null,
-    "format": "YYYY-MM-DD",
+    "valueFormat": "YYYY-MM-DD",
     "semanticType": "day",
     "values": null,
     "description": {
@@ -215,7 +215,7 @@
     "appliesTo": "Building",
     "precision": null,
     "unit": null,
-    "format": "YYYY-MM-DDThh:mm:ss.sss",
+    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
     "semanticType": "millisecond",
     "values": null,
     "description": {
@@ -234,7 +234,7 @@
     "appliesTo": "Building",
     "precision": null,
     "unit": null,
-    "format": "YYYY-MM-DDThh:mm:ss.sss",
+    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
     "semanticType": "millisecond",
     "values": null,
     "description": {
@@ -253,7 +253,7 @@
     "appliesTo": "Building",
     "precision": null,
     "unit": null,
-    "format": "YYYY-MM-DDThh:mm:ss.sss",
+    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
     "semanticType": "millisecond",
     "values": null,
     "description": {
@@ -272,7 +272,7 @@
     "appliesTo": "Building",
     "precision": null,
     "unit": null,
-    "format": "YYYY-MM-DDThh:mm:ss.sss",
+    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
     "semanticType": "millisecond",
     "values": null,
     "description": {
@@ -291,7 +291,7 @@
     "appliesTo": "Building",
     "precision": null,
     "unit": null,
-    "format": "YYYY-MM-DDThh:mm:ss.sss",
+    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
     "semanticType": "millisecond",
     "values": null,
     "description": {
@@ -310,7 +310,7 @@
     "appliesTo": "Building",
     "precision": null,
     "unit": null,
-    "format": "YYYY-MM-DDThh:mm:ss.sss",
+    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
     "semanticType": "millisecond",
     "values": null,
     "description": {
@@ -329,7 +329,7 @@
     "appliesTo": "Building",
     "precision": null,
     "unit": null,
-    "format": "YYYY-MM-DDThh:mm:ss.sss",
+    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
     "semanticType": "millisecond",
     "values": null,
     "description": {
@@ -351,7 +351,7 @@
       "en": "metre",
       "nl": "meter"
     },
-    "format": null,
+    "valueFormat": null,
     "semanticType": "elevation",
     "values": null,
     "description": {
@@ -370,7 +370,7 @@
     "appliesTo": "Building",
     "precision": null,
     "unit": null,
-    "format": null,
+    "valueFormat": null,
     "semanticType": "category",
     "values": {
       "slanted": {
@@ -410,7 +410,7 @@
     "appliesTo": "Building",
     "precision": null,
     "unit": null,
-    "format": "YYYY",
+    "valueFormat": "YYYY",
     "semanticType": "year",
     "values": null,
     "description": {
@@ -429,7 +429,7 @@
     "appliesTo": "Building",
     "precision": null,
     "unit": null,
-    "format": null,
+    "valueFormat": null,
     "semanticType": "text",
     "values": null,
     "description": {
@@ -448,7 +448,7 @@
     "appliesTo": "Building",
     "precision": null,
     "unit": null,
-    "format": null,
+    "valueFormat": null,
     "semanticType": "flag",
     "values": null,
     "description": {
@@ -467,7 +467,7 @@
     "appliesTo": "Building",
     "precision": null,
     "unit": null,
-    "format": null,
+    "valueFormat": null,
     "semanticType": "flag",
     "values": null,
     "description": {
@@ -489,7 +489,7 @@
       "en": "metre",
       "nl": "meter"
     },
-    "format": null,
+    "valueFormat": null,
     "semanticType": "elevation",
     "values": null,
     "description": {
@@ -511,7 +511,7 @@
       "en": "metre",
       "nl": "meter"
     },
-    "format": null,
+    "valueFormat": null,
     "semanticType": "elevation",
     "values": null,
     "description": {
@@ -533,7 +533,7 @@
       "en": "metre",
       "nl": "meter"
     },
-    "format": null,
+    "valueFormat": null,
     "semanticType": "elevation",
     "values": null,
     "description": {
@@ -555,7 +555,7 @@
       "en": "metre",
       "nl": "meter"
     },
-    "format": null,
+    "valueFormat": null,
     "semanticType": "elevation",
     "values": null,
     "description": {
@@ -575,7 +575,7 @@
     "semanticType": "list",
     "precision": null,
     "unit": null,
-    "format": null,
+    "valueFormat": null,
     "values": null,
     "scale": null,
     "description": {
@@ -603,7 +603,7 @@
     "semanticType": "list",
     "precision": null,
     "unit": null,
-    "format": null,
+    "valueFormat": null,
     "values": null,
     "scale": null,
     "description": {
@@ -631,7 +631,7 @@
     "semanticType": "list",
     "precision": null,
     "unit": null,
-    "format": null,
+    "valueFormat": null,
     "values": null,
     "scale": null,
     "description": {
@@ -661,7 +661,7 @@
       "en": "metre",
       "nl": "meter"
     },
-    "format": null,
+    "valueFormat": null,
     "semanticType": "error",
     "values": null,
     "description": {
@@ -683,7 +683,7 @@
       "en": "metre",
       "nl": "meter"
     },
-    "format": null,
+    "valueFormat": null,
     "semanticType": "error",
     "values": null,
     "description": {
@@ -705,7 +705,7 @@
       "en": "metre",
       "nl": "meter"
     },
-    "format": null,
+    "valueFormat": null,
     "semanticType": "error",
     "values": null,
     "description": {
@@ -724,7 +724,7 @@
     "appliesTo": "Building",
     "precision": null,
     "unit": null,
-    "format": null,
+    "valueFormat": null,
     "semanticType": "flag",
     "values": {
       "true": {
@@ -752,7 +752,7 @@
     "appliesTo": "Building",
     "precision": null,
     "unit": null,
-    "format": null,
+    "valueFormat": null,
     "semanticType": "fraction",
     "values": null,
     "description": {
@@ -771,7 +771,7 @@
     "appliesTo": "Building",
     "precision": null,
     "unit": null,
-    "format": null,
+    "valueFormat": null,
     "semanticType": "fraction",
     "values": null,
     "description": {
@@ -793,7 +793,7 @@
       "en": "metre",
       "nl": "meter"
     },
-    "format": null,
+    "valueFormat": null,
     "semanticType": "length",
     "values": null,
     "description": {
@@ -815,7 +815,7 @@
       "en": "metre",
       "nl": "meter"
     },
-    "format": null,
+    "valueFormat": null,
     "semanticType": "length",
     "values": null,
     "description": {
@@ -834,7 +834,7 @@
     "appliesTo": "Building",
     "precision": null,
     "unit": null,
-    "format": null,
+    "valueFormat": null,
     "semanticType": "category",
     "values": {
       "PREFERRED_AND_LATEST": {
@@ -877,7 +877,7 @@
       "en": "points per square metre",
       "nl": "punten per vierkante meter"
     },
-    "format": null,
+    "valueFormat": null,
     "semanticType": "density",
     "values": null,
     "description": {
@@ -899,7 +899,7 @@
       "en": "points per square metre",
       "nl": "punten per vierkante meter"
     },
-    "format": null,
+    "valueFormat": null,
     "semanticType": "density",
     "values": null,
     "description": {
@@ -921,7 +921,7 @@
       "en": "cubic metre",
       "nl": "kubieke meter"
     },
-    "format": null,
+    "valueFormat": null,
     "semanticType": "volume",
     "values": null,
     "description": {
@@ -943,7 +943,7 @@
       "en": "cubic metre",
       "nl": "kubieke meter"
     },
-    "format": null,
+    "valueFormat": null,
     "semanticType": "volume",
     "values": null,
     "description": {
@@ -965,7 +965,7 @@
       "en": "cubic metre",
       "nl": "kubieke meter"
     },
-    "format": null,
+    "valueFormat": null,
     "semanticType": "volume",
     "values": null,
     "description": {
@@ -987,7 +987,7 @@
       "en": "square metre",
       "nl": "vierkante meter"
     },
-    "format": null,
+    "valueFormat": null,
     "semanticType": "area",
     "values": null,
     "description": {
@@ -1009,7 +1009,7 @@
       "en": "square metre",
       "nl": "vierkante meter"
     },
-    "format": null,
+    "valueFormat": null,
     "semanticType": "area",
     "values": null,
     "description": {
@@ -1031,7 +1031,7 @@
       "en": "square metre",
       "nl": "vierkante meter"
     },
-    "format": null,
+    "valueFormat": null,
     "semanticType": "area",
     "values": null,
     "description": {
@@ -1053,7 +1053,7 @@
       "en": "square metre",
       "nl": "vierkante meter"
     },
-    "format": null,
+    "valueFormat": null,
     "semanticType": "area",
     "values": null,
     "description": {
@@ -1075,7 +1075,7 @@
       "en": "square metre",
       "nl": "vierkante meter"
     },
-    "format": null,
+    "valueFormat": null,
     "semanticType": "area",
     "values": null,
     "description": {
@@ -1097,7 +1097,7 @@
       "en": "square metre",
       "nl": "vierkante meter"
     },
-    "format": null,
+    "valueFormat": null,
     "semanticType": "area",
     "values": null,
     "description": {
@@ -1117,7 +1117,7 @@
     "semanticType": "list",
     "precision": null,
     "unit": null,
-    "format": null,
+    "valueFormat": null,
     "values": null,
     "scale": null,
     "description": {
@@ -1144,7 +1144,7 @@
     "appliesTo": "Building",
     "precision": null,
     "unit": null,
-    "format": null,
+    "valueFormat": null,
     "semanticType": "count",
     "values": null,
     "description": {
@@ -1163,7 +1163,7 @@
     "appliesTo": "Building",
     "precision": null,
     "unit": null,
-    "format": null,
+    "valueFormat": null,
     "semanticType": "flag",
     "values": {
       "true": {
@@ -1194,7 +1194,7 @@
       "en": "degrees",
       "nl": "graden"
     },
-    "format": null,
+    "valueFormat": null,
     "semanticType": "angle",
     "values": null,
     "description": {
@@ -1216,7 +1216,7 @@
       "en": "degrees",
       "nl": "graden"
     },
-    "format": null,
+    "valueFormat": null,
     "semanticType": "angle",
     "values": null,
     "description": {
