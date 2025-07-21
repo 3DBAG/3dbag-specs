@@ -1,5 +1,5 @@
 from bag3d.specs.resources import get_resource_file_path
-from bag3d.specs.core import Attribute, AttributeType, load_attributes_spec
+from bag3d.specs.core import Attribute, AttributeType, load_attributes_spec, BaseType
 
 
 def test_get_resource_file_path():
@@ -55,7 +55,8 @@ def test_attribute_array():
 
     attr = Attribute.from_dict("test_bool", data)
 
-    assert attr.items.type == AttributeType.INT
+    assert attr.type == AttributeType(BaseType.ARRAY, BaseType.INT)
+    assert str(attr.type) == "ARRAY<INT>"
     assert attr.items.scale.en == "ratio"
 
 
