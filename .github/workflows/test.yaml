@@ -22,3 +22,7 @@ jobs:
           python -m pip install tox tox-uv
       - name: Test with tox
         run: tox
+      - name: Test with doctest
+        run: |
+          python -m pip install -e .
+          python -m doctest src/python/bag3d/specs/core.py -v

@@ -4,10 +4,10 @@ from dataclasses import dataclass
 import json
 from pathlib import Path
 
-from .resources import get_resource_file_path
+from bag3d.specs.resources import get_resource_file_path
 
 
-class AttributeType(Enum):
+class BaseType(Enum):
     """3DBAG attribute types."""
 
     INT = auto()
@@ -20,7 +20,7 @@ class AttributeType(Enum):
     NULL = auto()
 
     @classmethod
-    def from_string(cls, type_str: str) -> "AttributeType":
+    def from_string(cls, type_str: str) -> "BaseType":
         """Convert string to AttributeType enum."""
         mapping = {
             "int": cls.INT,
@@ -34,6 +34,52 @@ class AttributeType(Enum):
         }
         return mapping[type_str.lower()]
 
+
+@dataclass(frozen=True)
+class AttributeType:
+    """3DBAG attribute type that can represent simple and complex types.
+
+    >>> simple = AttributeType(BaseType.INT)
+    >>> complex = AttributeType(BaseType.ARRAY, BaseType.INT)
+    >>> assert complex.as_ogr() == "IntegerList"
+    >>> complex = AttributeType.from_dict(
+    ...    {
+    ...        "type": "array",
+    ...        "items": { "type": "string" },
+    ...    }
+    ... )
+    >>> assert complex.as_ogr() == "StringList"
+    """
+
+    base_type: BaseType
+    sub_type: Optional[BaseType] = None
+
+    def __post_init__(self):
+        """Validate type specification."""
+        if self.sub_type is not None and self.base_type is None:
+            raise ValueError("A sub_type must have a base_type")
+
+    def __str__(self) -> str:
+        if self.sub_type:
+            return f"{self.base_type.name}<{self.sub_type.name}>"
+        return self.base_type.name
+
+    def __repr__(self) -> str:
+        if self.sub_type:
+            return f"AttributeType({self.base_type.name}, {self.sub_type.name})"
+        return f"AttributeType({self.base_type})"
+
+    @classmethod
+    def from_dict(cls, data: dict) -> "AttributeType":
+        """Create AttributeType from dictionary (for JSON deserialization)."""
+        base_type = BaseType.from_string(data["type"])
+
+        if base_type == BaseType.ARRAY and "items" in data:
+            item_type = BaseType.from_string(data["items"]["type"])
+            return cls(base_type, item_type)
+
+        return cls(base_type)
+
     def as_python(self) -> str:
         """Convert to Python data type name."""
         mapping = {
@@ -41,68 +87,38 @@ class AttributeType(Enum):
             "FLOAT": "float",
             "BOOL": "bool",
             "STRING": "str",
-            "DATE": "str",
+            "DATE": "date",
             "DATETIME": "datetime",
             "ARRAY": "list",
             "NULL": "None",
         }
-        return mapping[self.name]
+        return mapping[self.base_type.name]
 
-    def as_cpp(self) -> str:
-        """Convert to C++ data type name."""
-        mapping = {
-            "INT": "int",
-            "FLOAT": "float",
-            "BOOL": "bool",
-            "STRING": "string",
-            "DATE": "string",
-            "DATETIME": "string",
-            "ARRAY": "vector",
-            "NULL": "null",
-        }
-        return mapping[self.name]
+    def as_ogr(self) -> str:
+        """Convert to OGR Field data type, including the subtype where relevant.
 
-    def as_postgresql(self) -> str:
-        """Convert to PostgreSQL data type name."""
-        mapping = {
-            "INT": "INTEGER",
-            "FLOAT": "DOUBLE PRECISION",
-            "BOOL": "BOOLEAN",
-            "STRING": "TEXT",
-            "DATE": "DATE",
-            "DATETIME": "TIMESTAMP",
-            "ARRAY": "ARRAY",
-            "NULL": "NULL",
-        }
-        return mapping[self.name]
-
-    def as_gpkg(self) -> str:
-        """Convert to GeoPackage data type name."""
-        mapping = {
-            "INT": "INTEGER",
-            "FLOAT": "DOUBLE",
-            "BOOL": "BOOLEAN",
-            "STRING": "TEXT",
-            "DATE": "DATE",
-            "DATETIME": "DATETIME",
-            "ARRAY": "TEXT",
-            "NULL": "NULL",
-        }
-        return mapping[self.name]
-
-    def as_rust(self) -> str:
-        """Convert to Rust data type name."""
-        mapping = {
-            "INT": "i32",
-            "FLOAT": "f64",
-            "BOOL": "bool",
+        References:
+            - Schema for OGR_SCHEMA open option: https://raw.githubusercontent.com/OSGeo/gdal/refs/heads/master/ogr/data/ogr_fields_override.schema.json
+            - OGR Field subtypes RFC: https://gdal.org/en/stable/development/rfc/rfc50_ogr_field_subtype.html
+        """
+        mapping_subtype = {
+            "INT": "Integer",
+            "FLOAT": "Real",
             "STRING": "String",
-            "DATE": "String",
-            "DATETIME": "String",
-            "ARRAY": "Vec",
-            "NULL": "None",
         }
-        return mapping[self.name]
+        if self.base_type == BaseType.ARRAY:
+            if subtype := mapping_subtype.get(self.sub_type.name):
+                return f"{subtype}List"
+        mapping = {
+            "INT": "Integer",
+            "FLOAT": "Real",
+            "BOOL": "Integer(Boolean)",
+            "STRING": "String",
+            "DATE": "Date",
+            "DATETIME": "DateTime",
+            "NULL": "String",
+        }
+        return mapping[self.base_type.name]
 
 
 class AttributeAppliesTo(StrEnum):
@@ -187,7 +203,7 @@ class ArrayItemDefinition:
     def from_dict(cls, data: Dict[str, Any]) -> "ArrayItemDefinition":
         """Create ArrayItemDefinition from dictionary."""
         return cls(
-            type=AttributeType.from_string(data["type"]),
+            type=AttributeType(data["type"]),
             semantic_type=data.get("semanticType"),
             description=Translation.from_dict(data["description"])
             if "description" in data
@@ -259,7 +275,7 @@ class Attribute:
 
         return cls(
             name=name,
-            type=AttributeType.from_string(data["type"]),
+            type=AttributeType.from_dict(data),
             source=data["source"],
             nullable=data["nullable"],
             applies_to=AttributeAppliesTo.from_string(data["appliesTo"]),
