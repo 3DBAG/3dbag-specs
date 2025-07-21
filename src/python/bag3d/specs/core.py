@@ -121,11 +121,12 @@ class AttributeType:
         return mapping[self.base_type.name]
 
 
-class AttributeAppliesTo(StrEnum):
-    """The level where the attribute applies.
+class CityJSONLocation(StrEnum):
+    """The object type where the attribute is located in CityJSON.
 
     Attributes:
         Building
+        BuildingPart
         RoofSurface
         WallSurface
         GroundSurface
@@ -138,6 +139,7 @@ class AttributeAppliesTo(StrEnum):
     """
 
     Building = "Building"
+    BuildingPart = "BuildingPart"
     RoofSurface = "RoofSurface"
     WallSurface = "WallSurface"
     GroundSurface = "GroundSurface"
@@ -149,18 +151,60 @@ class AttributeAppliesTo(StrEnum):
     FloorSurface = "FloorSurface"
 
     @classmethod
-    def from_string(cls, applies_to_str: str) -> "AttributeAppliesTo":
-        """Convert string to AttributeAppliesTo enum."""
-        # Handle exact matches first
+    def from_string(cls, cityjson_location_str: str) -> "CityJSONLocation":
+        """Convert a string to CityJSONLocation enum."""
         for item in cls:
-            if item.value == applies_to_str:
+            if item.value == cityjson_location_str:
                 return item
 
-        # If no exact match, raise error with suggestions
         raise ValueError(
-            f"Unknown appliesTo value: {applies_to_str}. "
+            f"Unknown CityJSONLocation value: {cityjson_location_str}. "
             f"Valid values: {[item.value for item in cls]}"
         )
+
+
+class GpkgLocation(StrEnum):
+    """The GeoPackage layer where the attribute is located."""
+
+    pand = "pand"
+    lod12_2d = "lod12_2d"
+    lod12_3d = "lod12_3d"
+    lod13_2d = "lod13_2d"
+    lod13_3d = "lod13_3d"
+    lod22_2d = "lod22_2d"
+    lod22_3d = "lod22_3d"
+
+    @classmethod
+    def from_string(cls, gpkg_location_str: str) -> "GpkgLocation":
+        """Convert a string to GpkgLocation enum."""
+        for item in cls:
+            if item.value == gpkg_location_str:
+                return item
+
+        raise ValueError(
+            f"Unknown GpkgLocation value: {gpkg_location_str}. "
+            f"Valid values: {[item.value for item in cls]}"
+        )
+
+
+@dataclass
+class AttributeAppliesTo:
+    """The appliesTo property."""
+
+    cityjson: Optional[dict] = None
+    gpkg: Optional[dict] = None
+
+    @classmethod
+    def from_dict(cls, data: dict) -> "AttributeAppliesTo":
+        cityjson = None
+        gpkg = None
+        if cj := data.get("cityjson"):
+            cityjson = {
+                "locations": list(map(CityJSONLocation.from_string, cj["locations"]))
+            }
+        if g := data.get("gpkg"):
+            gpkg = {"locations": list(map(GpkgLocation.from_string, g["locations"]))}
+        return cls(cityjson=cityjson, gpkg=gpkg)
 
 
 class DocumentationLanguage(Enum):
@@ -224,7 +268,7 @@ class Attribute:
         applies_to: AttributeAppliesTo
         precision: Optional[int]
         unit: Optional[Translation]
-        format: Optional[str]
+        value_format: Optional[str]
         semantic_type: str
         values: Optional[Dict[str, Translation]]
         description: Translation
@@ -239,7 +283,7 @@ class Attribute:
     applies_to: AttributeAppliesTo
     precision: Optional[int]
     unit: Optional[Translation]
-    format: Optional[str]
+    value_format: Optional[str]
     semantic_type: str
     values: Optional[Dict[str, Translation]]
     description: Translation
@@ -278,10 +322,10 @@ class Attribute:
             type=AttributeType.from_dict(data),
             source=data["source"],
             nullable=data["nullable"],
-            applies_to=AttributeAppliesTo.from_string(data["appliesTo"]),
+            applies_to=AttributeAppliesTo.from_dict(data["appliesTo"]),
             precision=data["precision"],
             unit=unit,
-            format=data["format"],
+            value_format=data["valueFormat"],
             semantic_type=data["semanticType"],
             values=values,
             description=Translation.from_dict(data["description"]),
