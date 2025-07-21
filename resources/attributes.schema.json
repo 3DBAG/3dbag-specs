@@ -16,7 +16,7 @@
         "appliesTo",
         "precision",
         "unit",
-        "format",
+        "valueFormat",
         "semanticType",
         "values",
         "description",
@@ -51,20 +51,16 @@
           "description": "Whether null values are valid for this attribute or they indicate an error in the process."
         },
         "appliesTo": {
-          "type": "string",
-          "enum": [
-            "Building",
-            "RoofSurface",
-            "WallSurface",
-            "GroundSurface",
-            "ClosureSurface",
-            "OuterCeilingSurface",
-            "OuterFloorSurface",
-            "InteriorWallSurface",
-            "CeilingSurface",
-            "FloorSurface"
-          ],
-          "description": "Level where this attribute applies."
+          "properties": {
+            "cityjson": {
+              "$ref": "#/definitions/format-cityjson"
+            },
+            "gpkg": {
+              "$ref": "#/definitions/format-gpkg"
+            }
+          },
+          "minProperties": 0,
+          "additionalProperties": false
         },
         "precision": {
           "type": [
@@ -84,7 +80,7 @@
           ],
           "description": "Unit of measurement."
         },
-        "format": {
+        "valueFormat": {
           "type": [
             "string",
             "null"
@@ -167,6 +163,52 @@
         },
         "scale": {
           "$ref": "#/definitions/translation"
+        }
+      }
+    },
+    "format-cityjson": {
+      "type": "object",
+      "properties": {
+        "locations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "Building",
+              "BuildingPart",
+              "RoofSurface",
+              "WallSurface",
+              "GroundSurface",
+              "ClosureSurface",
+              "OuterCeilingSurface",
+              "OuterFloorSurface",
+              "InteriorWallSurface",
+              "CeilingSurface",
+              "FloorSurface"
+            ]
+          },
+          "description": "The CityObject or Semantic type where the attribute is located."
+        }
+      }
+    },
+    "format-gpkg": {
+      "type": "object",
+      "properties": {
+        "locations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "pand",
+              "lod12_2d",
+              "lod12_3d",
+              "lod13_2d",
+              "lod13_3d",
+              "lod22_2d",
+              "lod22_3d"
+            ]
+          },
+          "description": "The GeoPackage layer where the attribute is located."
         }
       }
     }

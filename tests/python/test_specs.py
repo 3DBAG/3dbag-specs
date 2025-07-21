@@ -1,5 +1,11 @@
 from bag3d.specs.resources import get_resource_file_path
-from bag3d.specs.core import Attribute, AttributeType, load_attributes_spec, BaseType
+from bag3d.specs.core import (
+    Attribute,
+    AttributeType,
+    load_attributes_spec,
+    BaseType,
+    CityJSONLocation,
+)
 
 
 def test_get_resource_file_path():
@@ -13,10 +19,10 @@ def test_attribute_scalar():
         "type": "string",
         "source": "source",
         "nullable": "true",
-        "appliesTo": "Building",
+        "appliesTo": {},
         "precision": 2,
         "unit": {"en": "metre", "nl": "meter"},
-        "format": "YYYY",
+        "valueFormat": "YYYY",
         "semanticType": "category",
         "values": {"yes": {"nl": "Ja", "en": "Yes"}, "no": {"nl": "Nee", "en": "No"}},
         "description": {"nl": "Test", "en": "Test"},
@@ -36,11 +42,14 @@ def test_attribute_array():
     data = {
         "type": "array",
         "source": "source",
-        "nullable": "true",
-        "appliesTo": "Building",
+        "nullable": True,
+        "appliesTo": {
+            "cityjson": {"locations": ["RoofSurface"]},
+            "gpkg": {"locations": ["lod22_2d"]},
+        },
         "precision": 2,
         "unit": {"en": "metre", "nl": "meter"},
-        "format": "YYYY",
+        "valueFormat": "YYYY",
         "semanticType": "category",
         "values": {"yes": {"nl": "Ja", "en": "Yes"}, "no": {"nl": "Nee", "en": "No"}},
         "description": {"nl": "Test", "en": "Test"},
@@ -58,6 +67,7 @@ def test_attribute_array():
     assert attr.type == AttributeType(BaseType.ARRAY, BaseType.INT)
     assert str(attr.type) == "ARRAY<INT>"
     assert attr.items.scale.en == "ratio"
+    assert CityJSONLocation.RoofSurface in attr.applies_to.cityjson["locations"]
 
 
 def test_load_from_package():
