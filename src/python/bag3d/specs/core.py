@@ -368,6 +368,14 @@ def load_attributes_from_json(json_path: Path) -> Dict[str, Attribute]:
     return attributes
 
 
+def load_attributes_spec_schema() -> dict:
+    """Load the attribute specifications schema from the package."""
+    path_attributes_json = get_resource_file_path("attributes.schema.json")
+    with open(path_attributes_json, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    return data
+
+
 def load_attributes_spec() -> Dict[str, Attribute]:
     """Load the attribute specifications from the package.
 

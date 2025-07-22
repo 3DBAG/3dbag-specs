@@ -720,7 +720,7 @@
     "type": "bool",
     "source": null,
     "nullable": null,
-    "appliesTo": {},
+    "appliesTo": null,
     "precision": null,
     "unit": null,
     "valueFormat": null,
