@@ -248,6 +248,9 @@ class DocumentationLanguage(Enum):
         }
         return mapping[lang_str.lower()]
 
+    def __str__(self) -> str:
+        return self.name.lower()
+
 
 @dataclass
 class Translation:
@@ -260,6 +263,10 @@ class Translation:
     def from_dict(cls, data: Dict[str, str]) -> "Translation":
         """Create Translation from dictionary."""
         return cls(nl=data["nl"], en=data["en"])
+
+    def get_translation(self, lang: DocumentationLanguage) -> str:
+        """Return the requested translation."""
+        return getattr(self, str(lang))
 
 
 @dataclass
