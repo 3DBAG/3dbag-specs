@@ -108,6 +108,20 @@ class AttributeType:
         }
         return mapping[self.base_type.name]
 
+    def as_gpkg(self) -> str:
+        """Convert to GeoPackage data type name."""
+        mapping = {
+            "INT": "INTEGER",
+            "FLOAT": "FLOAT",
+            "BOOL": "BOOLEAN",
+            "STRING": "TEXT",
+            "DATE": "DATE",
+            "DATETIME": "DATETIME",
+            "ARRAY": "TEXT",
+            "NULL": "NULL",
+        }
+        return mapping[self.base_type.name]
+
     def as_ogr(self) -> str:
         """Convert to OGR Field data type, including the subtype where relevant.
 
