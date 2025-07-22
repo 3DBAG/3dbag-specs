@@ -29,10 +29,12 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Install dependencies
-        run: |
-          pip install .
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Install package
+        run: uv sync
 
       - name: Validate JSON
         run: |
-          validate-attributes-json --schema resources/attributes.schema.json --json resources/attributes.json
+          uv run validate-attributes-json --schema resources/attributes.schema.json --json resources/attributes.json

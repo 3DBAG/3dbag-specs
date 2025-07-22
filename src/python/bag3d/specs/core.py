@@ -80,6 +80,20 @@ class AttributeType:
 
         return cls(base_type)
 
+    def as_json(self) -> str:
+        """Convert to JSON data type name."""
+        mapping = {
+            "INT": "number",
+            "FLOAT": "number",
+            "BOOL": "boolean",
+            "STRING": "string",
+            "DATE": "string",
+            "DATETIME": "string",
+            "ARRAY": "array",
+            "NULL": "null",
+        }
+        return mapping[self.base_type.name]
+
     def as_python(self) -> str:
         """Convert to Python data type name."""
         mapping = {
@@ -91,6 +105,20 @@ class AttributeType:
             "DATETIME": "datetime",
             "ARRAY": "list",
             "NULL": "None",
+        }
+        return mapping[self.base_type.name]
+
+    def as_gpkg(self) -> str:
+        """Convert to GeoPackage data type name."""
+        mapping = {
+            "INT": "INTEGER",
+            "FLOAT": "FLOAT",
+            "BOOL": "BOOLEAN",
+            "STRING": "TEXT",
+            "DATE": "DATE",
+            "DATETIME": "DATETIME",
+            "ARRAY": "TEXT",
+            "NULL": "NULL",
         }
         return mapping[self.base_type.name]
 
@@ -220,6 +248,9 @@ class DocumentationLanguage(Enum):
         }
         return mapping[lang_str.lower()]
 
+    def __str__(self) -> str:
+        return self.name.lower()
+
 
 @dataclass
 class Translation:
@@ -232,6 +263,10 @@ class Translation:
     def from_dict(cls, data: Dict[str, str]) -> "Translation":
         """Create Translation from dictionary."""
         return cls(nl=data["nl"], en=data["en"])
+
+    def get_translation(self, lang: DocumentationLanguage) -> str:
+        """Return the requested translation."""
+        return getattr(self, str(lang))
 
 
 @dataclass
@@ -352,6 +387,14 @@ def load_attributes_from_json(json_path: Path) -> Dict[str, Attribute]:
         attributes[attr_name] = Attribute.from_dict(attr_name, attr_data)
 
     return attributes
+
+
+def load_attributes_spec_schema() -> dict:
+    """Load the attribute specifications schema from the package."""
+    path_attributes_json = get_resource_file_path("attributes.schema.json")
+    with open(path_attributes_json, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    return data
 
 
 def load_attributes_spec() -> Dict[str, Attribute]:
