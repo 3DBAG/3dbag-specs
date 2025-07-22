@@ -11,7 +11,7 @@ def get_resource_file_path(filename: str) -> Path:
         return resource_path
 
     # Fallback for development (when running from source)
-    resource_path = Path(files("bag3d.specs").name).parent.parent.joinpath(
+    resource_path = Path(files("bag3d.specs")).parent.parent.parent.parent.joinpath(
         "resources", filename
     )
     if resource_path.exists():
