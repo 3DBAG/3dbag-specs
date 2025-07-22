@@ -80,6 +80,20 @@ class AttributeType:
 
         return cls(base_type)
 
+    def as_json(self) -> str:
+        """Convert to JSON data type name."""
+        mapping = {
+            "INT": "number",
+            "FLOAT": "number",
+            "BOOL": "boolean",
+            "STRING": "string",
+            "DATE": "string",
+            "DATETIME": "string",
+            "ARRAY": "array",
+            "NULL": "null",
+        }
+        return mapping[self.base_type.name]
+
     def as_python(self) -> str:
         """Convert to Python data type name."""
         mapping = {
