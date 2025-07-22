@@ -720,7 +720,13 @@
     "type": "bool",
     "source": null,
     "nullable": null,
-    "appliesTo": null,
+    "appliesTo": {
+      "cityjson": {
+        "locations": [
+          "Building"
+        ]
+      }
+    },
     "precision": null,
     "unit": null,
     "valueFormat": null,
