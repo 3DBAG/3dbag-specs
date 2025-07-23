@@ -214,6 +214,16 @@ class GpkgLocation(StrEnum):
             f"Valid values: {[item.value for item in cls]}"
         )
 
+    @classmethod
+    def building_layers(cls) -> tuple["GpkgLocation", ...]:
+        """Return a tuple of GpkgLocation-s that contain building objects (as opposed to building surface objects)."""
+        return cls.pand, cls.lod12_3d, cls.lod13_3d, cls.lod22_3d
+
+    @classmethod
+    def surface_layers(cls) -> tuple["GpkgLocation", ...]:
+        """Return a tuple of GpkgLocation-s that contain surface objects (as opposed to building objects)."""
+        return cls.lod12_2d, cls.lod13_2d, cls.lod22_2d
+
 
 @dataclass
 class AttributeAppliesTo:
