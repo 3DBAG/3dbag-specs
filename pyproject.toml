@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "bag3d-specs"
-version = "2025.07.22"
+version = "2025.07.24"
 description = "3DBAG specifications."
 readme = "README.md"
 authors = [{name = "Balázs Dukai", email = "balazs.dukai@3dgi.nl"}]
@@ -59,7 +59,7 @@ indent-style = "space"
 docstring-code-format = false
 
 [tool.bumpver]
-current_version = "2025.07.22"
+current_version = "2025.07.24"
 version_pattern = "YYYY.0M.0D"
 commit_message = "bump version {old_version} -> {new_version}"
 tag_message = "{new_version}"
