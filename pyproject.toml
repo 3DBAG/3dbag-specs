@@ -29,7 +29,6 @@ dev = [
     "tox~=4.27.0",
     "tox-uv>=1.26.1",
     "ruff~=0.12.3",
-    "bag3d-specs",
 ]
 
 [project.scripts]
@@ -45,9 +44,6 @@ include-package-data = true
 where = ["src/python"]
 
 [tool.uv]
-
-[tool.uv.sources]
-bag3d-specs = { workspace = true }
 
 [tool.ruff]
 line-length = 88

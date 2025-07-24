@@ -13,7 +13,7 @@ wheels = [
 
 [[package]]
 name = "bag3d-specs"
-version = "2025.7.22"
+version = "2025.7.24"
 source = { editable = "." }
 dependencies = [
     { name = "jsonschema" },
@@ -21,7 +21,6 @@ dependencies = [
 
 [package.dev-dependencies]
 dev = [
-    { name = "bag3d-specs" },
     { name = "bumpver" },
     { name = "pytest" },
     { name = "ruff" },
@@ -34,7 +33,6 @@ requires-dist = [{ name = "jsonschema", specifier = ">=4.24.0" }]
 
 [package.metadata.requires-dev]
 dev = [
-    { name = "bag3d-specs", editable = "." },
     { name = "bumpver", specifier = "~=2025.1131" },
     { name = "pytest", specifier = "~=8.4.1" },
     { name = "ruff", specifier = "~=0.12.3" },
