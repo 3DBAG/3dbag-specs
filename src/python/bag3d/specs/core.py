@@ -148,6 +148,20 @@ class AttributeType:
         }
         return mapping[self.base_type.name]
 
+    def as_geof(self) -> str:
+        """Convert to data type that Geoflow accepts."""
+        mapping = {
+            "INT": "int",
+            "FLOAT": "float",
+            "BOOL": "bool",
+            "STRING": "string",
+            "DATE": "string",
+            "DATETIME": "string",
+            "ARRAY": "string",
+            "NULL": "string",
+        }
+        return mapping[self.base_type.name]
+
 
 class CityJSONLocation(StrEnum):
     """The object type where the attribute is located in CityJSON.
