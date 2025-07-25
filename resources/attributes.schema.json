@@ -52,6 +52,9 @@
         },
         "appliesTo": {
           "properties": {
+            "cesium3dtiles": {
+              "$ref": "#/definitions/format-cesium3dtiles"
+            },
             "cityjson": {
               "$ref": "#/definitions/format-cityjson"
             },
@@ -209,6 +212,23 @@
             ]
           },
           "description": "The GeoPackage layer where the attribute is located."
+        }
+      }
+    },
+    "format-cesium3dtiles": {
+      "type": "object",
+      "properties": {
+        "locations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "lod12",
+              "lod13",
+              "lod22"
+            ]
+          },
+          "description": "The LoD-tileset of 3D Tiles where the attribute is located."
         }
       }
     }
