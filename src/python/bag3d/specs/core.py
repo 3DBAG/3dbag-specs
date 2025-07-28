@@ -249,7 +249,7 @@ class GpkgLocation(StrEnum):
         return cls.lod12_2d, cls.lod13_2d, cls.lod22_2d
 
 
-class Cesium3dTiles(StrEnum):
+class Cesium3dTilesLocation(StrEnum):
     """The 3D Tiles tileset where the attribute is located.
 
     Attributes:
@@ -263,7 +263,7 @@ class Cesium3dTiles(StrEnum):
     lod22 = "lod22"
 
     @classmethod
-    def from_string(cls, cesium3dtiles_location_str: str) -> "Cesium3dTiles":
+    def from_string(cls, cesium3dtiles_location_str: str) -> "Cesium3dTilesLocation":
         """Convert a string to Cesium3dTiles enum."""
         for item in cls:
             if item.value == cesium3dtiles_location_str:
