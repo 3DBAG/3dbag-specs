@@ -206,7 +206,17 @@ class CityJSONLocation(StrEnum):
 
 
 class GpkgLocation(StrEnum):
-    """The GeoPackage layer where the attribute is located."""
+    """The GeoPackage layer where the attribute is located.
+
+    Attributes:
+        pand
+        lod12_2d
+        lod12_3d
+        lod13_2d
+        lod13_3d
+        lod22_2d
+        lod22_3d
+    """
 
     pand = "pand"
     lod12_2d = "lod12_2d"
@@ -237,6 +247,32 @@ class GpkgLocation(StrEnum):
     def surface_layers(cls) -> tuple["GpkgLocation", ...]:
         """Return a tuple of GpkgLocation-s that contain surface objects (as opposed to building objects)."""
         return cls.lod12_2d, cls.lod13_2d, cls.lod22_2d
+
+
+class Cesium3dTiles(StrEnum):
+    """The 3D Tiles tileset where the attribute is located.
+
+    Attributes:
+        lod12
+        lod13
+        lod22
+    """
+
+    lod12 = "lod12"
+    lod13 = "lod13"
+    lod22 = "lod22"
+
+    @classmethod
+    def from_string(cls, cesium3dtiles_location_str: str) -> "Cesium3dTiles":
+        """Convert a string to Cesium3dTiles enum."""
+        for item in cls:
+            if item.value == cesium3dtiles_location_str:
+                return item
+
+        raise ValueError(
+            f"Unknown Cesium3dTiles value: {cesium3dtiles_location_str}. "
+            f"Valid values: {[item.value for item in cls]}"
+        )
 
 
 @dataclass
