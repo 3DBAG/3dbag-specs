@@ -274,6 +274,15 @@ class Cesium3dTilesLocation(StrEnum):
             f"Valid values: {[item.value for item in cls]}"
         )
 
+    @property
+    def lod(self) -> str:
+        """Return the Level of Detail that this location relates to.
+
+        >>> Cesium3dTilesLocation.lod12.lod
+        "2.2"
+        """
+        return ".".join(list(self.value.lstrip("lod")))
+
 
 @dataclass
 class AttributeAppliesTo:
