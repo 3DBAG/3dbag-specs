@@ -290,18 +290,26 @@ class AttributeAppliesTo:
 
     cityjson: Optional[dict] = None
     gpkg: Optional[dict] = None
+    cesium3dtiles: Optional[dict] = None
 
     @classmethod
     def from_dict(cls, data: dict) -> "AttributeAppliesTo":
         cityjson = None
         gpkg = None
+        cesium3dtiles = None
         if cj := data.get("cityjson"):
             cityjson = {
                 "locations": list(map(CityJSONLocation.from_string, cj["locations"]))
             }
         if g := data.get("gpkg"):
             gpkg = {"locations": list(map(GpkgLocation.from_string, g["locations"]))}
-        return cls(cityjson=cityjson, gpkg=gpkg)
+        if c3dt := data.get("cesium3dtiles"):
+            cesium3dtiles = {
+                "locations": list(
+                    map(Cesium3dTilesLocation.from_string, c3dt["locations"])
+                )
+            }
+        return cls(cityjson=cityjson, gpkg=gpkg, cesium3dtiles=cesium3dtiles)
 
 
 class DocumentationLanguage(Enum):
