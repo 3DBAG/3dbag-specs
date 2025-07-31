@@ -25,8 +25,8 @@
       "en": "Buildingpart ID. A building can have multiple parts when it was cut into parts because of underground parts."
     },
     "scale": {
-      "nl": "nominaal getal",
-      "en": "nominal number"
+      "nl": "nominaal",
+      "en": "nominal"
     }
   },
   "b3_dd_id": {
@@ -35,11 +35,7 @@
     "nullable": false,
     "appliesTo": {
       "gpkg": {
-        "locations": [
-          "lod22_2d",
-          "lod12_2d",
-          "lod13_2d"
-        ]
+        "locations": ["lod22_2d", "lod12_2d", "lod13_2d"]
       }
     },
     "precision": null,
@@ -52,8 +48,8 @@
       "en": "Dak Deel ID. Roofpart ID."
     },
     "scale": {
-      "nl": "nominaal getal",
-      "en": "nominal number"
+      "nl": "nominaal",
+      "en": "nominal"
     }
   },
   "identificatie": {
@@ -65,9 +61,7 @@
         "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
         "locations": [
@@ -104,14 +98,10 @@
         "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
     "precision": null,
@@ -137,14 +127,10 @@
         "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
     "precision": null,
@@ -157,8 +143,8 @@
       "en": "The current fase in the buildings life-cycle."
     },
     "scale": {
-      "nl": "categorisch",
-      "en": "categorical"
+      "nl": "nominaal",
+      "en": "nominal"
     }
   },
   "geconstateerd": {
@@ -167,14 +153,10 @@
     "nullable": null,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
     "precision": null,
@@ -197,14 +179,10 @@
     "nullable": null,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
     "precision": null,
@@ -227,14 +205,10 @@
     "nullable": null,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
     "precision": null,
@@ -257,14 +231,10 @@
     "nullable": null,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
     "precision": null,
@@ -287,14 +257,10 @@
     "nullable": null,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
     "precision": null,
@@ -317,14 +283,10 @@
     "nullable": null,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
     "precision": null,
@@ -347,14 +309,10 @@
     "nullable": null,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
     "precision": null,
@@ -377,14 +335,10 @@
     "nullable": null,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
     "precision": null,
@@ -407,14 +361,10 @@
     "nullable": null,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
     "precision": null,
@@ -437,14 +387,10 @@
     "nullable": null,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
     "precision": null,
@@ -467,14 +413,10 @@
     "nullable": null,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
     "precision": null,
@@ -497,14 +439,10 @@
     "nullable": null,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
     "precision": null,
@@ -527,14 +465,10 @@
     "nullable": null,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
     "precision": null,
@@ -553,18 +487,14 @@
   },
   "b3_h_maaiveld": {
     "type": "float",
-    "source": null,
-    "nullable": null,
+    "source": "roofer",
+    "nullable": false,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
     "precision": null,
@@ -586,18 +516,14 @@
   },
   "b3_dak_type": {
     "type": "string",
-    "source": null,
-    "nullable": null,
+    "source": "roofer",
+    "nullable": false,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
     "precision": null,
@@ -605,15 +531,19 @@
     "valueFormat": null,
     "semanticType": "category",
     "values": {
+      "unknown": {
+        "nl": "Onbekend.",
+        "en": "Unknown."
+      },
       "slanted": {
-        "nl": "Dat met ten minste \u00e9\u00e9n schuin oppervlak.",
+        "nl": "Dak met ten minste \u00e9\u00e9n schuin oppervlak.",
         "en": "Roof with at least one slanted surface."
       },
       "multiple horizontal": {
         "nl": "Dak met meerdere, uitsluitend horizontale oppervlakken.",
         "en": "Roof with multiple, only horizontal surfaces."
       },
-      "single horizontal": {
+      "horizontal": {
         "nl": "Dak met een enkel horizontaal oppervlak.",
         "en": "Roof with a single horizontal surface."
       },
@@ -621,7 +551,7 @@
         "nl": "Er was geen punt gevonden voor het gebouw.",
         "en": "No point was found for the building."
       },
-      "could not detect": {
+      "no planes": {
         "nl": "Kon geen dakoppervlak detecteren, ondanks dat er punten gevonden waren.",
         "en": "Could not detect a roof surface, even though points were found."
       }
@@ -631,24 +561,20 @@
       "en": "Roof type of the building."
     },
     "scale": {
-      "nl": "categorisch",
-      "en": "categorical"
+      "nl": "nominaal",
+      "en": "nominal"
     }
   },
   "b3_pw_datum": {
     "type": "int",
-    "source": null,
+    "source": "roofer",
     "nullable": false,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
     "precision": null,
@@ -667,18 +593,14 @@
   },
   "b3_pw_bron": {
     "type": "string",
-    "source": null,
-    "nullable": null,
+    "source": "roofer",
+    "nullable": false,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
     "precision": null,
@@ -697,18 +619,14 @@
   },
   "b3_kas_warenhuis": {
     "type": "bool",
-    "source": null,
-    "nullable": null,
+    "source": "roofer",
+    "nullable": false,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
     "precision": null,
@@ -727,13 +645,14 @@
   },
   "b3_reconstructie_onvolledig": {
     "type": "bool",
-    "source": null,
-    "nullable": null,
+    "source": "roofer",
+    "nullable": false,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
       }
     },
     "precision": null,
@@ -752,17 +671,17 @@
   },
   "b3_h_dak_min": {
     "type": "float",
-    "source": null,
+    "source": "roofer",
     "nullable": null,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "RoofSurface",
-          "Building"
-        ]
+        "locations": ["RoofSurface", "Building"]
+      },
+      "gpkg": {
+        "locations": ["lod12_2d", "lod13_2d", "lod22_2d", "pand"]
       }
     },
-    "precision": null,
+    "precision": 2,
     "unit": {
       "en": "metre",
       "nl": "meter"
@@ -781,17 +700,17 @@
   },
   "b3_h_dak_50p": {
     "type": "float",
-    "source": null,
+    "source": "roofer",
     "nullable": null,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "RoofSurface",
-          "Building"
-        ]
+        "locations": ["RoofSurface", "Building"]
+      },
+      "gpkg": {
+        "locations": ["lod12_2d", "lod13_2d", "lod22_2d", "pand"]
       }
     },
-    "precision": null,
+    "precision": 2,
     "unit": {
       "en": "metre",
       "nl": "meter"
@@ -810,17 +729,17 @@
   },
   "b3_h_dak_70p": {
     "type": "float",
-    "source": null,
+    "source": "roofer",
     "nullable": null,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "RoofSurface",
-          "Building"
-        ]
+        "locations": ["RoofSurface", "Building"]
+      },
+      "gpkg": {
+        "locations": ["lod12_2d", "lod13_2d", "lod22_2d", "pand"]
       }
     },
-    "precision": null,
+    "precision": 2,
     "unit": {
       "en": "metre",
       "nl": "meter"
@@ -839,17 +758,17 @@
   },
   "b3_h_dak_max": {
     "type": "float",
-    "source": null,
+    "source": "roofer",
     "nullable": null,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "RoofSurface",
-          "Building"
-        ]
+        "locations": ["RoofSurface", "Building"]
+      },
+      "gpkg": {
+        "locations": ["lod12_2d", "lod13_2d", "lod22_2d", "pand"]
       }
     },
-    "precision": null,
+    "precision": 2,
     "unit": {
       "en": "metre",
       "nl": "meter"
@@ -858,8 +777,8 @@
     "semanticType": "elevation",
     "values": null,
     "description": {
-      "nl": "Maximumhoogte op dakdeel gebaseerd op het gereconstrueerde 3D-model in LoD2.2. Gegeven als hoogte boven zeeniveau (NAP). Eenheid: meter.",
-      "en": "Maximum elevation on roof surface based on reconstructed 3D model in LoD2.2. Given as elevation above sea level (NAP). Unit: metre."
+      "nl": "Maximumhoogte op dakdeel gebaseerd op het gereconstrueerde 3D-model in LoD2.2. Gegeven als hoogte boven zeeniveau (NAP).",
+      "en": "Maximum elevation on roof surface based on reconstructed 3D model in LoD2.2. Given as elevation above sea level (NAP)."
     },
     "scale": {
       "nl": "ratio",
@@ -868,18 +787,14 @@
   },
   "b3_val3dity_lod12": {
     "type": "array",
-    "source": null,
-    "nullable": false,
+    "source": "roofer",
+    "nullable": true,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
     "semanticType": "list",
@@ -896,8 +811,8 @@
       "type": "int",
       "semanticType": "errorCode",
       "scale": {
-        "nl": "nominaal getal",
-        "en": "nominal number"
+        "nl": "nominaal",
+        "en": "nominal"
       },
       "description": {
         "nl": "Een Val3dity foutcode.",
@@ -907,18 +822,14 @@
   },
   "b3_val3dity_lod13": {
     "type": "array",
-    "source": null,
-    "nullable": false,
+    "source": "roofer",
+    "nullable": true,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
     "semanticType": "list",
@@ -935,8 +846,8 @@
       "type": "int",
       "semanticType": "errorCode",
       "scale": {
-        "nl": "nominaal getal",
-        "en": "nominal number"
+        "nl": "nominaal",
+        "en": "nominal"
       },
       "description": {
         "nl": "Een Val3dity foutcode.",
@@ -946,18 +857,14 @@
   },
   "b3_val3dity_lod22": {
     "type": "array",
-    "source": null,
-    "nullable": false,
+    "source": "roofer",
+    "nullable": true,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
     "semanticType": "list",
@@ -974,8 +881,8 @@
       "type": "int",
       "semanticType": "errorCode",
       "scale": {
-        "nl": "nominaal getal",
-        "en": "nominal number"
+        "nl": "nominaal",
+        "en": "nominal"
       },
       "description": {
         "nl": "Een Val3dity foutcode.",
@@ -985,21 +892,17 @@
   },
   "b3_rmse_lod12": {
     "type": "float",
-    "source": null,
-    "nullable": null,
+    "source": "roofer",
+    "nullable": true,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
-    "precision": null,
+    "precision": 2,
     "unit": {
       "en": "metre",
       "nl": "meter"
@@ -1018,21 +921,17 @@
   },
   "b3_rmse_lod13": {
     "type": "float",
-    "source": null,
-    "nullable": null,
+    "source": "roofer",
+    "nullable": true,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
-    "precision": null,
+    "precision": 2,
     "unit": {
       "en": "metre",
       "nl": "meter"
@@ -1051,21 +950,17 @@
   },
   "b3_rmse_lod22": {
     "type": "float",
-    "source": null,
-    "nullable": null,
+    "source": "roofer",
+    "nullable": true,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
-    "precision": null,
+    "precision": 2,
     "unit": {
       "en": "metre",
       "nl": "meter"
@@ -1084,18 +979,14 @@
   },
   "b3_mutatie_ahn3_ahn4": {
     "type": "bool",
-    "source": null,
-    "nullable": null,
+    "source": "roofer",
+    "nullable": false,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
     "precision": null,
@@ -1121,23 +1012,54 @@
       "en": "nominal"
     }
   },
-  "b3_nodata_fractie_ahn3": {
-    "type": "float",
-    "source": null,
-    "nullable": null,
+  "b3_mutatie_ahn4_ahn5": {
+    "type": "bool",
+    "source": "roofer",
+    "nullable": false,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
     "precision": null,
+    "unit": null,
+    "valueFormat": null,
+    "semanticType": "flag",
+    "values": {
+      "true": {
+        "en": "There was a significant change detected in the building between the AHN4 and AHN5 pointclouds.",
+        "nl": "Er was een significante verandering is gedetecteerd in het pand tussen de AHN4 en AHN5 puntenwolken."
+      },
+      "false": {
+        "en": "There was no significant change detected in the building between the AHN4 and AHN5 pointclouds.",
+        "nl": "Er was geen significante verandering is gedetecteerd in het pand tussen de AHN4 en AHN5 puntenwolken."
+      }
+    },
+    "description": {
+      "nl": "`true` als er een significante verandering is gedetecteerd in het pand tussen de AHN4 en AHN5 puntenwolken.",
+      "en": "`true` if there was a significant change detected in the building between the AHN4 and AHN5 pointclouds."
+    },
+    "scale": {
+      "nl": "nominaal",
+      "en": "nominal"
+    }
+  },
+  "b3_nodata_fractie_ahn3": {
+    "type": "float",
+    "source": "roofer",
+    "nullable": false,
+    "appliesTo": {
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    },
+    "precision": 2,
     "unit": null,
     "valueFormat": null,
     "semanticType": "fraction",
@@ -1153,21 +1075,43 @@
   },
   "b3_nodata_fractie_ahn4": {
     "type": "float",
-    "source": null,
-    "nullable": null,
+    "source": "roofer",
+    "nullable": false,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
-    "precision": null,
+    "precision": 2,
+    "unit": null,
+    "valueFormat": null,
+    "semanticType": "fraction",
+    "values": null,
+    "description": {
+      "nl": "Fractie van het BAG polygon met onvoldoende AHN4 punten dekking. Alleen punten geclassificeerd als gebouw of grond worden gebruikt.",
+      "en": "Fraction of the footprint area that has no point data in the AHN4 point cloud. Only points classified as building or ground are considered."
+    },
+    "scale": {
+      "nl": "ratio",
+      "en": "ratio"
+    }
+  },
+  "b3_nodata_fractie_ahn5": {
+    "type": "float",
+    "source": "roofer",
+    "nullable": false,
+    "appliesTo": {
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    },
+    "precision": 2,
     "unit": null,
     "valueFormat": null,
     "semanticType": "fraction",
@@ -1183,21 +1127,17 @@
   },
   "b3_nodata_radius_ahn3": {
     "type": "float",
-    "source": null,
-    "nullable": null,
+    "source": "roofer",
+    "nullable": false,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
-    "precision": null,
+    "precision": 2,
     "unit": {
       "en": "metre",
       "nl": "meter"
@@ -1216,21 +1156,17 @@
   },
   "b3_nodata_radius_ahn4": {
     "type": "float",
-    "source": null,
-    "nullable": null,
+    "source": "roofer",
+    "nullable": false,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
-    "precision": null,
+    "precision": 2,
     "unit": {
       "en": "metre",
       "nl": "meter"
@@ -1247,20 +1183,45 @@
       "en": "ratio"
     }
   },
-  "b3_pw_selectie_reden": {
-    "type": "string",
-    "source": null,
-    "nullable": null,
+  "b3_nodata_radius_ahn5": {
+    "type": "float",
+    "source": "roofer",
+    "nullable": false,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
+      }
+    },
+    "precision": 2,
+    "unit": {
+      "en": "metre",
+      "nl": "meter"
+    },
+    "valueFormat": null,
+    "semanticType": "length",
+    "values": null,
+    "description": {
+      "nl": "Straal van de grootste cirkel die binnen het BAG polygoon valt en geen AHN5 punten bevat. Alleen punten geclassificeerd als gebouw of grond worden gebruikt.",
+      "en": "Radius of the largest circle inside the BAG polygon without any AHN5 points. Only points classified as building or ground are considered."
+    },
+    "scale": {
+      "nl": "ratio",
+      "en": "ratio"
+    }
+  },
+  "b3_pw_selectie_reden": {
+    "type": "string",
+    "source": "roofer",
+    "nullable": false,
+    "appliesTo": {
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
       }
     },
     "precision": null,
@@ -1294,27 +1255,23 @@
       "en": "Provides information about the pointcloud selection indicated in the `pw_bron` attribute."
     },
     "scale": {
-      "nl": "categorisch",
-      "en": "categorical"
+      "nl": "nominaal",
+      "en": "nominal"
     }
   },
   "b3_puntdichtheid_ahn3": {
-    "type": "int",
-    "source": null,
-    "nullable": null,
+    "type": "float",
+    "source": "roofer",
+    "nullable": false,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
-    "precision": null,
+    "precision": 2,
     "unit": {
       "en": "points per square metre",
       "nl": "punten per vierkante meter"
@@ -1332,22 +1289,18 @@
     }
   },
   "b3_puntdichtheid_ahn4": {
-    "type": "int",
-    "source": null,
-    "nullable": null,
+    "type": "float",
+    "source": "roofer",
+    "nullable": false,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
-    "precision": null,
+    "precision": 2,
     "unit": {
       "en": "points per square metre",
       "nl": "punten per vierkante meter"
@@ -1364,23 +1317,48 @@
       "en": "ratio"
     }
   },
-  "b3_volume_lod12": {
+  "b3_puntdichtheid_ahn5": {
     "type": "float",
-    "source": null,
-    "nullable": null,
+    "source": "roofer",
+    "nullable": false,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
-    "precision": null,
+    "precision": 2,
+    "unit": {
+      "en": "points per square metre",
+      "nl": "punten per vierkante meter"
+    },
+    "valueFormat": null,
+    "semanticType": "density",
+    "values": null,
+    "description": {
+      "nl": "Puntdichtheid van de AHN5-puntenwolk voor het pand. Alleen punten geclassificeerd als gebouw of grond worden in beschouwing genomen. Eenheid: punten per vierkante meter.",
+      "en": "Density of the AHN5 point cloud on BAG polygon. Only points classified as building or ground are considered. Unit: points per square metre."
+    },
+    "scale": {
+      "nl": "ratio",
+      "en": "ratio"
+    }
+  },
+  "b3_volume_lod12": {
+    "type": "float",
+    "source": "roofer",
+    "nullable": true,
+    "appliesTo": {
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    },
+    "precision": 2,
     "unit": {
       "en": "cubic metre",
       "nl": "kubieke meter"
@@ -1399,21 +1377,17 @@
   },
   "b3_volume_lod13": {
     "type": "float",
-    "source": null,
-    "nullable": null,
+    "source": "roofer",
+    "nullable": true,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
-    "precision": null,
+    "precision": 2,
     "unit": {
       "en": "cubic metre",
       "nl": "kubieke meter"
@@ -1432,21 +1406,17 @@
   },
   "b3_volume_lod22": {
     "type": "float",
-    "source": null,
-    "nullable": null,
+    "source": "roofer",
+    "nullable": true,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
-    "precision": null,
+    "precision": 2,
     "unit": {
       "en": "cubic metre",
       "nl": "kubieke meter"
@@ -1465,21 +1435,17 @@
   },
   "b3_bag_bag_overlap": {
     "type": "float",
-    "source": null,
-    "nullable": null,
+    "source": "bag_bag_overlap",
+    "nullable": false,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
-    "precision": null,
+    "precision": 2,
     "unit": {
       "en": "square metre",
       "nl": "vierkante meter"
@@ -1498,21 +1464,17 @@
   },
   "b3_opp_grond": {
     "type": "float",
-    "source": null,
-    "nullable": null,
+    "source": "party_walls",
+    "nullable": false,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
-    "precision": null,
+    "precision": 2,
     "unit": {
       "en": "square metre",
       "nl": "vierkante meter"
@@ -1531,21 +1493,17 @@
   },
   "b3_opp_dak_plat": {
     "type": "float",
-    "source": null,
-    "nullable": null,
+    "source": "party_walls",
+    "nullable": false,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
-    "precision": null,
+    "precision": 2,
     "unit": {
       "en": "square metre",
       "nl": "vierkante meter"
@@ -1564,21 +1522,17 @@
   },
   "b3_opp_dak_schuin": {
     "type": "float",
-    "source": null,
-    "nullable": null,
+    "source": "party_walls",
+    "nullable": false,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
-    "precision": null,
+    "precision": 2,
     "unit": {
       "en": "square metre",
       "nl": "vierkante meter"
@@ -1597,21 +1551,17 @@
   },
   "b3_opp_scheidingsmuur": {
     "type": "float",
-    "source": null,
-    "nullable": null,
+    "source": "party_walls",
+    "nullable": false,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
-    "precision": null,
+    "precision": 2,
     "unit": {
       "en": "square metre",
       "nl": "vierkante meter"
@@ -1630,21 +1580,17 @@
   },
   "b3_opp_buitenmuur": {
     "type": "float",
-    "source": null,
-    "nullable": null,
+    "source": "party_walls",
+    "nullable": false,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
-    "precision": null,
+    "precision": 2,
     "unit": {
       "en": "square metre",
       "nl": "vierkante meter"
@@ -1663,15 +1609,11 @@
   },
   "labels": {
     "type": "array",
-    "source": null,
-    "nullable": null,
+    "source": "tyler-multiformat",
+    "nullable": false,
     "appliesTo": {
       "gpkg": {
-        "locations": [
-          "lod22_3d",
-          "lod13_3d",
-          "lod12_3d"
-        ]
+        "locations": ["lod22_3d", "lod13_3d", "lod12_3d"]
       }
     },
     "semanticType": "list",
@@ -1688,8 +1630,8 @@
       "type": "int",
       "semanticType": "category",
       "scale": {
-        "nl": "nominaal getal",
-        "en": "nominal number"
+        "nl": "nominaal",
+        "en": "nominal"
       },
       "description": {
         "nl": "Een semantisch label voor een oppervlak.",
@@ -1699,18 +1641,14 @@
   },
   "b3_bouwlagen": {
     "type": "int",
-    "source": null,
-    "nullable": null,
+    "source": "floors_estimation",
+    "nullable": true,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
     "precision": null,
@@ -1729,13 +1667,14 @@
   },
   "b3_kwaliteitsindicator": {
     "type": "string",
-    "source": null,
-    "nullable": null,
+    "source": "tyler-multiformat",
+    "nullable": true,
     "appliesTo": {
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
       }
     },
     "precision": null,
@@ -1763,21 +1702,17 @@
   },
   "b3_azimut": {
     "type": "float",
-    "source": null,
+    "source": "roofer",
     "nullable": null,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "RoofSurface"
-        ]
+        "locations": ["RoofSurface"]
       },
       "gpkg": {
-        "locations": [
-          "lod22_2d"
-        ]
+        "locations": ["lod22_2d"]
       }
     },
-    "precision": null,
+    "precision": 2,
     "unit": {
       "en": "degrees",
       "nl": "graden"
@@ -1796,21 +1731,17 @@
   },
   "b3_hellingshoek": {
     "type": "float",
-    "source": null,
+    "source": "roofer",
     "nullable": null,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "RoofSurface"
-        ]
+        "locations": ["RoofSurface"]
       },
       "gpkg": {
-        "locations": [
-          "lod22_2d"
-        ]
+        "locations": ["lod22_2d"]
       }
     },
-    "precision": null,
+    "precision": 2,
     "unit": {
       "en": "degrees",
       "nl": "graden"
