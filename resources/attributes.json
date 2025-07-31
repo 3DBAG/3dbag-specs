@@ -77,7 +77,7 @@
     },
     "precision": null,
     "unit": null,
-    "valueFormat": null,
+    "valueFormat": "NL.IMBAG.Pand.<16 digits>",
     "semanticType": "identifier",
     "values": null,
     "description": {
@@ -85,14 +85,14 @@
       "en": "ID of a building."
     },
     "scale": {
-      "nl": "tekst",
-      "en": "text"
+      "nl": "nominaal",
+      "en": "nominal"
     }
   },
   "oorspronkelijkbouwjaar": {
     "type": "int",
     "source": "BAG",
-    "nullable": true,
+    "nullable": false,
     "appliesTo": {
       "cesium3dtiles": {
         "locations": ["lod12", "lod13", "lod22"]
@@ -121,7 +121,7 @@
   "status": {
     "type": "string",
     "source": "BAG",
-    "nullable": null,
+    "nullable": false,
     "appliesTo": {
       "cesium3dtiles": {
         "locations": ["lod12", "lod13", "lod22"]
@@ -148,9 +148,9 @@
     }
   },
   "geconstateerd": {
-    "type": "string",
-    "source": null,
-    "nullable": null,
+    "type": "bool",
+    "source": "BAG",
+    "nullable": true,
     "appliesTo": {
       "cityjson": {
         "locations": ["Building"]
@@ -175,8 +175,8 @@
   },
   "documentdatum": {
     "type": "date",
-    "source": null,
-    "nullable": null,
+    "source": "BAG",
+    "nullable": false,
     "appliesTo": {
       "cityjson": {
         "locations": ["Building"]
@@ -201,8 +201,8 @@
   },
   "documentnummer": {
     "type": "string",
-    "source": null,
-    "nullable": null,
+    "source": "BAG",
+    "nullable": false,
     "appliesTo": {
       "cityjson": {
         "locations": ["Building"]
@@ -221,14 +221,14 @@
       "en": "Document number."
     },
     "scale": {
-      "nl": "tekst",
-      "en": "text"
+      "nl": "nominaal",
+      "en": "nominal"
     }
   },
   "voorkomenidentificatie": {
     "type": "int",
     "source": "BAG",
-    "nullable": null,
+    "nullable": false,
     "appliesTo": {
       "cityjson": {
         "locations": ["Building"]
@@ -247,14 +247,14 @@
       "en": "Relates to the building registration history and version."
     },
     "scale": {
-      "nl": "ordinaal getal",
-      "en": "ordinal number"
+      "nl": "ordinaal",
+      "en": "ordinal"
     }
   },
   "begingeldigheid": {
     "type": "date",
     "source": "BAG",
-    "nullable": null,
+    "nullable": false,
     "appliesTo": {
       "cityjson": {
         "locations": ["Building"]
@@ -280,7 +280,7 @@
   "eindgeldigheid": {
     "type": "date",
     "source": "BAG",
-    "nullable": null,
+    "nullable": true,
     "appliesTo": {
       "cityjson": {
         "locations": ["Building"]
@@ -306,7 +306,7 @@
   "tijdstipregistratie": {
     "type": "datetime",
     "source": "BAG",
-    "nullable": null,
+    "nullable": false,
     "appliesTo": {
       "cityjson": {
         "locations": ["Building"]
@@ -332,7 +332,7 @@
   "eindregistratie": {
     "type": "datetime",
     "source": "BAG",
-    "nullable": null,
+    "nullable": true,
     "appliesTo": {
       "cityjson": {
         "locations": ["Building"]
@@ -358,7 +358,7 @@
   "tijdstipinactief": {
     "type": "datetime",
     "source": "BAG",
-    "nullable": null,
+    "nullable": true,
     "appliesTo": {
       "cityjson": {
         "locations": ["Building"]
@@ -384,7 +384,7 @@
   "tijdstipregistratielv": {
     "type": "datetime",
     "source": "BAG",
-    "nullable": null,
+    "nullable": false,
     "appliesTo": {
       "cityjson": {
         "locations": ["Building"]
@@ -410,7 +410,7 @@
   "tijdstipeindregistratielv": {
     "type": "datetime",
     "source": "BAG",
-    "nullable": null,
+    "nullable": true,
     "appliesTo": {
       "cityjson": {
         "locations": ["Building"]
@@ -436,7 +436,7 @@
   "tijdstipinactieflv": {
     "type": "datetime",
     "source": "BAG",
-    "nullable": null,
+    "nullable": true,
     "appliesTo": {
       "cityjson": {
         "locations": ["Building"]
@@ -462,7 +462,7 @@
   "tijdstipnietbaglv": {
     "type": "datetime",
     "source": "BAG",
-    "nullable": null,
+    "nullable": true,
     "appliesTo": {
       "cityjson": {
         "locations": ["Building"]
