@@ -10,17 +10,17 @@
     "attribute": {
       "type": "object",
       "required": [
-        "type",
-        "source",
-        "nullable",
-        "appliesTo",
-        "precision",
-        "unit",
-        "valueFormat",
-        "semanticType",
-        "values",
         "description",
-        "scale"
+        "semanticType",
+        "source",
+        "type",
+        "unit",
+        "precision",
+        "scale",
+        "valueFormat",
+        "values",
+        "nullable",
+        "appliesTo"
       ],
       "properties": {
         "type": {

@@ -33,6 +33,7 @@ dev = [
 
 [project.scripts]
 validate-attributes-json = "bag3d.specs.validate_attributes_json:main"
+sort-attributes-json = "bag3d.specs.sort_attributes:main"
 
 [tool.setuptools]
 include-package-data = true
