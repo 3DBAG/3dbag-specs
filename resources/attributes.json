@@ -479,7 +479,7 @@
     },
     "semanticType": "flag",
     "source": "tyler-multiformat",
-    "type": "string",
+    "type": "bool",
     "unit": null,
     "precision": null,
     "scale": {
