@@ -21,14 +21,10 @@
     "nullable": null,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "RoofSurface"
-        ]
+        "locations": ["RoofSurface"]
       },
       "gpkg": {
-        "locations": [
-          "lod22_2d"
-        ]
+        "locations": ["lod22_2d"]
       }
     }
   },
@@ -54,14 +50,10 @@
     "nullable": false,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -84,21 +76,13 @@
     "nullable": true,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -146,21 +130,13 @@
     "nullable": false,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -183,11 +159,49 @@
     "nullable": false,
     "appliesTo": {
       "gpkg": {
-        "locations": [
-          "lod22_2d",
-          "lod12_2d",
-          "lod13_2d"
-        ]
+        "locations": ["lod22_2d", "lod12_2d", "lod13_2d"]
+      }
+    }
+  },
+  "b3_extrusie": {
+    "description": {
+      "nl": "Geeft aan welke methode is gebruikt om het 3D model te genereren.",
+      "en": "Indicates which method was used to generate the 3D model."
+    },
+    "semanticType": "identifier",
+    "source": "roofer",
+    "type": "string",
+    "unit": null,
+    "precision": null,
+    "scale": {
+      "nl": "nominaal",
+      "en": "nominal"
+    },
+    "valueFormat": null,
+    "values": {
+      "standard": {
+        "nl": "LoD1.2, LoD1.3 en LoD2.2 modellen zijn gegenereerd.",
+        "en": "LoD1.2, LoD1.3 and LoD2.2 models were generated."
+      },
+      "lod11_fallback": {
+        "nl": "Er is alleen een simpele LoD1.1 extrusie gedaan. Dit kan voorkomen voor gebouwen met een zeer groot oppervlak zoals kassen en warenhuizen.",
+        "en": "Only a simple LoD1.1 extrusion was done. This can occur for buildings with a very large footprint such as greenhouses and warehouses."
+      },
+      "skip": {
+        "nl": "Er kon geen 3D model worden gegenereerd door een gebrek aan puntenwolk data.",
+        "en": "No 3D model could be generated due to insufficient point cloud data."
+      }
+    },
+    "nullable": false,
+    "appliesTo": {
+      "gpkg": {
+        "locations": ["pand"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
       }
     }
   },
@@ -213,18 +227,10 @@
     "nullable": null,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "RoofSurface",
-          "Building"
-        ]
+        "locations": ["RoofSurface", "Building"]
       },
       "gpkg": {
-        "locations": [
-          "lod12_2d",
-          "lod13_2d",
-          "lod22_2d",
-          "pand"
-        ]
+        "locations": ["lod12_2d", "lod13_2d", "lod22_2d", "pand"]
       }
     }
   },
@@ -250,18 +256,10 @@
     "nullable": null,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "RoofSurface",
-          "Building"
-        ]
+        "locations": ["RoofSurface", "Building"]
       },
       "gpkg": {
-        "locations": [
-          "lod12_2d",
-          "lod13_2d",
-          "lod22_2d",
-          "pand"
-        ]
+        "locations": ["lod12_2d", "lod13_2d", "lod22_2d", "pand"]
       }
     }
   },
@@ -287,18 +285,10 @@
     "nullable": null,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "RoofSurface",
-          "Building"
-        ]
+        "locations": ["RoofSurface", "Building"]
       },
       "gpkg": {
-        "locations": [
-          "lod12_2d",
-          "lod13_2d",
-          "lod22_2d",
-          "pand"
-        ]
+        "locations": ["lod12_2d", "lod13_2d", "lod22_2d", "pand"]
       }
     }
   },
@@ -324,18 +314,10 @@
     "nullable": null,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "RoofSurface",
-          "Building"
-        ]
+        "locations": ["RoofSurface", "Building"]
       },
       "gpkg": {
-        "locations": [
-          "lod12_2d",
-          "lod13_2d",
-          "lod22_2d",
-          "pand"
-        ]
+        "locations": ["lod12_2d", "lod13_2d", "lod22_2d", "pand"]
       }
     }
   },
@@ -361,21 +343,45 @@
     "nullable": false,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_h_nok": {
+    "description": {
+      "nl": "Hoogte van de langste noklijn van het pand.",
+      "en": "Height of the longest ridge line of the building."
+    },
+    "semanticType": "length",
+    "source": "roofer",
+    "type": "float",
+    "unit": {
+      "en": "metre",
+      "nl": "meter"
+    },
+    "precision": 2,
+    "scale": {
+      "nl": "ratio",
+      "en": "ratio"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": true,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
       }
     }
   },
@@ -401,14 +407,39 @@
     "nullable": null,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "RoofSurface"
-        ]
+        "locations": ["RoofSurface"]
       },
       "gpkg": {
-        "locations": [
-          "lod22_2d"
-        ]
+        "locations": ["lod22_2d"]
+      }
+    }
+  },
+  "b3_is_glas_dak": {
+    "description": {
+      "nl": "Het gebouw heeft een glas dak. Let op: dit is gebaseerd op een experimentele automatische puntenwolk analyse.",
+      "en": "The building has a glass roof. Notice: this is based on an experimental automated pointcloud analysis."
+    },
+    "semanticType": "flag",
+    "source": "roofer",
+    "type": "bool",
+    "unit": null,
+    "precision": null,
+    "scale": {
+      "nl": "nominaal",
+      "en": "nominal"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
       }
     }
   },
@@ -431,21 +462,13 @@
     "nullable": false,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -477,21 +500,13 @@
     "nullable": true,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       }
     }
   },
@@ -523,21 +538,13 @@
     "nullable": false,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -569,21 +576,71 @@
     "nullable": false,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_n_nok": {
+    "description": {
+      "nl": "Aantal gedetecteerde noklijnen.",
+      "en": "Number of detected ridge lines."
+    },
+    "semanticType": "count",
+    "source": "roofer",
+    "type": "int",
+    "unit": null,
+    "precision": null,
+    "scale": {
+      "nl": "ratio",
+      "en": "ratio"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": true,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_n_vlakken": {
+    "description": {
+      "nl": "Aantal gedetecteerde dakvlakken in de puntenwolk (kan anders zijn dan in het LoD2.2 model).",
+      "en": "Number of detected roofplanes in the point cloud (could be different from the LoD2.2 model)."
+    },
+    "semanticType": "count",
+    "source": "roofer",
+    "type": "int",
+    "unit": null,
+    "precision": null,
+    "scale": {
+      "nl": "ratio",
+      "en": "ratio"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": true,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
       }
     }
   },
@@ -606,21 +663,13 @@
     "nullable": false,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -643,21 +692,13 @@
     "nullable": false,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -680,21 +721,13 @@
     "nullable": false,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -720,21 +753,13 @@
     "nullable": false,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -760,21 +785,13 @@
     "nullable": false,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -800,21 +817,13 @@
     "nullable": false,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -840,21 +849,13 @@
     "nullable": false,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -880,21 +881,13 @@
     "nullable": false,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -920,21 +913,13 @@
     "nullable": false,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -960,21 +945,13 @@
     "nullable": false,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -1000,21 +977,13 @@
     "nullable": false,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -1070,21 +1039,13 @@
     "nullable": false,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -1110,21 +1071,13 @@
     "nullable": false,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -1150,21 +1103,13 @@
     "nullable": false,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -1187,21 +1132,13 @@
     "nullable": false,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -1224,21 +1161,42 @@
     "nullable": false,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_pw_onvoldoende": {
+    "description": {
+      "nl": "De puntenwolk was onvoldoende voor het genereren van een 3D model.",
+      "en": "The input pointcloud was insufficient to generate a 3D model."
+    },
+    "semanticType": "flag",
+    "source": "roofer",
+    "type": "bool",
+    "unit": null,
+    "precision": null,
+    "scale": {
+      "nl": "nominaal",
+      "en": "nominal"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
       }
     }
   },
@@ -1282,51 +1240,13 @@
     "nullable": false,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    }
-  },
-  "b3_reconstructie_onvolledig": {
-    "description": {
-      "nl": "Geeft aan of de volledige LoD1.2/LoD1.3/LoD2.2 reconstructie is overgeslagen voor het pand.",
-      "en": "Indicates whether full LoD1.2/LoD1.3/LoD2.2 reconstruction was skipped for this feature."
-    },
-    "semanticType": "flag",
-    "source": "roofer",
-    "type": "bool",
-    "unit": null,
-    "precision": null,
-    "scale": {
-      "nl": "nominaal",
-      "en": "nominal"
-    },
-    "valueFormat": null,
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -1352,21 +1272,13 @@
     "nullable": true,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -1392,21 +1304,13 @@
     "nullable": true,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -1432,21 +1336,45 @@
     "nullable": true,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_t_run": {
+    "description": {
+      "nl": "Reconstructie tijd in milliseconden.",
+      "en": "Reconstruction time in milliseconds."
+    },
+    "semanticType": "duration",
+    "source": "roofer",
+    "type": "int",
+    "unit": {
+      "en": "milliseconds",
+      "nl": "milliseconden"
+    },
+    "precision": null,
+    "scale": {
+      "nl": "ratio",
+      "en": "ratio"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
       }
     }
   },
@@ -1466,21 +1394,13 @@
     "nullable": true,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
     "items": {
@@ -1512,21 +1432,13 @@
     "nullable": true,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
     "items": {
@@ -1558,21 +1470,13 @@
     "nullable": true,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     },
     "items": {
@@ -1610,21 +1514,13 @@
     "nullable": true,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -1650,21 +1546,13 @@
     "nullable": true,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -1690,21 +1578,13 @@
     "nullable": true,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -1727,14 +1607,10 @@
     "nullable": false,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -1757,14 +1633,10 @@
     "nullable": false,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -1787,14 +1659,10 @@
     "nullable": false,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -1817,14 +1685,10 @@
     "nullable": true,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -1847,14 +1711,10 @@
     "nullable": true,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -1877,14 +1737,10 @@
     "nullable": true,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -1907,16 +1763,10 @@
     "nullable": false,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
         "locations": [
@@ -1947,11 +1797,7 @@
     "nullable": false,
     "appliesTo": {
       "gpkg": {
-        "locations": [
-          "lod22_3d",
-          "lod13_3d",
-          "lod12_3d"
-        ]
+        "locations": ["lod22_3d", "lod13_3d", "lod12_3d"]
       }
     },
     "items": {
@@ -1986,21 +1832,13 @@
     "nullable": false,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -2023,21 +1861,13 @@
     "nullable": false,
     "appliesTo": {
       "cesium3dtiles": {
-        "locations": [
-          "lod12",
-          "lod13",
-          "lod22"
-        ]
+        "locations": ["lod12", "lod13", "lod22"]
       },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -2060,14 +1890,10 @@
     "nullable": true,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -2090,14 +1916,10 @@
     "nullable": true,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -2120,14 +1942,10 @@
     "nullable": true,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -2150,14 +1968,10 @@
     "nullable": true,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -2180,14 +1994,10 @@
     "nullable": false,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -2210,14 +2020,10 @@
     "nullable": false,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   },
@@ -2240,14 +2046,10 @@
     "nullable": false,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
     }
   }
