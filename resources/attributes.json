@@ -205,7 +205,7 @@
       }
     }
   },
-  "b3_h_dak_50p": {
+  "b3_h_50p": {
     "description": {
       "nl": "Medianhoogte op dakdeel gebaseerd op het gereconstrueerde 3D-model in LoD2.2. Gegeven als hoogte boven zeeniveau (NAP).",
       "en": "Median elevation on roof surface based on reconstructed 3D model in LoD2.2. Given as elevation above sea level (NAP)."
@@ -230,11 +230,11 @@
         "locations": ["RoofSurface", "Building"]
       },
       "gpkg": {
-        "locations": ["lod12_2d", "lod13_2d", "lod22_2d", "pand"]
+        "locations": ["lod12_2d", "lod13_2d", "lod22_2d"]
       }
     }
   },
-  "b3_h_dak_70p": {
+  "b3_h_70p": {
     "description": {
       "nl": "De 70e percentielhoogte op dakdeel gebaseerd op het gereconstrueerde 3D-model in LoD2.2. Gegeven als hoogte boven zeeniveau (NAP).",
       "en": "The 70th percentile elevation on roof surface based on reconstructed 3D model in LoD2.2. Given as elevation above sea level (NAP)."
@@ -259,11 +259,11 @@
         "locations": ["RoofSurface", "Building"]
       },
       "gpkg": {
-        "locations": ["lod12_2d", "lod13_2d", "lod22_2d", "pand"]
+        "locations": ["lod12_2d", "lod13_2d", "lod22_2d"]
       }
     }
   },
-  "b3_h_dak_max": {
+  "b3_h_max": {
     "description": {
       "nl": "Maximumhoogte op dakdeel gebaseerd op het gereconstrueerde 3D-model in LoD2.2. Gegeven als hoogte boven zeeniveau (NAP).",
       "en": "Maximum elevation on roof surface based on reconstructed 3D model in LoD2.2. Given as elevation above sea level (NAP)."
@@ -288,11 +288,11 @@
         "locations": ["RoofSurface", "Building"]
       },
       "gpkg": {
-        "locations": ["lod12_2d", "lod13_2d", "lod22_2d", "pand"]
+        "locations": ["lod12_2d", "lod13_2d", "lod22_2d"]
       }
     }
   },
-  "b3_h_dak_min": {
+  "b3_h_min": {
     "description": {
       "nl": "Minimumhoogte op dakdeel gebaseerd op het gereconstrueerde 3D-model in LoD2.2. Gegeven als hoogte boven zeeniveau (NAP).",
       "en": "Minimum elevation on roof surface based on reconstructed 3D model in LoD2.2. Given as elevation above sea level (NAP)."
@@ -317,7 +317,7 @@
         "locations": ["RoofSurface", "Building"]
       },
       "gpkg": {
-        "locations": ["lod12_2d", "lod13_2d", "lod22_2d", "pand"]
+        "locations": ["lod12_2d", "lod13_2d", "lod22_2d"]
       }
     }
   },
