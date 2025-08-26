@@ -499,9 +499,6 @@
     },
     "nullable": true,
     "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
       "gpkg": {
         "locations": ["pand"]
       },
