@@ -1,610 +1,120 @@
 {
-  "b3_pand_deel_id": {
-    "type": "int",
+  "b3_azimut": {
+    "description": {
+      "nl": "Azimut van dakdeel. Beschikbaar voor de LoD 2.2 dakdelen in de GPKG 2D lagen.",
+      "en": "Azimuth of roofpart. Available for the LoD 2.2 roofparts in GPKG 2D layers."
+    },
+    "semanticType": "angle",
     "source": "roofer",
-    "nullable": false,
-    "appliesTo": {
-      "gpkg": {
-        "locations": [
-          "lod13_3d",
-          "lod12_2d",
-          "lod22_2d",
-          "lod22_3d",
-          "lod13_2d",
-          "lod12_3d"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": null,
-    "valueFormat": null,
-    "semanticType": "identifier",
-    "values": null,
-    "description": {
-      "nl": "Panddeel ID. Een pand kan meerdere delen hebben wanneer het is opgedeeld vanwege ondergrondse delen.",
-      "en": "Buildingpart ID. A building can have multiple parts when it was cut into parts because of underground parts."
-    },
-    "scale": {
-      "nl": "nominaal getal",
-      "en": "nominal number"
-    }
-  },
-  "b3_dd_id": {
-    "type": "int",
-    "source": "roofer",
-    "nullable": false,
-    "appliesTo": {
-      "gpkg": {
-        "locations": [
-          "lod22_2d",
-          "lod12_2d",
-          "lod13_2d"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": null,
-    "valueFormat": null,
-    "semanticType": "identifier",
-    "values": null,
-    "description": {
-      "nl": "Dakdeel ID.",
-      "en": "Dak Deel ID. Roofpart ID."
-    },
-    "scale": {
-      "nl": "nominaal getal",
-      "en": "nominal number"
-    }
-  },
-  "identificatie": {
-    "type": "string",
-    "source": "BAG,roofer",
-    "nullable": false,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "lod13_3d",
-          "lod12_2d",
-          "pand",
-          "lod22_2d",
-          "lod22_3d",
-          "lod13_2d",
-          "lod12_3d"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": null,
-    "valueFormat": null,
-    "semanticType": "identifier",
-    "values": null,
-    "description": {
-      "nl": "De unieke BAG aanduiding van een pand.",
-      "en": "ID of a building."
-    },
-    "scale": {
-      "nl": "tekst",
-      "en": "text"
-    }
-  },
-  "oorspronkelijkbouwjaar": {
-    "type": "int",
-    "source": "BAG",
-    "nullable": true,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": null,
-    "valueFormat": "YYYY",
-    "semanticType": "year",
-    "values": null,
-    "description": {
-      "nl": "De aanduiding van het jaar waarin een pand oorspronkelijk als bouwkundig gereed is of zal worden opgeleverd.",
-      "en": "Building construction year."
-    },
-    "scale": {
-      "nl": "interval",
-      "en": "interval"
-    }
-  },
-  "status": {
-    "type": "string",
-    "source": "BAG",
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": null,
-    "valueFormat": null,
-    "semanticType": "category",
-    "values": null,
-    "description": {
-      "nl": "De fase van de levenscyclus van een pand, waarin het betreffende pand zich bevindt.",
-      "en": "The current fase in the buildings life-cycle."
-    },
-    "scale": {
-      "nl": "categorisch",
-      "en": "categorical"
-    }
-  },
-  "geconstateerd": {
-    "type": "string",
-    "source": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": null,
-    "valueFormat": null,
-    "semanticType": "flag",
-    "values": null,
-    "description": {
-      "nl": "Een aanduiding waarmee kan worden aangegeven dat een pand in de registratie is opgenomen als gevolg van een feitelijke constatering, zonder dat er op het moment van opname sprake was van een regulier brondocument voor deze opname.",
-      "en": "Indicates that the buildings has included in the BAG registration."
-    },
-    "scale": {
-      "nl": "nominaal",
-      "en": "nominal"
-    }
-  },
-  "documentdatum": {
-    "type": "date",
-    "source": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": null,
-    "valueFormat": "YYYY-MM-DD",
-    "semanticType": "day",
-    "values": null,
-    "description": {
-      "nl": "De datum waarop het brondocument is vastgesteld, op basis waarvan een opname, mutatie of een verwijdering van gegevens ten aanzien van een pand heeft plaatsgevonden.",
-      "en": "Building registration date."
-    },
-    "scale": {
-      "nl": "interval",
-      "en": "interval"
-    }
-  },
-  "documentnummer": {
-    "type": "string",
-    "source": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": null,
-    "valueFormat": null,
-    "semanticType": "identifier",
-    "values": null,
-    "description": {
-      "nl": "De unieke aanduiding van het brondocument op basis waarvan een opname, mutatie of een verwijdering van gegevens ten aanzien van een pand heeft plaatsgevonden, binnen een gemeente.",
-      "en": "Document number."
-    },
-    "scale": {
-      "nl": "tekst",
-      "en": "text"
-    }
-  },
-  "voorkomenidentificatie": {
-    "type": "int",
-    "source": "BAG",
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": null,
-    "valueFormat": null,
-    "semanticType": "identifier",
-    "values": null,
-    "description": {
-      "nl": "Houdt verband met de geschiedenis van de pandregistratie en de versie.",
-      "en": "Relates to the building registration history and version."
-    },
-    "scale": {
-      "nl": "ordinaal getal",
-      "en": "ordinal number"
-    }
-  },
-  "begingeldigheid": {
-    "type": "date",
-    "source": "BAG",
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": null,
-    "valueFormat": "YYYY-MM-DD",
-    "semanticType": "day",
-    "values": null,
-    "description": {
-      "nl": "De datum waarop een versie van een BAG-object geldig is in de werkelijkheid conform de ingangsdatum in het brondocument. Dit tijdstip wordt vastgelegd in de beginGeldigheid. Als er geen expliciete ingangsdatum van geldigheid is opgenomen, wordt de datum van het brondocument overgenomen.",
-      "en": "Relates to the building registration history and version."
-    },
-    "scale": {
-      "nl": "interval",
-      "en": "interval"
-    }
-  },
-  "eindgeldigheid": {
-    "type": "date",
-    "source": "BAG",
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": null,
-    "valueFormat": "YYYY-MM-DD",
-    "semanticType": "day",
-    "values": null,
-    "description": {
-      "nl": "De datum waarop de periode van geldigheid van een versie van een BAG-object eindigt. Bijvoorbeeld als gevolg van de vaststelling van een nieuw brondocument. Wanneer er geen tijdstip is ingevuld, dan is de versie nog geldig. Dit tijdstip wordt vastgelegd in de eindGeldigheid.",
-      "en": "Relates to the building registration history and version."
-    },
-    "scale": {
-      "nl": "interval",
-      "en": "interval"
-    }
-  },
-  "tijdstipregistratie": {
-    "type": "datetime",
-    "source": "BAG",
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": null,
-    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
-    "semanticType": "millisecond",
-    "values": null,
-    "description": {
-      "nl": "Houdt verband met de geschiedenis van de pandregistratie en de versie.",
-      "en": "Relates to the building registration history and version."
-    },
-    "scale": {
-      "nl": "interval",
-      "en": "interval"
-    }
-  },
-  "eindregistratie": {
-    "type": "datetime",
-    "source": "BAG",
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": null,
-    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
-    "semanticType": "millisecond",
-    "values": null,
-    "description": {
-      "nl": "Houdt verband met de geschiedenis van de pandregistratie en de versie.",
-      "en": "Relates to the building registration history and version."
-    },
-    "scale": {
-      "nl": "interval",
-      "en": "interval"
-    }
-  },
-  "tijdstipinactief": {
-    "type": "datetime",
-    "source": "BAG",
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": null,
-    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
-    "semanticType": "millisecond",
-    "values": null,
-    "description": {
-      "nl": "Houdt verband met de geschiedenis van de pandregistratie en de versie.",
-      "en": "Relates to the building registration history and version."
-    },
-    "scale": {
-      "nl": "interval",
-      "en": "interval"
-    }
-  },
-  "tijdstipregistratielv": {
-    "type": "datetime",
-    "source": "BAG",
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": null,
-    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
-    "semanticType": "millisecond",
-    "values": null,
-    "description": {
-      "nl": "Dit is het tijdstip waarop een versie van een BAG-object is opgenomen in de registratie van de landelijke voorziening. De gegevens komen daarmee beschikbaar voor afnemers.",
-      "en": "Relates to the building registration history and version."
-    },
-    "scale": {
-      "nl": "interval",
-      "en": "interval"
-    }
-  },
-  "tijdstipeindregistratielv": {
-    "type": "datetime",
-    "source": "BAG",
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": null,
-    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
-    "semanticType": "millisecond",
-    "values": null,
-    "description": {
-      "nl": "Houdt verband met de geschiedenis van de pandregistratie en de versie.",
-      "en": "Relates to the building registration history and version."
-    },
-    "scale": {
-      "nl": "interval",
-      "en": "interval"
-    }
-  },
-  "tijdstipinactieflv": {
-    "type": "datetime",
-    "source": "BAG",
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": null,
-    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
-    "semanticType": "millisecond",
-    "values": null,
-    "description": {
-      "nl": "Houdt verband met de geschiedenis van de pandregistratie en de versie.",
-      "en": "Relates to the building registration history and version."
-    },
-    "scale": {
-      "nl": "interval",
-      "en": "interval"
-    }
-  },
-  "tijdstipnietbaglv": {
-    "type": "datetime",
-    "source": "BAG",
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": null,
-    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
-    "semanticType": "millisecond",
-    "values": null,
-    "description": {
-      "nl": "Houdt verband met de geschiedenis van de pandregistratie en de versie.",
-      "en": "Relates to the building registration history and version."
-    },
-    "scale": {
-      "nl": "interval",
-      "en": "interval"
-    }
-  },
-  "b3_h_maaiveld": {
     "type": "float",
-    "source": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "precision": null,
     "unit": {
-      "en": "metre",
-      "nl": "meter"
+      "en": "degrees",
+      "nl": "graden"
     },
-    "valueFormat": null,
-    "semanticType": "elevation",
-    "values": null,
-    "description": {
-      "nl": "Elevatie boven zeeniveau (NAP) op het maaiveldniveau van het pand. Berekend als het 5e percentiel van de maaiveldpunten gevonden binnen een radius van 4 meter van het pand.",
-      "en": "Elevation above sea level (Amsterdam Ordnance Datum) at the ground level of the building. Calculated as the 5th percentile of the ground points found within a 4 meter radius of the building."
-    },
+    "precision": 2,
     "scale": {
       "nl": "ratio",
       "en": "ratio"
-    }
-  },
-  "b3_dak_type": {
-    "type": "string",
-    "source": null,
+    },
+    "valueFormat": null,
+    "values": null,
     "nullable": null,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["RoofSurface"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["lod22_2d"]
       }
+    }
+  },
+  "b3_bag_bag_overlap": {
+    "description": {
+      "nl": "Het oppervlakte van overlap van dit BAG polygon met andere BAG polygonen. Eenheid: vierkante meter.",
+      "en": "The total overlap area of BAG polygon with other BAG polygons. Unit: square metre."
     },
-    "precision": null,
-    "unit": null,
+    "semanticType": "area",
+    "source": "bag_bag_overlap",
+    "type": "float",
+    "unit": {
+      "en": "square metre",
+      "nl": "vierkante meter"
+    },
+    "precision": 2,
+    "scale": {
+      "nl": "ratio",
+      "en": "ratio"
+    },
     "valueFormat": null,
+    "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_bouwlagen": {
+    "description": {
+      "nl": "Een schatting van het aantal bouwlagen in het gebouw. Schattingen zijn alleen beschikbaar voor gebouwen met maximaal 5 geschatte bouwlagen.",
+      "en": "An estimation of the number of floors in the building. Estimates are only are available for buildings with up to 5 estimated floors."
+    },
+    "semanticType": "count",
+    "source": "floors_estimation",
+    "type": "int",
+    "unit": null,
+    "precision": null,
+    "scale": {
+      "nl": "ratio",
+      "en": "ratio"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": true,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_dak_type": {
+    "description": {
+      "nl": "Daktype van het pand.",
+      "en": "Roof type of the building."
+    },
     "semanticType": "category",
+    "source": "roofer",
+    "type": "string",
+    "unit": null,
+    "precision": null,
+    "scale": {
+      "nl": "nominaal",
+      "en": "nominal"
+    },
+    "valueFormat": null,
     "values": {
+      "unknown": {
+        "nl": "Onbekend.",
+        "en": "Unknown."
+      },
       "slanted": {
-        "nl": "Dat met ten minste \u00e9\u00e9n schuin oppervlak.",
+        "nl": "Dak met ten minste één schuin oppervlak.",
         "en": "Roof with at least one slanted surface."
       },
       "multiple horizontal": {
         "nl": "Dak met meerdere, uitsluitend horizontale oppervlakken.",
         "en": "Roof with multiple, only horizontal surfaces."
       },
-      "single horizontal": {
+      "horizontal": {
         "nl": "Dak met een enkel horizontaal oppervlak.",
         "en": "Roof with a single horizontal surface."
       },
@@ -612,487 +122,406 @@
         "nl": "Er was geen punt gevonden voor het gebouw.",
         "en": "No point was found for the building."
       },
-      "could not detect": {
+      "no planes": {
         "nl": "Kon geen dakoppervlak detecteren, ondanks dat er punten gevonden waren.",
         "en": "Could not detect a roof surface, even though points were found."
       }
     },
-    "description": {
-      "nl": "Daktype van het pand.",
-      "en": "Roof type of the building."
-    },
-    "scale": {
-      "nl": "categorisch",
-      "en": "categorical"
-    }
-  },
-  "b3_pw_datum": {
-    "type": "int",
-    "source": null,
     "nullable": false,
     "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
-    },
-    "precision": null,
-    "unit": null,
-    "valueFormat": "YYYY",
-    "semanticType": "year",
-    "values": null,
-    "description": {
-      "nl": "Inwinjaar van de bron puntenwolk. Dit is bepaald door naar de GPS tijd van de AHN punten voor dit pand. Indien een goede GPS tijd niet beschikbaar is, wordt de file creation date van het puntenwolk bestand gebruikt.",
-      "en": "Acquisition year of the point cloud. This is determined by looking at the GPS timestamps on the AHN points for the building. In case good GPS timestamps are not available the file creation date of the point cloud file is used."
-    },
-    "scale": {
-      "nl": "interval",
-      "en": "interval"
     }
   },
-  "b3_pw_bron": {
+  "b3_dd_id": {
+    "description": {
+      "nl": "Dakdeel ID.",
+      "en": "Dak Deel ID. Roofpart ID."
+    },
+    "semanticType": "identifier",
+    "source": "roofer",
+    "type": "int",
+    "unit": null,
+    "precision": null,
+    "scale": {
+      "nl": "nominaal",
+      "en": "nominal"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "gpkg": {
+        "locations": ["lod22_2d", "lod12_2d", "lod13_2d"]
+      }
+    }
+  },
+  "b3_extrusie": {
+    "description": {
+      "nl": "Geeft aan welke methode is gebruikt om het 3D model te genereren.",
+      "en": "Indicates which method was used to generate the 3D model."
+    },
+    "semanticType": "identifier",
+    "source": "roofer",
     "type": "string",
-    "source": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "precision": null,
     "unit": null,
-    "valueFormat": null,
-    "semanticType": "text",
-    "values": null,
-    "description": {
-      "nl": "Bron van de puntenwolk, bijv. AHN3 of AHN4.",
-      "en": "Source of the point cloud, eg. AHN3 or AHN4."
-    },
-    "scale": {
-      "nl": "tekst",
-      "en": "text"
-    }
-  },
-  "b3_kas_warenhuis": {
-    "type": "bool",
-    "source": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
     "precision": null,
-    "unit": null,
-    "valueFormat": null,
-    "semanticType": "flag",
-    "values": null,
-    "description": {
-      "nl": "Het gebouw is een kas of een warenhuis volgens de TOP10NL of heeft een oppervlakte van meer dan 70000 vierkante meter.",
-      "en": "The building is greenhouse or warehouse (according to TOP10NL) or has an area of over 70000 square meters."
-    },
     "scale": {
       "nl": "nominaal",
       "en": "nominal"
-    }
-  },
-  "b3_reconstructie_onvolledig": {
-    "type": "bool",
-    "source": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": null,
-    "valueFormat": null,
-    "semanticType": "flag",
-    "values": null,
-    "description": {
-      "nl": "Geeft aan of de volledige LoD1.2/LoD1.3/LoD2.2 reconstructie is overgeslagen voor het pand.",
-      "en": "Indicates whether full LoD1.2/LoD1.3/LoD2.2 reconstruction was skipped for this feature."
-    },
-    "scale": {
-      "nl": "nominaal",
-      "en": "nominal"
-    }
-  },
-  "b3_h_dak_min": {
-    "type": "float",
-    "source": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "RoofSurface",
-          "Building"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": {
-      "en": "metre",
-      "nl": "meter"
     },
     "valueFormat": null,
-    "semanticType": "elevation",
-    "values": null,
-    "description": {
-      "nl": "Minimumhoogte op dakdeel gebaseerd op het gereconstrueerde 3D-model in LoD2.2. Gegeven als hoogte boven zeeniveau (NAP).",
-      "en": "Minimum elevation on roof surface based on reconstructed 3D model in LoD2.2. Given as elevation above sea level (NAP)."
-    },
-    "scale": {
-      "nl": "ratio",
-      "en": "ratio"
-    }
-  },
-  "b3_h_dak_50p": {
-    "type": "float",
-    "source": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "RoofSurface",
-          "Building"
-        ]
+    "values": {
+      "standard": {
+        "nl": "LoD1.2, LoD1.3 en LoD2.2 modellen zijn gegenereerd.",
+        "en": "LoD1.2, LoD1.3 and LoD2.2 models were generated."
+      },
+      "lod11_fallback": {
+        "nl": "Er is alleen een simpele LoD1.1 extrusie gedaan. Dit kan voorkomen voor gebouwen met een zeer groot oppervlak zoals kassen en warenhuizen.",
+        "en": "Only a simple LoD1.1 extrusion was done. This can occur for buildings with a very large footprint such as greenhouses and warehouses."
+      },
+      "skip": {
+        "nl": "Er kon geen 3D model worden gegenereerd door een gebrek aan puntenwolk data.",
+        "en": "No 3D model could be generated due to insufficient point cloud data."
       }
     },
-    "precision": null,
-    "unit": {
-      "en": "metre",
-      "nl": "meter"
-    },
-    "valueFormat": null,
-    "semanticType": "elevation",
-    "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "gpkg": {
+        "locations": ["pand"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      }
+    }
+  },
+  "b3_h_50p": {
     "description": {
       "nl": "Medianhoogte op dakdeel gebaseerd op het gereconstrueerde 3D-model in LoD2.2. Gegeven als hoogte boven zeeniveau (NAP).",
       "en": "Median elevation on roof surface based on reconstructed 3D model in LoD2.2. Given as elevation above sea level (NAP)."
     },
-    "scale": {
-      "nl": "ratio",
-      "en": "ratio"
-    }
-  },
-  "b3_h_dak_70p": {
+    "semanticType": "elevation",
+    "source": "roofer",
     "type": "float",
-    "source": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "RoofSurface",
-          "Building"
-        ]
-      }
-    },
-    "precision": null,
     "unit": {
       "en": "metre",
       "nl": "meter"
     },
+    "precision": 2,
+    "scale": {
+      "nl": "ratio",
+      "en": "ratio"
+    },
     "valueFormat": null,
-    "semanticType": "elevation",
     "values": null,
+    "nullable": null,
+    "appliesTo": {
+      "cityjson": {
+        "locations": ["RoofSurface", "Building"]
+      },
+      "gpkg": {
+        "locations": ["lod12_2d", "lod13_2d", "lod22_2d"]
+      }
+    }
+  },
+  "b3_h_70p": {
     "description": {
       "nl": "De 70e percentielhoogte op dakdeel gebaseerd op het gereconstrueerde 3D-model in LoD2.2. Gegeven als hoogte boven zeeniveau (NAP).",
       "en": "The 70th percentile elevation on roof surface based on reconstructed 3D model in LoD2.2. Given as elevation above sea level (NAP)."
     },
-    "scale": {
-      "nl": "ratio",
-      "en": "ratio"
-    }
-  },
-  "b3_h_dak_max": {
-    "type": "float",
-    "source": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "RoofSurface",
-          "Building"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": {
-      "en": "metre",
-      "nl": "meter"
-    },
-    "valueFormat": null,
     "semanticType": "elevation",
-    "values": null,
-    "description": {
-      "nl": "Maximumhoogte op dakdeel gebaseerd op het gereconstrueerde 3D-model in LoD2.2. Gegeven als hoogte boven zeeniveau (NAP). Eenheid: meter.",
-      "en": "Maximum elevation on roof surface based on reconstructed 3D model in LoD2.2. Given as elevation above sea level (NAP). Unit: metre."
-    },
-    "scale": {
-      "nl": "ratio",
-      "en": "ratio"
-    }
-  },
-  "b3_val3dity_lod12": {
-    "type": "array",
-    "source": null,
-    "nullable": false,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "semanticType": "list",
-    "precision": null,
-    "unit": null,
-    "valueFormat": null,
-    "values": null,
-    "scale": null,
-    "description": {
-      "nl": "[Val3dity foutcodes](https://val3dity.readthedocs.io/en/latest/errors) voor het LoD1.2 3D model. Een lege lijst betekent een valide geometrie.",
-      "en": "[Val3dity error codes](https://val3dity.readthedocs.io/en/latest/errors) for the LoD1.2 3D model. An empty list means valid geometry."
-    },
-    "items": {
-      "type": "int",
-      "semanticType": "errorCode",
-      "scale": {
-        "nl": "nominaal getal",
-        "en": "nominal number"
-      },
-      "description": {
-        "nl": "Een Val3dity foutcode.",
-        "en": "A Val3dity error code."
-      }
-    }
-  },
-  "b3_val3dity_lod13": {
-    "type": "array",
-    "source": null,
-    "nullable": false,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "semanticType": "list",
-    "precision": null,
-    "unit": null,
-    "valueFormat": null,
-    "values": null,
-    "scale": null,
-    "description": {
-      "nl": "[Val3dity foutcodes](https://val3dity.readthedocs.io/en/latest/errors) voor het LoD1.3 3D model. Een lege lijst betekent een valide geometrie.",
-      "en": "[Val3dity error codes](https://val3dity.readthedocs.io/en/latest/errors) for the LoD1.3 3D model. An empty list means valid geometry."
-    },
-    "items": {
-      "type": "int",
-      "semanticType": "errorCode",
-      "scale": {
-        "nl": "nominaal getal",
-        "en": "nominal number"
-      },
-      "description": {
-        "nl": "Een Val3dity foutcode.",
-        "en": "A Val3dity error code."
-      }
-    }
-  },
-  "b3_val3dity_lod22": {
-    "type": "array",
-    "source": null,
-    "nullable": false,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "semanticType": "list",
-    "precision": null,
-    "unit": null,
-    "valueFormat": null,
-    "values": null,
-    "scale": null,
-    "description": {
-      "nl": "[Val3dity foutcodes](https://val3dity.readthedocs.io/en/latest/errors) voor het LoD2.2 3D model. Een lege lijst betekent een valide geometrie.",
-      "en": "[Val3dity error codes](https://val3dity.readthedocs.io/en/latest/errors) for the LoD2.2 3D model. An empty list means valid geometry."
-    },
-    "items": {
-      "type": "int",
-      "semanticType": "errorCode",
-      "scale": {
-        "nl": "nominaal getal",
-        "en": "nominal number"
-      },
-      "description": {
-        "nl": "Een Val3dity foutcode.",
-        "en": "A Val3dity error code."
-      }
-    }
-  },
-  "b3_rmse_lod12": {
+    "source": "roofer",
     "type": "float",
-    "source": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "precision": null,
     "unit": {
       "en": "metre",
       "nl": "meter"
     },
-    "valueFormat": null,
-    "semanticType": "error",
-    "values": null,
-    "description": {
-      "nl": "Root Mean Square Error van de 3D afstanden tussen de puntenwolk en het LoD1.2 model. Eenheid: meter.",
-      "en": "Root Mean Square Error of the 3D distances between the point cloud and the LoD1.2 model. Unit: metre."
-    },
+    "precision": 2,
     "scale": {
       "nl": "ratio",
       "en": "ratio"
-    }
-  },
-  "b3_rmse_lod13": {
-    "type": "float",
-    "source": null,
+    },
+    "valueFormat": null,
+    "values": null,
     "nullable": null,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["RoofSurface", "Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["lod12_2d", "lod13_2d", "lod22_2d"]
       }
+    }
+  },
+  "b3_h_max": {
+    "description": {
+      "nl": "Maximumhoogte op dakdeel gebaseerd op het gereconstrueerde 3D-model in LoD2.2. Gegeven als hoogte boven zeeniveau (NAP).",
+      "en": "Maximum elevation on roof surface based on reconstructed 3D model in LoD2.2. Given as elevation above sea level (NAP)."
     },
-    "precision": null,
+    "semanticType": "elevation",
+    "source": "roofer",
+    "type": "float",
     "unit": {
       "en": "metre",
       "nl": "meter"
     },
-    "valueFormat": null,
-    "semanticType": "error",
-    "values": null,
-    "description": {
-      "nl": "Root Mean Square Error van de 3D afstanden tussen de puntenwolk en het LoD1.3 model. Eenheid: meter.",
-      "en": "Root Mean Square Error of the 3D distances between the point cloud and the LoD1.3 model. Unit: metre."
-    },
+    "precision": 2,
     "scale": {
       "nl": "ratio",
       "en": "ratio"
-    }
-  },
-  "b3_rmse_lod22": {
-    "type": "float",
-    "source": null,
+    },
+    "valueFormat": null,
+    "values": null,
     "nullable": null,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["RoofSurface", "Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["lod12_2d", "lod13_2d", "lod22_2d"]
       }
+    }
+  },
+  "b3_h_min": {
+    "description": {
+      "nl": "Minimumhoogte op dakdeel gebaseerd op het gereconstrueerde 3D-model in LoD2.2. Gegeven als hoogte boven zeeniveau (NAP).",
+      "en": "Minimum elevation on roof surface based on reconstructed 3D model in LoD2.2. Given as elevation above sea level (NAP)."
     },
-    "precision": null,
+    "semanticType": "elevation",
+    "source": "roofer",
+    "type": "float",
     "unit": {
       "en": "metre",
       "nl": "meter"
     },
-    "valueFormat": null,
-    "semanticType": "error",
-    "values": null,
-    "description": {
-      "nl": "Root Mean Square Error van de 3D afstanden tussen de puntenwolk en het LoD2.2 model. Eenheid: meter.",
-      "en": "Root Mean Square Error of the 3D distances between the point cloud and the LoD2.2 model. Unit: metre."
-    },
+    "precision": 2,
     "scale": {
       "nl": "ratio",
       "en": "ratio"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": null,
+    "appliesTo": {
+      "cityjson": {
+        "locations": ["RoofSurface", "Building"]
+      },
+      "gpkg": {
+        "locations": ["lod12_2d", "lod13_2d", "lod22_2d"]
+      }
+    }
+  },
+  "b3_h_maaiveld": {
+    "description": {
+      "nl": "Elevatie boven zeeniveau (NAP) op het maaiveldniveau van het pand. Berekend als het 5e percentiel van de maaiveldpunten gevonden binnen een radius van 4 meter van het pand.",
+      "en": "Elevation above sea level (Amsterdam Ordnance Datum) at the ground level of the building. Calculated as the 5th percentile of the ground points found within a 4 meter radius of the building."
+    },
+    "semanticType": "elevation",
+    "source": "roofer",
+    "type": "float",
+    "unit": {
+      "en": "metre",
+      "nl": "meter"
+    },
+    "precision": null,
+    "scale": {
+      "nl": "ratio",
+      "en": "ratio"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_h_nok": {
+    "description": {
+      "nl": "Hoogte van de langste noklijn van het pand.",
+      "en": "Height of the longest ridge line of the building."
+    },
+    "semanticType": "length",
+    "source": "roofer",
+    "type": "float",
+    "unit": {
+      "en": "metre",
+      "nl": "meter"
+    },
+    "precision": 2,
+    "scale": {
+      "nl": "ratio",
+      "en": "ratio"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": true,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_hellingshoek": {
+    "description": {
+      "nl": "Hellingshoek van dakdeel. Beschikbaar voor de LoD 2.2 dakdelen in de GPKG 2D lagen",
+      "en": "Slope of roofpart. Available for the LoD 2.2 roofparts in GPKG 2D layers."
+    },
+    "semanticType": "angle",
+    "source": "roofer",
+    "type": "float",
+    "unit": {
+      "en": "degrees",
+      "nl": "graden"
+    },
+    "precision": 2,
+    "scale": {
+      "nl": "ratio",
+      "en": "ratio"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": null,
+    "appliesTo": {
+      "cityjson": {
+        "locations": ["RoofSurface"]
+      },
+      "gpkg": {
+        "locations": ["lod22_2d"]
+      }
+    }
+  },
+  "b3_is_glas_dak": {
+    "description": {
+      "nl": "Het gebouw heeft een glas dak. Let op: dit is gebaseerd op een experimentele automatische puntenwolk analyse.",
+      "en": "The building has a glass roof. Notice: this is based on an experimental automated pointcloud analysis."
+    },
+    "semanticType": "flag",
+    "source": "roofer",
+    "type": "bool",
+    "unit": null,
+    "precision": null,
+    "scale": {
+      "nl": "nominaal",
+      "en": "nominal"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_kas_warenhuis": {
+    "description": {
+      "nl": "Het gebouw is een kas of een warenhuis volgens de TOP10NL of heeft een oppervlakte van meer dan 70000 vierkante meter.",
+      "en": "The building is greenhouse or warehouse (according to TOP10NL) or has an area of over 70000 square meters."
+    },
+    "semanticType": "flag",
+    "source": "TOP10NL",
+    "type": "bool",
+    "unit": null,
+    "precision": null,
+    "scale": {
+      "nl": "nominaal",
+      "en": "nominal"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_kwaliteitsindicator": {
+    "description": {
+      "nl": "Indicatie van de betrouwbaarheid van de gebouwreconstructie. `b3_kwaliteitsindicator = (b3_bag_bag_overlap == 0) AND (b3_val3dity_lod22 == []) AND ( (b3_pw_selectie_reden != _HIGHEST_YET_INSUFFICIENT_COVERAGE) AND (b3_pw_selectie_reden != _LATEST_BUT_OUTDATED) )`",
+      "en": "Indication of the reliability of the building reconstruction. `b3_kwaliteitsindicator = (b3_bag_bag_overlap == 0) AND (b3_val3dity_lod22 == []) AND ( (b3_pw_selectie_reden != _HIGHEST_YET_INSUFFICIENT_COVERAGE) AND (b3_pw_selectie_reden != _LATEST_BUT_OUTDATED) )`"
+    },
+    "semanticType": "flag",
+    "source": "tyler-multiformat",
+    "type": "bool",
+    "unit": null,
+    "precision": null,
+    "scale": {
+      "nl": "nominaal",
+      "en": "nominal"
+    },
+    "valueFormat": null,
+    "values": {
+      "true": {
+        "en": "The reconstruction is correct.",
+        "nl": "De gebouwreconstructie is correct."
+      },
+      "false": {
+        "en": "The reconstruction is possibly incorrect.",
+        "nl": "De gebouwreconstructie is mogelijk niet correct."
+      }
+    },
+    "nullable": true,
+    "appliesTo": {
+      "gpkg": {
+        "locations": ["pand"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      }
     }
   },
   "b3_mutatie_ahn3_ahn4": {
-    "type": "bool",
-    "source": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
+    "description": {
+      "nl": "`true` als er een significante verandering is gedetecteerd in het pand tussen de AHN3 en AHN4 puntenwolken.",
+      "en": "`true` if there was a significant change detected in the building between the AHN3 and AHN4 pointclouds."
     },
-    "precision": null,
-    "unit": null,
-    "valueFormat": null,
     "semanticType": "flag",
+    "source": "roofer",
+    "type": "bool",
+    "unit": null,
+    "precision": null,
+    "scale": {
+      "nl": "nominaal",
+      "en": "nominal"
+    },
+    "valueFormat": null,
     "values": {
       "true": {
         "en": "There was a significant change detected in the building between the AHN3 and AHN4 pointclouds.",
@@ -1103,161 +532,686 @@
         "nl": "Er was geen significante verandering is gedetecteerd in het pand tussen de AHN3 en AHN4 puntenwolken."
       }
     },
+    "nullable": false,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_mutatie_ahn4_ahn5": {
     "description": {
-      "nl": "`true` als er een significante verandering is gedetecteerd in het pand tussen de AHN3 en AHN4 puntenwolken.",
-      "en": "`true` if there was a significant change detected in the building between the AHN3 and AHN4 pointclouds."
+      "nl": "`true` als er een significante verandering is gedetecteerd in het pand tussen de AHN4 en AHN5 puntenwolken.",
+      "en": "`true` if there was a significant change detected in the building between the AHN4 and AHN5 pointclouds."
     },
+    "semanticType": "flag",
+    "source": "roofer",
+    "type": "bool",
+    "unit": null,
+    "precision": null,
     "scale": {
       "nl": "nominaal",
       "en": "nominal"
+    },
+    "valueFormat": null,
+    "values": {
+      "true": {
+        "en": "There was a significant change detected in the building between the AHN4 and AHN5 pointclouds.",
+        "nl": "Er was een significante verandering is gedetecteerd in het pand tussen de AHN4 en AHN5 puntenwolken."
+      },
+      "false": {
+        "en": "There was no significant change detected in the building between the AHN4 and AHN5 pointclouds.",
+        "nl": "Er was geen significante verandering is gedetecteerd in het pand tussen de AHN4 en AHN5 puntenwolken."
+      }
+    },
+    "nullable": false,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_n_nok": {
+    "description": {
+      "nl": "Aantal gedetecteerde noklijnen.",
+      "en": "Number of detected ridge lines."
+    },
+    "semanticType": "count",
+    "source": "roofer",
+    "type": "int",
+    "unit": null,
+    "precision": null,
+    "scale": {
+      "nl": "ratio",
+      "en": "ratio"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": true,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_n_vlakken": {
+    "description": {
+      "nl": "Aantal gedetecteerde dakvlakken in de puntenwolk (kan anders zijn dan in het LoD2.2 model).",
+      "en": "Number of detected roofplanes in the point cloud (could be different from the LoD2.2 model)."
+    },
+    "semanticType": "count",
+    "source": "roofer",
+    "type": "int",
+    "unit": null,
+    "precision": null,
+    "scale": {
+      "nl": "ratio",
+      "en": "ratio"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": true,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
     }
   },
   "b3_nodata_fractie_ahn3": {
-    "type": "float",
-    "source": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": null,
-    "valueFormat": null,
-    "semanticType": "fraction",
-    "values": null,
     "description": {
       "nl": "Fractie van het BAG polygon met onvoldoende AHN3 punten dekking. Alleen punten geclassificeerd als gebouw of grond worden gebruikt.",
       "en": "Fraction of the footprint area that has no point data in the AHN3 point cloud. Only points classified as building or ground are considered."
     },
+    "semanticType": "fraction",
+    "source": "roofer",
+    "type": "float",
+    "unit": null,
+    "precision": 2,
     "scale": {
       "nl": "ratio",
       "en": "ratio"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
     }
   },
   "b3_nodata_fractie_ahn4": {
-    "type": "float",
-    "source": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": null,
-    "valueFormat": null,
-    "semanticType": "fraction",
-    "values": null,
     "description": {
       "nl": "Fractie van het BAG polygon met onvoldoende AHN4 punten dekking. Alleen punten geclassificeerd als gebouw of grond worden gebruikt.",
       "en": "Fraction of the footprint area that has no point data in the AHN4 point cloud. Only points classified as building or ground are considered."
     },
+    "semanticType": "fraction",
+    "source": "roofer",
+    "type": "float",
+    "unit": null,
+    "precision": 2,
     "scale": {
       "nl": "ratio",
       "en": "ratio"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_nodata_fractie_ahn5": {
+    "description": {
+      "nl": "Fractie van het BAG polygon met onvoldoende AHN4 punten dekking. Alleen punten geclassificeerd als gebouw of grond worden gebruikt.",
+      "en": "Fraction of the footprint area that has no point data in the AHN4 point cloud. Only points classified as building or ground are considered."
+    },
+    "semanticType": "fraction",
+    "source": "roofer",
+    "type": "float",
+    "unit": null,
+    "precision": 2,
+    "scale": {
+      "nl": "ratio",
+      "en": "ratio"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
     }
   },
   "b3_nodata_radius_ahn3": {
-    "type": "float",
-    "source": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": {
-      "en": "metre",
-      "nl": "meter"
-    },
-    "valueFormat": null,
-    "semanticType": "length",
-    "values": null,
     "description": {
       "nl": "Straal van de grootste cirkel die binnen het BAG polygoon valt en geen AHN3 punten bevat. Alleen punten geclassificeerd als gebouw of grond worden gebruikt.",
       "en": "Radius of the largest circle inside the BAG polygon without any AHN3 points. Only points classified as building or ground are considered."
     },
-    "scale": {
-      "nl": "ratio",
-      "en": "ratio"
-    }
-  },
-  "b3_nodata_radius_ahn4": {
+    "semanticType": "length",
+    "source": "roofer",
     "type": "float",
-    "source": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "precision": null,
     "unit": {
       "en": "metre",
       "nl": "meter"
     },
+    "precision": 2,
+    "scale": {
+      "nl": "ratio",
+      "en": "ratio"
+    },
     "valueFormat": null,
-    "semanticType": "length",
     "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_nodata_radius_ahn4": {
     "description": {
       "nl": "Straal van de grootste cirkel die binnen het BAG polygoon valt en geen AHN4 punten bevat. Alleen punten geclassificeerd als gebouw of grond worden gebruikt.",
       "en": "Radius of the largest circle inside the BAG polygon without any AHN4 points. Only points classified as building or ground are considered."
     },
+    "semanticType": "length",
+    "source": "roofer",
+    "type": "float",
+    "unit": {
+      "en": "metre",
+      "nl": "meter"
+    },
+    "precision": 2,
     "scale": {
       "nl": "ratio",
       "en": "ratio"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_nodata_radius_ahn5": {
+    "description": {
+      "nl": "Straal van de grootste cirkel die binnen het BAG polygoon valt en geen AHN5 punten bevat. Alleen punten geclassificeerd als gebouw of grond worden gebruikt.",
+      "en": "Radius of the largest circle inside the BAG polygon without any AHN5 points. Only points classified as building or ground are considered."
+    },
+    "semanticType": "length",
+    "source": "roofer",
+    "type": "float",
+    "unit": {
+      "en": "metre",
+      "nl": "meter"
+    },
+    "precision": 2,
+    "scale": {
+      "nl": "ratio",
+      "en": "ratio"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_opp_buitenmuur": {
+    "description": {
+      "nl": "Totale oppervlakte van de buitenmuren. Eenheid: vierkante meter.",
+      "en": "Total area of the exterior walls. Unit: square metre."
+    },
+    "semanticType": "area",
+    "source": "party_walls",
+    "type": "float",
+    "unit": {
+      "en": "square metre",
+      "nl": "vierkante meter"
+    },
+    "precision": 2,
+    "scale": {
+      "nl": "ratio",
+      "en": "ratio"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_opp_dak_plat": {
+    "description": {
+      "nl": "Totale oppervlakte van de platte delen van het dak. Eenheid: vierkante meter.",
+      "en": "Total area of the flat parts of the roof. Unit: square metre."
+    },
+    "semanticType": "area",
+    "source": "party_walls",
+    "type": "float",
+    "unit": {
+      "en": "square metre",
+      "nl": "vierkante meter"
+    },
+    "precision": 2,
+    "scale": {
+      "nl": "ratio",
+      "en": "ratio"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_opp_dak_schuin": {
+    "description": {
+      "nl": "Totale oppervlakte van de schuine delen van het dak. Eenheid: vierkante meter.",
+      "en": "Total area of the sloped parts of the roof. Unit: square metre."
+    },
+    "semanticType": "area",
+    "source": "party_walls",
+    "type": "float",
+    "unit": {
+      "en": "square metre",
+      "nl": "vierkante meter"
+    },
+    "precision": 2,
+    "scale": {
+      "nl": "ratio",
+      "en": "ratio"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_opp_grond": {
+    "description": {
+      "nl": "Totale oppervlakte begane grond. Eenheid: vierkante meter.",
+      "en": "Total ground floor area. Unit: square metre."
+    },
+    "semanticType": "area",
+    "source": "party_walls",
+    "type": "float",
+    "unit": {
+      "en": "square metre",
+      "nl": "vierkante meter"
+    },
+    "precision": 2,
+    "scale": {
+      "nl": "ratio",
+      "en": "ratio"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_opp_scheidingsmuur": {
+    "description": {
+      "nl": "Totale oppervlakte van de pandscheidende muren. Eenheid: vierkante meter.",
+      "en": "Total area of the party walls. Unit: square metre."
+    },
+    "semanticType": "area",
+    "source": "party_walls",
+    "type": "float",
+    "unit": {
+      "en": "square metre",
+      "nl": "vierkante meter"
+    },
+    "precision": 2,
+    "scale": {
+      "nl": "ratio",
+      "en": "ratio"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_pand_deel_id": {
+    "description": {
+      "nl": "Panddeel ID. Een pand kan meerdere delen hebben wanneer het is opgedeeld vanwege ondergrondse delen.",
+      "en": "Buildingpart ID. A building can have multiple parts when it was cut into parts because of underground parts."
+    },
+    "semanticType": "identifier",
+    "source": "roofer",
+    "type": "int",
+    "unit": null,
+    "precision": null,
+    "scale": {
+      "nl": "nominaal",
+      "en": "nominal"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "gpkg": {
+        "locations": [
+          "lod13_3d",
+          "lod12_2d",
+          "lod22_2d",
+          "lod22_3d",
+          "lod13_2d",
+          "lod12_3d"
+        ]
+      }
+    }
+  },
+  "b3_puntdichtheid_ahn3": {
+    "description": {
+      "nl": "Puntdichtheid van de AHN3-puntenwolk voor het pand. Alleen punten geclassificeerd als gebouw of grond worden in beschouwing genomen.",
+      "en": "Density of the AHN3 point cloud on BAG polygon. Only points classified as building or ground are considered."
+    },
+    "semanticType": "density",
+    "source": "roofer",
+    "type": "float",
+    "unit": {
+      "en": "points per square metre",
+      "nl": "punten per vierkante meter"
+    },
+    "precision": 2,
+    "scale": {
+      "nl": "ratio",
+      "en": "ratio"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_puntdichtheid_ahn4": {
+    "description": {
+      "nl": "Puntdichtheid van de AHN4-puntenwolk voor het pand. Alleen punten geclassificeerd als gebouw of grond worden in beschouwing genomen. Eenheid: punten per vierkante meter.",
+      "en": "Density of the AHN4 point cloud on BAG polygon. Only points classified as building or ground are considered. Unit: points per square metre."
+    },
+    "semanticType": "density",
+    "source": "roofer",
+    "type": "float",
+    "unit": {
+      "en": "points per square metre",
+      "nl": "punten per vierkante meter"
+    },
+    "precision": 2,
+    "scale": {
+      "nl": "ratio",
+      "en": "ratio"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_puntdichtheid_ahn5": {
+    "description": {
+      "nl": "Puntdichtheid van de AHN5-puntenwolk voor het pand. Alleen punten geclassificeerd als gebouw of grond worden in beschouwing genomen. Eenheid: punten per vierkante meter.",
+      "en": "Density of the AHN5 point cloud on BAG polygon. Only points classified as building or ground are considered. Unit: points per square metre."
+    },
+    "semanticType": "density",
+    "source": "roofer",
+    "type": "float",
+    "unit": {
+      "en": "points per square metre",
+      "nl": "punten per vierkante meter"
+    },
+    "precision": 2,
+    "scale": {
+      "nl": "ratio",
+      "en": "ratio"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_pw_bron": {
+    "description": {
+      "nl": "Bron van de puntenwolk, bijv. AHN3 of AHN4.",
+      "en": "Source of the point cloud, eg. AHN3 or AHN4."
+    },
+    "semanticType": "text",
+    "source": "roofer",
+    "type": "string",
+    "unit": null,
+    "precision": null,
+    "scale": {
+      "nl": "nominaal",
+      "en": "nominal"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_pw_datum": {
+    "description": {
+      "nl": "Inwinjaar van de bron puntenwolk. Dit is bepaald door naar de GPS tijd van de AHN punten voor dit pand. Indien een goede GPS tijd niet beschikbaar is, wordt de file creation date van het puntenwolk bestand gebruikt.",
+      "en": "Acquisition year of the point cloud. This is determined by looking at the GPS timestamps on the AHN points for the building. In case good GPS timestamps are not available the file creation date of the point cloud file is used."
+    },
+    "semanticType": "year",
+    "source": "roofer",
+    "type": "date",
+    "unit": null,
+    "precision": null,
+    "scale": {
+      "nl": "interval",
+      "en": "interval"
+    },
+    "valueFormat": "YYYY",
+    "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_pw_onvoldoende": {
+    "description": {
+      "nl": "De puntenwolk was onvoldoende voor het genereren van een 3D model.",
+      "en": "The input pointcloud was insufficient to generate a 3D model."
+    },
+    "semanticType": "flag",
+    "source": "roofer",
+    "type": "bool",
+    "unit": null,
+    "precision": null,
+    "scale": {
+      "nl": "nominaal",
+      "en": "nominal"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
     }
   },
   "b3_pw_selectie_reden": {
-    "type": "string",
-    "source": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
+    "description": {
+      "nl": "Geeft achtergrond informatie met betrekking tot de puntenwolk selectie (zie `pw_bron` attribuut).",
+      "en": "Provides information about the pointcloud selection indicated in the `pw_bron` attribute."
     },
-    "precision": null,
-    "unit": null,
-    "valueFormat": null,
     "semanticType": "category",
+    "source": "roofer",
+    "type": "string",
+    "unit": null,
+    "precision": null,
+    "scale": {
+      "nl": "nominaal",
+      "en": "nominal"
+    },
+    "valueFormat": null,
     "values": {
       "PREFERRED_AND_LATEST": {
         "nl": "De geselecteerde puntenwolk heeft een goede puntdekking en er is geen recentere puntenwolk met voldoende puntdekking beschikbaar.",
@@ -1280,407 +1234,575 @@
         "en": "The selected pointcloud is the latest one available, but it may be outdated for this building. This happens when the year of construction is equal or later than the point cloud acquisition date."
       }
     },
-    "description": {
-      "nl": "Geeft achtergrond informatie met betrekking tot de puntenwolk selectie (zie `pw_bron` attribuut).",
-      "en": "Provides information about the pointcloud selection indicated in the `pw_bron` attribute."
-    },
-    "scale": {
-      "nl": "categorisch",
-      "en": "categorical"
-    }
-  },
-  "b3_puntdichtheid_ahn3": {
-    "type": "int",
-    "source": null,
-    "nullable": null,
+    "nullable": false,
     "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
-    },
-    "precision": null,
-    "unit": {
-      "en": "points per square metre",
-      "nl": "punten per vierkante meter"
-    },
-    "valueFormat": null,
-    "semanticType": "density",
-    "values": null,
+    }
+  },
+  "b3_rmse_lod12": {
     "description": {
-      "nl": "Puntdichtheid van de AHN3-puntenwolk voor het pand. Alleen punten geclassificeerd als gebouw of grond worden in beschouwing genomen.",
-      "en": "Density of the AHN3 point cloud on BAG polygon. Only points classified as building or ground are considered."
+      "nl": "Root Mean Square Error van de 3D afstanden tussen de puntenwolk en het LoD1.2 model. Eenheid: meter.",
+      "en": "Root Mean Square Error of the 3D distances between the point cloud and the LoD1.2 model. Unit: metre."
     },
+    "semanticType": "error",
+    "source": "roofer",
+    "type": "float",
+    "unit": {
+      "en": "metre",
+      "nl": "meter"
+    },
+    "precision": 2,
     "scale": {
       "nl": "ratio",
       "en": "ratio"
-    }
-  },
-  "b3_puntdichtheid_ahn4": {
-    "type": "int",
-    "source": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": {
-      "en": "points per square metre",
-      "nl": "punten per vierkante meter"
     },
     "valueFormat": null,
-    "semanticType": "density",
     "values": null,
+    "nullable": true,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_rmse_lod13": {
     "description": {
-      "nl": "Puntdichtheid van de AHN4-puntenwolk voor het pand. Alleen punten geclassificeerd als gebouw of grond worden in beschouwing genomen. Eenheid: punten per vierkante meter.",
-      "en": "Density of the AHN4 point cloud on BAG polygon. Only points classified as building or ground are considered. Unit: points per square metre."
+      "nl": "Root Mean Square Error van de 3D afstanden tussen de puntenwolk en het LoD1.3 model. Eenheid: meter.",
+      "en": "Root Mean Square Error of the 3D distances between the point cloud and the LoD1.3 model. Unit: metre."
     },
+    "semanticType": "error",
+    "source": "roofer",
+    "type": "float",
+    "unit": {
+      "en": "metre",
+      "nl": "meter"
+    },
+    "precision": 2,
     "scale": {
       "nl": "ratio",
       "en": "ratio"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": true,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_rmse_lod22": {
+    "description": {
+      "nl": "Root Mean Square Error van de 3D afstanden tussen de puntenwolk en het LoD2.2 model. Eenheid: meter.",
+      "en": "Root Mean Square Error of the 3D distances between the point cloud and the LoD2.2 model. Unit: metre."
+    },
+    "semanticType": "error",
+    "source": "roofer",
+    "type": "float",
+    "unit": {
+      "en": "metre",
+      "nl": "meter"
+    },
+    "precision": 2,
+    "scale": {
+      "nl": "ratio",
+      "en": "ratio"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": true,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_t_run": {
+    "description": {
+      "nl": "Reconstructie tijd in milliseconden.",
+      "en": "Reconstruction time in milliseconds."
+    },
+    "semanticType": "duration",
+    "source": "roofer",
+    "type": "int",
+    "unit": {
+      "en": "milliseconds",
+      "nl": "milliseconden"
+    },
+    "precision": null,
+    "scale": {
+      "nl": "ratio",
+      "en": "ratio"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_val3dity_lod12": {
+    "description": {
+      "nl": "[Val3dity foutcodes](https://val3dity.readthedocs.io/en/latest/errors) voor het LoD1.2 3D model. Een lege lijst betekent een valide geometrie.",
+      "en": "[Val3dity error codes](https://val3dity.readthedocs.io/en/latest/errors) for the LoD1.2 3D model. An empty list means valid geometry."
+    },
+    "semanticType": "list",
+    "source": "roofer,val3dity",
+    "type": "array",
+    "unit": null,
+    "precision": null,
+    "scale": null,
+    "valueFormat": null,
+    "values": null,
+    "nullable": true,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    },
+    "items": {
+      "type": "int",
+      "semanticType": "errorCode",
+      "scale": {
+        "nl": "nominaal",
+        "en": "nominal"
+      },
+      "description": {
+        "nl": "Een Val3dity foutcode.",
+        "en": "A Val3dity error code."
+      }
+    }
+  },
+  "b3_val3dity_lod13": {
+    "description": {
+      "nl": "[Val3dity foutcodes](https://val3dity.readthedocs.io/en/latest/errors) voor het LoD1.3 3D model. Een lege lijst betekent een valide geometrie.",
+      "en": "[Val3dity error codes](https://val3dity.readthedocs.io/en/latest/errors) for the LoD1.3 3D model. An empty list means valid geometry."
+    },
+    "semanticType": "list",
+    "source": "roofer,val3dity",
+    "type": "array",
+    "unit": null,
+    "precision": null,
+    "scale": null,
+    "valueFormat": null,
+    "values": null,
+    "nullable": true,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    },
+    "items": {
+      "type": "int",
+      "semanticType": "errorCode",
+      "scale": {
+        "nl": "nominaal",
+        "en": "nominal"
+      },
+      "description": {
+        "nl": "Een Val3dity foutcode.",
+        "en": "A Val3dity error code."
+      }
+    }
+  },
+  "b3_val3dity_lod22": {
+    "description": {
+      "nl": "[Val3dity foutcodes](https://val3dity.readthedocs.io/en/latest/errors) voor het LoD2.2 3D model. Een lege lijst betekent een valide geometrie.",
+      "en": "[Val3dity error codes](https://val3dity.readthedocs.io/en/latest/errors) for the LoD2.2 3D model. An empty list means valid geometry."
+    },
+    "semanticType": "list",
+    "source": "roofer,val3dity",
+    "type": "array",
+    "unit": null,
+    "precision": null,
+    "scale": null,
+    "valueFormat": null,
+    "values": null,
+    "nullable": true,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    },
+    "items": {
+      "type": "int",
+      "semanticType": "errorCode",
+      "scale": {
+        "nl": "nominaal",
+        "en": "nominal"
+      },
+      "description": {
+        "nl": "Een Val3dity foutcode.",
+        "en": "A Val3dity error code."
+      }
     }
   },
   "b3_volume_lod12": {
-    "type": "float",
-    "source": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": {
-      "en": "cubic metre",
-      "nl": "kubieke meter"
-    },
-    "valueFormat": null,
-    "semanticType": "volume",
-    "values": null,
     "description": {
       "nl": "Volume van het LoD1.2-model. Eenheid: kubieke meter.",
       "en": "Volume of the LoD1.2 model. Unit: cubic metre."
     },
-    "scale": {
-      "nl": "ratio",
-      "en": "ratio"
-    }
-  },
-  "b3_volume_lod13": {
+    "semanticType": "volume",
+    "source": "roofer",
     "type": "float",
-    "source": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "precision": null,
     "unit": {
       "en": "cubic metre",
       "nl": "kubieke meter"
     },
+    "precision": 2,
+    "scale": {
+      "nl": "ratio",
+      "en": "ratio"
+    },
     "valueFormat": null,
-    "semanticType": "volume",
     "values": null,
+    "nullable": true,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_volume_lod13": {
     "description": {
       "nl": "Volume van het LoD1.3-model. Eenheid: kubieke meter.",
       "en": "Volume of the LoD1.3 model. Unit: cubic metre."
     },
-    "scale": {
-      "nl": "ratio",
-      "en": "ratio"
-    }
-  },
-  "b3_volume_lod22": {
+    "semanticType": "volume",
+    "source": "roofer",
     "type": "float",
-    "source": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "precision": null,
     "unit": {
       "en": "cubic metre",
       "nl": "kubieke meter"
     },
+    "precision": 2,
+    "scale": {
+      "nl": "ratio",
+      "en": "ratio"
+    },
     "valueFormat": null,
-    "semanticType": "volume",
     "values": null,
+    "nullable": true,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "b3_volume_lod22": {
     "description": {
       "nl": "Volume van het LoD2.2-model. Eenheid: kubieke meter.",
       "en": "Volume of the LoD2.2 model. Unit: cubic metre."
     },
+    "semanticType": "volume",
+    "source": "roofer",
+    "type": "float",
+    "unit": {
+      "en": "cubic metre",
+      "nl": "kubieke meter"
+    },
+    "precision": 2,
     "scale": {
       "nl": "ratio",
       "en": "ratio"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": true,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
     }
   },
-  "b3_bag_bag_overlap": {
-    "type": "float",
-    "source": null,
-    "nullable": null,
+  "begingeldigheid": {
+    "description": {
+      "nl": "De datum waarop een versie van een BAG-object geldig is in de werkelijkheid conform de ingangsdatum in het brondocument. Dit tijdstip wordt vastgelegd in de beginGeldigheid. Als er geen expliciete ingangsdatum van geldigheid is opgenomen, wordt de datum van het brondocument overgenomen.",
+      "en": "Relates to the building registration history and version."
+    },
+    "semanticType": "day",
+    "source": "BAG",
+    "type": "date",
+    "unit": null,
+    "precision": null,
+    "scale": {
+      "nl": "interval",
+      "en": "interval"
+    },
+    "valueFormat": "YYYY-MM-DD",
+    "values": null,
+    "nullable": false,
     "appliesTo": {
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "documentdatum": {
+    "description": {
+      "nl": "De datum waarop het brondocument is vastgesteld, op basis waarvan een opname, mutatie of een verwijdering van gegevens ten aanzien van een pand heeft plaatsgevonden.",
+      "en": "Building registration date."
+    },
+    "semanticType": "day",
+    "source": "BAG",
+    "type": "date",
+    "unit": null,
+    "precision": null,
+    "scale": {
+      "nl": "interval",
+      "en": "interval"
+    },
+    "valueFormat": "YYYY-MM-DD",
+    "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "documentnummer": {
+    "description": {
+      "nl": "De unieke aanduiding van het brondocument op basis waarvan een opname, mutatie of een verwijdering van gegevens ten aanzien van een pand heeft plaatsgevonden, binnen een gemeente.",
+      "en": "Document number."
+    },
+    "semanticType": "identifier",
+    "source": "BAG",
+    "type": "string",
+    "unit": null,
+    "precision": null,
+    "scale": {
+      "nl": "nominaal",
+      "en": "nominal"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "eindgeldigheid": {
+    "description": {
+      "nl": "De datum waarop de periode van geldigheid van een versie van een BAG-object eindigt. Bijvoorbeeld als gevolg van de vaststelling van een nieuw brondocument. Wanneer er geen tijdstip is ingevuld, dan is de versie nog geldig. Dit tijdstip wordt vastgelegd in de eindGeldigheid.",
+      "en": "Relates to the building registration history and version."
+    },
+    "semanticType": "day",
+    "source": "BAG",
+    "type": "date",
+    "unit": null,
+    "precision": null,
+    "scale": {
+      "nl": "interval",
+      "en": "interval"
+    },
+    "valueFormat": "YYYY-MM-DD",
+    "values": null,
+    "nullable": true,
+    "appliesTo": {
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "eindregistratie": {
+    "description": {
+      "nl": "Houdt verband met de geschiedenis van de pandregistratie en de versie.",
+      "en": "Relates to the building registration history and version."
+    },
+    "semanticType": "millisecond",
+    "source": "BAG",
+    "type": "datetime",
+    "unit": null,
+    "precision": null,
+    "scale": {
+      "nl": "interval",
+      "en": "interval"
+    },
+    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
+    "values": null,
+    "nullable": true,
+    "appliesTo": {
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "geconstateerd": {
+    "description": {
+      "nl": "Een aanduiding waarmee kan worden aangegeven dat een pand in de registratie is opgenomen als gevolg van een feitelijke constatering, zonder dat er op het moment van opname sprake was van een regulier brondocument voor deze opname.",
+      "en": "Indicates that the buildings has included in the BAG registration."
+    },
+    "semanticType": "flag",
+    "source": "BAG",
+    "type": "bool",
+    "unit": null,
+    "precision": null,
+    "scale": {
+      "nl": "nominaal",
+      "en": "nominal"
+    },
+    "valueFormat": null,
+    "values": null,
+    "nullable": true,
+    "appliesTo": {
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "identificatie": {
+    "description": {
+      "nl": "De unieke BAG aanduiding van een pand.",
+      "en": "ID of a building."
+    },
+    "semanticType": "identifier",
+    "source": "BAG,roofer",
+    "type": "string",
+    "unit": null,
+    "precision": null,
+    "scale": {
+      "nl": "nominaal",
+      "en": "nominal"
+    },
+    "valueFormat": "NL.IMBAG.Pand.<16 digits>",
+    "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
+      "cityjson": {
+        "locations": ["Building"]
       },
       "gpkg": {
         "locations": [
-          "pand"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": {
-      "en": "square metre",
-      "nl": "vierkante meter"
-    },
-    "valueFormat": null,
-    "semanticType": "area",
-    "values": null,
-    "description": {
-      "nl": "Het oppervlakte van overlap van dit BAG polygon met andere BAG polygonen. Eenheid: vierkante meter.",
-      "en": "The total overlap area of BAG polygon with other BAG polygons. Unit: square metre."
-    },
-    "scale": {
-      "nl": "ratio",
-      "en": "ratio"
-    }
-  },
-  "b3_opp_grond": {
-    "type": "float",
-    "source": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": {
-      "en": "square metre",
-      "nl": "vierkante meter"
-    },
-    "valueFormat": null,
-    "semanticType": "area",
-    "values": null,
-    "description": {
-      "nl": "Totale oppervlakte begane grond. Eenheid: vierkante meter.",
-      "en": "Total ground floor area. Unit: square metre."
-    },
-    "scale": {
-      "nl": "ratio",
-      "en": "ratio"
-    }
-  },
-  "b3_opp_dak_plat": {
-    "type": "float",
-    "source": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": {
-      "en": "square metre",
-      "nl": "vierkante meter"
-    },
-    "valueFormat": null,
-    "semanticType": "area",
-    "values": null,
-    "description": {
-      "nl": "Totale oppervlakte van de platte delen van het dak. Eenheid: vierkante meter.",
-      "en": "Total area of the flat parts of the roof. Unit: square metre."
-    },
-    "scale": {
-      "nl": "ratio",
-      "en": "ratio"
-    }
-  },
-  "b3_opp_dak_schuin": {
-    "type": "float",
-    "source": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": {
-      "en": "square metre",
-      "nl": "vierkante meter"
-    },
-    "valueFormat": null,
-    "semanticType": "area",
-    "values": null,
-    "description": {
-      "nl": "Totale oppervlakte van de schuine delen van het dak. Eenheid: vierkante meter.",
-      "en": "Total area of the sloped parts of the roof. Unit: square metre."
-    },
-    "scale": {
-      "nl": "ratio",
-      "en": "ratio"
-    }
-  },
-  "b3_opp_scheidingsmuur": {
-    "type": "float",
-    "source": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": {
-      "en": "square metre",
-      "nl": "vierkante meter"
-    },
-    "valueFormat": null,
-    "semanticType": "area",
-    "values": null,
-    "description": {
-      "nl": "Totale oppervlakte van de pandscheidende muren. Eenheid: vierkante meter.",
-      "en": "Total area of the party walls. Unit: square metre."
-    },
-    "scale": {
-      "nl": "ratio",
-      "en": "ratio"
-    }
-  },
-  "b3_opp_buitenmuur": {
-    "type": "float",
-    "source": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "Building"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": {
-      "en": "square metre",
-      "nl": "vierkante meter"
-    },
-    "valueFormat": null,
-    "semanticType": "area",
-    "values": null,
-    "description": {
-      "nl": "Totale oppervlakte van de buitenmuren. Eenheid: vierkante meter.",
-      "en": "Total area of the exterior walls. Unit: square metre."
-    },
-    "scale": {
-      "nl": "ratio",
-      "en": "ratio"
-    }
-  },
-  "labels": {
-    "type": "array",
-    "source": null,
-    "nullable": null,
-    "appliesTo": {
-      "gpkg": {
-        "locations": [
-          "lod22_3d",
           "lod13_3d",
+          "lod12_2d",
+          "pand",
+          "lod22_2d",
+          "lod22_3d",
+          "lod13_2d",
           "lod12_3d"
         ]
       }
-    },
-    "semanticType": "list",
-    "precision": null,
-    "unit": null,
-    "valueFormat": null,
-    "values": null,
-    "scale": null,
+    }
+  },
+  "labels": {
     "description": {
       "nl": "Pand-oppervlaksemantiek. Alleen beschikbaar in de GPKG 3D lagen. Dit is een array van integers, waarbij een integer verwijst naar een oppervlaktype (0: `GroundSurface`, 1: `RoofSurface`, 2: `OuterWallSurface`, 3: `InnerWallSurface`). Als een oppervlak geen semantische waarde heeft, wordt NULL gebruikt. De lengte van de array staat dus gelijk aan het aantal 3D polygonen van de geometrie, en de volgorde van waarden in de array correspondeert met de volgorde van de polygonen.",
       "en": "Building surface semantics. Only available in the GPKG 3D layers. This is an array of integers, where an integer refers to a surface type (0: `GroundSurface`, 1: `RoofSurface`, 2: `OuterWallSurface`, 3: `InnerWallSurface`). If a surface does not have a semantic value, NULL is used instead. Thus the length of the array equals the number of 3D polygons in the geometry, and the order of values in the array corresponds to the order of polygons."
+    },
+    "semanticType": "list",
+    "source": "tyler-multiformat",
+    "type": "array",
+    "unit": null,
+    "precision": null,
+    "scale": null,
+    "valueFormat": null,
+    "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "gpkg": {
+        "locations": ["lod22_3d", "lod13_3d", "lod12_3d"]
+      }
     },
     "items": {
       "type": "int",
       "semanticType": "category",
       "scale": {
-        "nl": "nominaal getal",
-        "en": "nominal number"
+        "nl": "nominaal",
+        "en": "nominal"
       },
       "description": {
         "nl": "Een semantisch label voor een oppervlak.",
@@ -1688,134 +1810,244 @@
       }
     }
   },
-  "b3_bouwlagen": {
+  "oorspronkelijkbouwjaar": {
+    "description": {
+      "nl": "De aanduiding van het jaar waarin een pand oorspronkelijk als bouwkundig gereed is of zal worden opgeleverd.",
+      "en": "Building construction year."
+    },
+    "semanticType": "year",
+    "source": "BAG",
     "type": "int",
-    "source": null,
-    "nullable": null,
+    "unit": null,
+    "precision": null,
+    "scale": {
+      "nl": "interval",
+      "en": "interval"
+    },
+    "valueFormat": "YYYY",
+    "values": null,
+    "nullable": false,
     "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
       "cityjson": {
-        "locations": [
-          "Building"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "pand"
-        ]
+        "locations": ["pand"]
       }
-    },
-    "precision": null,
-    "unit": null,
-    "valueFormat": null,
-    "semanticType": "count",
-    "values": null,
-    "description": {
-      "nl": "Een schatting van het aantal bouwlagen in het gebouw. Schattingen zijn alleen beschikbaar voor gebouwen met maximaal 5 geschatte bouwlagen.",
-      "en": "An estimation of the number of floors in the building. Estimates are only are available for buildings with up to 5 estimated floors."
-    },
-    "scale": {
-      "nl": "ratio",
-      "en": "ratio"
     }
   },
-  "b3_kwaliteitsindicator": {
-    "type": "string",
-    "source": null,
-    "nullable": null,
-    "appliesTo": {
-      "gpkg": {
-        "locations": [
-          "pand"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": null,
-    "valueFormat": null,
-    "semanticType": "flag",
-    "values": {
-      "true": {
-        "en": "The reconstruction is correct.",
-        "nl": "De gebouwreconstructie is correct."
-      },
-      "false": {
-        "en": "The reconstruction is possibly incorrect.",
-        "nl": "De gebouwreconstructie is mogelijk niet correct."
-      }
-    },
+  "status": {
     "description": {
-      "nl": "Indicatie van de betrouwbaarheid van de gebouwreconstructie. `b3_kwaliteitsindicator = (b3_bag_bag_overlap == 0) AND (b3_val3dity_lod22 == []) AND ( (b3_pw_selectie_reden != _HIGHEST_YET_INSUFFICIENT_COVERAGE) AND (b3_pw_selectie_reden != _LATEST_BUT_OUTDATED) )`",
-      "en": "Indication of the reliability of the building reconstruction. `b3_kwaliteitsindicator = (b3_bag_bag_overlap == 0) AND (b3_val3dity_lod22 == []) AND ( (b3_pw_selectie_reden != _HIGHEST_YET_INSUFFICIENT_COVERAGE) AND (b3_pw_selectie_reden != _LATEST_BUT_OUTDATED) )`"
+      "nl": "De fase van de levenscyclus van een pand, waarin het betreffende pand zich bevindt.",
+      "en": "The current fase in the buildings life-cycle."
     },
+    "semanticType": "category",
+    "source": "BAG",
+    "type": "string",
+    "unit": null,
+    "precision": null,
     "scale": {
       "nl": "nominaal",
       "en": "nominal"
-    }
-  },
-  "b3_azimut": {
-    "type": "float",
-    "source": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": [
-          "RoofSurface"
-        ]
-      },
-      "gpkg": {
-        "locations": [
-          "lod22_2d"
-        ]
-      }
-    },
-    "precision": null,
-    "unit": {
-      "en": "degrees",
-      "nl": "graden"
     },
     "valueFormat": null,
-    "semanticType": "angle",
     "values": null,
-    "description": {
-      "nl": "Azimut van dakdeel. Beschikbaar voor de LoD 2.2 dakdelen in de GPKG 2D lagen.",
-      "en": "Azimuth of roofpart. Available for the LoD 2.2 roofparts in GPKG 2D layers."
-    },
-    "scale": {
-      "nl": "ratio",
-      "en": "ratio"
-    }
-  },
-  "b3_hellingshoek": {
-    "type": "float",
-    "source": null,
-    "nullable": null,
+    "nullable": false,
     "appliesTo": {
+      "cesium3dtiles": {
+        "locations": ["lod12", "lod13", "lod22"]
+      },
       "cityjson": {
-        "locations": [
-          "RoofSurface"
-        ]
+        "locations": ["Building"]
       },
       "gpkg": {
-        "locations": [
-          "lod22_2d"
-        ]
+        "locations": ["pand"]
       }
+    }
+  },
+  "tijdstipeindregistratielv": {
+    "description": {
+      "nl": "Houdt verband met de geschiedenis van de pandregistratie en de versie.",
+      "en": "Relates to the building registration history and version."
     },
+    "semanticType": "millisecond",
+    "source": "BAG",
+    "type": "datetime",
+    "unit": null,
     "precision": null,
-    "unit": {
-      "en": "degrees",
-      "nl": "graden"
+    "scale": {
+      "nl": "interval",
+      "en": "interval"
+    },
+    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
+    "values": null,
+    "nullable": true,
+    "appliesTo": {
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "tijdstipinactief": {
+    "description": {
+      "nl": "Houdt verband met de geschiedenis van de pandregistratie en de versie.",
+      "en": "Relates to the building registration history and version."
+    },
+    "semanticType": "millisecond",
+    "source": "BAG",
+    "type": "datetime",
+    "unit": null,
+    "precision": null,
+    "scale": {
+      "nl": "interval",
+      "en": "interval"
+    },
+    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
+    "values": null,
+    "nullable": true,
+    "appliesTo": {
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "tijdstipinactieflv": {
+    "description": {
+      "nl": "Houdt verband met de geschiedenis van de pandregistratie en de versie.",
+      "en": "Relates to the building registration history and version."
+    },
+    "semanticType": "millisecond",
+    "source": "BAG",
+    "type": "datetime",
+    "unit": null,
+    "precision": null,
+    "scale": {
+      "nl": "interval",
+      "en": "interval"
+    },
+    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
+    "values": null,
+    "nullable": true,
+    "appliesTo": {
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "tijdstipnietbaglv": {
+    "description": {
+      "nl": "Houdt verband met de geschiedenis van de pandregistratie en de versie.",
+      "en": "Relates to the building registration history and version."
+    },
+    "semanticType": "millisecond",
+    "source": "BAG",
+    "type": "datetime",
+    "unit": null,
+    "precision": null,
+    "scale": {
+      "nl": "interval",
+      "en": "interval"
+    },
+    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
+    "values": null,
+    "nullable": true,
+    "appliesTo": {
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "tijdstipregistratie": {
+    "description": {
+      "nl": "Houdt verband met de geschiedenis van de pandregistratie en de versie.",
+      "en": "Relates to the building registration history and version."
+    },
+    "semanticType": "millisecond",
+    "source": "BAG",
+    "type": "datetime",
+    "unit": null,
+    "precision": null,
+    "scale": {
+      "nl": "interval",
+      "en": "interval"
+    },
+    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
+    "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "tijdstipregistratielv": {
+    "description": {
+      "nl": "Dit is het tijdstip waarop een versie van een BAG-object is opgenomen in de registratie van de landelijke voorziening. De gegevens komen daarmee beschikbaar voor afnemers.",
+      "en": "Relates to the building registration history and version."
+    },
+    "semanticType": "millisecond",
+    "source": "BAG",
+    "type": "datetime",
+    "unit": null,
+    "precision": null,
+    "scale": {
+      "nl": "interval",
+      "en": "interval"
+    },
+    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
+    "values": null,
+    "nullable": false,
+    "appliesTo": {
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
+    }
+  },
+  "voorkomenidentificatie": {
+    "description": {
+      "nl": "Houdt verband met de geschiedenis van de pandregistratie en de versie.",
+      "en": "Relates to the building registration history and version."
+    },
+    "semanticType": "identifier",
+    "source": "BAG",
+    "type": "int",
+    "unit": null,
+    "precision": null,
+    "scale": {
+      "nl": "ordinaal",
+      "en": "ordinal"
     },
     "valueFormat": null,
-    "semanticType": "angle",
     "values": null,
-    "description": {
-      "nl": "Hellingshoek van dakdeel. Beschikbaar voor de LoD 2.2 dakdelen in de GPKG 2D lagen",
-      "en": "Slope of roofpart. Available for the LoD 2.2 roofparts in GPKG 2D layers."
-    },
-    "scale": {
-      "nl": "ratio",
-      "en": "ratio"
+    "nullable": false,
+    "appliesTo": {
+      "cityjson": {
+        "locations": ["Building"]
+      },
+      "gpkg": {
+        "locations": ["pand"]
+      }
     }
   }
 }

@@ -4,10 +4,14 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "bag3d-specs"
-version = "2025.07.24"
+version = "2025.09.03"
 description = "3DBAG specifications."
 readme = "README.md"
-authors = [{name = "Balázs Dukai", email = "balazs.dukai@3dgi.nl"}]
+authors = [
+    { name = "Balázs Dukai", email = "balazs.dukai@3dgi.nl" },
+    { name = "Ravi Peters", email = "ravi.peters@3dgi.nl" },
+    { name = "Gina Stavropoulou", email = "G.Stavropoulou@tudelft.nl" },
+]
 license = "Apache-2.0"
 license-files = ["LICEN[CS]E*", "NOTICE"]
 classifiers = [
@@ -33,6 +37,7 @@ dev = [
 
 [project.scripts]
 validate-attributes-json = "bag3d.specs.validate_attributes_json:main"
+sort-attributes-json = "bag3d.specs.sort_attributes:main"
 
 [tool.setuptools]
 include-package-data = true
@@ -55,7 +60,7 @@ indent-style = "space"
 docstring-code-format = false
 
 [tool.bumpver]
-current_version = "2025.07.24"
+current_version = "2025.09.03"
 version_pattern = "YYYY.0M.0D"
 commit_message = "bump version {old_version} -> {new_version}"
 tag_message = "{new_version}"

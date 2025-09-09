@@ -1,3 +1,10 @@
+"""
+The core module defines the core data model for 3DBAG attribute specifications: enums
+for base types and locations (CityJSON, GeoPackage, Cesium 3D Tiles), dataclasses for
+types, translations, array items, and attributes, utilities to map types to
+JSON/Python/GPKG/OGR/Geoflow, and loaders for the packaged attribute specs and schema.
+"""
+
 from enum import Enum, StrEnum, auto
 from typing import Optional, Dict, Any
 from dataclasses import dataclass
@@ -8,7 +15,7 @@ from bag3d.specs.resources import get_resource_file_path
 
 
 class BaseType(Enum):
-    """3DBAG attribute types."""
+    """Simple 3DBAG attribute types."""
 
     INT = auto()
     FLOAT = auto()
@@ -148,6 +155,20 @@ class AttributeType:
         }
         return mapping[self.base_type.name]
 
+    def as_geof(self) -> str:
+        """Convert to data type that Geoflow accepts."""
+        mapping = {
+            "INT": "int",
+            "FLOAT": "float",
+            "BOOL": "bool",
+            "STRING": "string",
+            "DATE": "string",
+            "DATETIME": "string",
+            "ARRAY": "string",
+            "NULL": "string",
+        }
+        return mapping[self.base_type.name]
+
 
 class CityJSONLocation(StrEnum):
     """The object type where the attribute is located in CityJSON.
@@ -192,7 +213,17 @@ class CityJSONLocation(StrEnum):
 
 
 class GpkgLocation(StrEnum):
-    """The GeoPackage layer where the attribute is located."""
+    """The GeoPackage layer where the attribute is located.
+
+    Attributes:
+        pand
+        lod12_2d
+        lod12_3d
+        lod13_2d
+        lod13_3d
+        lod22_2d
+        lod22_3d
+    """
 
     pand = "pand"
     lod12_2d = "lod12_2d"
@@ -225,24 +256,67 @@ class GpkgLocation(StrEnum):
         return cls.lod12_2d, cls.lod13_2d, cls.lod22_2d
 
 
+class Cesium3dTilesLocation(StrEnum):
+    """The 3D Tiles tileset where the attribute is located.
+
+    Attributes:
+        lod12
+        lod13
+        lod22
+    """
+
+    lod12 = "lod12"
+    lod13 = "lod13"
+    lod22 = "lod22"
+
+    @classmethod
+    def from_string(cls, cesium3dtiles_location_str: str) -> "Cesium3dTilesLocation":
+        """Convert a string to Cesium3dTiles enum."""
+        for item in cls:
+            if item.value == cesium3dtiles_location_str:
+                return item
+
+        raise ValueError(
+            f"Unknown Cesium3dTiles value: {cesium3dtiles_location_str}. "
+            f"Valid values: {[item.value for item in cls]}"
+        )
+
+    @property
+    def lod(self) -> str:
+        """Return the Level of Detail that this location relates to.
+
+        >>> Cesium3dTilesLocation.lod12.lod
+        "2.2"
+        """
+        return ".".join(list(self.value.lstrip("lod")))
+
+
 @dataclass
 class AttributeAppliesTo:
     """The appliesTo property."""
 
     cityjson: Optional[dict] = None
     gpkg: Optional[dict] = None
+    cesium3dtiles: Optional[dict] = None
 
     @classmethod
     def from_dict(cls, data: dict) -> "AttributeAppliesTo":
         cityjson = None
         gpkg = None
+        cesium3dtiles = None
         if cj := data.get("cityjson"):
             cityjson = {
                 "locations": list(map(CityJSONLocation.from_string, cj["locations"]))
             }
         if g := data.get("gpkg"):
             gpkg = {"locations": list(map(GpkgLocation.from_string, g["locations"]))}
-        return cls(cityjson=cityjson, gpkg=gpkg)
+        if c3dt := data.get("cesium3dtiles"):
+            cesium3dtiles = {
+                "locations": list(
+                    map(Cesium3dTilesLocation.from_string, c3dt["locations"])
+                )
+            }
+        return cls(cityjson=cityjson, gpkg=gpkg, cesium3dtiles=cesium3dtiles)
 
 
 class DocumentationLanguage(Enum):
