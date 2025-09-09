@@ -1,3 +1,9 @@
+"""
+The core module defines the core data model for 3DBAG attribute specifications: enums
+for base types and locations (CityJSON, GeoPackage, Cesium 3D Tiles), dataclasses for
+types, translations, array items, and attributes, utilities to map types to
+JSON/Python/GPKG/OGR/Geoflow, and loaders for the packaged attribute specs and schema.
+"""
 from enum import Enum, StrEnum, auto
 from typing import Optional, Dict, Any
 from dataclasses import dataclass
@@ -8,7 +14,7 @@ from bag3d.specs.resources import get_resource_file_path
 
 
 class BaseType(Enum):
-    """3DBAG attribute types."""
+    """Simple 3DBAG attribute types."""
 
     INT = auto()
     FLOAT = auto()
