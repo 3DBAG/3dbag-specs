@@ -7,7 +7,11 @@ name = "bag3d-specs"
 version = "2025.07.24"
 description = "3DBAG specifications."
 readme = "README.md"
-authors = [{name = "Balázs Dukai", email = "balazs.dukai@3dgi.nl"}]
+authors = [
+    { name = "Balázs Dukai", email = "balazs.dukai@3dgi.nl" },
+    { name = "Ravi Peters", email = "ravi.peters@3dgi.nl" },
+    { name = "Gina Stavropoulou", email = "G.Stavropoulou@tudelft.nl" },
+]
 license = "Apache-2.0"
 license-files = ["LICEN[CS]E*", "NOTICE"]
 classifiers = [
