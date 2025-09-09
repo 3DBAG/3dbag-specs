@@ -1,6 +1,7 @@
 import argparse
 import json
 
+
 def sort_json_complete(input_file, output_file):
     """
     Read a JSON file, sort the main keys alphabetically, and sort the properties
@@ -22,7 +23,7 @@ def sort_json_complete(input_file, output_file):
         "valueFormat",
         "values",
         "nullable",
-        "appliesTo"
+        "appliesTo",
     ]
 
     def sort_object_properties(obj):
@@ -47,7 +48,7 @@ def sort_json_complete(input_file, output_file):
 
     try:
         # Read the JSON file
-        with open(input_file, 'r', encoding='utf-8') as f:
+        with open(input_file, "r", encoding="utf-8") as f:
             data = json.load(f)
 
         # Sort the main dictionary by keys alphabetically
@@ -58,10 +59,12 @@ def sort_json_complete(input_file, output_file):
             sorted_data[key] = sort_object_properties(value)
 
         # Write the sorted data to the output file
-        with open(output_file, 'w', encoding='utf-8') as f:
+        with open(output_file, "w", encoding="utf-8") as f:
             json.dump(sorted_data, f, indent=2, ensure_ascii=False)
 
-        print(f"Successfully sorted JSON from '{input_file}' and saved to '{output_file}'")
+        print(
+            f"Successfully sorted JSON from '{input_file}' and saved to '{output_file}'"
+        )
         print("- Main keys sorted alphabetically")
         print("- Object properties ordered according to schema")
 
@@ -74,9 +77,7 @@ def sort_json_complete(input_file, output_file):
 
 
 def main():
-    parser = argparse.ArgumentParser(
-        description="Sort the attributes.json file"
-    )
+    parser = argparse.ArgumentParser(description="Sort the attributes.json file")
     parser.add_argument(
         "--input", "-i", required=True, help="Path to the input attributes.json"
     )
@@ -86,6 +87,7 @@ def main():
 
     args = parser.parse_args()
     sort_json_complete(args.input, args.output)
+
 
 if __name__ == "__main__":
     main()

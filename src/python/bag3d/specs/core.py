@@ -4,6 +4,7 @@ for base types and locations (CityJSON, GeoPackage, Cesium 3D Tiles), dataclasse
 types, translations, array items, and attributes, utilities to map types to
 JSON/Python/GPKG/OGR/Geoflow, and loaders for the packaged attribute specs and schema.
 """
+
 from enum import Enum, StrEnum, auto
 from typing import Optional, Dict, Any
 from dataclasses import dataclass

@@ -13,7 +13,7 @@ wheels = [
 
 [[package]]
 name = "bag3d-specs"
-version = "2025.7.24"
+version = "2025.9.3"
 source = { editable = "." }
 dependencies = [
     { name = "jsonschema" },
