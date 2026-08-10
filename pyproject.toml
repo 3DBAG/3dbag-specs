@@ -20,7 +20,7 @@ classifiers = [
 ]
 requires-python = ">=3.11"
 dependencies = [
-    "jsonschema>=4.24.0",
+    "jsonschema>=4.26.0",
 ]
 
 [project.urls]
@@ -28,11 +28,11 @@ Repository = "https://github.com/3DBAG/3dbag-specs"
 
 [dependency-groups]
 dev = [
-    "pytest~=8.4.1",
-    "bumpver~=2025.1131",
-    "tox~=4.27.0",
-    "tox-uv>=1.26.1",
-    "ruff~=0.12.3",
+    "pytest~=9.1.1",
+    "bumpver~=2026.1132",
+    "tox~=4.58.0",
+    "tox-uv>=1.36.0",
+    "ruff~=0.16.2",
 ]
 
 [project.scripts]
