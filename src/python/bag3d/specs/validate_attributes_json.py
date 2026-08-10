@@ -1,7 +1,8 @@
-import json
-import jsonschema
-import sys
 import argparse
+import json
+import sys
+
+import jsonschema
 
 
 def validate_json_file(schema_path, json_path):
@@ -30,7 +31,7 @@ def validate_json_file(schema_path, json_path):
         print(f"   {e.message}")
         print(f"   At path: {' -> '.join(str(p) for p in e.absolute_path)}")
         return False
-    except Exception as e:
+    except (OSError, TypeError, jsonschema.SchemaError) as e:
         print(f"❌ Unexpected error: {e}")
         return False
 

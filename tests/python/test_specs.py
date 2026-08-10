@@ -1,11 +1,12 @@
-from bag3d.specs.resources import get_resource_file_path
 from bag3d.specs.core import (
     Attribute,
     AttributeType,
-    load_attributes_spec,
     BaseType,
     CityJSONLocation,
+    Ogc3dTilesLocation,
+    load_attributes_spec,
 )
+from bag3d.specs.resources import get_resource_file_path
 
 
 def test_get_resource_file_path():
@@ -68,6 +69,28 @@ def test_attribute_array():
     assert str(attr.type) == "ARRAY<INT>"
     assert attr.items.scale.en == "ratio"
     assert CityJSONLocation.RoofSurface in attr.applies_to.cityjson["locations"]
+
+
+def test_attribute_ogc3dtiles():
+    """Can we deserialize the OGC 3D Tiles appliesTo format?"""
+    data = {
+        "type": "string",
+        "source": "source",
+        "nullable": True,
+        "appliesTo": {"ogc3dtiles": {"locations": ["lod12", "lod22"]}},
+        "precision": None,
+        "unit": None,
+        "valueFormat": None,
+        "semanticType": "category",
+        "values": None,
+        "description": {"nl": "Test", "en": "Test"},
+        "scale": None,
+    }
+
+    attr = Attribute.from_dict("test_ogc3dtiles", data)
+
+    assert Ogc3dTilesLocation.lod12 in attr.applies_to.ogc3dtiles["locations"]
+    assert Ogc3dTilesLocation.lod22 in attr.applies_to.ogc3dtiles["locations"]
 
 
 def test_load_from_package():

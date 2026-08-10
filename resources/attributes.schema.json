@@ -52,8 +52,8 @@
         },
         "appliesTo": {
           "properties": {
-            "cesium3dtiles": {
-              "$ref": "#/definitions/format-cesium3dtiles"
+            "ogc3dtiles": {
+              "$ref": "#/definitions/format-ogc3dtiles"
             },
             "cityjson": {
               "$ref": "#/definitions/format-cityjson"
@@ -215,7 +215,7 @@
         }
       }
     },
-    "format-cesium3dtiles": {
+    "format-ogc3dtiles": {
       "type": "object",
       "properties": {
         "locations": {

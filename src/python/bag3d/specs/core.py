@@ -1,15 +1,15 @@
 """
 The core module defines the core data model for 3DBAG attribute specifications: enums
-for base types and locations (CityJSON, GeoPackage, Cesium 3D Tiles), dataclasses for
+for base types and locations (CityJSON, GeoPackage, OGC 3D Tiles), dataclasses for
 types, translations, array items, and attributes, utilities to map types to
 JSON/Python/GPKG/OGR/Geoflow, and loaders for the packaged attribute specs and schema.
 """
 
-from enum import Enum, StrEnum, auto
-from typing import Optional, Dict, Any
-from dataclasses import dataclass
 import json
+from dataclasses import dataclass
+from enum import Enum, StrEnum, auto
 from pathlib import Path
+from typing import Any
 
 from bag3d.specs.resources import get_resource_file_path
 
@@ -59,7 +59,7 @@ class AttributeType:
     """
 
     base_type: BaseType
-    sub_type: Optional[BaseType] = None
+    sub_type: BaseType | None = None
 
     def __post_init__(self):
         """Validate type specification."""
@@ -141,9 +141,10 @@ class AttributeType:
             "FLOAT": "Real",
             "STRING": "String",
         }
-        if self.base_type == BaseType.ARRAY:
-            if subtype := mapping_subtype.get(self.sub_type.name):
-                return f"{subtype}List"
+        if self.base_type == BaseType.ARRAY and (
+            subtype := mapping_subtype.get(self.sub_type.name)
+        ):
+            return f"{subtype}List"
         mapping = {
             "INT": "Integer",
             "FLOAT": "Real",
@@ -256,7 +257,7 @@ class GpkgLocation(StrEnum):
         return cls.lod12_2d, cls.lod13_2d, cls.lod22_2d
 
 
-class Cesium3dTilesLocation(StrEnum):
+class Ogc3dTilesLocation(StrEnum):
     """The 3D Tiles tileset where the attribute is located.
 
     Attributes:
@@ -270,14 +271,14 @@ class Cesium3dTilesLocation(StrEnum):
     lod22 = "lod22"
 
     @classmethod
-    def from_string(cls, cesium3dtiles_location_str: str) -> "Cesium3dTilesLocation":
-        """Convert a string to Cesium3dTiles enum."""
+    def from_string(cls, ogc3dtiles_location_str: str) -> "Ogc3dTilesLocation":
+        """Convert a string to Ogc3dTiles enum."""
         for item in cls:
-            if item.value == cesium3dtiles_location_str:
+            if item.value == ogc3dtiles_location_str:
                 return item
 
         raise ValueError(
-            f"Unknown Cesium3dTiles value: {cesium3dtiles_location_str}. "
+            f"Unknown Ogc3dTiles value: {ogc3dtiles_location_str}. "
             f"Valid values: {[item.value for item in cls]}"
         )
 
@@ -285,8 +286,8 @@ class Cesium3dTilesLocation(StrEnum):
     def lod(self) -> str:
         """Return the Level of Detail that this location relates to.
 
-        >>> Cesium3dTilesLocation.lod12.lod
-        "2.2"
+        >>> Ogc3dTilesLocation.lod12.lod == "1.2"
+        True
         """
         return ".".join(list(self.value.lstrip("lod")))
 
@@ -295,28 +296,31 @@ class Cesium3dTilesLocation(StrEnum):
 class AttributeAppliesTo:
     """The appliesTo property."""
 
-    cityjson: Optional[dict] = None
-    gpkg: Optional[dict] = None
-    cesium3dtiles: Optional[dict] = None
+    cityjson: dict | None = None
+    gpkg: dict | None = None
+    ogc3dtiles: dict | None = None
 
     @classmethod
     def from_dict(cls, data: dict) -> "AttributeAppliesTo":
         cityjson = None
         gpkg = None
-        cesium3dtiles = None
+        ogc3dtiles = None
         if cj := data.get("cityjson"):
             cityjson = {
                 "locations": list(map(CityJSONLocation.from_string, cj["locations"]))
             }
         if g := data.get("gpkg"):
             gpkg = {"locations": list(map(GpkgLocation.from_string, g["locations"]))}
-        if c3dt := data.get("cesium3dtiles"):
-            cesium3dtiles = {
+        if ogc3dtiles_data := data.get("ogc3dtiles"):
+            ogc3dtiles = {
                 "locations": list(
-                    map(Cesium3dTilesLocation.from_string, c3dt["locations"])
+                    map(
+                        Ogc3dTilesLocation.from_string,
+                        ogc3dtiles_data["locations"],
+                    )
                 )
             }
-        return cls(cityjson=cityjson, gpkg=gpkg, cesium3dtiles=cesium3dtiles)
+        return cls(cityjson=cityjson, gpkg=gpkg, ogc3dtiles=ogc3dtiles)
 
 
 class DocumentationLanguage(Enum):
@@ -344,7 +348,7 @@ class Translation:
     en: str
 
     @classmethod
-    def from_dict(cls, data: Dict[str, str]) -> "Translation":
+    def from_dict(cls, data: dict[str, str]) -> "Translation":
         """Create Translation from dictionary."""
         return cls(nl=data["nl"], en=data["en"])
 
@@ -358,12 +362,12 @@ class ArrayItemDefinition:
     """Definition for items in an array-type attribute."""
 
     type: AttributeType
-    semantic_type: Optional[str] = None
-    description: Optional[Translation] = None
-    scale: Optional[Translation] = None
+    semantic_type: str | None = None
+    description: Translation | None = None
+    scale: Translation | None = None
 
     @classmethod
-    def from_dict(cls, data: Dict[str, Any]) -> "ArrayItemDefinition":
+    def from_dict(cls, data: dict[str, Any]) -> "ArrayItemDefinition":
         """Create ArrayItemDefinition from dictionary."""
         return cls(
             type=AttributeType(data["type"]),
@@ -397,20 +401,20 @@ class Attribute:
 
     name: str
     type: AttributeType
-    source: Optional[str]
+    source: str | None
     nullable: bool
     applies_to: AttributeAppliesTo
-    precision: Optional[int]
-    unit: Optional[Translation]
-    value_format: Optional[str]
+    precision: int | None
+    unit: Translation | None
+    value_format: str | None
     semantic_type: str
-    values: Optional[Dict[str, Translation]]
+    values: dict[str, Translation] | None
     description: Translation
-    scale: Optional[Translation]
-    items: Optional[ArrayItemDefinition]
+    scale: Translation | None
+    items: ArrayItemDefinition | None
 
     @classmethod
-    def from_dict(cls, name: str, data: Dict[str, Any]) -> "Attribute":
+    def from_dict(cls, name: str, data: dict[str, Any]) -> "Attribute":
         """Create Attribute from dictionary."""
         # Handle values - can be null or a dict of value: translation pairs
         values = None
@@ -453,7 +457,7 @@ class Attribute:
         )
 
 
-def load_attributes_from_json(json_path: Path) -> Dict[str, Attribute]:
+def load_attributes_from_json(json_path: Path) -> dict[str, Attribute]:
     """
     Load attributes from a JSON file and deserialize them into a dictionary.
 
@@ -481,7 +485,7 @@ def load_attributes_spec_schema() -> dict:
     return data
 
 
-def load_attributes_spec() -> Dict[str, Attribute]:
+def load_attributes_spec() -> dict[str, Attribute]:
     """Load the attribute specifications from the package.
 
     Returns:

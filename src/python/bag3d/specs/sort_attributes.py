@@ -72,7 +72,7 @@ def sort_json_complete(input_file, output_file):
         print(f"Error: File '{input_file}' not found")
     except json.JSONDecodeError:
         print(f"Error: Invalid JSON format in '{input_file}'")
-    except Exception as e:
+    except (OSError, TypeError) as e:
         print(f"Error: {e}")
 
 

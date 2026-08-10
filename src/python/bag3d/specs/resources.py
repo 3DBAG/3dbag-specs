@@ -1,6 +1,6 @@
+import sys
 from importlib.resources import files
 from pathlib import Path
-import sys
 
 
 def get_resource_file_path(filename: str) -> Path:
