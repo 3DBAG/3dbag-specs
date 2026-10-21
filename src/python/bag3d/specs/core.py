@@ -292,6 +292,24 @@ class Ogc3dTilesLocation(StrEnum):
         return ".".join(list(self.value.lstrip("lod")))
 
 
+class ObjLocation(StrEnum):
+    """Enum of LoD names for using it as a suffix in the OBJ files.
+    Does little beyond providing the prefix.
+    """
+
+    lod12 = "lod12"
+    lod13 = "lod13"
+    lod22 = "lod22"
+    
+    @property
+    def lod(self) -> str:
+        """Return the Level of Detail that this location relates to.
+        
+        >>> ObjLocation.lod12.lod == "1.2"
+        """
+        return ".".join(list(self.value.lstrip("lod")))
+
+
 @dataclass
 class AttributeAppliesTo:
     """The appliesTo property."""
