@@ -1,0 +1,163 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "3DBAG Semantic Attribute Specification Schema",
+  "description": "Schema for resources/semantic/attributes.json, the format-independent semantic model of 3DBAG attributes. Format-specific locations, physical types, and serialization live in resources/projections/, not here. Pinned review decisions: valueFormat is optional and descriptive only (strftime for date/datetime, free-form otherwise; never validated against data values); precision is max decimal places (0-17), rounded half-to-even in float64 before narrowing to a physical type, and must be absent for non-float types (enforced by the validator, not expressible in draft-07); array items reuse the value definition (attribute = value + source + items), the item-only \"null\" type is dropped in favor of item-level nullable; required fields are type, description, semanticType, source, nullable; empty attribute names are rejected via propertyNames.",
+  "type": "object",
+  "propertyNames": {
+    "minLength": 1
+  },
+  "additionalProperties": {
+    "$ref": "#/definitions/attribute"
+  },
+  "definitions": {
+    "translation": {
+      "type": "object",
+      "required": [
+        "nl",
+        "en"
+      ],
+      "properties": {
+        "nl": {
+          "type": "string"
+        },
+        "en": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "scalar-type": {
+      "type": "string",
+      "enum": [
+        "int",
+        "float",
+        "bool",
+        "string",
+        "date",
+        "datetime"
+      ],
+      "description": "Logical value type of a scalar."
+    },
+    "value": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "description",
+        "semanticType",
+        "nullable"
+      ],
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/scalar-type"
+        },
+        "description": {
+          "$ref": "#/definitions/translation"
+        },
+        "semanticType": {
+          "type": "string",
+          "description": "What is the attribute? A year, a day, a millisecond, an error etc."
+        },
+        "nullable": {
+          "type": "boolean",
+          "description": "Whether null values are valid for this attribute or they indicate an error in the process."
+        },
+        "unit": {
+          "$ref": "#/definitions/translation",
+          "description": "Unit of measurement."
+        },
+        "precision": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 17,
+          "description": "Maximum number of digits after the decimal point (decimal places, not significant digits). Round half-to-even in float64 first, then narrow to the physical type declared by the projection. Only valid for type float; must be absent otherwise."
+        },
+        "scale": {
+          "$ref": "#/definitions/translation",
+          "description": "How is the attribute measured? On an interval scale, on a nominal scale etc."
+        },
+        "valueFormat": {
+          "type": "string",
+          "description": "Optional pattern describing the logical value. strftime pattern for date/datetime (e.g. 'YYYY-MM-DD'); free-form pattern otherwise (e.g. 'NL.IMBAG.Pand.<16 digits>', 'YYYY' for a year stored as int). Descriptive only: not validated against data values, and serializers may rely on it only for temporal types."
+        },
+        "values": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/translation"
+          },
+          "description": "Possible values for categorical attributes."
+        }
+      }
+    },
+    "attribute": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "description",
+        "semanticType",
+        "source",
+        "nullable"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "int",
+            "float",
+            "bool",
+            "string",
+            "date",
+            "datetime",
+            "array"
+          ],
+          "description": "How is the attribute stored? As an int, as a float etc. 'array' requires 'items'."
+        },
+        "description": {
+          "$ref": "#/definitions/translation"
+        },
+        "semanticType": {
+          "type": "string",
+          "description": "What is the attribute? A year, a day, a millisecond, an error etc."
+        },
+        "source": {
+          "type": "string",
+          "description": "The source of this attribute. It can be another data set like the BAG or a software that generates this attribute."
+        },
+        "nullable": {
+          "type": "boolean",
+          "description": "Whether null values are valid for this attribute or they indicate an error in the process."
+        },
+        "unit": {
+          "$ref": "#/definitions/translation",
+          "description": "Unit of measurement."
+        },
+        "precision": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 17,
+          "description": "Maximum number of digits after the decimal point (decimal places, not significant digits). Round half-to-even in float64 first, then narrow to the physical type declared by the projection. Only valid for type float; must be absent otherwise."
+        },
+        "scale": {
+          "$ref": "#/definitions/translation",
+          "description": "How is the attribute measured? On an interval scale, on a nominal scale etc."
+        },
+        "valueFormat": {
+          "type": "string",
+          "description": "Optional pattern describing the logical value. strftime pattern for date/datetime (e.g. 'YYYY-MM-DD'); free-form pattern otherwise (e.g. 'NL.IMBAG.Pand.<16 digits>', 'YYYY' for a year stored as int). Descriptive only: not validated against data values, and serializers may rely on it only for temporal types. Originallybouwjaar is intentionally int + 'YYYY' because source data contains invalid years (e.g. 9999) that must be preserved, not parsed as dates."
+        },
+        "values": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/translation"
+          },
+          "description": "Possible values for categorical attributes."
+        },
+        "items": {
+          "$ref": "#/definitions/value",
+          "description": "Definition of the items of an array-type attribute. Required when type is 'array'; must be absent otherwise (enforced by the validator). Items cannot themselves be arrays."
+        }
+      }
+    }
+  }
+}
