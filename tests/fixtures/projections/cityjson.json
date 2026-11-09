@@ -1,0 +1,51 @@
+{
+  "format": "cityjson",
+  "objects": {
+    "Building": {
+      "attributes": {
+        "b3_h_nok": {
+          "type": "number"
+        },
+        "identificatie": {
+          "type": "string"
+        },
+        "b3_h_50p": {
+          "type": "number"
+        },
+        "b3_val3dity_lod22": {
+          "type": "array"
+        },
+        "b3_dak_type": {
+          "type": "string"
+        },
+        "b3_kwaliteitsindicator": {
+          "type": "boolean"
+        },
+        "b3_pw_datum": {
+          "type": "string"
+        },
+        "eindregistratie": {
+          "type": "string"
+        },
+        "oorspronkelijkbouwjaar": {
+          "type": "number"
+        },
+        "b3_rmse_lod22": {
+          "type": "number"
+        }
+      }
+    }
+  },
+  "semanticSurfaces": {
+    "RoofSurface": {
+      "attributes": {
+        "b3_h_50p": {
+          "type": "number"
+        },
+        "b3_azimut": {
+          "type": "number"
+        }
+      }
+    }
+  }
+}

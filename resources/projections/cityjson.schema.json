@@ -1,0 +1,112 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "3DBAG CityJSON Projection Schema",
+  "description": "Projection of semantic 3DBAG attributes into CityJSON. Containers are CityObjects (objects) and semantic surfaces (semanticSurfaces). CityJSON has no float32/float64 distinction: numeric values use JSON 'number'; date/datetime are 'string' (ISO 8601 per valueFormat). 'property' defaults to the semantic attribute name when absent.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "objects"
+  ],
+  "properties": {
+    "format": {
+      "const": "cityjson"
+    },
+    "objects": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {
+        "enum": [
+          "Building",
+          "BuildingPart",
+          "BuildingInstallation",
+          "BuildingFurniture",
+          "Bridge",
+          "BridgePart",
+          "BridgeInstallation",
+          "BridgeConstructionElement",
+          "Tunnel",
+          "TunnelPart",
+          "TunnelInstallation",
+          "CityFurniture",
+          "LandUse",
+          "WaterBody",
+          "PlantCover",
+          "SolitaryVegetationObject",
+          "TransportSquare",
+          "ReliefFeature"
+        ]
+      },
+      "additionalProperties": {
+        "$ref": "#/definitions/container"
+      }
+    },
+    "semanticSurfaces": {
+      "type": "object",
+      "propertyNames": {
+        "enum": [
+          "RoofSurface",
+          "WallSurface",
+          "GroundSurface",
+          "ClosureSurface",
+          "OuterCeilingSurface",
+          "OuterFloorSurface",
+          "InteriorWallSurface",
+          "CeilingSurface",
+          "FloorSurface"
+        ]
+      },
+      "additionalProperties": {
+        "$ref": "#/definitions/container"
+      }
+    }
+  },
+  "definitions": {
+    "container": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "attributes"
+      ],
+      "properties": {
+        "attributes": {
+          "$ref": "#/definitions/attribute-map"
+        }
+      }
+    },
+    "attribute-map": {
+      "type": "object",
+      "propertyNames": {
+        "minLength": 1
+      },
+      "additionalProperties": {
+        "$ref": "#/definitions/attribute-entry"
+      }
+    },
+    "attribute-entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "property": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Serialized property name. Defaults to the semantic attribute name when absent."
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "string",
+            "number",
+            "boolean",
+            "array",
+            "object"
+          ],
+          "description": "JSON type of the serialized value. CityJSON numbers are 'number' (no float32/float64 distinction)."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "3DBAG OGC 3D Tiles Projection Schema",
+  "description": "Projection of semantic 3DBAG attributes into OGC 3D Tiles metadata (EXT_structural_metadata). The tileset is the container (not the class alone), because applicability is per-LoD tileset: e.g. b3_val3dity_lod22 exists only in the lod22 tileset. Each tileset has a selector ({lod}), a metadata class, and a property map. 'property' defaults to the semantic attribute name when absent. componentType uses the EXT_structural_metadata vocabulary; arrays set shape 'array' with the componentType of their items. date/datetime are serialized as STRING (ISO 8601 per valueFormat).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "tilesets"
+  ],
+  "properties": {
+    "format": {
+      "const": "ogc3dtiles"
+    },
+    "tilesets": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/definitions/tileset"
+      }
+    }
+  },
+  "definitions": {
+    "tileset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "selector",
+        "class",
+        "properties"
+      ],
+      "properties": {
+        "selector": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "lod"
+          ],
+          "properties": {
+            "lod": {
+              "type": "string",
+              "enum": [
+                "lod12",
+                "lod13",
+                "lod22"
+              ]
+            }
+          }
+        },
+        "class": {
+          "type": "string",
+          "minLength": 1,
+          "description": "EXT_structural_metadata class name, e.g. 'building'."
+        },
+        "properties": {
+          "$ref": "#/definitions/attribute-map"
+        }
+      }
+    },
+    "attribute-map": {
+      "type": "object",
+      "propertyNames": {
+        "minLength": 1
+      },
+      "additionalProperties": {
+        "$ref": "#/definitions/attribute-entry"
+      }
+    },
+    "attribute-entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "componentType"
+      ],
+      "properties": {
+        "property": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Property name. Defaults to the semantic attribute name when absent."
+        },
+        "componentType": {
+          "type": "string",
+          "enum": [
+            "INT8",
+            "INT16",
+            "INT32",
+            "INT64",
+            "UINT8",
+            "UINT16",
+            "UINT32",
+            "UINT64",
+            "FLOAT32",
+            "FLOAT64",
+            "STRING",
+            "BOOLEAN"
+          ]
+        },
+        "shape": {
+          "type": "string",
+          "enum": [
+            "scalar",
+            "array"
+          ],
+          "default": "scalar",
+          "description": "'array' for semantic array attributes; componentType then describes the items."
+        }
+      }
+    }
+  }
+}
