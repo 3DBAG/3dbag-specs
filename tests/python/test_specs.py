@@ -1,99 +1,65 @@
-from bag3d.specs.core import (
-    Attribute,
-    AttributeType,
-    BaseType,
-    CityJSONLocation,
-    Ogc3dTilesLocation,
-    load_attributes_spec,
-)
-from bag3d.specs.resources import get_resource_file_path
+import json
+
+from bag3d.specs.projections.cityjson import load_cityjson_projection
+from bag3d.specs.projections.geopackage import load_geopackage_projection
+from bag3d.specs.projections.ogc3dtiles import load_ogc3dtiles_projection
+from bag3d.specs.resources import resource_file
+from bag3d.specs.semantic import Attribute, AttributeType, BaseType, load_attributes
+from bag3d.specs.validate_json import validate_json_file
 
 
 def test_get_resource_file_path():
-    """Can we get the path of a resource file?"""
-    assert get_resource_file_path("attributes.json").is_file()
+    """All shipped documents and schemas can be located and validated."""
+    for name in (
+        "semantic/attributes",
+        "projections/cityjson",
+        "projections/gpkg",
+        "projections/ogc3dtiles",
+    ):
+        assert validate_json_file(
+            resource_file(f"{name}.schema.json"), resource_file(f"{name}.json")
+        )
 
 
 def test_attribute_scalar():
-    """Can we deserialize an attribute with all of its values?"""
-    data = {
-        "type": "string",
-        "source": "source",
-        "nullable": "true",
-        "appliesTo": {},
-        "precision": 2,
-        "unit": {"en": "metre", "nl": "meter"},
-        "valueFormat": "YYYY",
-        "semanticType": "category",
-        "values": {"yes": {"nl": "Ja", "en": "Yes"}, "no": {"nl": "Nee", "en": "No"}},
-        "description": {"nl": "Test", "en": "Test"},
-        "scale": {"en": "ratio", "nl": "ratio"},
-    }
-
-    attr = Attribute.from_dict("test_bool", data)
-
-    assert attr.values is not None
-    assert len(attr.values) == 2
-    assert attr.values["yes"].en == "Yes"
-    assert attr.values["no"].nl == "Nee"
+    """Deserialize categorical values and optional semantic metadata."""
+    data = json.loads(
+        resource_file("semantic/attributes.json").read_text(encoding="utf-8")
+    )
+    attr = Attribute.from_dict("b3_dak_type", data["b3_dak_type"])
+    assert attr.values["slanted"].en
+    assert attr.items is None
+    assert attr.precision is None
 
 
 def test_attribute_array():
-    """Can we deserialize an array attribute?"""
-    data = {
-        "type": "array",
-        "source": "source",
-        "nullable": True,
-        "appliesTo": {
-            "cityjson": {"locations": ["RoofSurface"]},
-            "gpkg": {"locations": ["lod22_2d"]},
-        },
-        "precision": 2,
-        "unit": {"en": "metre", "nl": "meter"},
-        "valueFormat": "YYYY",
-        "semanticType": "category",
-        "values": {"yes": {"nl": "Ja", "en": "Yes"}, "no": {"nl": "Nee", "en": "No"}},
-        "description": {"nl": "Test", "en": "Test"},
-        "scale": None,
-        "items": {
-            "type": "int",
-            "semanticType": "category",
-            "description": {"nl": "Test", "en": "Test"},
-            "scale": {"en": "ratio", "nl": "ratio"},
-        },
-    }
-
-    attr = Attribute.from_dict("test_bool", data)
-
+    """Array item constraints survive deserialization."""
+    attr = load_attributes()["b3_val3dity_lod22"]
     assert attr.type == AttributeType(BaseType.ARRAY, BaseType.INT)
     assert str(attr.type) == "ARRAY<INT>"
-    assert attr.items.scale.en == "ratio"
-    assert CityJSONLocation.RoofSurface in attr.applies_to.cityjson["locations"]
+    assert attr.items.type == AttributeType(BaseType.INT)
+    assert attr.items.scale.en == "nominal"
+    assert attr.items.nullable is False
 
 
 def test_attribute_ogc3dtiles():
-    """Can we deserialize the OGC 3D Tiles appliesTo format?"""
-    data = {
-        "type": "string",
-        "source": "source",
-        "nullable": True,
-        "appliesTo": {"ogc3dtiles": {"locations": ["lod12", "lod22"]}},
-        "precision": None,
-        "unit": None,
-        "valueFormat": None,
-        "semanticType": "category",
-        "values": None,
-        "description": {"nl": "Test", "en": "Test"},
-        "scale": None,
-    }
-
-    attr = Attribute.from_dict("test_ogc3dtiles", data)
-
-    assert Ogc3dTilesLocation.lod12 in attr.applies_to.ogc3dtiles["locations"]
-    assert Ogc3dTilesLocation.lod22 in attr.applies_to.ogc3dtiles["locations"]
+    """The tileset loader exposes the published physical encoding."""
+    projection = load_ogc3dtiles_projection()
+    for tileset in projection.tilesets:
+        prop = tileset.properties["b3_val3dity_lod22"]
+        assert prop.component_type == "STRING"
+        assert prop.encoding == "json"
 
 
 def test_load_from_package():
-    """Can we load the attribute specs from the package?"""
-    attributes_spec = load_attributes_spec()
-    assert "identificatie" in attributes_spec
+    """Load semantic definitions and the two other native projections."""
+    assert load_attributes()["identificatie"].nullable is False
+    assert (
+        load_cityjson_projection().objects["Building"]["identificatie"].type == "string"
+    )
+    building = next(
+        c
+        for c in load_geopackage_projection().containers
+        if c.selector and c.selector.city_object_type == "Building"
+    )
+    assert building.attributes["identificatie"].column == "attributes__identificatie"

@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "3DBAG GeoPackage Projection Schema",
-  "description": "Projection of semantic 3DBAG attributes into GeoPackage. Containers: 'layer' (feature tables), 'semantics' and 'address' (named data tables that carry attribute values; only true GeoPackage system tables such as gpkg_* and rtree are structural and never appear here). 'layer' containers have 'name'; when the name is derived rather than fixed, 'selector' records the derivation input (cityObjectType, geometryFamily, lod) and cross-file tests verify the expansion. 'semantics'/'address' containers have a fixed 'table' and never a 'selector'. 'column' defaults to the semantic attribute name when absent. Physical types are GeoPackage/SQLite data types; arrays are stored as TEXT (JSON).",
+  "description": "Current Tyler GeoPackage layout. Generated feature layer names are lowercase cityObjectType_geometryFamily_lod<lod with dots replaced by underscores>. Attributes use escaped attributes__ paths. REAL is SQLite float64; BOOLEAN values are stored as INTEGER 0/1; dates and datetimes as TEXT; arrays as JSON TEXT; semantic null as SQL NULL. Structural columns and hierarchy tables carry identity and relationships, not semantic attributes. Missing inferred columns and incompatible inferred types are validation failures. Semantics columns use attribute__ paths; addresses are disabled in the production export. Hierarchy tables are named containers containing only relation columns.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -34,7 +34,8 @@
           "enum": [
             "layer",
             "semantics",
-            "address"
+            "address",
+            "hierarchy"
           ]
         },
         "name": {
@@ -53,6 +54,14 @@
         },
         "attributes": {
           "$ref": "#/definitions/attribute-map"
+        },
+        "structuralColumns": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
         }
       },
       "allOf": [
@@ -111,7 +120,7 @@
           "then": {
             "properties": {
               "table": {
-                "const": "address"
+                "const": "addresses"
               },
               "selector": false,
               "name": false
@@ -119,6 +128,33 @@
             "required": [
               "table"
             ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "hierarchy"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "required": [
+              "table"
+            ],
+            "properties": {
+              "name": false,
+              "selector": false,
+              "table": {
+                "enum": [
+                  "cityobject_hierarchy",
+                  "semantic_hierarchy"
+                ]
+              }
+            }
           }
         }
       ]
@@ -145,7 +181,7 @@
           "minLength": 1
         }
       },
-      "description": "Input of the layer-name derivation, e.g. {cityObjectType: BuildingPart, geometryFamily: MultiSurface, lod: 2.2} -> buildingpart_multisurface_lod2_2. Cross-file tests verify that the declared name matches the expansion."
+      "description": "Inputs to lowercase <cityObjectType>_<geometryFamily>_lod<lod with dots replaced by underscores>."
     },
     "attribute-map": {
       "type": "object",
@@ -180,6 +216,12 @@
             "DATETIME"
           ],
           "description": "GeoPackage/SQLite column data type. Arrays are stored as TEXT (JSON)."
+        },
+        "encoding": {
+          "enum": [
+            "json"
+          ],
+          "description": "Semantic array stored as compact JSON TEXT."
         }
       }
     }

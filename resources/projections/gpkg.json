@@ -1,0 +1,384 @@
+{
+  "format": "gpkg",
+  "containers": [
+    {
+      "kind": "layer",
+      "name": "building_multisurface_lod0",
+      "selector": {
+        "cityObjectType": "Building",
+        "geometryFamily": "MultiSurface",
+        "lod": "0"
+      },
+      "structuralColumns": [
+        "id",
+        "cityobject_id",
+        "cityobject_type",
+        "geometry_type",
+        "lod",
+        "geom"
+      ],
+      "attributes": {
+        "b3_bag_bag_overlap": {
+          "column": "attributes__b3_bag_bag_overlap",
+          "type": "REAL"
+        },
+        "b3_bouwlagen": {
+          "column": "attributes__b3_bouwlagen",
+          "type": "INTEGER"
+        },
+        "b3_dak_type": {
+          "column": "attributes__b3_dak_type",
+          "type": "TEXT"
+        },
+        "b3_extrusie": {
+          "column": "attributes__b3_extrusie",
+          "type": "TEXT"
+        },
+        "b3_h_50p": {
+          "column": "attributes__b3_h_dak_50p",
+          "type": "REAL"
+        },
+        "b3_h_70p": {
+          "column": "attributes__b3_h_dak_70p",
+          "type": "REAL"
+        },
+        "b3_h_max": {
+          "column": "attributes__b3_h_dak_max",
+          "type": "REAL"
+        },
+        "b3_h_min": {
+          "column": "attributes__b3_h_dak_min",
+          "type": "REAL"
+        },
+        "b3_h_maaiveld": {
+          "column": "attributes__b3_h_maaiveld",
+          "type": "REAL"
+        },
+        "b3_h_nok": {
+          "column": "attributes__b3_h_nok",
+          "type": "REAL"
+        },
+        "b3_is_glas_dak": {
+          "column": "attributes__b3_is_glas_dak",
+          "type": "INTEGER"
+        },
+        "b3_kas_warenhuis": {
+          "column": "attributes__b3_kas_warenhuis",
+          "type": "INTEGER"
+        },
+        "b3_kwaliteitsindicator": {
+          "column": "attributes__b3_kwaliteitsindicator",
+          "type": "INTEGER"
+        },
+        "b3_mutatie_ahn3_ahn4": {
+          "column": "attributes__b3_mutatie_ahn3_ahn4",
+          "type": "INTEGER"
+        },
+        "b3_mutatie_ahn4_ahn5": {
+          "column": "attributes__b3_mutatie_ahn4_ahn5",
+          "type": "INTEGER"
+        },
+        "b3_n_nok": {
+          "column": "attributes__b3_n_nok",
+          "type": "INTEGER"
+        },
+        "b3_n_vlakken": {
+          "column": "attributes__b3_n_vlakken",
+          "type": "INTEGER"
+        },
+        "b3_nodata_fractie_ahn3": {
+          "column": "attributes__b3_nodata_fractie_ahn3",
+          "type": "REAL"
+        },
+        "b3_nodata_fractie_ahn4": {
+          "column": "attributes__b3_nodata_fractie_ahn4",
+          "type": "REAL"
+        },
+        "b3_nodata_fractie_ahn5": {
+          "column": "attributes__b3_nodata_fractie_ahn5",
+          "type": "REAL"
+        },
+        "b3_nodata_radius_ahn3": {
+          "column": "attributes__b3_nodata_radius_ahn3",
+          "type": "REAL"
+        },
+        "b3_nodata_radius_ahn4": {
+          "column": "attributes__b3_nodata_radius_ahn4",
+          "type": "REAL"
+        },
+        "b3_nodata_radius_ahn5": {
+          "column": "attributes__b3_nodata_radius_ahn5",
+          "type": "REAL"
+        },
+        "b3_opp_buitenmuur": {
+          "column": "attributes__b3_opp_buitenmuur",
+          "type": "REAL"
+        },
+        "b3_opp_dak_plat": {
+          "column": "attributes__b3_opp_dak_plat",
+          "type": "REAL"
+        },
+        "b3_opp_dak_schuin": {
+          "column": "attributes__b3_opp_dak_schuin",
+          "type": "REAL"
+        },
+        "b3_opp_grond": {
+          "column": "attributes__b3_opp_grond",
+          "type": "REAL"
+        },
+        "b3_opp_scheidingsmuur": {
+          "column": "attributes__b3_opp_scheidingsmuur",
+          "type": "REAL"
+        },
+        "b3_puntdichtheid_ahn3": {
+          "column": "attributes__b3_puntdichtheid_ahn3",
+          "type": "REAL"
+        },
+        "b3_puntdichtheid_ahn4": {
+          "column": "attributes__b3_puntdichtheid_ahn4",
+          "type": "REAL"
+        },
+        "b3_puntdichtheid_ahn5": {
+          "column": "attributes__b3_puntdichtheid_ahn5",
+          "type": "REAL"
+        },
+        "b3_pw_bron": {
+          "column": "attributes__b3_pw_bron",
+          "type": "TEXT"
+        },
+        "b3_pw_datum": {
+          "column": "attributes__b3_pw_datum",
+          "type": "TEXT"
+        },
+        "b3_pw_onvoldoende": {
+          "column": "attributes__b3_pw_onvoldoende",
+          "type": "INTEGER"
+        },
+        "b3_pw_selectie_reden": {
+          "column": "attributes__b3_pw_selectie_reden",
+          "type": "TEXT"
+        },
+        "b3_rmse_lod12": {
+          "column": "attributes__b3_rmse_lod12",
+          "type": "REAL"
+        },
+        "b3_rmse_lod13": {
+          "column": "attributes__b3_rmse_lod13",
+          "type": "REAL"
+        },
+        "b3_rmse_lod22": {
+          "column": "attributes__b3_rmse_lod22",
+          "type": "REAL"
+        },
+        "b3_t_run": {
+          "column": "attributes__b3_t_run",
+          "type": "INTEGER"
+        },
+        "b3_val3dity_lod12": {
+          "column": "attributes__b3_val3dity_lod12",
+          "type": "TEXT",
+          "encoding": "json"
+        },
+        "b3_val3dity_lod13": {
+          "column": "attributes__b3_val3dity_lod13",
+          "type": "TEXT",
+          "encoding": "json"
+        },
+        "b3_val3dity_lod22": {
+          "column": "attributes__b3_val3dity_lod22",
+          "type": "TEXT",
+          "encoding": "json"
+        },
+        "b3_volume_lod12": {
+          "column": "attributes__b3_volume_lod12",
+          "type": "REAL"
+        },
+        "b3_volume_lod13": {
+          "column": "attributes__b3_volume_lod13",
+          "type": "REAL"
+        },
+        "b3_volume_lod22": {
+          "column": "attributes__b3_volume_lod22",
+          "type": "REAL"
+        },
+        "begingeldigheid": {
+          "column": "attributes__begingeldigheid",
+          "type": "TEXT"
+        },
+        "documentdatum": {
+          "column": "attributes__documentdatum",
+          "type": "TEXT"
+        },
+        "documentnummer": {
+          "column": "attributes__documentnummer",
+          "type": "TEXT"
+        },
+        "eindgeldigheid": {
+          "column": "attributes__eindgeldigheid",
+          "type": "TEXT"
+        },
+        "eindregistratie": {
+          "column": "attributes__eindregistratie",
+          "type": "TEXT"
+        },
+        "geconstateerd": {
+          "column": "attributes__geconstateerd",
+          "type": "INTEGER"
+        },
+        "identificatie": {
+          "column": "attributes__identificatie",
+          "type": "TEXT"
+        },
+        "oorspronkelijkbouwjaar": {
+          "column": "attributes__oorspronkelijkbouwjaar",
+          "type": "INTEGER"
+        },
+        "status": {
+          "column": "attributes__status",
+          "type": "TEXT"
+        },
+        "tijdstipeindregistratielv": {
+          "column": "attributes__tijdstipeindregistratielv",
+          "type": "TEXT"
+        },
+        "tijdstipinactief": {
+          "column": "attributes__tijdstipinactief",
+          "type": "TEXT"
+        },
+        "tijdstipinactieflv": {
+          "column": "attributes__tijdstipinactieflv",
+          "type": "TEXT"
+        },
+        "tijdstipnietbaglv": {
+          "column": "attributes__tijdstipnietbaglv",
+          "type": "TEXT"
+        },
+        "tijdstipregistratie": {
+          "column": "attributes__tijdstipregistratie",
+          "type": "TEXT"
+        },
+        "tijdstipregistratielv": {
+          "column": "attributes__tijdstipregistratielv",
+          "type": "TEXT"
+        },
+        "voorkomenidentificatie": {
+          "column": "attributes__voorkomenidentificatie",
+          "type": "INTEGER"
+        }
+      }
+    },
+    {
+      "kind": "layer",
+      "name": "buildingpart_solid_lod1_2",
+      "selector": {
+        "cityObjectType": "BuildingPart",
+        "geometryFamily": "Solid",
+        "lod": "1.2"
+      },
+      "structuralColumns": [
+        "id",
+        "cityobject_id",
+        "cityobject_type",
+        "geometry_type",
+        "lod",
+        "geom"
+      ],
+      "attributes": {}
+    },
+    {
+      "kind": "layer",
+      "name": "buildingpart_solid_lod1_3",
+      "selector": {
+        "cityObjectType": "BuildingPart",
+        "geometryFamily": "Solid",
+        "lod": "1.3"
+      },
+      "structuralColumns": [
+        "id",
+        "cityobject_id",
+        "cityobject_type",
+        "geometry_type",
+        "lod",
+        "geom"
+      ],
+      "attributes": {}
+    },
+    {
+      "kind": "layer",
+      "name": "buildingpart_solid_lod2_2",
+      "selector": {
+        "cityObjectType": "BuildingPart",
+        "geometryFamily": "Solid",
+        "lod": "2.2"
+      },
+      "structuralColumns": [
+        "id",
+        "cityobject_id",
+        "cityobject_type",
+        "geometry_type",
+        "lod",
+        "geom"
+      ],
+      "attributes": {}
+    },
+    {
+      "kind": "semantics",
+      "table": "semantics",
+      "structuralColumns": [
+        "id",
+        "cityobject_id",
+        "geometry_id",
+        "semantic_id",
+        "primitive_ix",
+        "geometry_type",
+        "geometry_lod",
+        "semantic_type",
+        "geom"
+      ],
+      "attributes": {
+        "b3_azimut": {
+          "column": "attribute__b3_azimut",
+          "type": "REAL"
+        },
+        "b3_h_50p": {
+          "column": "attribute__b3_h_dak_50p",
+          "type": "REAL"
+        },
+        "b3_h_70p": {
+          "column": "attribute__b3_h_dak_70p",
+          "type": "REAL"
+        },
+        "b3_h_max": {
+          "column": "attribute__b3_h_dak_max",
+          "type": "REAL"
+        },
+        "b3_h_min": {
+          "column": "attribute__b3_h_dak_min",
+          "type": "REAL"
+        },
+        "b3_hellingshoek": {
+          "column": "attribute__b3_hellingshoek",
+          "type": "REAL"
+        }
+      }
+    },
+    {
+      "kind": "hierarchy",
+      "table": "cityobject_hierarchy",
+      "structuralColumns": [
+        "parent_id",
+        "child_id"
+      ],
+      "attributes": {}
+    },
+    {
+      "kind": "hierarchy",
+      "table": "semantic_hierarchy",
+      "structuralColumns": [
+        "parent_id",
+        "child_id"
+      ],
+      "attributes": {}
+    }
+  ]
+}

@@ -1,16 +1,14 @@
-name: Validate attributes.json
+name: Validate specifications
 
 on:
   push:
     paths:
-      - 'resources/attributes.json'
-      - 'resources/attributes.schema.json'
+      - 'resources/**/*.json'
     branches:
       - '**'
   pull_request:
     paths:
-      - 'resources/attributes.json'
-      - 'resources/attributes.schema.json'
+      - 'resources/**/*.json'
     branches:
       - '**'
   workflow_dispatch:
@@ -18,7 +16,7 @@ on:
 jobs:
   validate-json:
     runs-on: ubuntu-latest
-    name: Validate attributes.json
+    name: Validate specifications
 
     steps:
       - name: Checkout repository
@@ -37,4 +35,6 @@ jobs:
 
       - name: Validate JSON
         run: |
-          uv run validate-attributes-json --schema resources/attributes.schema.json --json resources/attributes.json
+          for document in resources/semantic/attributes.json resources/projections/{cityjson,gpkg,ogc3dtiles}.json; do
+            uv run validate-specs-json --schema "${document%.json}.schema.json" --json "$document"
+          done

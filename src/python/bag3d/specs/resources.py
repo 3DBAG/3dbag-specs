@@ -1,20 +1,22 @@
-import sys
+"""Read JSON relative to the packaged resources root."""
+
+import json
 from importlib.resources import files
-from pathlib import Path
+from importlib.resources.abc import Traversable
+from pathlib import PurePosixPath
+from typing import Any
 
 
-def get_resource_file_path(filename: str) -> Path:
-    """Get the path to the resources directory."""
-    # In installed package, resources are in site-packages/bag3d/resources/
-    resource_path = Path(sys.prefix) / "share" / "bag3d" / "resources" / filename
-    if resource_path.exists():
-        return resource_path
+def resource_file(relative_path: str) -> Traversable:
+    """Find a semantic or projection resource in source and installed packages."""
+    path = PurePosixPath(relative_path)
+    if path.is_absolute() or ".." in path.parts:
+        raise ValueError("Resource paths must be relative to the resources root")
+    resource = files("bag3d.specs.data").joinpath(*path.parts)
+    if not resource.is_file():
+        raise FileNotFoundError(relative_path)
+    return resource
 
-    # Fallback for development (when running from source)
-    resource_path = Path(files("bag3d.specs")).parent.parent.parent.parent.joinpath(
-        "resources", filename
-    )
-    if resource_path.exists():
-        return resource_path
 
-    raise FileNotFoundError(f"Resource file {filename} is not found at {resource_path}")
+def load_resource(relative_path: str) -> dict[str, Any]:
+    return json.loads(resource_file(relative_path).read_text(encoding="utf-8"))

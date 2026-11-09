@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "bag3d-specs"
-version = "2025.09.03"
+version = "2026.11.09"
 description = "3DBAG specifications."
 readme = "README.md"
 authors = [
@@ -36,17 +36,18 @@ dev = [
 ]
 
 [project.scripts]
-validate-attributes-json = "bag3d.specs.validate_attributes_json:main"
-sort-attributes-json = "bag3d.specs.sort_attributes:main"
+validate-specs-json = "bag3d.specs.validate_json:main"
+sort-specs-json = "bag3d.specs.sort_json:main"
 
 [tool.setuptools]
-include-package-data = true
+packages = ["bag3d.specs", "bag3d.specs.projections", "bag3d.specs.data"]
 
-[tool.setuptools.data-files]
-"share/bag3d/resources" = ["resources/attributes.json", "resources/attributes.schema.json"]
+[tool.setuptools.package-dir]
+"bag3d.specs" = "src/python/bag3d/specs"
+"bag3d.specs.data" = "resources"
 
-[tool.setuptools.packages.find]
-where = ["src/python"]
+[tool.setuptools.package-data]
+"bag3d.specs.data" = ["semantic/*.json", "projections/*.json"]
 
 [tool.uv]
 
@@ -60,7 +61,7 @@ indent-style = "space"
 docstring-code-format = false
 
 [tool.bumpver]
-current_version = "2025.09.03"
+current_version = "2026.11.09"
 version_pattern = "YYYY.0M.0D"
 commit_message = "bump version {old_version} -> {new_version}"
 tag_message = "{new_version}"

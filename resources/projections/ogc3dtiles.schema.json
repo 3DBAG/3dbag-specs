@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "3DBAG OGC 3D Tiles Projection Schema",
-  "description": "Projection of semantic 3DBAG attributes into OGC 3D Tiles metadata (EXT_structural_metadata). The tileset is the container (not the class alone), because applicability is per-LoD tileset: e.g. b3_val3dity_lod22 exists only in the lod22 tileset. Each tileset has a selector ({lod}), a metadata class, and a property map. 'property' defaults to the semantic attribute name when absent. componentType uses the EXT_structural_metadata vocabulary; arrays set shape 'array' with the componentType of their items. date/datetime are serialized as STRING (ISO 8601 per valueFormat).",
+  "description": "Current Tyler EXT_structural_metadata contract per LoD tileset. Numeric properties are SCALAR with componentType and noData; STRING has no componentType in glTF. Semantic arrays are JSON strings (encoding json), booleans are INT8 0/1. Missing strings use empty strings; empty and null strings cannot be distinguished. Numeric noData sentinels are reserved. All three tilesets include all three val3dity attributes. Float values are rounded half-to-even per semantic precision in float64 before narrowing to FLOAT32. Values outside the declared component range or colliding with noData are invalid.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -103,6 +103,24 @@
           ],
           "default": "scalar",
           "description": "'array' for semantic array attributes; componentType then describes the items."
+        },
+        "encoding": {
+          "enum": [
+            "json",
+            "boolean-integer"
+          ]
+        },
+        "noData": {
+          "type": [
+            "number",
+            "string",
+            "boolean"
+          ]
+        },
+        "nullEncoding": {
+          "enum": [
+            "empty-string"
+          ]
         }
       }
     }

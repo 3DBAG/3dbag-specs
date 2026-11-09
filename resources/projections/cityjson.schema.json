@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "3DBAG CityJSON Projection Schema",
-  "description": "Projection of semantic 3DBAG attributes into CityJSON. Containers are CityObjects (objects) and semantic surfaces (semanticSurfaces). CityJSON has no float32/float64 distinction: numeric values use JSON 'number'; date/datetime are 'string' (ISO 8601 per valueFormat). 'property' defaults to the semantic attribute name when absent.",
+  "description": "Projection of semantic 3DBAG attributes into CityJSON. Containers are CityObjects (objects) and semantic surfaces (semanticSurfaces). CityJSON has no float32/float64 distinction: numeric values use JSON 'number'; date/datetime are 'string' (ISO 8601 per valueFormat). 'property' defaults to the semantic attribute name when absent. Nulls are JSON null; arrays with encoding json are JSON text inside a string. Temporal values are strings; valueFormat is descriptive.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -105,6 +105,12 @@
             "object"
           ],
           "description": "JSON type of the serialized value. CityJSON numbers are 'number' (no float32/float64 distinction)."
+        },
+        "encoding": {
+          "enum": [
+            "json"
+          ],
+          "description": "Semantic array serialized as a JSON string."
         }
       }
     }
