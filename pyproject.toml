@@ -37,17 +37,24 @@ dev = [
 
 [project.scripts]
 validate-specs-json = "bag3d.specs.validate_json:main"
+validate-specs-bundle = "bag3d.specs.validate_bundle:main"
 sort-specs-json = "bag3d.specs.sort_json:main"
 
 [tool.setuptools]
-packages = ["bag3d.specs", "bag3d.specs.projections", "bag3d.specs.data"]
+packages = [
+    "bag3d.specs",
+    "bag3d.specs.projections",
+    "bag3d.specs.data",
+    "bag3d.specs.data.semantic",
+    "bag3d.specs.data.projections",
+]
 
 [tool.setuptools.package-dir]
 "bag3d.specs" = "src/python/bag3d/specs"
 "bag3d.specs.data" = "resources"
 
 [tool.setuptools.package-data]
-"bag3d.specs.data" = ["semantic/*.json", "projections/*.json"]
+"bag3d.specs.data" = ["*.json", "semantic/*.json", "projections/*.json"]
 
 [tool.uv]
 

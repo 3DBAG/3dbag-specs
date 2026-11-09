@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "3DBAG Semantic Attribute Specification Schema",
-  "description": "Schema for resources/semantic/attributes.json, the format-independent semantic model of 3DBAG attributes. Format-specific locations, physical types, and serialization live in resources/projections/, not here. Pinned review decisions: valueFormat is optional and descriptive only (strftime for date/datetime, free-form otherwise; never validated against data values); precision is max decimal places (0-17), rounded half-to-even in float64 before narrowing to a physical type, and must be absent for non-float types (enforced by the validator, not expressible in draft-07); array items reuse the value definition (attribute = value + source + items), the item-only \"null\" type is dropped in favor of item-level nullable; required fields are type, description, semanticType, source, nullable; empty attribute names are rejected via propertyNames.",
+  "description": "Schema for resources/semantic/attributes.json, the format-independent semantic model of 3DBAG attributes. Format-specific locations, physical types, and serialization live in resources/projections/, not here. Pinned review decisions: valueFormat is optional and descriptive for non-temporal values; date and datetime require a non-empty Chrono/strftime format checked by bundle validation; precision is max decimal places (0-17), rounded half-to-even in float64 before narrowing to a physical type, and must be absent for non-float types (enforced by the validator, not expressible in draft-07); array items reuse the value definition (attribute = value + source + items), the item-only \"null\" type is dropped in favor of item-level nullable; required fields are type, description, semanticType, source, nullable; empty attribute names are rejected via propertyNames.",
   "type": "object",
   "propertyNames": {
     "minLength": 1
@@ -26,18 +26,6 @@
       },
       "additionalProperties": false
     },
-    "scalar-type": {
-      "type": "string",
-      "enum": [
-        "int",
-        "float",
-        "bool",
-        "string",
-        "date",
-        "datetime"
-      ],
-      "description": "Logical value type of a scalar."
-    },
     "value": {
       "type": "object",
       "additionalProperties": false,
@@ -49,7 +37,7 @@
       ],
       "properties": {
         "type": {
-          "$ref": "#/definitions/scalar-type"
+          "$ref": "#/definitions/value-type"
         },
         "description": {
           "$ref": "#/definitions/translation"
@@ -78,7 +66,7 @@
         },
         "valueFormat": {
           "type": "string",
-          "description": "Optional pattern describing the logical value. strftime pattern for date/datetime (e.g. 'YYYY-MM-DD'); free-form pattern otherwise (e.g. 'NL.IMBAG.Pand.<16 digits>', 'YYYY' for a year stored as int). Descriptive only: not validated against data values, and serializers may rely on it only for temporal types."
+          "description": "Optional pattern describing the logical value. Date and datetime require a non-empty Chrono/strftime pattern (e.g. '%Y-%m-%d') that consumers use for parsing and serialization. Other types may use a free-form description (e.g. 'NL.IMBAG.Pand.<16 digits>' or 'YYYY' for a year stored as int); it is not a parsing rule."
         },
         "values": {
           "type": "object",
@@ -86,8 +74,36 @@
             "$ref": "#/definitions/translation"
           },
           "description": "Possible values for categorical attributes."
+        },
+        "items": {
+          "$ref": "#/definitions/value",
+          "description": "Recursive definition for each item of an array value."
         }
-      }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "array"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "required": [
+              "items"
+            ]
+          },
+          "else": {
+            "properties": {
+              "items": false
+            }
+          }
+        }
+      ]
     },
     "attribute": {
       "type": "object",
@@ -144,7 +160,7 @@
         },
         "valueFormat": {
           "type": "string",
-          "description": "Optional pattern describing the logical value. strftime pattern for date/datetime (e.g. 'YYYY-MM-DD'); free-form pattern otherwise (e.g. 'NL.IMBAG.Pand.<16 digits>', 'YYYY' for a year stored as int). Descriptive only: not validated against data values, and serializers may rely on it only for temporal types. Originallybouwjaar is intentionally int + 'YYYY' because source data contains invalid years (e.g. 9999) that must be preserved, not parsed as dates."
+          "description": "Optional pattern describing the logical value. Date and datetime require a non-empty Chrono/strftime pattern (e.g. '%Y-%m-%d') that consumers use for parsing and serialization. Other types may use a free-form description (e.g. 'NL.IMBAG.Pand.<16 digits>' or 'YYYY' for a year stored as int); it is not a parsing rule. Originallybouwjaar is intentionally int + 'YYYY' because source data contains invalid years (e.g. 9999) that must be preserved, not parsed as dates."
         },
         "values": {
           "type": "object",
@@ -155,9 +171,46 @@
         },
         "items": {
           "$ref": "#/definitions/value",
-          "description": "Definition of the items of an array-type attribute. Required when type is 'array'; must be absent otherwise (enforced by the validator). Items cannot themselves be arrays."
+          "description": "Recursive definition for each item of an array-type attribute."
         }
-      }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "array"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "required": [
+              "items"
+            ]
+          },
+          "else": {
+            "properties": {
+              "items": false
+            }
+          }
+        }
+      ]
+    },
+    "value-type": {
+      "type": "string",
+      "enum": [
+        "int",
+        "float",
+        "bool",
+        "string",
+        "date",
+        "datetime",
+        "array"
+      ],
+      "description": "Logical value type of a semantic value; arrays may recursively contain other values."
     }
   }
 }

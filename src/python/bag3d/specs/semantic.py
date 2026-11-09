@@ -1,5 +1,7 @@
 """Format-independent meanings and constraints of published attributes."""
 
+from __future__ import annotations
+
 from collections.abc import Mapping
 from dataclasses import dataclass
 from enum import StrEnum
@@ -28,24 +30,22 @@ class BaseType(StrEnum):
 @dataclass(frozen=True)
 class AttributeType:
     base_type: BaseType
-    sub_type: BaseType | None = None
+    sub_type: AttributeType | None = None
 
     def __post_init__(self) -> None:
         if (self.base_type == BaseType.ARRAY) != (self.sub_type is not None):
-            raise ValueError("Only array types require a scalar item type")
-        if self.sub_type == BaseType.ARRAY:
-            raise ValueError("Nested arrays are unsupported")
+            raise ValueError("Only array types require an item type")
 
     def __str__(self) -> str:
         if self.sub_type is not None:
-            return f"{self.base_type.name}<{self.sub_type.name}>"
+            return f"{self.base_type.name}<{self.sub_type}>"
         return self.base_type.name
 
     @classmethod
     def from_dict(cls, data: dict[str, Any]) -> Self:
         return cls(
             BaseType(data["type"]),
-            BaseType(data["items"]["type"]) if data["type"] == "array" else None,
+            cls.from_dict(data["items"]) if data["type"] == "array" else None,
         )
 
 
@@ -94,6 +94,7 @@ class ArrayItemDefinition:
     scale: Translation | None = None
     value_format: str | None = None
     values: Mapping[str, Translation] | None = None
+    items: ArrayItemDefinition | None = None
 
     @classmethod
     def from_dict(cls, data: dict[str, Any]) -> Self:
@@ -107,6 +108,7 @@ class ArrayItemDefinition:
             scale=_optional_translation(data, "scale"),
             value_format=data.get("valueFormat"),
             values=_values(data),
+            items=cls.from_dict(data["items"]) if "items" in data else None,
         )
 
 

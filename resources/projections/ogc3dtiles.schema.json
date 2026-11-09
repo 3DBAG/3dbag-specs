@@ -102,7 +102,7 @@
             "array"
           ],
           "default": "scalar",
-          "description": "'array' for semantic array attributes; componentType then describes the items."
+          "description": "'array' for semantic arrays represented natively; componentType then describes the items. STRING plus encoding 'json' represents arrays unsupported by the metadata shape."
         },
         "encoding": {
           "enum": [

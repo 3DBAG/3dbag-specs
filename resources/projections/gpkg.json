@@ -34,19 +34,19 @@
           "column": "attributes__b3_extrusie",
           "type": "TEXT"
         },
-        "b3_h_50p": {
+        "b3_h_dak_50p": {
           "column": "attributes__b3_h_dak_50p",
           "type": "REAL"
         },
-        "b3_h_70p": {
+        "b3_h_dak_70p": {
           "column": "attributes__b3_h_dak_70p",
           "type": "REAL"
         },
-        "b3_h_max": {
+        "b3_h_dak_max": {
           "column": "attributes__b3_h_dak_max",
           "type": "REAL"
         },
-        "b3_h_min": {
+        "b3_h_dak_min": {
           "column": "attributes__b3_h_dak_min",
           "type": "REAL"
         },
@@ -340,19 +340,19 @@
           "column": "attribute__b3_azimut",
           "type": "REAL"
         },
-        "b3_h_50p": {
+        "b3_h_dak_50p": {
           "column": "attribute__b3_h_dak_50p",
           "type": "REAL"
         },
-        "b3_h_70p": {
+        "b3_h_dak_70p": {
           "column": "attribute__b3_h_dak_70p",
           "type": "REAL"
         },
-        "b3_h_max": {
+        "b3_h_dak_max": {
           "column": "attribute__b3_h_dak_max",
           "type": "REAL"
         },
-        "b3_h_min": {
+        "b3_h_dak_min": {
           "column": "attribute__b3_h_dak_min",
           "type": "REAL"
         },

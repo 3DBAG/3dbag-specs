@@ -110,7 +110,7 @@
           "enum": [
             "json"
           ],
-          "description": "Semantic array serialized as a JSON string."
+          "description": "Reserved for compatibility; CityJSON arrays use native JSON arrays."
         }
       }
     }

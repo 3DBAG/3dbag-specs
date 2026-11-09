@@ -35,46 +35,52 @@ combined domain model and its physical type conversion helpers.
 
 ## Resources and commands
 
+- `resources/attribute-specification.json` is the versioned entry point. Its relative URI references name the semantic catalogue and available projections.
 - `resources/semantic/attributes.json` and its `.schema.json` define semantic attributes.
-- `resources/projections/{cityjson,gpkg,ogc3dtiles}.json` and their `.schema.json`
-  define the three native format projections.
+- `resources/projections/{cityjson,gpkg,ogc3dtiles}.json` and their `.schema.json` define the three format projections.
 - `bag3d.specs.resources.resource_file("semantic/attributes.json")` locates a
   packaged resource; paths are relative to the resource root.
 
-The wheel includes all eight JSON documents and schemas. No source checkout is
-needed when loading installed resources.
+The wheel includes the manifest, semantic catalogue, all projections, and their
+schemas. The tagged release archive contains the same full resources directory.
+No source checkout is needed when loading installed resources.
 
 ```sh
 uv run validate-specs-json -s resources/semantic/attributes.schema.json -j resources/semantic/attributes.json
 uv run validate-specs-json -s resources/projections/gpkg.schema.json -j resources/projections/gpkg.json
+uv run validate-specs-bundle resources/attribute-specification.json
 uv run sort-specs-json -i resources/projections/gpkg.json -o /tmp/gpkg.json
 ```
 
-Validation checks schemas, duplicate keys and semantic cross-field rules.
-Sorting recursively sorts object keys and preserves array order.
+The bundle validator resolves the manifest references, validates every document
+schema, then checks cross-file names, storage compatibility, physical-name and
+selector uniqueness, structural conflicts, temporal formats and categorical
+keys. Sorting recursively sorts object keys and preserves array order.
 
 ## Updating the specification
 
 To add an attribute, add its stable name to the semantic document. Supply `type`,
 `description` (Dutch and English), `semanticType`, `source` and boolean `nullable`.
-Optional properties are omitted when absent. Arrays require scalar `items` with
-its own type, description, semantic type and nullability; nested arrays are not
-supported. `precision` applies only to floats, including float array items.
-It specifies decimal places, rounded half-to-even in float64 before physical
-narrowing. `valueFormat` is descriptive and is never a value-validation pattern.
-Years remain integers, including invalid calendar years supplied by the source.
+Optional properties are omitted when absent. Array `items` have their own type,
+description, semantic type and nullability and may recursively contain arrays.
+`precision` applies only to floats and float array items. It specifies decimal
+places, rounded half-to-even in float64 before physical narrowing. Temporal
+`valueFormat` uses Chrono/strftime and validates input strings; other types may
+use descriptive formats. Years remain integers, including invalid calendar
+years supplied by the source.
 
-Add the attribute to each intended format container, using the semantic name as
-the map key. A physical property/column name defaults to that key when omitted.
-Use the actual exporter schema and representative serialized products to choose
-physical names, types, encodings and null representations. Validate the changed
-JSON against its adjacent schema, check references and physical-name uniqueness,
-and run `uv run pytest`. Migration comparisons are one-off checks, not permanent
-tests.
+Add the actual input attribute name to the semantic catalogue and each intended
+format container. Projection keys refer to that catalogue; attribute renaming is
+not supported. Use the projection to choose storage types and supported
+encodings. Keep GeoPackage layout prefixes such as `attributes__` and
+`attribute__`. Validate the changed JSON against its adjacent schema, run
+`uv run validate-specs-bundle resources/attribute-specification.json`, and run
+`uv run pytest`. Migration comparisons are one-off checks, not permanent tests.
 
 CityJSON and 3D Tiles preserve their previous attribute selection, including
-`b3_val3dity_lod22` in all three tilesets. Val3dity arrays are currently JSON
-strings in both distributions. GeoPackage describes Tyler's current
+`b3_val3dity_lod22` in all three tilesets. Val3dity arrays use native CityJSON
+arrays and native 3D Tiles array properties; GeoPackage stores arrays as JSON
+text. GeoPackage describes Tyler's current
 `building_multisurface_lod0`, three `buildingpart_solid_lod*` layers, `semantics`
 and hierarchy tables. Object columns use `attributes__`; semantic columns use
 `attribute__`. Booleans are INTEGER, floats REAL, temporal values TEXT, and arrays

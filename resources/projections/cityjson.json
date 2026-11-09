@@ -15,19 +15,19 @@
         "b3_extrusie": {
           "type": "string"
         },
-        "b3_h_50p": {
+        "b3_h_dak_50p": {
           "type": "number",
           "property": "b3_h_dak_50p"
         },
-        "b3_h_70p": {
+        "b3_h_dak_70p": {
           "type": "number",
           "property": "b3_h_dak_70p"
         },
-        "b3_h_max": {
+        "b3_h_dak_max": {
           "type": "number",
           "property": "b3_h_dak_max"
         },
-        "b3_h_min": {
+        "b3_h_dak_min": {
           "type": "number",
           "property": "b3_h_dak_min"
         },
@@ -125,16 +125,13 @@
           "type": "number"
         },
         "b3_val3dity_lod12": {
-          "type": "string",
-          "encoding": "json"
+          "type": "array"
         },
         "b3_val3dity_lod13": {
-          "type": "string",
-          "encoding": "json"
+          "type": "array"
         },
         "b3_val3dity_lod22": {
-          "type": "string",
-          "encoding": "json"
+          "type": "array"
         },
         "b3_volume_lod12": {
           "type": "number"
@@ -205,19 +202,19 @@
         "b3_azimut": {
           "type": "number"
         },
-        "b3_h_50p": {
+        "b3_h_dak_50p": {
           "type": "number",
           "property": "b3_h_dak_50p"
         },
-        "b3_h_70p": {
+        "b3_h_dak_70p": {
           "type": "number",
           "property": "b3_h_dak_70p"
         },
-        "b3_h_max": {
+        "b3_h_dak_max": {
           "type": "number",
           "property": "b3_h_dak_max"
         },
-        "b3_h_min": {
+        "b3_h_dak_min": {
           "type": "number",
           "property": "b3_h_dak_min"
         },

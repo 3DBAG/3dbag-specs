@@ -178,22 +178,16 @@
           "noData": 2147483647
         },
         "b3_val3dity_lod12": {
-          "componentType": "STRING",
-          "shape": "scalar",
-          "nullEncoding": "empty-string",
-          "encoding": "json"
+          "componentType": "INT32",
+          "shape": "array"
         },
         "b3_val3dity_lod13": {
-          "componentType": "STRING",
-          "shape": "scalar",
-          "nullEncoding": "empty-string",
-          "encoding": "json"
+          "componentType": "INT32",
+          "shape": "array"
         },
         "b3_val3dity_lod22": {
-          "componentType": "STRING",
-          "shape": "scalar",
-          "nullEncoding": "empty-string",
-          "encoding": "json"
+          "componentType": "INT32",
+          "shape": "array"
         },
         "b3_volume_lod12": {
           "componentType": "FLOAT32",
@@ -404,22 +398,16 @@
           "noData": 2147483647
         },
         "b3_val3dity_lod12": {
-          "componentType": "STRING",
-          "shape": "scalar",
-          "nullEncoding": "empty-string",
-          "encoding": "json"
+          "componentType": "INT32",
+          "shape": "array"
         },
         "b3_val3dity_lod13": {
-          "componentType": "STRING",
-          "shape": "scalar",
-          "nullEncoding": "empty-string",
-          "encoding": "json"
+          "componentType": "INT32",
+          "shape": "array"
         },
         "b3_val3dity_lod22": {
-          "componentType": "STRING",
-          "shape": "scalar",
-          "nullEncoding": "empty-string",
-          "encoding": "json"
+          "componentType": "INT32",
+          "shape": "array"
         },
         "b3_volume_lod12": {
           "componentType": "FLOAT32",
@@ -630,22 +618,16 @@
           "noData": 2147483647
         },
         "b3_val3dity_lod12": {
-          "componentType": "STRING",
-          "shape": "scalar",
-          "nullEncoding": "empty-string",
-          "encoding": "json"
+          "componentType": "INT32",
+          "shape": "array"
         },
         "b3_val3dity_lod13": {
-          "componentType": "STRING",
-          "shape": "scalar",
-          "nullEncoding": "empty-string",
-          "encoding": "json"
+          "componentType": "INT32",
+          "shape": "array"
         },
         "b3_val3dity_lod22": {
-          "componentType": "STRING",
-          "shape": "scalar",
-          "nullEncoding": "empty-string",
-          "encoding": "json"
+          "componentType": "INT32",
+          "shape": "array"
         },
         "b3_volume_lod12": {
           "componentType": "FLOAT32",

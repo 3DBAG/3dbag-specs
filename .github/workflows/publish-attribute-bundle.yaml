@@ -1,0 +1,40 @@
+name: Publish attribute specification bundle
+
+on:
+  push:
+    tags:
+      - 'attribute-spec-v*'
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Install package
+        run: uv sync
+
+      - name: Validate and publish bundle
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          uv run validate-specs-bundle resources/attribute-specification.json
+          contract_version="$(uv run python -c 'import json; from pathlib import Path; print(json.loads(Path("resources/attribute-specification.json").read_text(encoding="utf-8"))["contractVersion"])')"
+          expected_tag="attribute-spec-v${contract_version}"
+          if [ "$GITHUB_REF_NAME" != "$expected_tag" ]; then
+            echo "Tag $GITHUB_REF_NAME does not match contract version $contract_version" >&2
+            exit 1
+          fi
+          archive="attribute-specification-v${contract_version}.zip"
+          zip -r "$archive" resources
+          gh release create "$GITHUB_REF_NAME" "$archive" \
+            --title "Attribute specification contract v${contract_version}" \
+            --notes "Pinned bundle for attribute specification contract v${contract_version}. The archive contains the complete resources directory." \
+            --latest=false

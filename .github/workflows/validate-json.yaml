@@ -3,11 +3,13 @@ name: Validate specifications
 on:
   push:
     paths:
+      - 'resources/*.json'
       - 'resources/**/*.json'
     branches:
       - '**'
   pull_request:
     paths:
+      - 'resources/*.json'
       - 'resources/**/*.json'
     branches:
       - '**'
@@ -38,3 +40,4 @@ jobs:
           for document in resources/semantic/attributes.json resources/projections/{cityjson,gpkg,ogc3dtiles}.json; do
             uv run validate-specs-json --schema "${document%.json}.schema.json" --json "$document"
           done
+          uv run validate-specs-bundle resources/attribute-specification.json

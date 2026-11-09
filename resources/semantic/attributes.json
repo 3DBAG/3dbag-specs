@@ -133,7 +133,7 @@
     },
     "nullable": false
   },
-  "b3_h_50p": {
+  "b3_h_dak_50p": {
     "description": {
       "nl": "Medianhoogte op dakdeel gebaseerd op het gereconstrueerde 3D-model in LoD2.2. Gegeven als hoogte boven zeeniveau (NAP).",
       "en": "Median elevation on roof surface based on reconstructed 3D model in LoD2.2. Given as elevation above sea level (NAP)."
@@ -152,10 +152,48 @@
     },
     "nullable": true
   },
-  "b3_h_70p": {
+  "b3_h_dak_70p": {
     "description": {
       "nl": "De 70e percentielhoogte op dakdeel gebaseerd op het gereconstrueerde 3D-model in LoD2.2. Gegeven als hoogte boven zeeniveau (NAP).",
       "en": "The 70th percentile elevation on roof surface based on reconstructed 3D model in LoD2.2. Given as elevation above sea level (NAP)."
+    },
+    "semanticType": "elevation",
+    "source": "roofer",
+    "type": "float",
+    "unit": {
+      "en": "metre",
+      "nl": "meter"
+    },
+    "precision": 2,
+    "scale": {
+      "nl": "ratio",
+      "en": "ratio"
+    },
+    "nullable": true
+  },
+  "b3_h_dak_max": {
+    "description": {
+      "nl": "Maximumhoogte op dakdeel gebaseerd op het gereconstrueerde 3D-model in LoD2.2. Gegeven als hoogte boven zeeniveau (NAP).",
+      "en": "Maximum elevation on roof surface based on reconstructed 3D model in LoD2.2. Given as elevation above sea level (NAP)."
+    },
+    "semanticType": "elevation",
+    "source": "roofer",
+    "type": "float",
+    "unit": {
+      "en": "metre",
+      "nl": "meter"
+    },
+    "precision": 2,
+    "scale": {
+      "nl": "ratio",
+      "en": "ratio"
+    },
+    "nullable": true
+  },
+  "b3_h_dak_min": {
+    "description": {
+      "nl": "Minimumhoogte op dakdeel gebaseerd op het gereconstrueerde 3D-model in LoD2.2. Gegeven als hoogte boven zeeniveau (NAP).",
+      "en": "Minimum elevation on roof surface based on reconstructed 3D model in LoD2.2. Given as elevation above sea level (NAP)."
     },
     "semanticType": "elevation",
     "source": "roofer",
@@ -188,44 +226,6 @@
       "en": "ratio"
     },
     "nullable": false
-  },
-  "b3_h_max": {
-    "description": {
-      "nl": "Maximumhoogte op dakdeel gebaseerd op het gereconstrueerde 3D-model in LoD2.2. Gegeven als hoogte boven zeeniveau (NAP).",
-      "en": "Maximum elevation on roof surface based on reconstructed 3D model in LoD2.2. Given as elevation above sea level (NAP)."
-    },
-    "semanticType": "elevation",
-    "source": "roofer",
-    "type": "float",
-    "unit": {
-      "en": "metre",
-      "nl": "meter"
-    },
-    "precision": 2,
-    "scale": {
-      "nl": "ratio",
-      "en": "ratio"
-    },
-    "nullable": true
-  },
-  "b3_h_min": {
-    "description": {
-      "nl": "Minimumhoogte op dakdeel gebaseerd op het gereconstrueerde 3D-model in LoD2.2. Gegeven als hoogte boven zeeniveau (NAP).",
-      "en": "Minimum elevation on roof surface based on reconstructed 3D model in LoD2.2. Given as elevation above sea level (NAP)."
-    },
-    "semanticType": "elevation",
-    "source": "roofer",
-    "type": "float",
-    "unit": {
-      "en": "metre",
-      "nl": "meter"
-    },
-    "precision": 2,
-    "scale": {
-      "nl": "ratio",
-      "en": "ratio"
-    },
-    "nullable": true
   },
   "b3_h_nok": {
     "description": {
@@ -687,7 +687,7 @@
       "nl": "interval",
       "en": "interval"
     },
-    "valueFormat": "YYYY",
+    "valueFormat": "%Y",
     "nullable": false
   },
   "b3_pw_onvoldoende": {
@@ -953,7 +953,7 @@
       "nl": "interval",
       "en": "interval"
     },
-    "valueFormat": "YYYY-MM-DD",
+    "valueFormat": "%Y-%m-%d",
     "nullable": false
   },
   "documentdatum": {
@@ -968,7 +968,7 @@
       "nl": "interval",
       "en": "interval"
     },
-    "valueFormat": "YYYY-MM-DD",
+    "valueFormat": "%Y-%m-%d",
     "nullable": false
   },
   "documentnummer": {
@@ -997,7 +997,7 @@
       "nl": "interval",
       "en": "interval"
     },
-    "valueFormat": "YYYY-MM-DD",
+    "valueFormat": "%Y-%m-%d",
     "nullable": true
   },
   "eindregistratie": {
@@ -1012,7 +1012,7 @@
       "nl": "interval",
       "en": "interval"
     },
-    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
+    "valueFormat": "%Y-%m-%dT%H:%M:%S%.3f",
     "nullable": true
   },
   "geconstateerd": {
@@ -1108,7 +1108,7 @@
       "nl": "interval",
       "en": "interval"
     },
-    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
+    "valueFormat": "%Y-%m-%dT%H:%M:%S%.3f",
     "nullable": true
   },
   "tijdstipinactief": {
@@ -1123,7 +1123,7 @@
       "nl": "interval",
       "en": "interval"
     },
-    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
+    "valueFormat": "%Y-%m-%dT%H:%M:%S%.3f",
     "nullable": true
   },
   "tijdstipinactieflv": {
@@ -1138,7 +1138,7 @@
       "nl": "interval",
       "en": "interval"
     },
-    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
+    "valueFormat": "%Y-%m-%dT%H:%M:%S%.3f",
     "nullable": true
   },
   "tijdstipnietbaglv": {
@@ -1153,7 +1153,7 @@
       "nl": "interval",
       "en": "interval"
     },
-    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
+    "valueFormat": "%Y-%m-%dT%H:%M:%S%.3f",
     "nullable": true
   },
   "tijdstipregistratie": {
@@ -1168,7 +1168,7 @@
       "nl": "interval",
       "en": "interval"
     },
-    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
+    "valueFormat": "%Y-%m-%dT%H:%M:%S%.3f",
     "nullable": false
   },
   "tijdstipregistratielv": {
@@ -1183,7 +1183,7 @@
       "nl": "interval",
       "en": "interval"
     },
-    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
+    "valueFormat": "%Y-%m-%dT%H:%M:%S%.3f",
     "nullable": false
   },
   "voorkomenidentificatie": {

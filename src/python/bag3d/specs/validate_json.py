@@ -26,14 +26,18 @@ def validate_semantic_rules(data: dict[str, Any]) -> None:
     for name, attribute in data.items():
         if not name:
             raise ValueError("Attribute names must not be empty")
-        if (attribute["type"] == "array") != ("items" in attribute):
-            raise ValueError(f"{name}: items must be present exactly for array types")
-        for label, value in (
-            (name, attribute),
-            (f"{name}.items", attribute.get("items")),
-        ):
-            if value is not None and "precision" in value and value["type"] != "float":
+
+        def validate_value(value: dict[str, Any], label: str) -> None:
+            if (value["type"] == "array") != ("items" in value):
+                raise ValueError(
+                    f"{label}: items must be present exactly for array types"
+                )
+            if "precision" in value and value["type"] != "float":
                 raise ValueError(f"{label}: precision is only valid for float")
+            if "items" in value:
+                validate_value(value["items"], f"{label}.items")
+
+        validate_value(attribute, name)
 
 
 def validate_json_file(schema_path: Path, json_path: Path) -> bool:
