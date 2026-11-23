@@ -4,6 +4,7 @@ from collections.abc import Callable
 from pathlib import Path
 from typing import Any
 
+import jsonschema
 import pytest
 from bag3d.specs.projections import geopackage
 from bag3d.specs.projections.cityjson import load_cityjson_projection
@@ -163,7 +164,7 @@ def test_native_array_requires_compatible_component(
         validate_bundle(bundle_root / "attribute-specification.json")
 
 
-def test_geopackage_omitted_columns_use_layout_prefixes(
+def test_geopackage_omitted_columns_use_attributes_prefix(
     bundle_root: Path, monkeypatch: pytest.MonkeyPatch
 ) -> None:
     def omit_columns(data: dict[str, Any]) -> None:
@@ -184,7 +185,27 @@ def test_geopackage_omitted_columns_use_layout_prefixes(
         containers[0].attributes["identificatie"].column == "attributes__identificatie"
     )
     semantics = next(c for c in containers if c.kind == "semantics")
-    assert semantics.attributes["b3_azimut"].column == "attribute__b3_azimut"
+    assert semantics.attributes["b3_azimut"].column == "attributes__b3_azimut"
+
+
+def test_geopackage_rejects_singular_attribute_prefix(
+    bundle_root: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    def use_singular_prefix(data: dict[str, Any]) -> None:
+        semantics = next(c for c in data["containers"] if c["kind"] == "semantics")
+        semantics["attributes"]["b3_azimut"]["column"] = "attribute__b3_azimut"
+
+    edit_json(bundle_root, "projections/gpkg.json", use_singular_prefix)
+    monkeypatch.setattr(
+        geopackage,
+        "load_resource",
+        lambda path: json.loads((bundle_root / path).read_text(encoding="utf-8")),
+    )
+
+    with pytest.raises(jsonschema.ValidationError, match="attributes__"):
+        validate_bundle(bundle_root / "attribute-specification.json")
+    with pytest.raises(ValueError, match="expected column 'attributes__b3_azimut'"):
+        load_geopackage_projection()
 
 
 @pytest.mark.parametrize(

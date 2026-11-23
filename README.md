@@ -72,8 +72,8 @@ years supplied by the source.
 Add the actual input attribute name to the semantic catalogue and each intended
 format container. Projection keys refer to that catalogue; attribute renaming is
 not supported. Use the projection to choose storage types and supported
-encodings. Keep GeoPackage layout prefixes such as `attributes__` and
-`attribute__`. Validate the changed JSON against its adjacent schema, run
+encodings. Use the `attributes__` prefix for GeoPackage attribute columns.
+Validate the changed JSON against its adjacent schema, run
 `uv run validate-specs-bundle resources/attribute-specification.json`, and run
 `uv run pytest`. Migration comparisons are one-off checks, not permanent tests.
 
@@ -82,8 +82,8 @@ CityJSON and 3D Tiles preserve their previous attribute selection, including
 arrays and native 3D Tiles array properties; GeoPackage stores arrays as JSON
 text. GeoPackage describes Tyler's current
 `building_multisurface_lod0`, three `buildingpart_solid_lod*` layers, `semantics`
-and hierarchy tables. Object columns use `attributes__`; semantic columns use
-`attribute__`. Booleans are INTEGER, floats REAL, temporal values TEXT, and arrays
+and hierarchy tables. Object and semantic attribute columns use `attributes__`.
+Booleans are INTEGER, floats REAL, temporal values TEXT, and arrays are
 JSON TEXT. SQLite REAL does not guarantee float32 storage. Addresses are disabled
 by the pipeline's exporter options, so there is no address container in this
 projection. The schema supports the exporter's `addresses` table when enabled.

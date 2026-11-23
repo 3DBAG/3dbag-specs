@@ -9,7 +9,7 @@ from typing import Any
 from urllib.parse import unquote, urlsplit
 
 import jsonschema
-from bag3d.specs.projections.geopackage import attribute_column_prefix
+from bag3d.specs.projections.geopackage import attribute_column_name
 from bag3d.specs.validate_json import read_json, validate_semantic_rules
 
 CONTRACT_VERSION = "1.0"
@@ -174,7 +174,7 @@ def _compatible_cityjson(
 
 
 def _compatible_gpkg(
-    name: str, entry: dict[str, Any], semantic: dict[str, Any], prefix: str
+    name: str, entry: dict[str, Any], semantic: dict[str, Any]
 ) -> None:
     value_type = semantic[name]["type"]
     expected = {
@@ -195,8 +195,6 @@ def _compatible_gpkg(
             raise ValueError(f"gpkg {name}: arrays require JSON text encoding")
     elif "encoding" in entry:
         raise ValueError(f"gpkg {name}: encoding is only supported for arrays")
-    if entry.get("column", prefix + name) != prefix + name:
-        raise ValueError(f"gpkg {name}: attribute renaming is not supported")
 
 
 def _compatible_tiles(
@@ -380,13 +378,12 @@ def _validate_gpkg(projection: dict[str, Any], semantic: dict[str, Any]) -> None
                 raise ValueError(
                     f"gpkg {table_name}: layer name must match generated selector name {expected_name!r}"
                 )
-        prefix = attribute_column_prefix(container["kind"])
         columns = {
             column.casefold() for column in container.get("structuralColumns", [])
         }
         for name, entry in container["attributes"].items():
-            _compatible_gpkg(name, entry, semantic, prefix)
-            column = entry.get("column", prefix + name)
+            _compatible_gpkg(name, entry, semantic)
+            column = attribute_column_name(name, entry)
             if column.casefold() in columns:
                 raise ValueError(
                     f"gpkg {table_name}: duplicate or structural column {column!r}"
