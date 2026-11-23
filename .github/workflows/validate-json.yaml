@@ -3,12 +3,14 @@ name: Validate specifications
 on:
   push:
     paths:
+      - '.github/workflows/validate-json.yaml'
       - 'resources/*.json'
       - 'resources/**/*.json'
     branches:
       - '**'
   pull_request:
     paths:
+      - '.github/workflows/validate-json.yaml'
       - 'resources/*.json'
       - 'resources/**/*.json'
     branches:
@@ -30,7 +32,7 @@ jobs:
           python-version: '3.12'
 
       - name: Install uv
-        uses: astral-sh/setup-uv@v10
+        uses: astral-sh/setup-uv@v10.4.0
 
       - name: Install package
         run: uv sync
