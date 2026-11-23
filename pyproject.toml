@@ -28,11 +28,11 @@ Repository = "https://github.com/3DBAG/3dbag-specs"
 
 [dependency-groups]
 dev = [
-    "pytest~=9.1.1",
+    "pytest==9.2.0",
     "bumpver~=2026.1132",
-    "tox~=4.58.0",
-    "tox-uv>=1.36.0",
-    "ruff~=0.16.2",
+    "tox==4.67.15",
+    "tox-uv==1.37.9",
+    "ruff==0.17.6",
 ]
 
 [project.scripts]
