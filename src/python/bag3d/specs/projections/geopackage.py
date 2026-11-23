@@ -36,10 +36,16 @@ class GeoPackageProjection:
     structural_tables: tuple[str, ...]
 
 
+def attribute_column_prefix(kind: str) -> str:
+    """Return the physical attribute column prefix for a container kind."""
+    return "attribute__" if kind == "semantics" else "attributes__"
+
+
 def load_geopackage_projection() -> GeoPackageProjection:
     data = load_resource("projections/gpkg.json")
     containers = []
     for container in data["containers"]:
+        prefix = attribute_column_prefix(container["kind"])
         selector = container.get("selector")
         containers.append(
             GeoPackageContainer(
@@ -55,7 +61,7 @@ def load_geopackage_projection() -> GeoPackageProjection:
                 attributes=MappingProxyType(
                     {
                         name: GeoPackageAttribute(
-                            entry.get("column", name),
+                            entry.get("column", prefix + name),
                             entry["type"],
                             entry.get("encoding"),
                         )

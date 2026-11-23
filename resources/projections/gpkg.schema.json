@@ -202,7 +202,7 @@
         "column": {
           "type": "string",
           "minLength": 1,
-          "description": "Column name. Defaults to the semantic attribute name when absent."
+          "description": "Column name. Defaults to the attribute name prefixed with attribute__ in semantics containers and attributes__ in other containers."
         },
         "type": {
           "type": "string",

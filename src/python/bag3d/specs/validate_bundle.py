@@ -4,10 +4,12 @@ import argparse
 import math
 import re
 from pathlib import Path
+from sys import float_info
 from typing import Any
 from urllib.parse import unquote, urlsplit
 
 import jsonschema
+from bag3d.specs.projections.geopackage import attribute_column_prefix
 from bag3d.specs.validate_json import read_json, validate_semantic_rules
 
 CONTRACT_VERSION = "1.0"
@@ -22,7 +24,10 @@ INTEGER_COMPONENTS = {
     "INT64": (-(2**63), 2**63 - 1),
     "UINT64": (0, 2**64 - 1),
 }
-FLOAT_COMPONENTS = {"FLOAT32", "FLOAT64"}
+FLOAT_COMPONENTS: dict[str, float] = {
+    "FLOAT32": float.fromhex("0x1.fffffep+127"),
+    "FLOAT64": float_info.max,
+}
 TEMPORAL_DIRECTIVES = set("AaBCcDdefFfGgHhIjklMmnpPRrSsTtUuVvWwXxYyZz+b%q")
 PAD_DIRECTIVES = set("CYymdeHkIlMSfUWVjGgsquw")
 
@@ -208,8 +213,10 @@ def _compatible_tiles(
         item_type = value["items"]["type"]
         native = shape == "array" and (
             (
-                item_type in {"int", "float"}
-                and component in set(INTEGER_COMPONENTS) | FLOAT_COMPONENTS
+                (
+                    (item_type == "int" and component in INTEGER_COMPONENTS)
+                    or (item_type == "float" and component in FLOAT_COMPONENTS)
+                )
                 and encoding is None
             )
             or (
@@ -287,12 +294,15 @@ def _compatible_tiles(
                     f"ogc3dtiles {name}: noData is outside {component} storage"
                 )
         elif component in FLOAT_COMPONENTS:
+            limit = FLOAT_COMPONENTS[component]
             if (
                 isinstance(no_data, bool)
                 or not isinstance(no_data, (float, int))
-                or not math.isfinite(no_data)
+                or not -limit <= no_data <= limit
             ):
-                raise ValueError(f"ogc3dtiles {name}: noData must be a finite number")
+                raise ValueError(
+                    f"ogc3dtiles {name}: noData is outside {component} storage"
+                )
         elif component == "STRING" and not isinstance(no_data, str):
             raise ValueError(f"ogc3dtiles {name}: STRING noData must be text")
         elif component == "BOOLEAN" and not isinstance(no_data, bool):
@@ -370,7 +380,7 @@ def _validate_gpkg(projection: dict[str, Any], semantic: dict[str, Any]) -> None
                 raise ValueError(
                     f"gpkg {table_name}: layer name must match generated selector name {expected_name!r}"
                 )
-        prefix = "attribute__" if container["kind"] == "semantics" else "attributes__"
+        prefix = attribute_column_prefix(container["kind"])
         columns = {
             column.casefold() for column in container.get("structuralColumns", [])
         }
