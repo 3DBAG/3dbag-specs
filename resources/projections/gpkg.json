@@ -223,7 +223,7 @@
         },
         "geconstateerd": {
           "column": "attributes__geconstateerd",
-          "type": "INTEGER"
+          "type": "BOOLEAN"
         },
         "identificatie": {
           "column": "attributes__identificatie",

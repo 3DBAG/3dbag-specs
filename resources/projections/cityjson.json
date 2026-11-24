@@ -16,20 +16,16 @@
           "type": "string"
         },
         "b3_h_dak_50p": {
-          "type": "number",
-          "property": "b3_h_dak_50p"
+          "type": "number"
         },
         "b3_h_dak_70p": {
-          "type": "number",
-          "property": "b3_h_dak_70p"
+          "type": "number"
         },
         "b3_h_dak_max": {
-          "type": "number",
-          "property": "b3_h_dak_max"
+          "type": "number"
         },
         "b3_h_dak_min": {
-          "type": "number",
-          "property": "b3_h_dak_min"
+          "type": "number"
         },
         "b3_h_maaiveld": {
           "type": "number"
@@ -203,20 +199,16 @@
           "type": "number"
         },
         "b3_h_dak_50p": {
-          "type": "number",
-          "property": "b3_h_dak_50p"
+          "type": "number"
         },
         "b3_h_dak_70p": {
-          "type": "number",
-          "property": "b3_h_dak_70p"
+          "type": "number"
         },
         "b3_h_dak_max": {
-          "type": "number",
-          "property": "b3_h_dak_max"
+          "type": "number"
         },
         "b3_h_dak_min": {
-          "type": "number",
-          "property": "b3_h_dak_min"
+          "type": "number"
         },
         "b3_hellingshoek": {
           "type": "number"

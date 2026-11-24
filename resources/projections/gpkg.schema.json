@@ -208,6 +208,9 @@
           "type": "string",
           "enum": [
             "TEXT",
+            "TINYINT",
+            "SMALLINT",
+            "MEDIUMINT",
             "INTEGER",
             "FLOAT",
             "REAL",
