@@ -178,17 +178,18 @@ def _compatible_gpkg(
 ) -> None:
     value_type = semantic[name]["type"]
     expected = {
-        "int": "INTEGER",
-        "float": "REAL",
-        "bool": "INTEGER",
-        "string": "TEXT",
-        "date": "TEXT",
-        "datetime": "TEXT",
-        "array": "TEXT",
+        "int": ("INTEGER",),
+        "float": ("REAL",),
+        "bool": ("BOOLEAN", "INTEGER"),
+        "string": ("TEXT",),
+        "date": ("TEXT",),
+        "datetime": ("TEXT",),
+        "array": ("TEXT",),
     }[value_type]
-    if entry["type"] != expected:
+    if entry["type"] not in expected:
         raise ValueError(
-            f"gpkg {name}: expected {expected} storage for semantic {value_type}"
+            f"gpkg {name}: expected {' or '.join(expected)} storage "
+            f"for semantic {value_type}"
         )
     if value_type == "array":
         if entry.get("encoding") != "json":

@@ -1,5 +1,8 @@
 set shell := ["bash", "-cu"]
 
+_default:
+    @just --list
+
 # Run all tests, formatting, lint, and specification checks.
 ci: test fmt-check lint check
 

@@ -83,8 +83,9 @@ arrays and native 3D Tiles array properties; GeoPackage stores arrays as JSON
 text. GeoPackage describes Tyler's current
 `building_multisurface_lod0`, three `buildingpart_solid_lod*` layers, `semantics`
 and hierarchy tables. Object and semantic attribute columns use `attributes__`.
-Booleans are INTEGER, floats REAL, temporal values TEXT, and arrays are
-JSON TEXT. SQLite REAL does not guarantee float32 storage. Addresses are disabled
+Boolean columns can be declared as `BOOLEAN` or `INTEGER`, with values stored
+as 0 or 1. Floats are REAL, temporal values TEXT, and arrays are JSON TEXT.
+SQLite REAL does not guarantee float32 storage. Addresses are disabled
 by the pipeline's exporter options, so there is no address container in this
 projection. The schema supports the exporter's `addresses` table when enabled.
 
