@@ -1,0 +1,225 @@
+{
+  "format": "cityjson",
+  "objects": {
+    "Building": {
+      "attributes": {
+        "b3_bag_bag_overlap": {
+          "type": "number"
+        },
+        "b3_bouwlagen": {
+          "type": "number"
+        },
+        "b3_dak_type": {
+          "type": "string"
+        },
+        "b3_extrusie": {
+          "type": "string"
+        },
+        "b3_h_dak_50p": {
+          "type": "number"
+        },
+        "b3_h_dak_70p": {
+          "type": "number"
+        },
+        "b3_h_dak_max": {
+          "type": "number"
+        },
+        "b3_h_dak_min": {
+          "type": "number"
+        },
+        "b3_h_maaiveld": {
+          "type": "number"
+        },
+        "b3_h_nok": {
+          "type": "number"
+        },
+        "b3_is_glas_dak": {
+          "type": "boolean"
+        },
+        "b3_kas_warenhuis": {
+          "type": "boolean"
+        },
+        "b3_kwaliteitsindicator": {
+          "type": "boolean"
+        },
+        "b3_mutatie_ahn3_ahn4": {
+          "type": "boolean"
+        },
+        "b3_mutatie_ahn4_ahn5": {
+          "type": "boolean"
+        },
+        "b3_n_nok": {
+          "type": "number"
+        },
+        "b3_n_vlakken": {
+          "type": "number"
+        },
+        "b3_nodata_fractie_ahn3": {
+          "type": "number"
+        },
+        "b3_nodata_fractie_ahn4": {
+          "type": "number"
+        },
+        "b3_nodata_fractie_ahn5": {
+          "type": "number"
+        },
+        "b3_nodata_radius_ahn3": {
+          "type": "number"
+        },
+        "b3_nodata_radius_ahn4": {
+          "type": "number"
+        },
+        "b3_nodata_radius_ahn5": {
+          "type": "number"
+        },
+        "b3_opp_buitenmuur": {
+          "type": "number"
+        },
+        "b3_opp_dak_plat": {
+          "type": "number"
+        },
+        "b3_opp_dak_schuin": {
+          "type": "number"
+        },
+        "b3_opp_grond": {
+          "type": "number"
+        },
+        "b3_opp_scheidingsmuur": {
+          "type": "number"
+        },
+        "b3_puntdichtheid_ahn3": {
+          "type": "number"
+        },
+        "b3_puntdichtheid_ahn4": {
+          "type": "number"
+        },
+        "b3_puntdichtheid_ahn5": {
+          "type": "number"
+        },
+        "b3_pw_bron": {
+          "type": "string"
+        },
+        "b3_pw_datum": {
+          "type": "string"
+        },
+        "b3_pw_onvoldoende": {
+          "type": "boolean"
+        },
+        "b3_pw_selectie_reden": {
+          "type": "string"
+        },
+        "b3_rmse_lod12": {
+          "type": "number"
+        },
+        "b3_rmse_lod13": {
+          "type": "number"
+        },
+        "b3_rmse_lod22": {
+          "type": "number"
+        },
+        "b3_t_run": {
+          "type": "number"
+        },
+        "b3_val3dity_lod12": {
+          "type": "array"
+        },
+        "b3_val3dity_lod13": {
+          "type": "array"
+        },
+        "b3_val3dity_lod22": {
+          "type": "array"
+        },
+        "b3_volume_lod12": {
+          "type": "number"
+        },
+        "b3_volume_lod13": {
+          "type": "number"
+        },
+        "b3_volume_lod22": {
+          "type": "number"
+        },
+        "begingeldigheid": {
+          "type": "string"
+        },
+        "documentdatum": {
+          "type": "string"
+        },
+        "documentnummer": {
+          "type": "string"
+        },
+        "eindgeldigheid": {
+          "type": "string"
+        },
+        "eindregistratie": {
+          "type": "string"
+        },
+        "geconstateerd": {
+          "type": "boolean"
+        },
+        "identificatie": {
+          "type": "string"
+        },
+        "oorspronkelijkbouwjaar": {
+          "type": "number"
+        },
+        "status": {
+          "type": "string"
+        },
+        "tijdstipeindregistratielv": {
+          "type": "string"
+        },
+        "tijdstipinactief": {
+          "type": "string"
+        },
+        "tijdstipinactieflv": {
+          "type": "string"
+        },
+        "tijdstipnietbaglv": {
+          "type": "string"
+        },
+        "tijdstipregistratie": {
+          "type": "string"
+        },
+        "tijdstipregistratielv": {
+          "type": "string"
+        },
+        "voorkomenidentificatie": {
+          "type": "number"
+        }
+      }
+    },
+    "BuildingPart": {
+      "attributes": {}
+    }
+  },
+  "semanticSurfaces": {
+    "RoofSurface": {
+      "attributes": {
+        "b3_azimut": {
+          "type": "number"
+        },
+        "b3_h_dak_50p": {
+          "type": "number"
+        },
+        "b3_h_dak_70p": {
+          "type": "number"
+        },
+        "b3_h_dak_max": {
+          "type": "number"
+        },
+        "b3_h_dak_min": {
+          "type": "number"
+        },
+        "b3_hellingshoek": {
+          "type": "number"
+        }
+      }
+    },
+    "WallSurface": {
+      "attributes": {}
+    },
+    "GroundSurface": {
+      "attributes": {}
+    }
+  }
+}

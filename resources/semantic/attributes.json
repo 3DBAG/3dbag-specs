@@ -16,17 +16,7 @@
       "nl": "ratio",
       "en": "ratio"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": ["RoofSurface"]
-      },
-      "gpkg": {
-        "locations": ["lod22_2d"]
-      }
-    }
+    "nullable": true
   },
   "b3_bag_bag_overlap": {
     "description": {
@@ -45,17 +35,7 @@
       "nl": "ratio",
       "en": "ratio"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": false
   },
   "b3_bouwlagen": {
     "description": {
@@ -65,26 +45,11 @@
     "semanticType": "count",
     "source": "floors_estimation",
     "type": "int",
-    "unit": null,
-    "precision": null,
     "scale": {
       "nl": "ratio",
       "en": "ratio"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": true,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": true
   },
   "b3_dak_type": {
     "description": {
@@ -94,13 +59,10 @@
     "semanticType": "category",
     "source": "roofer",
     "type": "string",
-    "unit": null,
-    "precision": null,
     "scale": {
       "nl": "nominaal",
       "en": "nominal"
     },
-    "valueFormat": null,
     "values": {
       "unknown": {
         "nl": "Onbekend.",
@@ -127,18 +89,7 @@
         "en": "Could not detect a roof surface, even though points were found."
       }
     },
-    "nullable": false,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": false
   },
   "b3_dd_id": {
     "description": {
@@ -148,20 +99,11 @@
     "semanticType": "identifier",
     "source": "roofer",
     "type": "int",
-    "unit": null,
-    "precision": null,
     "scale": {
       "nl": "nominaal",
       "en": "nominal"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "gpkg": {
-        "locations": ["lod22_2d", "lod12_2d", "lod13_2d"]
-      }
-    }
+    "nullable": false
   },
   "b3_extrusie": {
     "description": {
@@ -171,13 +113,10 @@
     "semanticType": "identifier",
     "source": "roofer",
     "type": "string",
-    "unit": null,
-    "precision": null,
     "scale": {
       "nl": "nominaal",
       "en": "nominal"
     },
-    "valueFormat": null,
     "values": {
       "standard": {
         "nl": "LoD1.2, LoD1.3 en LoD2.2 modellen zijn gegenereerd.",
@@ -192,20 +131,9 @@
         "en": "No 3D model could be generated due to insufficient point cloud data."
       }
     },
-    "nullable": false,
-    "appliesTo": {
-      "gpkg": {
-        "locations": ["pand"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      }
-    }
+    "nullable": false
   },
-  "b3_h_50p": {
+  "b3_h_dak_50p": {
     "description": {
       "nl": "Medianhoogte op dakdeel gebaseerd op het gereconstrueerde 3D-model in LoD2.2. Gegeven als hoogte boven zeeniveau (NAP).",
       "en": "Median elevation on roof surface based on reconstructed 3D model in LoD2.2. Given as elevation above sea level (NAP)."
@@ -222,19 +150,9 @@
       "nl": "ratio",
       "en": "ratio"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": ["RoofSurface", "Building"]
-      },
-      "gpkg": {
-        "locations": ["lod12_2d", "lod13_2d", "lod22_2d"]
-      }
-    }
+    "nullable": true
   },
-  "b3_h_70p": {
+  "b3_h_dak_70p": {
     "description": {
       "nl": "De 70e percentielhoogte op dakdeel gebaseerd op het gereconstrueerde 3D-model in LoD2.2. Gegeven als hoogte boven zeeniveau (NAP).",
       "en": "The 70th percentile elevation on roof surface based on reconstructed 3D model in LoD2.2. Given as elevation above sea level (NAP)."
@@ -251,19 +169,9 @@
       "nl": "ratio",
       "en": "ratio"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": ["RoofSurface", "Building"]
-      },
-      "gpkg": {
-        "locations": ["lod12_2d", "lod13_2d", "lod22_2d"]
-      }
-    }
+    "nullable": true
   },
-  "b3_h_max": {
+  "b3_h_dak_max": {
     "description": {
       "nl": "Maximumhoogte op dakdeel gebaseerd op het gereconstrueerde 3D-model in LoD2.2. Gegeven als hoogte boven zeeniveau (NAP).",
       "en": "Maximum elevation on roof surface based on reconstructed 3D model in LoD2.2. Given as elevation above sea level (NAP)."
@@ -280,19 +188,9 @@
       "nl": "ratio",
       "en": "ratio"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": ["RoofSurface", "Building"]
-      },
-      "gpkg": {
-        "locations": ["lod12_2d", "lod13_2d", "lod22_2d"]
-      }
-    }
+    "nullable": true
   },
-  "b3_h_min": {
+  "b3_h_dak_min": {
     "description": {
       "nl": "Minimumhoogte op dakdeel gebaseerd op het gereconstrueerde 3D-model in LoD2.2. Gegeven als hoogte boven zeeniveau (NAP).",
       "en": "Minimum elevation on roof surface based on reconstructed 3D model in LoD2.2. Given as elevation above sea level (NAP)."
@@ -309,17 +207,7 @@
       "nl": "ratio",
       "en": "ratio"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": ["RoofSurface", "Building"]
-      },
-      "gpkg": {
-        "locations": ["lod12_2d", "lod13_2d", "lod22_2d"]
-      }
-    }
+    "nullable": true
   },
   "b3_h_maaiveld": {
     "description": {
@@ -333,25 +221,11 @@
       "en": "metre",
       "nl": "meter"
     },
-    "precision": null,
     "scale": {
       "nl": "ratio",
       "en": "ratio"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": false
   },
   "b3_h_nok": {
     "description": {
@@ -370,20 +244,7 @@
       "nl": "ratio",
       "en": "ratio"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": true,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": true
   },
   "b3_hellingshoek": {
     "description": {
@@ -402,17 +263,7 @@
       "nl": "ratio",
       "en": "ratio"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": null,
-    "appliesTo": {
-      "cityjson": {
-        "locations": ["RoofSurface"]
-      },
-      "gpkg": {
-        "locations": ["lod22_2d"]
-      }
-    }
+    "nullable": true
   },
   "b3_is_glas_dak": {
     "description": {
@@ -422,26 +273,11 @@
     "semanticType": "flag",
     "source": "roofer",
     "type": "bool",
-    "unit": null,
-    "precision": null,
     "scale": {
       "nl": "nominaal",
       "en": "nominal"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": false
   },
   "b3_kas_warenhuis": {
     "description": {
@@ -451,26 +287,11 @@
     "semanticType": "flag",
     "source": "TOP10NL",
     "type": "bool",
-    "unit": null,
-    "precision": null,
     "scale": {
       "nl": "nominaal",
       "en": "nominal"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": false
   },
   "b3_kwaliteitsindicator": {
     "description": {
@@ -480,13 +301,10 @@
     "semanticType": "flag",
     "source": "tyler-multiformat",
     "type": "bool",
-    "unit": null,
-    "precision": null,
     "scale": {
       "nl": "nominaal",
       "en": "nominal"
     },
-    "valueFormat": null,
     "values": {
       "true": {
         "en": "The reconstruction is correct.",
@@ -497,15 +315,7 @@
         "nl": "De gebouwreconstructie is mogelijk niet correct."
       }
     },
-    "nullable": true,
-    "appliesTo": {
-      "gpkg": {
-        "locations": ["pand"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      }
-    }
+    "nullable": true
   },
   "b3_mutatie_ahn3_ahn4": {
     "description": {
@@ -515,13 +325,10 @@
     "semanticType": "flag",
     "source": "roofer",
     "type": "bool",
-    "unit": null,
-    "precision": null,
     "scale": {
       "nl": "nominaal",
       "en": "nominal"
     },
-    "valueFormat": null,
     "values": {
       "true": {
         "en": "There was a significant change detected in the building between the AHN3 and AHN4 pointclouds.",
@@ -532,18 +339,7 @@
         "nl": "Er was geen significante verandering is gedetecteerd in het pand tussen de AHN3 en AHN4 puntenwolken."
       }
     },
-    "nullable": false,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": false
   },
   "b3_mutatie_ahn4_ahn5": {
     "description": {
@@ -553,13 +349,10 @@
     "semanticType": "flag",
     "source": "roofer",
     "type": "bool",
-    "unit": null,
-    "precision": null,
     "scale": {
       "nl": "nominaal",
       "en": "nominal"
     },
-    "valueFormat": null,
     "values": {
       "true": {
         "en": "There was a significant change detected in the building between the AHN4 and AHN5 pointclouds.",
@@ -570,18 +363,7 @@
         "nl": "Er was geen significante verandering is gedetecteerd in het pand tussen de AHN4 en AHN5 puntenwolken."
       }
     },
-    "nullable": false,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": false
   },
   "b3_n_nok": {
     "description": {
@@ -591,26 +373,11 @@
     "semanticType": "count",
     "source": "roofer",
     "type": "int",
-    "unit": null,
-    "precision": null,
     "scale": {
       "nl": "ratio",
       "en": "ratio"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": true,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": true
   },
   "b3_n_vlakken": {
     "description": {
@@ -620,26 +387,11 @@
     "semanticType": "count",
     "source": "roofer",
     "type": "int",
-    "unit": null,
-    "precision": null,
     "scale": {
       "nl": "ratio",
       "en": "ratio"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": true,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": true
   },
   "b3_nodata_fractie_ahn3": {
     "description": {
@@ -649,26 +401,12 @@
     "semanticType": "fraction",
     "source": "roofer",
     "type": "float",
-    "unit": null,
     "precision": 2,
     "scale": {
       "nl": "ratio",
       "en": "ratio"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": false
   },
   "b3_nodata_fractie_ahn4": {
     "description": {
@@ -678,26 +416,12 @@
     "semanticType": "fraction",
     "source": "roofer",
     "type": "float",
-    "unit": null,
     "precision": 2,
     "scale": {
       "nl": "ratio",
       "en": "ratio"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": false
   },
   "b3_nodata_fractie_ahn5": {
     "description": {
@@ -707,26 +431,12 @@
     "semanticType": "fraction",
     "source": "roofer",
     "type": "float",
-    "unit": null,
     "precision": 2,
     "scale": {
       "nl": "ratio",
       "en": "ratio"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": false
   },
   "b3_nodata_radius_ahn3": {
     "description": {
@@ -745,20 +455,7 @@
       "nl": "ratio",
       "en": "ratio"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": false
   },
   "b3_nodata_radius_ahn4": {
     "description": {
@@ -777,20 +474,7 @@
       "nl": "ratio",
       "en": "ratio"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": false
   },
   "b3_nodata_radius_ahn5": {
     "description": {
@@ -809,20 +493,7 @@
       "nl": "ratio",
       "en": "ratio"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": false
   },
   "b3_opp_buitenmuur": {
     "description": {
@@ -841,20 +512,7 @@
       "nl": "ratio",
       "en": "ratio"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": false
   },
   "b3_opp_dak_plat": {
     "description": {
@@ -873,20 +531,7 @@
       "nl": "ratio",
       "en": "ratio"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": false
   },
   "b3_opp_dak_schuin": {
     "description": {
@@ -905,20 +550,7 @@
       "nl": "ratio",
       "en": "ratio"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": false
   },
   "b3_opp_grond": {
     "description": {
@@ -937,20 +569,7 @@
       "nl": "ratio",
       "en": "ratio"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": false
   },
   "b3_opp_scheidingsmuur": {
     "description": {
@@ -969,20 +588,7 @@
       "nl": "ratio",
       "en": "ratio"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": false
   },
   "b3_pand_deel_id": {
     "description": {
@@ -992,27 +598,11 @@
     "semanticType": "identifier",
     "source": "roofer",
     "type": "int",
-    "unit": null,
-    "precision": null,
     "scale": {
       "nl": "nominaal",
       "en": "nominal"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "gpkg": {
-        "locations": [
-          "lod13_3d",
-          "lod12_2d",
-          "lod22_2d",
-          "lod22_3d",
-          "lod13_2d",
-          "lod12_3d"
-        ]
-      }
-    }
+    "nullable": false
   },
   "b3_puntdichtheid_ahn3": {
     "description": {
@@ -1031,20 +621,7 @@
       "nl": "ratio",
       "en": "ratio"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": false
   },
   "b3_puntdichtheid_ahn4": {
     "description": {
@@ -1063,20 +640,7 @@
       "nl": "ratio",
       "en": "ratio"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": false
   },
   "b3_puntdichtheid_ahn5": {
     "description": {
@@ -1095,20 +659,7 @@
       "nl": "ratio",
       "en": "ratio"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": false
   },
   "b3_pw_bron": {
     "description": {
@@ -1118,26 +669,11 @@
     "semanticType": "text",
     "source": "roofer",
     "type": "string",
-    "unit": null,
-    "precision": null,
     "scale": {
       "nl": "nominaal",
       "en": "nominal"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": false
   },
   "b3_pw_datum": {
     "description": {
@@ -1147,26 +683,12 @@
     "semanticType": "year",
     "source": "roofer",
     "type": "date",
-    "unit": null,
-    "precision": null,
     "scale": {
       "nl": "interval",
       "en": "interval"
     },
-    "valueFormat": "YYYY",
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "valueFormat": "%Y",
+    "nullable": false
   },
   "b3_pw_onvoldoende": {
     "description": {
@@ -1176,26 +698,11 @@
     "semanticType": "flag",
     "source": "roofer",
     "type": "bool",
-    "unit": null,
-    "precision": null,
     "scale": {
       "nl": "nominaal",
       "en": "nominal"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": false
   },
   "b3_pw_selectie_reden": {
     "description": {
@@ -1205,13 +712,10 @@
     "semanticType": "category",
     "source": "roofer",
     "type": "string",
-    "unit": null,
-    "precision": null,
     "scale": {
       "nl": "nominaal",
       "en": "nominal"
     },
-    "valueFormat": null,
     "values": {
       "PREFERRED_AND_LATEST": {
         "nl": "De geselecteerde puntenwolk heeft een goede puntdekking en er is geen recentere puntenwolk met voldoende puntdekking beschikbaar.",
@@ -1234,18 +738,7 @@
         "en": "The selected pointcloud is the latest one available, but it may be outdated for this building. This happens when the year of construction is equal or later than the point cloud acquisition date."
       }
     },
-    "nullable": false,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": false
   },
   "b3_rmse_lod12": {
     "description": {
@@ -1264,20 +757,7 @@
       "nl": "ratio",
       "en": "ratio"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": true,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": true
   },
   "b3_rmse_lod13": {
     "description": {
@@ -1296,20 +776,7 @@
       "nl": "ratio",
       "en": "ratio"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": true,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": true
   },
   "b3_rmse_lod22": {
     "description": {
@@ -1328,20 +795,7 @@
       "nl": "ratio",
       "en": "ratio"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": true,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": true
   },
   "b3_t_run": {
     "description": {
@@ -1355,25 +809,11 @@
       "en": "milliseconds",
       "nl": "milliseconden"
     },
-    "precision": null,
     "scale": {
       "nl": "ratio",
       "en": "ratio"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": false
   },
   "b3_val3dity_lod12": {
     "description": {
@@ -1383,34 +823,19 @@
     "semanticType": "list",
     "source": "roofer,val3dity",
     "type": "array",
-    "unit": null,
-    "precision": null,
-    "scale": null,
-    "valueFormat": null,
-    "values": null,
     "nullable": true,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    },
     "items": {
-      "type": "int",
+      "description": {
+        "nl": "Een Val3dity foutcode.",
+        "en": "A Val3dity error code."
+      },
       "semanticType": "errorCode",
+      "type": "int",
       "scale": {
         "nl": "nominaal",
         "en": "nominal"
       },
-      "description": {
-        "nl": "Een Val3dity foutcode.",
-        "en": "A Val3dity error code."
-      }
+      "nullable": false
     }
   },
   "b3_val3dity_lod13": {
@@ -1421,34 +846,19 @@
     "semanticType": "list",
     "source": "roofer,val3dity",
     "type": "array",
-    "unit": null,
-    "precision": null,
-    "scale": null,
-    "valueFormat": null,
-    "values": null,
     "nullable": true,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    },
     "items": {
-      "type": "int",
+      "description": {
+        "nl": "Een Val3dity foutcode.",
+        "en": "A Val3dity error code."
+      },
       "semanticType": "errorCode",
+      "type": "int",
       "scale": {
         "nl": "nominaal",
         "en": "nominal"
       },
-      "description": {
-        "nl": "Een Val3dity foutcode.",
-        "en": "A Val3dity error code."
-      }
+      "nullable": false
     }
   },
   "b3_val3dity_lod22": {
@@ -1459,34 +869,19 @@
     "semanticType": "list",
     "source": "roofer,val3dity",
     "type": "array",
-    "unit": null,
-    "precision": null,
-    "scale": null,
-    "valueFormat": null,
-    "values": null,
     "nullable": true,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    },
     "items": {
-      "type": "int",
+      "description": {
+        "nl": "Een Val3dity foutcode.",
+        "en": "A Val3dity error code."
+      },
       "semanticType": "errorCode",
+      "type": "int",
       "scale": {
         "nl": "nominaal",
         "en": "nominal"
       },
-      "description": {
-        "nl": "Een Val3dity foutcode.",
-        "en": "A Val3dity error code."
-      }
+      "nullable": false
     }
   },
   "b3_volume_lod12": {
@@ -1506,20 +901,7 @@
       "nl": "ratio",
       "en": "ratio"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": true,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": true
   },
   "b3_volume_lod13": {
     "description": {
@@ -1538,20 +920,7 @@
       "nl": "ratio",
       "en": "ratio"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": true,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": true
   },
   "b3_volume_lod22": {
     "description": {
@@ -1570,20 +939,7 @@
       "nl": "ratio",
       "en": "ratio"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": true,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": true
   },
   "begingeldigheid": {
     "description": {
@@ -1593,23 +949,12 @@
     "semanticType": "day",
     "source": "BAG",
     "type": "date",
-    "unit": null,
-    "precision": null,
     "scale": {
       "nl": "interval",
       "en": "interval"
     },
-    "valueFormat": "YYYY-MM-DD",
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "valueFormat": "%Y-%m-%d",
+    "nullable": false
   },
   "documentdatum": {
     "description": {
@@ -1619,23 +964,12 @@
     "semanticType": "day",
     "source": "BAG",
     "type": "date",
-    "unit": null,
-    "precision": null,
     "scale": {
       "nl": "interval",
       "en": "interval"
     },
-    "valueFormat": "YYYY-MM-DD",
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "valueFormat": "%Y-%m-%d",
+    "nullable": false
   },
   "documentnummer": {
     "description": {
@@ -1645,23 +979,11 @@
     "semanticType": "identifier",
     "source": "BAG",
     "type": "string",
-    "unit": null,
-    "precision": null,
     "scale": {
       "nl": "nominaal",
       "en": "nominal"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": false
   },
   "eindgeldigheid": {
     "description": {
@@ -1671,23 +993,12 @@
     "semanticType": "day",
     "source": "BAG",
     "type": "date",
-    "unit": null,
-    "precision": null,
     "scale": {
       "nl": "interval",
       "en": "interval"
     },
-    "valueFormat": "YYYY-MM-DD",
-    "values": null,
-    "nullable": true,
-    "appliesTo": {
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "valueFormat": "%Y-%m-%d",
+    "nullable": true
   },
   "eindregistratie": {
     "description": {
@@ -1697,23 +1008,12 @@
     "semanticType": "millisecond",
     "source": "BAG",
     "type": "datetime",
-    "unit": null,
-    "precision": null,
     "scale": {
       "nl": "interval",
       "en": "interval"
     },
-    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
-    "values": null,
-    "nullable": true,
-    "appliesTo": {
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "valueFormat": "%Y-%m-%dT%H:%M:%S%.3f",
+    "nullable": true
   },
   "geconstateerd": {
     "description": {
@@ -1723,23 +1023,11 @@
     "semanticType": "flag",
     "source": "BAG",
     "type": "bool",
-    "unit": null,
-    "precision": null,
     "scale": {
       "nl": "nominaal",
       "en": "nominal"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": true,
-    "appliesTo": {
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": true
   },
   "identificatie": {
     "description": {
@@ -1749,34 +1037,12 @@
     "semanticType": "identifier",
     "source": "BAG,roofer",
     "type": "string",
-    "unit": null,
-    "precision": null,
     "scale": {
       "nl": "nominaal",
       "en": "nominal"
     },
     "valueFormat": "NL.IMBAG.Pand.<16 digits>",
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": [
-          "lod13_3d",
-          "lod12_2d",
-          "pand",
-          "lod22_2d",
-          "lod22_3d",
-          "lod13_2d",
-          "lod12_3d"
-        ]
-      }
-    }
+    "nullable": false
   },
   "labels": {
     "description": {
@@ -1786,28 +1052,19 @@
     "semanticType": "list",
     "source": "tyler-multiformat",
     "type": "array",
-    "unit": null,
-    "precision": null,
-    "scale": null,
-    "valueFormat": null,
-    "values": null,
     "nullable": false,
-    "appliesTo": {
-      "gpkg": {
-        "locations": ["lod22_3d", "lod13_3d", "lod12_3d"]
-      }
-    },
     "items": {
-      "type": "int",
+      "description": {
+        "nl": "Een semantisch label voor een oppervlak.",
+        "en": "A semantic label for a surface."
+      },
       "semanticType": "category",
+      "type": "int",
       "scale": {
         "nl": "nominaal",
         "en": "nominal"
       },
-      "description": {
-        "nl": "Een semantisch label voor een oppervlak.",
-        "en": "A semantic label for a surface."
-      }
+      "nullable": false
     }
   },
   "oorspronkelijkbouwjaar": {
@@ -1818,26 +1075,12 @@
     "semanticType": "year",
     "source": "BAG",
     "type": "int",
-    "unit": null,
-    "precision": null,
     "scale": {
       "nl": "interval",
       "en": "interval"
     },
     "valueFormat": "YYYY",
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": false
   },
   "status": {
     "description": {
@@ -1847,26 +1090,11 @@
     "semanticType": "category",
     "source": "BAG",
     "type": "string",
-    "unit": null,
-    "precision": null,
     "scale": {
       "nl": "nominaal",
       "en": "nominal"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "cesium3dtiles": {
-        "locations": ["lod12", "lod13", "lod22"]
-      },
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": false
   },
   "tijdstipeindregistratielv": {
     "description": {
@@ -1876,23 +1104,12 @@
     "semanticType": "millisecond",
     "source": "BAG",
     "type": "datetime",
-    "unit": null,
-    "precision": null,
     "scale": {
       "nl": "interval",
       "en": "interval"
     },
-    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
-    "values": null,
-    "nullable": true,
-    "appliesTo": {
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "valueFormat": "%Y-%m-%dT%H:%M:%S%.3f",
+    "nullable": true
   },
   "tijdstipinactief": {
     "description": {
@@ -1902,23 +1119,12 @@
     "semanticType": "millisecond",
     "source": "BAG",
     "type": "datetime",
-    "unit": null,
-    "precision": null,
     "scale": {
       "nl": "interval",
       "en": "interval"
     },
-    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
-    "values": null,
-    "nullable": true,
-    "appliesTo": {
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "valueFormat": "%Y-%m-%dT%H:%M:%S%.3f",
+    "nullable": true
   },
   "tijdstipinactieflv": {
     "description": {
@@ -1928,23 +1134,12 @@
     "semanticType": "millisecond",
     "source": "BAG",
     "type": "datetime",
-    "unit": null,
-    "precision": null,
     "scale": {
       "nl": "interval",
       "en": "interval"
     },
-    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
-    "values": null,
-    "nullable": true,
-    "appliesTo": {
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "valueFormat": "%Y-%m-%dT%H:%M:%S%.3f",
+    "nullable": true
   },
   "tijdstipnietbaglv": {
     "description": {
@@ -1954,23 +1149,12 @@
     "semanticType": "millisecond",
     "source": "BAG",
     "type": "datetime",
-    "unit": null,
-    "precision": null,
     "scale": {
       "nl": "interval",
       "en": "interval"
     },
-    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
-    "values": null,
-    "nullable": true,
-    "appliesTo": {
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "valueFormat": "%Y-%m-%dT%H:%M:%S%.3f",
+    "nullable": true
   },
   "tijdstipregistratie": {
     "description": {
@@ -1980,23 +1164,12 @@
     "semanticType": "millisecond",
     "source": "BAG",
     "type": "datetime",
-    "unit": null,
-    "precision": null,
     "scale": {
       "nl": "interval",
       "en": "interval"
     },
-    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "valueFormat": "%Y-%m-%dT%H:%M:%S%.3f",
+    "nullable": false
   },
   "tijdstipregistratielv": {
     "description": {
@@ -2006,23 +1179,12 @@
     "semanticType": "millisecond",
     "source": "BAG",
     "type": "datetime",
-    "unit": null,
-    "precision": null,
     "scale": {
       "nl": "interval",
       "en": "interval"
     },
-    "valueFormat": "YYYY-MM-DDThh:mm:ss.sss",
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "valueFormat": "%Y-%m-%dT%H:%M:%S%.3f",
+    "nullable": false
   },
   "voorkomenidentificatie": {
     "description": {
@@ -2032,22 +1194,10 @@
     "semanticType": "identifier",
     "source": "BAG",
     "type": "int",
-    "unit": null,
-    "precision": null,
     "scale": {
       "nl": "ordinaal",
       "en": "ordinal"
     },
-    "valueFormat": null,
-    "values": null,
-    "nullable": false,
-    "appliesTo": {
-      "cityjson": {
-        "locations": ["Building"]
-      },
-      "gpkg": {
-        "locations": ["pand"]
-      }
-    }
+    "nullable": false
   }
 }

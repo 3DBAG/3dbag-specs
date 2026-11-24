@@ -1,0 +1,9 @@
+{
+  "contractVersion": "1.0",
+  "semantic": "semantic/attributes.json",
+  "projections": {
+    "cityjson": "projections/cityjson.json",
+    "gpkg": "projections/gpkg.json",
+    "ogc3dtiles": "projections/ogc3dtiles.json"
+  }
+}

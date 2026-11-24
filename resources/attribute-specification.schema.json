@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "3DBAG Attribute Specification Manifest Schema",
+  "description": "Versioned entry point for the semantic catalogue and available attribute projections. References are relative URI references resolved against this manifest.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contractVersion", "semantic", "projections"],
+  "properties": {
+    "contractVersion": {"const": "1.0"},
+    "semantic": {"type": "string", "minLength": 1},
+    "projections": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["cityjson", "gpkg", "ogc3dtiles"],
+      "properties": {
+        "cityjson": {"type": "string", "minLength": 1},
+        "gpkg": {"type": "string", "minLength": 1},
+        "ogc3dtiles": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}

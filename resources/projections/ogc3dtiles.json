@@ -1,0 +1,665 @@
+{
+  "format": "ogc3dtiles",
+  "tilesets": [
+    {
+      "selector": {
+        "lod": "lod12"
+      },
+      "class": "building",
+      "properties": {
+        "b3_bouwlagen": {
+          "componentType": "INT32",
+          "shape": "scalar",
+          "noData": 2147483647
+        },
+        "b3_dak_type": {
+          "componentType": "STRING",
+          "shape": "scalar",
+          "nullEncoding": "empty-string"
+        },
+        "b3_extrusie": {
+          "componentType": "STRING",
+          "shape": "scalar",
+          "nullEncoding": "empty-string"
+        },
+        "b3_h_maaiveld": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_h_nok": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_is_glas_dak": {
+          "componentType": "INT8",
+          "shape": "scalar",
+          "noData": 127,
+          "encoding": "boolean-integer"
+        },
+        "b3_kas_warenhuis": {
+          "componentType": "INT8",
+          "shape": "scalar",
+          "noData": 127,
+          "encoding": "boolean-integer"
+        },
+        "b3_mutatie_ahn3_ahn4": {
+          "componentType": "INT8",
+          "shape": "scalar",
+          "noData": 127,
+          "encoding": "boolean-integer"
+        },
+        "b3_mutatie_ahn4_ahn5": {
+          "componentType": "INT8",
+          "shape": "scalar",
+          "noData": 127,
+          "encoding": "boolean-integer"
+        },
+        "b3_n_nok": {
+          "componentType": "INT32",
+          "shape": "scalar",
+          "noData": 2147483647
+        },
+        "b3_n_vlakken": {
+          "componentType": "INT32",
+          "shape": "scalar",
+          "noData": 2147483647
+        },
+        "b3_nodata_fractie_ahn3": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_nodata_fractie_ahn4": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_nodata_fractie_ahn5": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_nodata_radius_ahn3": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_nodata_radius_ahn4": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_nodata_radius_ahn5": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_opp_buitenmuur": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_opp_dak_plat": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_opp_dak_schuin": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_opp_grond": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_opp_scheidingsmuur": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_puntdichtheid_ahn3": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_puntdichtheid_ahn4": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_puntdichtheid_ahn5": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_pw_bron": {
+          "componentType": "STRING",
+          "shape": "scalar",
+          "nullEncoding": "empty-string"
+        },
+        "b3_pw_datum": {
+          "componentType": "STRING",
+          "shape": "scalar",
+          "nullEncoding": "empty-string"
+        },
+        "b3_pw_onvoldoende": {
+          "componentType": "INT8",
+          "shape": "scalar",
+          "noData": 127,
+          "encoding": "boolean-integer"
+        },
+        "b3_pw_selectie_reden": {
+          "componentType": "STRING",
+          "shape": "scalar",
+          "nullEncoding": "empty-string"
+        },
+        "b3_rmse_lod12": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_rmse_lod13": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_rmse_lod22": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_t_run": {
+          "componentType": "INT32",
+          "shape": "scalar",
+          "noData": 2147483647
+        },
+        "b3_val3dity_lod12": {
+          "componentType": "INT32",
+          "shape": "array"
+        },
+        "b3_val3dity_lod13": {
+          "componentType": "INT32",
+          "shape": "array"
+        },
+        "b3_val3dity_lod22": {
+          "componentType": "INT32",
+          "shape": "array"
+        },
+        "b3_volume_lod12": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_volume_lod13": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_volume_lod22": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "identificatie": {
+          "componentType": "STRING",
+          "shape": "scalar",
+          "nullEncoding": "empty-string"
+        },
+        "oorspronkelijkbouwjaar": {
+          "componentType": "INT32",
+          "shape": "scalar",
+          "noData": 2147483647
+        },
+        "status": {
+          "componentType": "STRING",
+          "shape": "scalar",
+          "nullEncoding": "empty-string"
+        }
+      }
+    },
+    {
+      "selector": {
+        "lod": "lod13"
+      },
+      "class": "building",
+      "properties": {
+        "b3_bouwlagen": {
+          "componentType": "INT32",
+          "shape": "scalar",
+          "noData": 2147483647
+        },
+        "b3_dak_type": {
+          "componentType": "STRING",
+          "shape": "scalar",
+          "nullEncoding": "empty-string"
+        },
+        "b3_extrusie": {
+          "componentType": "STRING",
+          "shape": "scalar",
+          "nullEncoding": "empty-string"
+        },
+        "b3_h_maaiveld": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_h_nok": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_is_glas_dak": {
+          "componentType": "INT8",
+          "shape": "scalar",
+          "noData": 127,
+          "encoding": "boolean-integer"
+        },
+        "b3_kas_warenhuis": {
+          "componentType": "INT8",
+          "shape": "scalar",
+          "noData": 127,
+          "encoding": "boolean-integer"
+        },
+        "b3_mutatie_ahn3_ahn4": {
+          "componentType": "INT8",
+          "shape": "scalar",
+          "noData": 127,
+          "encoding": "boolean-integer"
+        },
+        "b3_mutatie_ahn4_ahn5": {
+          "componentType": "INT8",
+          "shape": "scalar",
+          "noData": 127,
+          "encoding": "boolean-integer"
+        },
+        "b3_n_nok": {
+          "componentType": "INT32",
+          "shape": "scalar",
+          "noData": 2147483647
+        },
+        "b3_n_vlakken": {
+          "componentType": "INT32",
+          "shape": "scalar",
+          "noData": 2147483647
+        },
+        "b3_nodata_fractie_ahn3": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_nodata_fractie_ahn4": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_nodata_fractie_ahn5": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_nodata_radius_ahn3": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_nodata_radius_ahn4": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_nodata_radius_ahn5": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_opp_buitenmuur": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_opp_dak_plat": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_opp_dak_schuin": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_opp_grond": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_opp_scheidingsmuur": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_puntdichtheid_ahn3": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_puntdichtheid_ahn4": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_puntdichtheid_ahn5": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_pw_bron": {
+          "componentType": "STRING",
+          "shape": "scalar",
+          "nullEncoding": "empty-string"
+        },
+        "b3_pw_datum": {
+          "componentType": "STRING",
+          "shape": "scalar",
+          "nullEncoding": "empty-string"
+        },
+        "b3_pw_onvoldoende": {
+          "componentType": "INT8",
+          "shape": "scalar",
+          "noData": 127,
+          "encoding": "boolean-integer"
+        },
+        "b3_pw_selectie_reden": {
+          "componentType": "STRING",
+          "shape": "scalar",
+          "nullEncoding": "empty-string"
+        },
+        "b3_rmse_lod12": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_rmse_lod13": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_rmse_lod22": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_t_run": {
+          "componentType": "INT32",
+          "shape": "scalar",
+          "noData": 2147483647
+        },
+        "b3_val3dity_lod12": {
+          "componentType": "INT32",
+          "shape": "array"
+        },
+        "b3_val3dity_lod13": {
+          "componentType": "INT32",
+          "shape": "array"
+        },
+        "b3_val3dity_lod22": {
+          "componentType": "INT32",
+          "shape": "array"
+        },
+        "b3_volume_lod12": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_volume_lod13": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_volume_lod22": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "identificatie": {
+          "componentType": "STRING",
+          "shape": "scalar",
+          "nullEncoding": "empty-string"
+        },
+        "oorspronkelijkbouwjaar": {
+          "componentType": "INT32",
+          "shape": "scalar",
+          "noData": 2147483647
+        },
+        "status": {
+          "componentType": "STRING",
+          "shape": "scalar",
+          "nullEncoding": "empty-string"
+        }
+      }
+    },
+    {
+      "selector": {
+        "lod": "lod22"
+      },
+      "class": "building",
+      "properties": {
+        "b3_bouwlagen": {
+          "componentType": "INT32",
+          "shape": "scalar",
+          "noData": 2147483647
+        },
+        "b3_dak_type": {
+          "componentType": "STRING",
+          "shape": "scalar",
+          "nullEncoding": "empty-string"
+        },
+        "b3_extrusie": {
+          "componentType": "STRING",
+          "shape": "scalar",
+          "nullEncoding": "empty-string"
+        },
+        "b3_h_maaiveld": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_h_nok": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_is_glas_dak": {
+          "componentType": "INT8",
+          "shape": "scalar",
+          "noData": 127,
+          "encoding": "boolean-integer"
+        },
+        "b3_kas_warenhuis": {
+          "componentType": "INT8",
+          "shape": "scalar",
+          "noData": 127,
+          "encoding": "boolean-integer"
+        },
+        "b3_mutatie_ahn3_ahn4": {
+          "componentType": "INT8",
+          "shape": "scalar",
+          "noData": 127,
+          "encoding": "boolean-integer"
+        },
+        "b3_mutatie_ahn4_ahn5": {
+          "componentType": "INT8",
+          "shape": "scalar",
+          "noData": 127,
+          "encoding": "boolean-integer"
+        },
+        "b3_n_nok": {
+          "componentType": "INT32",
+          "shape": "scalar",
+          "noData": 2147483647
+        },
+        "b3_n_vlakken": {
+          "componentType": "INT32",
+          "shape": "scalar",
+          "noData": 2147483647
+        },
+        "b3_nodata_fractie_ahn3": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_nodata_fractie_ahn4": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_nodata_fractie_ahn5": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_nodata_radius_ahn3": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_nodata_radius_ahn4": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_nodata_radius_ahn5": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_opp_buitenmuur": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_opp_dak_plat": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_opp_dak_schuin": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_opp_grond": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_opp_scheidingsmuur": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_puntdichtheid_ahn3": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_puntdichtheid_ahn4": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_puntdichtheid_ahn5": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_pw_bron": {
+          "componentType": "STRING",
+          "shape": "scalar",
+          "nullEncoding": "empty-string"
+        },
+        "b3_pw_datum": {
+          "componentType": "STRING",
+          "shape": "scalar",
+          "nullEncoding": "empty-string"
+        },
+        "b3_pw_onvoldoende": {
+          "componentType": "INT8",
+          "shape": "scalar",
+          "noData": 127,
+          "encoding": "boolean-integer"
+        },
+        "b3_pw_selectie_reden": {
+          "componentType": "STRING",
+          "shape": "scalar",
+          "nullEncoding": "empty-string"
+        },
+        "b3_rmse_lod12": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_rmse_lod13": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_rmse_lod22": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_t_run": {
+          "componentType": "INT32",
+          "shape": "scalar",
+          "noData": 2147483647
+        },
+        "b3_val3dity_lod12": {
+          "componentType": "INT32",
+          "shape": "array"
+        },
+        "b3_val3dity_lod13": {
+          "componentType": "INT32",
+          "shape": "array"
+        },
+        "b3_val3dity_lod22": {
+          "componentType": "INT32",
+          "shape": "array"
+        },
+        "b3_volume_lod12": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_volume_lod13": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "b3_volume_lod22": {
+          "componentType": "FLOAT32",
+          "shape": "scalar",
+          "noData": 3.4028234663852886e+38
+        },
+        "identificatie": {
+          "componentType": "STRING",
+          "shape": "scalar",
+          "nullEncoding": "empty-string"
+        },
+        "oorspronkelijkbouwjaar": {
+          "componentType": "INT32",
+          "shape": "scalar",
+          "noData": 2147483647
+        },
+        "status": {
+          "componentType": "STRING",
+          "shape": "scalar",
+          "nullEncoding": "empty-string"
+        }
+      }
+    }
+  ]
+}

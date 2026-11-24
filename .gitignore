@@ -7,10 +7,13 @@
 .ruff_cache
 .pytest_cache
 .tox
-tests/python/__pycache__
+__pycache__/
 
 # Build
+build/
+dist/
 src/python/bag3d_specs.egg-info
+bag3d_specs.egg-info
 
 # tmp
 /tmp

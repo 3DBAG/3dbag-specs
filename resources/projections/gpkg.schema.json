@@ -1,0 +1,232 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "3DBAG GeoPackage Projection Schema",
+  "description": "Current Tyler GeoPackage layout. Generated feature layer names are lowercase cityObjectType_geometryFamily_lod<lod with dots replaced by underscores>. Attributes in all containers use escaped attributes__ paths. REAL is SQLite float64; BOOLEAN values are stored as INTEGER 0/1; dates and datetimes as TEXT; arrays as JSON TEXT; semantic null as SQL NULL. Structural columns and hierarchy tables carry identity and relationships, not semantic attributes. Missing inferred columns and incompatible inferred types are validation failures. Addresses are disabled in the production export. Hierarchy tables are named containers containing only relation columns.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "containers"
+  ],
+  "properties": {
+    "format": {
+      "const": "gpkg"
+    },
+    "containers": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/definitions/container"
+      }
+    }
+  },
+  "definitions": {
+    "container": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "attributes"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "layer",
+            "semantics",
+            "address",
+            "hierarchy"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Feature table name. Required for kind 'layer'."
+        },
+        "table": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Fixed data table name. Required (and fixed) for kinds 'semantics' and 'address'."
+        },
+        "selector": {
+          "$ref": "#/definitions/selector",
+          "description": "Derivation input for generated layer names. Only valid on kind 'layer'."
+        },
+        "attributes": {
+          "$ref": "#/definitions/attribute-map"
+        },
+        "structuralColumns": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "layer"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "required": [
+              "name"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "semantics"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "table": {
+                "const": "semantics"
+              },
+              "selector": false,
+              "name": false
+            },
+            "required": [
+              "table"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "address"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "table": {
+                "const": "addresses"
+              },
+              "selector": false,
+              "name": false
+            },
+            "required": [
+              "table"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "hierarchy"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "required": [
+              "table"
+            ],
+            "properties": {
+              "name": false,
+              "selector": false,
+              "table": {
+                "enum": [
+                  "cityobject_hierarchy",
+                  "semantic_hierarchy"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "selector": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cityObjectType",
+        "geometryFamily",
+        "lod"
+      ],
+      "properties": {
+        "cityObjectType": {
+          "type": "string",
+          "minLength": 1
+        },
+        "geometryFamily": {
+          "type": "string",
+          "minLength": 1
+        },
+        "lod": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "description": "Inputs to lowercase <cityObjectType>_<geometryFamily>_lod<lod with dots replaced by underscores>."
+    },
+    "attribute-map": {
+      "type": "object",
+      "propertyNames": {
+        "minLength": 1
+      },
+      "additionalProperties": {
+        "$ref": "#/definitions/attribute-entry"
+      }
+    },
+    "attribute-entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "column": {
+          "type": "string",
+          "pattern": "^attributes__.",
+          "description": "Column name. Defaults to the attribute name prefixed with attributes__."
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "TEXT",
+            "TINYINT",
+            "SMALLINT",
+            "MEDIUMINT",
+            "INTEGER",
+            "FLOAT",
+            "REAL",
+            "BOOLEAN",
+            "DATE",
+            "DATETIME"
+          ],
+          "description": "GeoPackage/SQLite column data type. Arrays are stored as TEXT (JSON)."
+        },
+        "encoding": {
+          "enum": [
+            "json"
+          ],
+          "description": "Semantic array stored as compact JSON TEXT."
+        }
+      }
+    }
+  }
+}
