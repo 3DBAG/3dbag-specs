@@ -512,7 +512,7 @@
       "nl": "ratio",
       "en": "ratio"
     },
-    "nullable": false
+    "nullable": true
   },
   "b3_opp_dak_plat": {
     "description": {
@@ -531,7 +531,7 @@
       "nl": "ratio",
       "en": "ratio"
     },
-    "nullable": false
+    "nullable": true
   },
   "b3_opp_dak_schuin": {
     "description": {
@@ -550,7 +550,7 @@
       "nl": "ratio",
       "en": "ratio"
     },
-    "nullable": false
+    "nullable": true
   },
   "b3_opp_grond": {
     "description": {
@@ -569,7 +569,7 @@
       "nl": "ratio",
       "en": "ratio"
     },
-    "nullable": false
+    "nullable": true
   },
   "b3_opp_scheidingsmuur": {
     "description": {
@@ -588,7 +588,7 @@
       "nl": "ratio",
       "en": "ratio"
     },
-    "nullable": false
+    "nullable": true
   },
   "b3_pand_deel_id": {
     "description": {
