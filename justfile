@@ -6,10 +6,9 @@ _default:
 # Run all tests, formatting, lint, and specification checks.
 ci: test fmt-check lint check
 
-# Bump the package version to today's date and refresh the lockfile locally.
+# Bump to today's date, refresh the lockfile, and push the commit and tag.
 bump:
-    uv run --locked bumpver update --no-commit --no-fetch
-    uv lock
+    uv run --locked bumpver update
 
 # Run the test suite with tox.
 test:
