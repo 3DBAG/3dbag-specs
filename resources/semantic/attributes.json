@@ -37,6 +37,20 @@
     },
     "nullable": false
   },
+  "b3_bevat_overbouw": {
+    "description": {
+      "nl": "Geeft aan of het gereconstrueerde pand ten minste één overbouw bevat.",
+      "en": "Indicates whether the reconstructed building contains at least one underpass."
+    },
+    "semanticType": "flag",
+    "source": "roofer",
+    "type": "bool",
+    "scale": {
+      "nl": "nominaal",
+      "en": "nominal"
+    },
+    "nullable": false
+  },
   "b3_bouwlagen": {
     "description": {
       "nl": "Een schatting van het aantal bouwlagen in het gebouw. Schattingen zijn alleen beschikbaar voor gebouwen met maximaal 5 geschatte bouwlagen.",
@@ -601,6 +615,44 @@
     "scale": {
       "nl": "nominaal",
       "en": "nominal"
+    },
+    "nullable": false
+  },
+  "b3_overbouw_betrouwbaarheidsscore": {
+    "description": {
+      "nl": "Betrouwbaarheidsscore tussen 0 en 1 voor de geschatte plafondhoogte van de overbouw. De waarde kan null zijn als er geen score beschikbaar is.",
+      "en": "Confidence score between 0 and 1 for the estimated underpass ceiling height. The value may be null if no score is available."
+    },
+    "semanticType": "fraction",
+    "source": "underpass-tools",
+    "type": "float",
+    "scale": {
+      "nl": "ratio",
+      "en": "ratio"
+    },
+    "nullable": true
+  },
+  "b3_overbouw_hoogtebron": {
+    "description": {
+      "nl": "Bron van de plafondhoogte van de overbouw.",
+      "en": "Source of the underpass ceiling height."
+    },
+    "semanticType": "category",
+    "source": "underpasses",
+    "type": "string",
+    "scale": {
+      "nl": "nominaal",
+      "en": "nominal"
+    },
+    "values": {
+      "aanname": {
+        "nl": "Een standaard vrije hoogte boven de vloer van het pand.",
+        "en": "A default clearance above the building floor."
+      },
+      "straatlidar": {
+        "nl": "Een schatting op basis van lidarpunten die vanaf straatniveau zijn ingewonnen.",
+        "en": "An estimate based on lidar points collected at street level."
+      }
     },
     "nullable": false
   },

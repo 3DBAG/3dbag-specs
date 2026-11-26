@@ -22,6 +22,10 @@
           "column": "attributes__b3_bag_bag_overlap",
           "type": "REAL"
         },
+        "b3_bevat_overbouw": {
+          "column": "attributes__b3_bevat_overbouw",
+          "type": "INTEGER"
+        },
         "b3_bouwlagen": {
           "column": "attributes__b3_bouwlagen",
           "type": "INTEGER"
@@ -359,6 +363,14 @@
         "b3_hellingshoek": {
           "column": "attributes__b3_hellingshoek",
           "type": "REAL"
+        },
+        "b3_overbouw_betrouwbaarheidsscore": {
+          "column": "attributes__b3_overbouw_betrouwbaarheidsscore",
+          "type": "REAL"
+        },
+        "b3_overbouw_hoogtebron": {
+          "column": "attributes__b3_overbouw_hoogtebron",
+          "type": "TEXT"
         }
       }
     },

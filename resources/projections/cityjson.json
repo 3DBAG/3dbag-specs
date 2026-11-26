@@ -6,6 +6,9 @@
         "b3_bag_bag_overlap": {
           "type": "number"
         },
+        "b3_bevat_overbouw": {
+          "type": "boolean"
+        },
         "b3_bouwlagen": {
           "type": "number"
         },
@@ -193,6 +196,16 @@
     }
   },
   "semanticSurfaces": {
+    "OuterCeilingSurface": {
+      "attributes": {
+        "b3_overbouw_betrouwbaarheidsscore": {
+          "type": "number"
+        },
+        "b3_overbouw_hoogtebron": {
+          "type": "string"
+        }
+      }
+    },
     "RoofSurface": {
       "attributes": {
         "b3_azimut": {

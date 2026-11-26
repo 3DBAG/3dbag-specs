@@ -7,6 +7,12 @@
       },
       "class": "building",
       "properties": {
+        "b3_bevat_overbouw": {
+          "componentType": "INT8",
+          "shape": "scalar",
+          "noData": 127,
+          "encoding": "boolean-integer"
+        },
         "b3_bouwlagen": {
           "componentType": "INT32",
           "shape": "scalar",
@@ -227,6 +233,12 @@
       },
       "class": "building",
       "properties": {
+        "b3_bevat_overbouw": {
+          "componentType": "INT8",
+          "shape": "scalar",
+          "noData": 127,
+          "encoding": "boolean-integer"
+        },
         "b3_bouwlagen": {
           "componentType": "INT32",
           "shape": "scalar",
@@ -447,6 +459,12 @@
       },
       "class": "building",
       "properties": {
+        "b3_bevat_overbouw": {
+          "componentType": "INT8",
+          "shape": "scalar",
+          "noData": 127,
+          "encoding": "boolean-integer"
+        },
         "b3_bouwlagen": {
           "componentType": "INT32",
           "shape": "scalar",
